@@ -1,0 +1,12 @@
+body{
+	font-family: Helvetica;
+}
+.pageTitle{
+	background-color: #5D5E5E;
+	width: 75%;
+}
+.pageTitle__text{
+	color: white;
+	font-size: 20px;
+	font-weight: 600;
+}
