@@ -42,16 +42,6 @@ GEM
       debug_inspector (>= 0.0.1)
     builder (3.2.2)
     byebug (9.0.5)
-    capybara (2.7.1)
-      addressable
-      mime-types (>= 1.16)
-      nokogiri (>= 1.3.3)
-      rack (>= 1.0.0)
-      rack-test (>= 0.5.4)
-      xpath (~> 2.0)
-    capybara-webkit (1.11.1)
-      capybara (>= 2.3.0, < 2.8.0)
-      json
     coderay (1.1.1)
     concurrent-ruby (1.0.2)
     crack (0.4.3)
@@ -191,14 +181,11 @@ GEM
       addressable (>= 2.3.6)
       crack (>= 0.3.2)
       hashdiff
-    xpath (2.0.0)
-      nokogiri (~> 1.3)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  capybara-webkit
   database_cleaner
   dotenv-rails
   jbuilder (~> 2.0)
