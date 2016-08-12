@@ -39,6 +39,7 @@ group :development, :test do
   gem 'rspec-rails'
 end
 
+
 group :development do
   gem "quiet_assets"
 
@@ -51,7 +52,9 @@ end
 
 group :test do
   # gem "capybara-webkit"
+
   gem "capybara"
+
   gem "database_cleaner"
   gem "webmock"
 end
@@ -59,3 +62,5 @@ end
 group :staging, :production do
   gem 'rails_12factor'
 end
+
+gem 'devise'
