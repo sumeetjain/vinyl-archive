@@ -50,7 +50,7 @@ group :development do
 end
 
 group :test do
-#  gem "capybara-webkit"
+  gem "capybara"
   gem "database_cleaner"
   gem "webmock"
 end

@@ -1,8 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
-  <%= @artist.name %>
+  <%= @artist.name %> | Artist  <%= link_to 'Edit', edit_artist_path(@artist) %>
 </p>
 
 <p>
@@ -16,14 +15,19 @@
 </p>
 
 <p>
-  <strong>Bio:</strong>
+  <strong>Bio:</strong><br>
   <%= @artist.bio %>
 </p>
 
-<% @albums.each do |album| %>
-	<p><%= link_to album.name, album %></p>
-<% end %>
+<p>
+	Members
+</p>
 
+<p>
+	Albums
+	<% @albums.each do |album| %>
+		<p><%= link_to album.name, album %></p>
+	<% end %>
+</p>
 
-<%= link_to 'Edit', edit_artist_path(@artist) %> |
 <%= link_to 'Back', artists_path %>
