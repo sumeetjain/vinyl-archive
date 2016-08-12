@@ -16,6 +16,10 @@ body{
 	justify-content: space-around;
 	width: 45%;
 }
+.headerWrapper--album{
+	display: flex;
+	align-items: center;
+}
 .playerImage{
 	width: 100px;
 	height: 100%;
