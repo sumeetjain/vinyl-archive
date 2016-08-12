@@ -1,21 +1,114 @@
 <head>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<h1>Component Gallery</h1>
 </head>
 
 <body>
+	<h3>Page header (replace with image)</h3>
+	<div class="header">
+		<div class="headerWrapper">
+			<div class="playerImage">
+				<!-- Image of record player. Link to homepage. -->
+			</div>
+			<div class="siteName">
+				THE VINYL ARCHIVE
+			</div>
+			<div class="siteInfo">
+				by Hear Nebraska
+			</div>
+		</div>
+		<div class="headerWrapper">
+			<div class="addAlbum">
+				ADD AN ALBUM
+			</div>
+		</div>
+	</div>
+
+<br><br><br>
+
+	<h3>Page title element</h3>
 	<div class="pageTitle">
 		<div class="pageTitle__Text">Latest uploads</div>
 	</div>
 
 <br><br><br>
 
+	<h3>Album block</h3>
 	<div class="album">
-		<img src="Imwideawake.jpg" height="200" width="200">
+		<div class="album__image">
+			<img src="Imwideawake.jpeg" height="200" width="200">
+		</div>
 		<div class="album__albumName">
 			I'm Wide Awake, It's Morning
+		</div>
 		<div class="album__artistName">
 			Bright Eyes
 		</div>
+
+<br><br><br>
+
+	<h3>Filter title block</h3>
+	<div class="filterTitle">
+		<div class="filterTitle__text">
+			CITIES
+		</div>
+	</div>
+
+<br><br><br>
+
+	<h3>Sort dropdown element</h3>
+	<div class="sortBy">
+		<select>
+  			<option value="newToOld">UPLOAD DATE, NEW TO OLD</option>
+		</select>
+	</div>
+
+<br><br><br>
+
+	<h3>Search bar element</h3>
+	<div class="searchBox">
+		<div class="search">
+			<form action="">
+				<input method="" name="" type="text" placeholder="Search for an album, artist or track..." class="search__input" id="search" required><span class="search__icon"><img src="search.png"></span>
+			</form>
+		</div>
+	</div>
+
+<br><br><br>
+
+	<h3>Album block-- smaller image, text on side</h3>
+	<div class="album--textRight">
+		<div class="album__image--small">
+			<img src="Imwideawake.jpeg" height="50" width="50">
+		</div>
+		<div class="wrapText">
+			<div class="album__albumName">
+				I'm Wide Awake, It's Morning
+				</div>
+			<div class="album__artistName">
+				Bright Eyes
+			</div>
+		</div>
+	</div>
+
+<br><br><br>
+
+	<h3>Pagination</h3>
+	<div class="pagination">
+		<div class="line">
+	</div>
+		<div class="pageNav">
+			<div class="prev">
+				Prev
+			</div>
+			<div class="pageNumbers">
+				1-1 of 1
+			</div>
+			<div class="next">
+				Next
+			</div>
+		</div>
+	</div>
 
 
 </body>

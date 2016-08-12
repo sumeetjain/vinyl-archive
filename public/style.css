@@ -1,12 +1,118 @@
 body{
 	font-family: Helvetica;
 }
+.header{
+	display: flex;
+	justify-content: space-between;
+	background-color: #2B2B2B;
+	height: 100px;
+	width: 90%;
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+.headerWrapper{
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	width: 45%;
+}
+.playerImage{
+	width: 100px;
+	height: 100%;
+	background-color: white;
+}
+.siteName{
+	color: white;
+	font-size: 20px;
+	font-weight: 600;
+}
+.siteInfo{
+	color: white;
+	font-size: white;
+}
+.addAlbum{
+	color: white;
+	font-size: 20px;
+	font-weight: 800;
+}
 .pageTitle{
 	background-color: #5D5E5E;
-	width: 75%;
+	width: 70%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
 }
 .pageTitle__text{
 	color: white;
 	font-size: 20px;
 	font-weight: 600;
+}
+.album--textRight{
+	display: flex;
+}
+.album__image{
+	width: 200px;
+	-moz-box-shadow: 0 0 8px #888888;
+	-webkit-box-shadow: 0 0 8px #888888;
+	box-shadow: 0 0 8px #888888;
+}
+.album__image--small{
+	width: 50px;
+	-moz-box-shadow: 0 0 8px #888888;
+	-webkit-box-shadow: 0 0 8px #888888;
+	box-shadow: 0 0 8px #888888;
+	margin-right: 10px;
+}
+.album__albumName{
+	font-weight: 600;
+	font-size: 18px;
+}
+.album__artistName{
+	font-style: italic;
+	font-style: 18px;
+}
+.wrapText {
+	display: flex;
+	flex-direction: column;
+}
+.filterTitle{
+	background-color: #A6A6A6;
+	width: 20%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+}
+.filterTitle__text{
+	color: white;
+	font-size: 20px;
+	font-weight: 600;
+}
+.search{
+	border-bottom: solid white 3px;
+	margin-top: 20px;
+	display: flex;
+}
+.search__input{
+	background-color: #EFEFEF;
+	border: none;
+	width: 400px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+::-webkit-input-placeholder{
+	color: #A6A6A6;
+	font-size: 20px;
+	font-style: italic;
+}
+.search__icon{
+	background-color: #EFEFEF;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.line{
+	border-bottom: 3px #B6B6B6 solid;
+}
+.pageNav{
+	display: flex;
+	justify-content: space-around;
 }
