@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   get 'home/index'
-
+  delete 'users/sign_out'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
