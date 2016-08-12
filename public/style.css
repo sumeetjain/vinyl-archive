@@ -116,7 +116,7 @@ body{
 .line{
 	border-bottom: 3px #B6B6B6 solid;
 }
-.pageNav{
+.albumNav{
 	display: flex;
 	justify-content: space-around;
 }
