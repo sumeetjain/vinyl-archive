@@ -10,7 +10,7 @@
 
 	<tbody>
 		<% @albums.each do |album| %>
-			<tr>
+			<tr id="album_<%= album.id %>">
 				<td><%= album.name %></td>
 			</tr>
 		<% end %>
