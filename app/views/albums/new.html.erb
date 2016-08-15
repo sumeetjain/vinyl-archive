@@ -23,29 +23,65 @@
 
 
 
-<%= form.fields_for :artist do |artist| %>
+	<%= form.fields_for :artist do |artist| %>
 
-<div>
-	<%= artist.label "Artist Name(s)" %><br>
-	<%= artist.text_field :name %>
-</div>
+		<div>
+			<%= artist.label "Artist Name(s)" %><br>
+			<%= artist.text_field :name %>
+		</div>
 
-<div>
-	<%= artist.label "City" %><br>
-	<%= artist.text_field :city %>
-</div>
+		<div>
+			<%= artist.label "City" %><br>
+			<%= artist.text_field :city %>
+		</div>
 
-<div>
-	<%= artist.label "Artist URL" %><br>
-	<%= artist.url_field :url %>
-</div>
+		<div>
+			<%= artist.label "Artist URL" %><br>
+			<%= artist.url_field :url %>
+		</div>
 
-<div>
-	<%= artist.label "Biography" %><br>
-	<%= artist.text_area :bio %>
-</div>
+		<div>
+			<%= artist.label "Biography" %><br>
+			<%= artist.text_area :bio %>
+		</div>
 
-<% end %>
+	<% end %>
+
+		<%= form.fields_for :musician do |member| %>
+
+			<div>
+				<%= member.label "Band Member Name" %><br>
+				<%= member.text_field :name %>
+			</div>
+
+			<div>
+				<%= member.label "Band Member Instrument" %><br>
+				<%= member.text_field :instrument %>
+			</div>
+
+			<div><br><br>
+				<%= member.label "Band Member Name" %><br>
+				<%= member.text_field :name %>
+			</div>
+
+			<div>
+				<%= member.label "Band Member Instrument" %><br>
+				<%= member.text_field :instrument %>
+			</div>
+
+			<div><br><br>
+				<%= member.label "Band Member Name" %><br>
+				<%= member.text_field :name %>
+			</div>
+
+			<div>
+				<%= member.label "Band Member Instrument" %><br>
+				<%= member.text_field :instrument %>
+			</div>
+
+		<% end %>
+
+
 
 <div>
 	<%= form.submit %>

@@ -1,6 +1,7 @@
 class Album < ActiveRecord::Base
 	belongs_to :artist
-
-	accepts_nested_attributes_for :artist, :musicians
-	
+	belongs_to :musician
+	# belongs_to :musician, :class_name => :artist
+	accepts_nested_attributes_for :artist
+	# accepts_nested_attributes_for :musician
 end

@@ -11,6 +11,8 @@ class AlbumsController < ApplicationController
 	def new
 		@album = Album.new
 		@album.build_artist
+		# @album.build_musician
+		# @album.artist.build_musicians
 	end
 
 	def create
@@ -25,7 +27,7 @@ binding.pry
 
 	private
 	def album_params
-		params.require(:album).permit(:name, :genre, :release_date, :format, artist_attributes: [:name, :city, :url, :bio])
+		params.require(:album).permit(:name, :genre, :release_date, :format, artist_attributes: [:name, :city, :url, :bio], musician_attributes: [:name, :instrument])
 	end
 end
 
