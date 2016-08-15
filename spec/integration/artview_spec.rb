@@ -6,7 +6,7 @@ describe 'artists' do
 	let!(:album) { Album.create(artist_id: 1, name: "Big Kahuna", genre: "Rock", release_date: "2008") }
 	let!(:album2) { Album.create(artist_id: 1, name: "Red Rocket", genre: "Blues", release_date: "1999") }
 	let!(:album3) { Album.create(artist_id: 1, name: "Dance Dance!", genre: "Electronic", release_date: "2011") }
-
+	binding.pry
 	it 'displays artist albums' do
 		visit '/artists/1'
 		page.should have_content("Big Kahuna")
