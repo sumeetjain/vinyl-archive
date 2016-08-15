@@ -10,12 +10,15 @@ class AlbumsController < ApplicationController
 
 	def new
 		@album = Album.new
+
+		@album.artists.new
 		
 	end
 
 	def create
-		binding.pry
-		@album = Album.new(album_params)
+		@album = Album.find(params[:id])
+
+		@artist = @album.artist.new(album_params)
 
 		if @album.save
 			redirect_to album_path(@album.id)
