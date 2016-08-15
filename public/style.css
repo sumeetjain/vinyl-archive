@@ -20,16 +20,13 @@
 	background-color: white;
 }
 .siteName{
-	color: white;
 	font-size: 20px;
 	font-weight: 600;
 }
 .siteInfo{
-	color: white;
-	font-size: white;
+	font-size: 20px;
 }
 .addAlbum{
-	color: white;
 	font-size: 20px;
 	font-weight: 800;
 }
@@ -39,7 +36,6 @@
 	padding-top: 10px;
 }
 .pageTitle__text{
-	color: white;
 	font-size: 20px;
 	font-weight: 600;
 }
@@ -74,7 +70,6 @@
 	padding-left: 10px;
 }
 .filterTitle__text{
-	color: white;
 	font-size: 20px;
 	font-weight: 600;
 }

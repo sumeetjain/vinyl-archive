@@ -1,0 +1,10 @@
+body{
+	background: #BBBBBB;
+}
+.bodyContainer{
+	background: white;
+	width: 90%;
+}
+.rowWrapper{
+	justify-content: space-around;
+}
