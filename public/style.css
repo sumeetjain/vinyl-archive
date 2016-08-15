@@ -68,6 +68,9 @@
 	font-weight: 600;
 }
 .search{
+	background-color: #EFEFEF;
+	border-radius: 5px;
+	padding-right: 10px;
 }
 .search__input{
 	background-color: #EFEFEF;
@@ -80,9 +83,6 @@
 	color: #A6A6A6;
 	font-size: 20px;
 	font-style: italic;
-}
-.search__icon{
-	background-color: #EFEFEF;
 }
 .columnWrapper{
 	flex-direction: column;
