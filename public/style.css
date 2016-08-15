@@ -19,6 +19,8 @@
 	background-color: #5D5E5E;
 	width: 100%;
 	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
 }
 .pageTitle__text{
 	font-weight: 800;

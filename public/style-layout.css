@@ -23,11 +23,11 @@ body{
 }
 .contentContainer{
 	justify-content: space-between;
-	padding-left: 20px;
 }
 .rowWrapper{
 	justify-content: space-around;
 	align-items: center;
+	margin-top: 10px;
 }
 .leftContainer{
 	flex-direction: column;
@@ -40,4 +40,5 @@ body{
 .filterOptions{
 	flex-direction: column;
 	width: 25%;
+	margin-left: 0;
 }
