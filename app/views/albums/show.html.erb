@@ -2,6 +2,9 @@
 <h1>Title</h1>
 <p><%= @album.name %></p>
 
+<h3>Artist(s)</h3>
+<p><%= @album.artists.name %>
+
 <h3>Genre</h3>
 <p><%= @album.genre %></p>
 
@@ -9,4 +12,4 @@
 <p><%= @album.release_date %></p>
 
 <%= link_to "Home", albums_path %>
-
+<%= link_to "Add An Album", new_album_path %>
