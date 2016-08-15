@@ -2,7 +2,7 @@ class Search
 	def Search.keywordSearch(query)
 		return_arr = []
 		results = []
-		results.push(PgSearch.multisearch(query)[0])
+		results += PgSearch.multisearch(query)
 		results.each do |entry|
 			if entry["searchable_type"] == "Album"
 				return_arr.push(Album.find(entry["searchable_id"]))
