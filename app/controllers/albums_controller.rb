@@ -9,16 +9,17 @@ class AlbumsController < ApplicationController
 	end
 
 	def new
-		@album = Album.new
+		@artist = Artist.new
+		@album = @artist.albums.new
 
-		@album.artists.new
+		
 		
 	end
 
 	def create
-		@album = Album.find(params[:id])
+		@artist = Artist.new
 
-		@artist = @album.artist.new(album_params)
+		@album = @artist.albums.new(album_params)
 
 		if @album.save
 			redirect_to album_path(@album.id)

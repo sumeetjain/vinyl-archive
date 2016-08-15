@@ -1,4 +1,6 @@
 class Artist < ActiveRecord::Base
-	belongs_to :album
+	has_many :albums
+
+	accepts_nested_attributes_for :albums
 
 end
