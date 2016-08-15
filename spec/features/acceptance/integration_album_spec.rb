@@ -1,9 +1,11 @@
 require "rails_helper"
 
 RSpec.describe Album, type: :model do
-	let!(:album) { Album.create(name: "Big Kahuna", genre: "Rock", release_date: "2008") }
-	let!(:album2) { Album.create(name: "Red Rocket", genre: "Blues", release_date: "1999") }
-	let!(:album3) { Album.create(name: "Dance Dance!", genre: "Electronic", release_date: "2011") }
+
+  Artist.create(:name=>"New Band", :city=>"Fremont", :url=>"fake.jpg", :bio=>"cool guys")
+	Album.create(name: "Big Kahuna", genre: "Rock", release_date: "2008") 
+	Album.create(name: "Red Rocket", genre: "Blues", release_date: "1999") 
+	Album.create(name: "Dance Dance!", genre: "Electronic", release_date: "2011")
 
   describe "All Albums" do
     it "Finds a specific album title" do

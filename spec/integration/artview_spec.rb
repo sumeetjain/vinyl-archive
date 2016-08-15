@@ -19,5 +19,4 @@ describe 'artists' do
 		click_link 'Big Kahuna'
 		page.should have_content('Big Kahuna')
 	end
-
 end
