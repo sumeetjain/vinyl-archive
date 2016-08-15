@@ -1,10 +1,16 @@
 body{
 	background: #BBBBBB;
+	margin: 0;
 }
 .bodyContainer{
 	background: white;
 	width: 90%;
 }
+.contentContainer{
+}
 .rowWrapper{
 	justify-content: space-around;
+}
+.filterOptions{
+	justify-content: flex-end;
 }

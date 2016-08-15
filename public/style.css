@@ -3,8 +3,6 @@
 	background-color: #2B2B2B;
 	height: 100px;
 	width: 90%;
-	padding-right: 30px;
-	padding-left: 15px;
 }
 .headerWrapper{
 	align-items: center;
@@ -20,24 +18,18 @@
 	background-color: white;
 }
 .siteName{
-	font-size: 20px;
 	font-weight: 600;
 }
-.siteInfo{
-	font-size: 20px;
-}
 .addAlbum{
-	font-size: 20px;
 	font-weight: 800;
 }
 .pageTitle{
 	background-color: #5D5E5E;
-	width: 70%;
+	width: 65%;
 	padding-top: 10px;
 }
 .pageTitle__text{
-	font-size: 20px;
-	font-weight: 600;
+	font-weight: 800;
 }
 .album__image{
 	width: 200px;
@@ -64,13 +56,11 @@
 }
 .filterTitle{
 	background-color: #A6A6A6;
-	width: 20%;
 	padding-top: 10px;
 	padding-bottom: 10px;
 	padding-left: 10px;
 }
 .filterTitle__text{
-	font-size: 20px;
 	font-weight: 600;
 }
 .search{
