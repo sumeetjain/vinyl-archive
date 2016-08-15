@@ -1,26 +1,17 @@
-body{
-	font-family: Helvetica;
-}
-.padding-sm{
-	padding-bottom: 10px;
-	padding-top: 10px;
-	padding-left: 10px;
-}
 .header{
-	display: flex;
 	justify-content: space-between;
 	background-color: #2B2B2B;
 	height: 100px;
 	width: 90%;
+	padding-right: 30px;
+	padding-left: 15px;
 }
 .headerWrapper{
-	display: flex;
 	align-items: center;
 	justify-content: space-around;
 	width: 45%;
 }
 .headerWrapper--album{
-	display: flex;
 	align-items: center;
 }
 .playerImage{
@@ -52,9 +43,6 @@ body{
 	font-size: 20px;
 	font-weight: 600;
 }
-.album--textRight{
-	display: flex;
-}
 .album__image{
 	width: 200px;
 	height: 200px;
@@ -75,8 +63,7 @@ body{
 	font-style: italic;
 	font-style: 18px;
 }
-.wrapText {
-	display: flex;
+.columnWrapper {
 	flex-direction: column;
 }
 .filterTitle{
@@ -93,7 +80,6 @@ body{
 }
 .search{
 	border-bottom: solid white 3px;
-	display: flex;
 }
 .search__input{
 	background-color: #EFEFEF;
@@ -110,8 +96,9 @@ body{
 }
 .line{
 	border-bottom: 3px #B6B6B6 solid;
+	width: 50%;
 }
 .albumNav{
-	display: flex;
 	justify-content: space-around;
+	width: 50%;
 }

@@ -1,0 +1,12 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+body{
+font-family: 'Open Sans', sans-serif;
+}
+.padding-10{
+	padding-bottom: 10px;
+	padding-top: 10px;
+	padding-left: 10px;
+}
+.flex{
+	display: flex;
+}

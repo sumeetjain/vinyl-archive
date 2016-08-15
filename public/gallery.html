@@ -6,14 +6,15 @@
 	<meta charset="UTF-8">
 	<title>Component Gallery</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="utility.css">
 	<h1>Component Gallery</h1>
 </head>
 
 <body>
 	<h3>Page header (replace with image)</h3>
 	<!-- Main header located on top of page. Background is image instead of a solid color. -->
-	<div class="header padding-sm">
-		<div class="headerWrapper">
+	<div class="header flex">
+		<div class="headerWrapper flex">
 			<div class="playerImage">
 				<!-- Image of record player. Link to homepage. -->
 			</div>
@@ -26,7 +27,7 @@
 				<!-- Link to Hear Nebraska website -->
 			</div>
 		</div>
-		<div class="headerWrapper--album">
+		<div class="headerWrapper--album flex">
 			<div class="addAlbum">
 				ADD AN ALBUM
 				<!-- Javascript for add album form -->
@@ -38,7 +39,7 @@
 
 	<h3>Page title element</h3>
 <!-- 	This style appears on the homepage where the text "Latest uploads" apperas. It will be reused in the same position on all other pages of the main website where the specific page title appers. -->
-	<div class="pageTitle padding-sm">
+	<div class="pageTitle padding-10">
 		<div class="pageTitle__Text">Latest uploads</div>
 	</div>
 
@@ -82,9 +83,9 @@
 
 	<h3>Search bar element</h3>
 	<div class="searchBox">
-		<div class="search">
+		<div class="search flex">
 			<form action="">
-				<input method="" name="" type="text" placeholder="Search for an album, artist or track..." class="search__input padding-sm" id="search" required><span class="search__icon"><img src="search.png"></span>
+				<input method="" name="" type="text" placeholder="Search for an album, artist or track..." class="search__input padding-10" id="search" required><span class="search__icon"><img src="search.png"></span>
 			</form>
 			<!-- Formating is still weird where the search image appears -->
 		</div>
@@ -93,11 +94,11 @@
 <br><br><br>
 
 	<h3>Album block-- smaller image, text on side</h3>
-	<div class="album--textRight">
+	<div class="album album--textRight flex">
 		<div class="album__image album__image--small">
 			<img src="Imwideawake.jpeg" height="50" width="50">
 		</div>
-		<div class="wrapText">
+		<div class="columnWrapper flex">
 			<div class="album__albumName">
 				I'm Wide Awake, It's Morning
 				</div>
@@ -112,8 +113,8 @@
 	<h3>Pagination</h3>
 	<div class="pagination">
 		<div class="line">
-	</div>
-		<div class="albumNav">
+		</div>
+		<div class="albumNav flex">
 			<div class="prev">
 				Prev
 			<!-- This text is a lighter shade of grey when there is no previous page to show. Use Javascript. -->
