@@ -5,11 +5,44 @@
 	<%= form.text_field :name %>
 </div>
 
+<div>
+	<%= form.label "Genre" %><br>
+	<%= form.text_field :genre %>
+</div>
+
+<div>
+	<%= form.label "Release Date" %><br>
+	<%= form.text_field :release_date %>
+</div>
+
+<!-- This should be a dropdown -->
+<div>
+	<%= form.label "Format" %><br>
+	<%= form.text_field :format %>
+</div>
+
+
+
 <%= form.fields_for :artist do |artist| %>
 
 <div>
 	<%= artist.label "Artist Name(s)" %><br>
 	<%= artist.text_field :name %>
+</div>
+
+<div>
+	<%= artist.label "City" %><br>
+	<%= artist.text_field :city %>
+</div>
+
+<div>
+	<%= artist.label "Artist URL" %><br>
+	<%= artist.text_field :url %>
+</div>
+
+<div>
+	<%= artist.label "Biography" %><br>
+	<%= artist.text_area :bio %>
 </div>
 
 <% end %>
