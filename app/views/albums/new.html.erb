@@ -12,13 +12,13 @@
 
 <div>
 	<%= form.label "Release Date" %><br>
-	<%= form.text_field :release_date %>
+	<%= form.date_select :release_date %>
 </div>
 
 <!-- This should be a dropdown -->
 <div>
 	<%= form.label "Format" %><br>
-	<%= form.text_field :format %>
+	<%= form.select :format, ["LP", "EP", "Single"] %>
 </div>
 
 
@@ -37,7 +37,7 @@
 
 <div>
 	<%= artist.label "Artist URL" %><br>
-	<%= artist.text_field :url %>
+	<%= artist.url_field :url %>
 </div>
 
 <div>
