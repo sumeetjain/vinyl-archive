@@ -2,7 +2,7 @@
 	justify-content: space-between;
 	background-color: #2B2B2B;
 	height: 100px;
-	width: 90%;
+	width: 85%;
 }
 .headerWrapper{
 	align-items: center;
@@ -25,11 +25,14 @@
 }
 .pageTitle{
 	background-color: #5D5E5E;
-	width: 65%;
+	width: 100%;
 	padding-top: 10px;
 }
 .pageTitle__text{
 	font-weight: 800;
+}
+.album{
+	width: 200px;
 }
 .album__image{
 	width: 200px;

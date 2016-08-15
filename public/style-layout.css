@@ -4,13 +4,24 @@ body{
 }
 .bodyContainer{
 	background: white;
-	width: 90%;
+	width: 85%;
 }
 .contentContainer{
+	justify-content: space-between;
 }
 .rowWrapper{
 	justify-content: space-around;
 }
+.leftContainer{
+	flex-direction: column;
+	width: 75%;
+	margin: 20px;
+}
+.populateAlbums{
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
 .filterOptions{
-	justify-content: flex-end;
+	flex-direction: column;
+	width: 25%;
 }
