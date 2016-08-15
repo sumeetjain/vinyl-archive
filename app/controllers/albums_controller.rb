@@ -9,17 +9,16 @@ class AlbumsController < ApplicationController
 	end
 
 	def new
-		@artist = Artist.new
-		@album = @artist.albums.new
+		@album = Album.new
 
-		
+		@album.artist.new
 		
 	end
 
 	def create
-		@artist = Artist.new
+		@album = Album.find(params[:id])
 
-		@album = @artist.albums.new(album_params)
+		@artist = @album.artist.new(album_params)
 
 		if @album.save
 			redirect_to album_path(@album.id)
@@ -33,3 +32,6 @@ class AlbumsController < ApplicationController
 		params.require(:album).permit(:name, artists_attributes: [:name, :id])
 	end
 end
+
+
+
