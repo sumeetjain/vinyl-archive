@@ -1,0 +1,18 @@
+<h1>All Albums</h1>
+
+<table>
+
+	<thead>
+		<tr>
+			<th>Title</th>
+		</tr>
+	</thead>
+
+	<tbody>
+		<% @albums.each do |album| %>
+			<tr id="album_<%= album.id %>">
+				<td><%= album.name %></td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>
