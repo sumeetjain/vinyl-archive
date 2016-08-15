@@ -1,4 +1,9 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
 body{
+	font-family: 'Open Sans', sans-serif;
+	display: flex;
+	flex-flow: column;
+	align-items: center;
 	background: #BBBBBB;
 	margin: 0;
 }
@@ -6,22 +11,34 @@ body{
 	background: white;
 	width: 85%;
 }
+.headerWrapper{
+	align-items: center;
+	justify-content: space-around;
+	width: 50%;
+	padding-left: 20px;
+}
+.headerWrapper--album{
+	align-items: center;
+	padding-right: 20px;
+}
 .contentContainer{
 	justify-content: space-between;
+	padding-left: 20px;
 }
 .rowWrapper{
 	justify-content: space-around;
+	align-items: center;
 }
 .leftContainer{
 	flex-direction: column;
 	width: 75%;
-	margin: 20px;
 }
 .populateAlbums{
 	flex-wrap: wrap;
-	justify-content: space-around;
+	justify-content: space-between;
 }
 .filterOptions{
 	flex-direction: column;
 	width: 25%;
+	margin: 20px;
 }

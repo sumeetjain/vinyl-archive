@@ -4,14 +4,6 @@
 	height: 100px;
 	width: 85%;
 }
-.headerWrapper{
-	align-items: center;
-	justify-content: space-around;
-	width: 45%;
-}
-.headerWrapper--album{
-	align-items: center;
-}
 .playerImage{
 	width: 100px;
 	height: 100%;
@@ -53,9 +45,6 @@
 .album__artistName{
 	font-style: italic;
 	font-style: 18px;
-}
-.columnWrapper {
-	flex-direction: column;
 }
 .filterTitle{
 	background-color: #A6A6A6;
