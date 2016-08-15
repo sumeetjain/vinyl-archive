@@ -13,7 +13,7 @@
 <body>
 	<h3>Page header (replace with image)</h3>
 	<!-- Main header located on top of page. Background is image instead of a solid color. -->
-	<div class="header flex">
+<div class="header flex">
 		<div class="headerWrapper flex">
 			<div class="playerImage">
 				<!-- Image of record player. Link to homepage. -->
@@ -50,10 +50,10 @@
 		<div class="album__image">
 			<img src="Imwideawake.jpeg" height="200" width="200">
 		</div>
-		<div class="album__albumName">
+		<div class="album__albumName color-dark-grey">
 			I'm Wide Awake, It's Morning
 		</div>
-		<div class="album__artistName">
+		<div class="album__artistName color-dark-grey">
 			Bright Eyes
 		</div>
 	</div>
@@ -66,8 +66,74 @@
 		<div class="filterTitle__text color-white font-size-lg">
 			CITIES
 		</div>
-		<!-- List of cities will need to be dynamically populated -->
 	</div>
+	<div class="city">
+		Omaha (86)
+	</div>
+	<div class="city">
+		Lincoln (75)
+	</div>
+	<div class="city">
+		Kearney (42)
+	</div>
+	<!-- List of cities and numbers will need to be dynamically populated -->
+
+	<div class="filterTitle">
+		<div class="filterTitle__text color-white font-size-lg">
+			GENRES
+		</div>
+	</div>
+		<div class="genre">
+			Rock (138)
+		</div>
+		<div class="genre">
+			Folk (64)
+		</div>
+		<div class="genre">
+			Ska (1)
+		</div>
+	<!-- List of genres and numbers will need to be dynamically populated -->
+
+	<div class="filterTitle">
+		<div class="filterTitle__text color-white font-size-lg">
+			DECADES
+		</div>
+	</div>
+	<div class="decade">
+		2010s (120)
+	</div>
+	<div class="decade">
+		2000s (35)
+	</div>
+	<div class="decade">
+		1990s (18)
+	</div>
+	<div class="decade">
+		1980s (15)
+	</div>
+	<div class="decade">
+		1970s (13)
+	</div>
+	<div class="decade">
+		1960s (2)
+	</div>
+	<!-- List of decades and numbers will need to be dynamically populated -->
+
+	<div class="filterTitle">
+		<div class="filterTitle__text color-white font-size-lg">
+			FORMAT
+		</div>
+	</div>
+		<div class="format">
+			LP (174)
+		</div>
+		<div class="format">
+			EP (23)
+		</div>
+		<div class="format">
+			Single (7)
+		</div>
+	<!-- List of formats and numbers will need to be dynamically populated -->
 
 <br><br><br>
 
@@ -82,14 +148,12 @@
 <br><br><br>
 
 	<h3>Search bar element</h3>
-	<div class="searchBox">
-		<div class="search flex">
+		<div class="search">
 			<form action="">
 				<input method="" name="" type="text" placeholder="Search for an album, artist or track..." class="search__input padding-10" id="search" required><span class="search__icon"><img src="search.png"></span>
 			</form>
 			<!-- Formating is still weird where the search image appears -->
 		</div>
-	</div>
 
 <br><br><br>
 
@@ -99,10 +163,10 @@
 			<img src="Imwideawake.jpeg" height="50" width="50">
 		</div>
 		<div class="columnWrapper flex">
-			<div class="album__albumName">
+			<div class="album__albumName color-dark-grey">
 				I'm Wide Awake, It's Morning
 				</div>
-			<div class="album__artistName">
+			<div class="album__artistName color-dark-grey">
 				Bright Eyes
 			</div>
 		</div>
@@ -115,15 +179,15 @@
 		<div class="line">
 		</div>
 		<div class="albumNav flex">
-			<div class="prev">
+			<div class="prev color-dark-grey">
 				Prev
 			<!-- This text is a lighter shade of grey when there is no previous page to show. Use Javascript. -->
 			</div>
-			<div class="albumNumbers">
+			<div class="albumNumbers color-dark-grey">
 				1-1 of 1
 			<!-- Filler text. Numbers are representative of number of albums in system and how many are currently being displayed on the page. -->
 			</div>
-			<div class="next">
+			<div class="next color-dark-grey">
 				Next
 			<!-- Probably will use AJAX to give affect of clicking through "pages".  -->
 			</div>

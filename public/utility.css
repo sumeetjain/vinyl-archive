@@ -6,15 +6,18 @@
 .flex{
 	display: flex;
 }
+.color-white{
+	color: #FFFFFF;
+}
 .color-light-grey{
 	color: #A6A6A6;
 }
-.color-white{
-	color: #FFFFFF;
+.color-dark-grey{
+	color: #5D5E5E;
 }
 .font-size-lg{
 	font-size: 20px;
 }
 .margin-sm{
-	margin: 20px;
+	margin: 30px;
 }
