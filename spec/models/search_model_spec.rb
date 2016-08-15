@@ -15,4 +15,15 @@ RSpec.describe Search, type: :model do
 		page.should have_no_content("Big Band")
 	end
 
+	it 'fills out the form and gets results' do
+		visit "/search"
+
+		fill_in('query', :with => 'Big')
+		click_button('Search')
+
+		page.should have_content("Big Kahuna")
+		page.should have_content("Red Rocket")
+		page.should have_no_content("Big Band")
+	end
+
 end
