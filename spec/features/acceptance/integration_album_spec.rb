@@ -28,7 +28,7 @@ RSpec.describe Album, type: :model do
     	
     	expect(page).to have_content("Dance Dance!")
     	expect(all_albums.count).to eq(3)
-    	expect(album2.release_date).to eq("Tue, 01 May 2007")
+    	
     end
 
   end
