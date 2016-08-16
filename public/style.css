@@ -7,7 +7,7 @@
 .headerWrapper{
 	align-items: center;
 	justify-content: space-around;
-	width: 50%;
+	width: 400px;
 	padding-left: 20px;
 }
 .headerWrapper--album{
@@ -24,6 +24,9 @@
 .siteName{
 	font-size: 30px;
 }
+.siteInfo{
+	font-family: Oswald, Regular;
+}
 .addAlbum{
 	font-family: Montserrat;
 	font-size: 25px;
@@ -35,7 +38,7 @@
 	padding-left: 10px;
 }
 .pageTitle__text{
-	font-weight: 800;
+	font-family: Montserrat;
 }
 .album{
 	width: 200px;
@@ -67,7 +70,9 @@
 	padding-left: 10px;
 }
 .filterTitle__text{
-	font-weight: 600;
+	font-size: 20px;
+	color: white;
+	font-family: Oswald;
 }
 .search{
 	background-color: #EFEFEF;
