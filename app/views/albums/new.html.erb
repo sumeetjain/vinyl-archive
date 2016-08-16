@@ -1,0 +1,67 @@
+<%= form_for(@album) do |form| %>
+
+<div>
+	<%= form.label "Album Title" %><br>
+	<%= form.text_field :name %>
+</div>
+
+<div>
+	<%= form.label "Genre" %><br>
+	<%= form.text_field :genre %>
+</div>
+
+<div>
+	<%= form.label "Release Date" %><br>
+	<%= form.date_select :release_date %>
+</div>
+
+<div>
+	<%= form.label "Format" %><br>
+	<%= form.select :format, ["LP", "EP", "Single"] %>
+</div>
+
+
+
+	<%= form.fields_for :artist do |artist| %>
+
+		<div>
+			<%= artist.label "Artist Name(s)" %><br>
+			<%= artist.text_field :name %>
+		</div>
+
+		<div>
+			<%= artist.label "City" %><br>
+			<%= artist.text_field :city %>
+		</div>
+
+		<div>
+			<%= artist.label "Artist URL" %><br>
+			<%= artist.url_field :url %>
+		</div>
+
+		<div>
+			<%= artist.label "Biography" %><br>
+			<%= artist.text_area :bio %>
+		</div>
+
+			<%= artist.fields_for :musicians do |member| %>
+
+				<div>
+					<%= member.label "Band Member Name" %><br>
+					<%= member.text_field :name %>
+				</div>
+
+				<div>
+					<%= member.label "Band Member Instrument" %><br>
+					<%= member.text_field :instrument %>
+				</div>
+
+			<% end %>
+	<% end %>
+
+
+<div>
+	<%= form.submit %>
+</div>
+
+<% end %>
