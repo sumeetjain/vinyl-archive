@@ -6,10 +6,10 @@ RSpec.describe Album, type: :model do
 
     visit "/albums"
     click_link "Add An Album"
-    fill_in "Album Title", with: options[:name]
-    fill_in "Genre", with:       options[:genre]
-    fill_in "Release Date" with: options[:release_date]
-    fill_in "Format" with:       options[:format]
+    fill_in "Album title", with: options[:name]
+    fill_in "Genre", with: options[:genre]
+    fill_in "Release Date", with: options[:release_date]
+    fill_in "Format", with: options[:format]
     click_button "Create Album"
   end
 

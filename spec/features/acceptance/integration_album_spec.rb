@@ -1,12 +1,12 @@
 require "rails_helper"
 
 RSpec.describe Album, type: :model do
-	let!(:album) { Album.create(name: "Big Kahuna", genre: "Rock", release_date: "2008") }
-	let!(:album2) { Album.create(name: "Red Rocket", genre: "Blues", release_date: "1999") }
-	let!(:album3) { Album.create(name: "Dance Dance!", genre: "Electronic", release_date: "2011") }
+	let!(:album) { Album.create(name: "Big Kahuna", genre: "Rock", release_date: "2008-20-04") }
+	let!(:album2) { Album.create(name: "Red Rocket", genre: "Blues", release_date: "2007-05-01") }
+	let!(:album3) { Album.create(name: "Dance Dance!", genre: "Electronic", release_date: "2011-13-10") }
 
   def visit_album_details(album)
-    visit "/"
+    visit "/albums"
     within "#album_#{album.id}" do
       click_link "Details"
     end
@@ -28,7 +28,7 @@ RSpec.describe Album, type: :model do
     	
     	expect(page).to have_content("Dance Dance!")
     	expect(all_albums.count).to eq(3)
-    	expect(album2.release_date).to eq("1999")
+    	expect(album2.release_date).to eq("Tue, 01 May 2007")
     end
 
   end
