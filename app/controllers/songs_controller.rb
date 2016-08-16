@@ -1,3 +1,5 @@
+require 'pry'
+
 class SongsController < ApplicationController
   before_action :set_song, only: [:show, :edit, :update, :destroy]
 
@@ -5,6 +7,7 @@ class SongsController < ApplicationController
   # GET /songs.json
   def index
     @songs = Song.all
+    @albums = Album.all
   end
 
   # GET /songs/1
@@ -24,10 +27,11 @@ class SongsController < ApplicationController
   # POST /songs
   # POST /songs.json
   def create
+    binding.pry
     @song = Song.new(song_params)
     @song.song_file = params[:file]
     @song.song_name = params['song']['song_name']
-
+    @song.album_id = params['song']['album_id']
     respond_to do |format|
       if @song.save
         format.html { redirect_to @song, notice: 'Song was successfully created.' }
@@ -71,6 +75,6 @@ class SongsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def song_params
-      params.require(:song).permit(:song_file, :song_name)
+      params.require(:song).permit(:song_file, :song_name, :album_id)
     end
 end
