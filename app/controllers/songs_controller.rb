@@ -27,7 +27,6 @@ class SongsController < ApplicationController
   # POST /songs
   # POST /songs.json
   def create
-    binding.pry
     @song = Song.new(song_params)
     @song.song_file = params[:file]
     @song.song_name = params['song']['song_name']
