@@ -44,22 +44,20 @@
 			<%= artist.text_area :bio %>
 		</div>
 
+			<%= artist.fields_for :musicians do |member| %>
+
+				<div>
+					<%= member.label "Band Member Name" %><br>
+					<%= member.text_field :name %>
+				</div>
+
+				<div>
+					<%= member.label "Band Member Instrument" %><br>
+					<%= member.text_field :instrument %>
+				</div>
+
+			<% end %>
 	<% end %>
-
-		<%= form.fields_for :musicians do |member| %>
-
-			<div>
-				<%= member.label "Band Member Name" %><br>
-				<%= member.text_field :name %>
-			</div>
-
-			<div>
-				<%= member.label "Band Member Instrument" %><br>
-				<%= member.text_field :instrument %>
-			</div>
-
-		<% end %>
-
 
 
 <div>
