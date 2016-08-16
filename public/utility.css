@@ -19,5 +19,8 @@
 	font-size: 20px;
 }
 .margin-sm{
-	margin: 30px;
+	margin: 25px;
+}
+.font-yanone{
+	font-family: Yanone Kaffeesatz;
 }

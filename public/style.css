@@ -15,15 +15,18 @@
 	padding-right: 20px;
 }
 .playerImage{
+	align-items: center;
+	justify-content: center;
 	width: 100px;
-	height: 100%;
+	height: 100px;
 	background-color: white;
 }
 .siteName{
-	font-weight: 600;
+	font-size: 30px;
 }
 .addAlbum{
-	font-weight: 800;
+	font-family: Montserrat;
+	font-size: 25px;
 }
 .pageTitle{
 	background-color: #5D5E5E;
