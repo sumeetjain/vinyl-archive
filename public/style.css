@@ -39,6 +39,9 @@
 	font-family: Montserrat;
 	font-size: 25px;
 }
+option{
+	background-color: green;
+	}
 .pageTitle{
 	background-color: #5D5E5E;
 	padding-top: 10px;
@@ -65,11 +68,11 @@
 }
 .album__albumName{
 	font-weight: 600;
-	font-size: 18px;
+	font-size: 20px;
 }
 .album__artistName{
-	font-style: italic;
-	font-style: 18px;
+	font-family: Oswald;
+	font-size: 20px;
 }
 .filterTitle{
 	background-color: #A6A6A6;
