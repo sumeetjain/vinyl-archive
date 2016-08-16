@@ -32,6 +32,9 @@ gem 'awesome_print'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# Use pg_search for extra database search functionality
+gem 'pg_search'
+
 group :development, :test do
   gem "dotenv-rails"
   gem "pry-byebug"
