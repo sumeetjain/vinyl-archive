@@ -20,8 +20,13 @@
 </p>
 
 <p>
-	Members
+	<strong>Members:</strong><br>
+  <%= @artist.musicians.each do |musician| %>
+    <h4><%= musician.name %></h4>
+    <p><%= musician.instrument %></p>
+  <% end %>
 </p>
+
 
 <p>
 	Albums
