@@ -12,6 +12,7 @@
 		<% @albums.each do |album| %>
 			<tr id="album_<%= album.id %>">
 				<td><%= album.name %></td>
+				<td><%= link_to "Details", album_path(album.id) %></td>
 			</tr>
 		<% end %>
 	</tbody>
