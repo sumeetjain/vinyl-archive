@@ -21,6 +21,7 @@ class AlbumsController < ApplicationController
 		@album = Album.new(album_params)
 
 		if @album.save
+			
 			redirect_to album_path(@album.id)
 		else
 			render :new
@@ -31,7 +32,7 @@ class AlbumsController < ApplicationController
 	def album_params
 		params.require(:album).permit(:name, :genre, :release_date, :format,
 																 artist_attributes: [:name, :city, :url, :bio],
-																 musician_attributes: [:name, :instrument])
+																 musicians_attributes: [:name, :instrument])
 	end
 end
 
