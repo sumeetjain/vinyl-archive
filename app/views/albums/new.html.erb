@@ -47,29 +47,9 @@
 
 	<% end %>
 
-		<%= form.fields_for :musician do |member| %>
+		<%= form.fields_for :musicians do |member| %>
 
 			<div>
-				<%= member.label "Band Member Name" %><br>
-				<%= member.text_field :name %>
-			</div>
-
-			<div>
-				<%= member.label "Band Member Instrument" %><br>
-				<%= member.text_field :instrument %>
-			</div>
-
-			<div><br><br>
-				<%= member.label "Band Member Name" %><br>
-				<%= member.text_field :name %>
-			</div>
-
-			<div>
-				<%= member.label "Band Member Instrument" %><br>
-				<%= member.text_field :instrument %>
-			</div>
-
-			<div><br><br>
 				<%= member.label "Band Member Name" %><br>
 				<%= member.text_field :name %>
 			</div>

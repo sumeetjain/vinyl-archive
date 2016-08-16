@@ -11,8 +11,10 @@ class AlbumsController < ApplicationController
 	def new
 		@album = Album.new
 		@album.build_artist
-		# @album.build_musician
-		# @album.artist.build_musicians
+
+		3.times do
+			@album.musicians.build
+		end
 	end
 
 	def create
