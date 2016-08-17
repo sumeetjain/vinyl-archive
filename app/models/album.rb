@@ -18,14 +18,32 @@ class Album < ActiveRecord::Base
 		return_arr = []
 		i=0
 		albums.each do |album|
-			order[album["name"]]=i
+			order[i]=album["name"]
 			i+=1
 		end
 
-		order = order.sort
+		order = order.sort_by {|_key, value| value}
 
 		order.each do |key, value|
-			return_arr.push(albums[value])
+			return_arr.push(albums[key])
+		end
+		return return_arr
+	end
+
+	def Album.sortArtist(albums)
+		order = {}
+		return_arr = []
+		i=0
+		albums.each do |album|
+			artist = Artist.find(album["artist_id"])
+			order[i]=artist
+			i+=1
+		end
+
+		order = order.sort_by {|_key, value| value}
+
+		order.each do |key, value|
+			return_arr.push(albums[key])
 		end
 		return return_arr
 	end
