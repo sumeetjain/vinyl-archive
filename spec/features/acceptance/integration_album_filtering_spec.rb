@@ -30,4 +30,6 @@ RSpec.describe Album, type: :model do
 		end
 	end
 
+	describe "Filtering Albums via"
+
 end

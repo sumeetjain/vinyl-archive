@@ -6,4 +6,8 @@ class Album < ActiveRecord::Base
 	include PgSearch
 	multisearchable :against => [:artist_id, :name]
 
+	def self.genres(genre={})
+		Album.where(genre)
+	end
+
 end

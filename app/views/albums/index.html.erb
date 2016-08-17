@@ -9,27 +9,18 @@
 	</thead>
 
 	<tbody>
-		<% if !params[:genre] %>
-			<% @albums.each do |album| %>
-				<tr id="album_<%= album.id %>">
-					<td><%= album.name %></td>
-					<td><%= link_to "Details", album_path(album.id) %></td>
-				</tr>
-			<% end %>
-		<% else %>
-			<% @genres.each do |album| %>
-				<tr>
-					<td><%= album.name %></td>
-					<td><%= link_to "Details", album_path(album.id) %></td>
-				</tr>
-			<% end %>
+		<% @albums.each do |album| %>
+			<tr id="album_<%= album.id %>">
+				<td><%= album.name %></td>
+				<td><%= link_to "Details", album_path(album.id) %></td>
+			</tr>
 		<% end %>
 	</tbody>
 </table>
 
 <%= paginate @albums %>
 
-<% Album.uniq.pluck(:genre).each do |genre| %>
+<% @genres.each do |genre| %>
 
 		<div>
 			<%= link_to genre, albums_path(genre: genre) %><br>
@@ -39,4 +30,5 @@
 
 
 
-<%= link_to "Add An Album", new_album_path %>
+<%= link_to "Add An Album", new_album_path %><br>
+<%= link_to "All Albums", albums_path %>
