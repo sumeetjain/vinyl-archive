@@ -5,7 +5,7 @@
 <p><%= @album.name %></p>
 
 <h3>Artist(s)</h3>
-<p><%= link_to @album.artist.name, artist_path(@album.artist.id) %></p>
+<p id="artist"><%= link_to @album.artist.name, artist_path(@album.artist.id) %></p>
 
 <h3>City</h3>
 <p><%= @album.artist.city %></p>
