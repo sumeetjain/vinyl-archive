@@ -25,6 +25,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'awesome_print'
 
 gem 'kaminari'
+gem "administrate", "~> 0.2.2"
+gem 'bourbon'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

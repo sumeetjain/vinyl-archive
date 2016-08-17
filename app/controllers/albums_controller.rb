@@ -1,7 +1,14 @@
 class AlbumsController < ApplicationController
 
 	def index
-		@albums = Album.all.page(params[:page]).per(3)
+		@genres = Album.uniq.pluck(:genre)
+
+		if params[:genre]
+			@albums = Album.genres(genre: params[:genre])
+			@albums = @albums.page(params[:page]).per(3)
+		else
+			@albums = Album.all.page(params[:page]).per(3)
+		end
 	end
 
 	def show

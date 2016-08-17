@@ -20,4 +20,15 @@
 
 <%= paginate @albums %>
 
-<%= link_to "Add An Album", new_album_path %>
+<% @genres.each do |genre| %>
+
+		<div>
+			<%= link_to genre, albums_path(genre: genre) %><br>
+		<div>
+
+<% end %>
+
+
+
+<%= link_to "Add An Album", new_album_path %><br>
+<%= link_to "All Albums", albums_path %>
