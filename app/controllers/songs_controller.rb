@@ -1,5 +1,3 @@
-require 'pry'
-
 class SongsController < ApplicationController
 
   # GET /songs/new
