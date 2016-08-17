@@ -1,6 +1,7 @@
 class Album < ActiveRecord::Base
 	include PgSearch
 	multisearchable :against => [:artist_id, :name]
+	belongs_to :artist
 
 	# Returns a sorted array of albums
 	#
@@ -9,55 +10,12 @@ class Album < ActiveRecord::Base
 	#
 	def Album.getSortedList(albums, sortby)
 		if sortby=="title"
-			return Album.sortTitle(albums)
+			return albums.order("name")
 		elsif sortby=="artist"
-			return Album.sortArtist(albums)
+			return albums.joins(:artist).order('artists.name')
 		elsif sortby=="date"
-			return Album.sortDate(albums)
+			return albums.sort_by &:created_at
 		end
-	end
-
-	# Returns an array of albums sorted by album title
-	#
-	# albums => array of Albums to be sorted
-	# 
-	def Album.sortTitle(albums)
-		order = {}
-		return_arr = []
-		i=0
-		albums.each do |album|
-			order[i]=album["name"]
-			i+=1
-		end
-
-		order = order.sort_by {|_key, value| value}
-
-		order.each do |key, value|
-			return_arr.push(albums[key])
-		end
-		return return_arr
-	end
-
-	# Returns an array of albums sorted by artist name
-	#
-	# albums => array of Albums to be sorted
-	# 
-	def Album.sortArtist(albums)
-		order = {}
-		return_arr = []
-		i=0
-		albums.each do |album|
-			artist = Artist.find(album["artist_id"])
-			order[i]=artist["name"]
-			i+=1
-		end
-
-		order = order.sort_by {|_key, value| value}
-
-		order.each do |key, value|
-			return_arr.push(albums[key])
-		end
-		return return_arr
 	end
 
 	# Returns an array of albums sorted by date added
