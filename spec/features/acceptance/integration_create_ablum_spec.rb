@@ -9,14 +9,14 @@ RSpec.describe Album, type: :model do
   let!(:musician3){ {name: "Allen Johnson", instrument: "Drums"} }
 
   def fill_out_album_form(album1={})
-    visit "/albums/new"
+
     fill_in "album[name]", with: album1[:name]
     fill_in "album[genre]", with: album1[:genre]
     select album1[:format], from: "album[format]"
   end
 
   def fill_out_artist_form(artist={})
-    visit "/albums/new"
+   
     fill_in "album[artist_attributes][name]", with: artist[:name]
     fill_in "album[artist_attributes][city]", with: artist[:city]
     fill_in "album[artist_attributes][bio]", with: artist[:bio]
@@ -24,7 +24,7 @@ RSpec.describe Album, type: :model do
   end
 
   def fill_out_musician_form(musician={}, i)
-    visit "/albums/new"
+    
     fill_in "album[artist_attributes][musicians_attributes][#{i}][name]", with: musician[:name]
     fill_in "album[artist_attributes][musicians_attributes][#{i}][instrument]", with: musician[:instrument]     
   end
@@ -32,6 +32,7 @@ RSpec.describe Album, type: :model do
   describe "Add Album details when creating a new album" do
 
     it "Saves new album details" do
+      visit "/albums/new"
       fill_out_album_form(album1)
       click_button "Create Album"
 
@@ -51,6 +52,7 @@ RSpec.describe Album, type: :model do
   describe "Add Artist when creating new album" do
 
     it "Save new artist details" do
+      visit "/albums/new"
       fill_out_artist_form(artist)
       click_button "Create Album"
 
@@ -58,22 +60,26 @@ RSpec.describe Album, type: :model do
       expect(page).to have_content("Omaha")
       expect(page).to have_content("This is the biography. That is all.")
       expect(page).to have_content("brighteyes.com")
+
+      expect(page).to have_link("Bright Eyes")
     end
   end
 
   describe "Add Musicians when creating new album" do
 
     it "Saves 1 new musician's details" do
+      visit "/albums/new"
       fill_out_artist_form(artist)
       fill_out_musician_form(musician1, 0)
       click_button "Create Album"
 
       click_link "Bright Eyes"
 
-      expect(page).to have_content("Trumpet")
+      expect(page).to have_content("Guitar")
     end
 
     it "Saves 3 new musicians' details" do
+      visit "/albums/new"
       fill_out_artist_form(artist)
       fill_out_album_form(album1)
 
