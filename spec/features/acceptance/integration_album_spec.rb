@@ -4,6 +4,7 @@ RSpec.describe Album, type: :model do
 	let!(:album) { Album.create(name: "Big Kahuna", genre: "Rock", release_date: "2008-20-04") }
 	let!(:album2) { Album.create(name: "Red Rocket", genre: "Blues", release_date: "2007-05-01") }
 	let!(:album3) { Album.create(name: "Dance Dance!", genre: "Electronic", release_date: "2011-13-10") }
+  
 
   def visit_album_details(album)
     visit "/albums"
