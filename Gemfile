@@ -69,3 +69,4 @@ group :staging, :production do
 end
 
 gem 'devise'
+gem 'carrierwave'
