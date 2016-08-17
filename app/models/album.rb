@@ -48,7 +48,7 @@ class Album < ActiveRecord::Base
 		i=0
 		albums.each do |album|
 			artist = Artist.find(album["artist_id"])
-			order[i]=artist
+			order[i]=artist["name"]
 			i+=1
 		end
 
