@@ -8,10 +8,7 @@ class SongsController < ApplicationController
   # POST /songs
   # POST /songs.json
   def create
-    @song = Song.new
-    @song.song_file = params[:song_file]
-    @song.song_name = params['song']['song_name']
-    @song.album_id = params['song']['album_id']
+    @song = Song.new(song_params)
     @song.save
     redirect_to '/songs/new'
   end
