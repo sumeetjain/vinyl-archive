@@ -15,6 +15,6 @@ class Album < ActiveRecord::Base
 	def Album.timeframe(albums, early, late)
 		date1 = Date.new(early)
 		date2 = Date.new(late)
-		return albums.where("release_date > ? AND release_date < ?", date1, date2)
+		return albums.where("release_date >= ? AND release_date <= ?", date1, date2)
 	end
 end
