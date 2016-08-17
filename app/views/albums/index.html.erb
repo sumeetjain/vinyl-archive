@@ -27,7 +27,6 @@
 	</tbody>
 </table>
 
-
 <%= paginate @albums %>
 
 <% Album.uniq.pluck(:genre).each do |genre| %>
