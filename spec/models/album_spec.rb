@@ -13,4 +13,16 @@ RSpec.describe Album, type: :model do
 	let! (:album4) {Album.create(artist_id: artist.id, name: "Alpha", genre: "Electronic", release_date: "2011")}
 	let! (:album5) {Album.create(artist_id: artist.id, name: "Zeta", genre: "Electronic", release_date: "2011")}
 
+	it 'sorts by title' do
+
+	end
+
+	it 'sorts by artist' do
+
+	end
+
+	it 'sorts by date added' do
+
+	end
+
 end
