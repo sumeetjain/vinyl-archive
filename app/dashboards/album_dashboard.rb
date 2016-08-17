@@ -1,4 +1,6 @@
 require "administrate/base_dashboard"
+# All of these ATTRIBUTES Hashes originally had 'pg_search_document' keys within them,
+# I deleted them so that the admin page would work correctly
 
 class AlbumDashboard < Administrate::BaseDashboard
   # ATTRIBUTE_TYPES
@@ -10,7 +12,6 @@ class AlbumDashboard < Administrate::BaseDashboard
   ATTRIBUTE_TYPES = {
     artist: Field::BelongsTo,
     musicians: Field::HasMany,
-    pg_search_document: Field::HasOne,
     id: Field::Number,
     name: Field::String,
     genre: Field::String,
@@ -28,7 +29,6 @@ class AlbumDashboard < Administrate::BaseDashboard
   COLLECTION_ATTRIBUTES = [
     :artist,
     :musicians,
-    :pg_search_document,
     :id,
   ].freeze
 
@@ -37,7 +37,6 @@ class AlbumDashboard < Administrate::BaseDashboard
   SHOW_PAGE_ATTRIBUTES = [
     :artist,
     :musicians,
-    :pg_search_document,
     :id,
     :name,
     :genre,
@@ -53,7 +52,6 @@ class AlbumDashboard < Administrate::BaseDashboard
   FORM_ATTRIBUTES = [
     :artist,
     :musicians,
-    :pg_search_document,
     :name,
     :genre,
     :release_date,

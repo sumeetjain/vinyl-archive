@@ -18,6 +18,7 @@ Bundler.require(*Rails.groups)
 
 module VinylArchive
   class Application < Rails::Application
+    
     config.quiet_assets = true
     config.generators do |generate|
       generate.helper false
