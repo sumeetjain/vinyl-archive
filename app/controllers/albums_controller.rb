@@ -2,6 +2,8 @@ class AlbumsController < ApplicationController
 
 	def index
 		@albums = Album.all.page(params[:page]).per(3)
+		@genres = Album.where(genre: params[:genre])
+
 	end
 
 	def show
