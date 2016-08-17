@@ -1,3 +1,5 @@
+require 'pry'
+
 class SongsController < ApplicationController
 
   # GET /songs/new
@@ -8,7 +10,7 @@ class SongsController < ApplicationController
   # POST /songs
   # POST /songs.json
   def create
-    @song = Song.new(song_params)
+    @song = Song.new
     @song.song_file = params[:song_file]
     @song.song_name = params['song']['song_name']
     @song.album_id = params['song']['album_id']
@@ -19,7 +21,7 @@ class SongsController < ApplicationController
   private
 
     def song_params
-      params.require(:song).permit(:audio_file, :album_id, :song_name, :song_file)
+      params.require(:song).permit(:album_id, :song_name, :song_file)
     end
 
 end
