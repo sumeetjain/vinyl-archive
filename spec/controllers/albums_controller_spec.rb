@@ -8,12 +8,6 @@ RSpec.describe AlbumsController, type: :controller do
 			expect(response).to have_http_status(:success)
 	    end
 
-		it "Creates new instance for all albums" do
-			all_albums = Album.all
-
-			get :index
-			assigns(:albums).should eq(all_albums)
-		end
 	end
 
 end
