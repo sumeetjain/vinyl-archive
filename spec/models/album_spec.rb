@@ -31,7 +31,8 @@ RSpec.describe Album, type: :model do
 	end
 
 	it 'sorts by date added' do
-		albums = Album.getSortedList(Album.all, "date")
+		albums = Album.getSortedList(Album.all, "title")
+		albums = Album.getSortedList(albums, "date")
 		expect(albums[0]).to eq(album)
 		expect(albums[1]).to eq(album2)
 		expect(albums[2]).to eq(album3)
