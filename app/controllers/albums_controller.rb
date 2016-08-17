@@ -1,7 +1,7 @@
 class AlbumsController < ApplicationController
 
 	def index
-		@albums = Album.all
+		@albums = Album.all.page(params[:page]).per(3)
 	end
 
 	def show
