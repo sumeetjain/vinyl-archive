@@ -14,15 +14,19 @@ RSpec.describe Album, type: :model do
 	describe "Filtering Albums via Links" do
 
 		it "Genre links show up on /albums page" do
-	
-		end
+			visit "/albums"
 
-		it "All genres are displayed as links" do
-		
+			expect(page).to have_link("Rock")
+			expect(page).to have_link("Blues")
 		end
 
 		it "Genre links show albums belonging to the correct genre" do
+			visit "/albums"
+			click_link "Blues"
 
+			expect(page).to have_content("Hampton Park")
+			expect(page).to have_content("Red Rocket")
+			expect(page).to have_content("Black Rabbit")
 		end
 	end
 
