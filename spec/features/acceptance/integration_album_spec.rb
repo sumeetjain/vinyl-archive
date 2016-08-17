@@ -1,7 +1,8 @@
 require "rails_helper"
 
 RSpec.describe Album, type: :model do
-	let!(:album) { Album.create(name: "Big Kahuna", genre: "Rock", release_date: "2008-20-04") }
+  let!(:artist) { Artist.create(name: "Bright Eyes", city: "Omaha", bio: "This is the biography. That is all.", url: "brighteyes.com") }
+	let!(:album) { Album.create(artist_id: artist.id, name: "Big Kahuna", genre: "Rock", release_date: "2008-20-04") }
 	let!(:album2) { Album.create(name: "Red Rocket", genre: "Blues", release_date: "2007-05-01") }
 	let!(:album3) { Album.create(name: "Dance Dance!", genre: "Electronic", release_date: "2011-13-10") }
   
@@ -36,21 +37,18 @@ RSpec.describe Album, type: :model do
 
   describe "Link to album details" do
 
-    # These are failing because an Artist isn't being created in the test database
-    # so there's nothing to call when creating the link for the Show page
+    it "Album details show up on details page" do
+      visit_album_details(album)
 
-    # it "Album details show up on details page" do
-    #   visit_album_details(album)
+      expect(page).to have_content(album.name)
+      expect(page).to have_content(album.release_date)
+    end
 
-    #   expect(page).to have_content(album.name)
-    #   expect(page).to have_content(album.release_date)
-    # end
+    it "Link can be clicked to return to home page from details" do
+      visit_album_details(album)
+      click_link "Home"
 
-    # it "Link can be clicked to return to home page from details" do
-    #   visit_album_details(album2)
-    #   click_link "Home"
-
-    #   expect(page).to have_content("All Albums")
-    # end
+      expect(page).to have_content("All Albums")
+    end
   end
 end
