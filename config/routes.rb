@@ -1,5 +1,15 @@
 Rails.application.routes.draw do
 
+  namespace :admin do
+    resources :users
+    resources :albums
+    resources :artists
+    resources :musicians
+    resources :songs
+
+    root to: "users#index"
+  end
+
   resources :songs
 
   devise_for :users do
