@@ -1,5 +1,14 @@
 Rails.application.routes.draw do
 
+  namespace :admin do
+    resources :users
+resources :albums
+resources :artists
+resources :musicians
+
+    root to: "users#index"
+  end
+
   devise_for :users do
     get '/users/sign_out' => 'devise/sessions#destroy'
   end
