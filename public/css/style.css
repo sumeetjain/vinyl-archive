@@ -1,13 +1,13 @@
 .header{
 	justify-content: space-between;
-	background-image: url("record-background.png");
+	background-image: url("../img/record-background.png");
 	background-position: bottom;
 	background-color: #2B2B2B;
 	height: 90px;
 	width: 1000px;
 }
 .header--footer{
-	background-image: url("footer-background.png");
+	background-image: url("../img/footer-background.png");
 }
 .headerWrapper{
 	align-items: center;
@@ -32,16 +32,13 @@
 	letter-spacing: 1px;
 }
 .siteInfo{
-	font-family: Oswald;
+	font-family: Oswald-Light;
 	font-size: 25px;
 }
 .addAlbum{
 	font-family: Montserrat;
 	font-size: 25px;
 }
-option{
-	background-color: green;
-	}
 .pageTitle{
 	background-color: #5D5E5E;
 	padding-top: 10px;
@@ -67,11 +64,12 @@ option{
 	margin-right: 10px;
 }
 .album__albumName{
-	font-weight: 600;
+	font-family: Oswald;
 	font-size: 20px;
 }
 .album__artistName{
 	font-family: Oswald;
+	font-style: italic;
 	font-size: 20px;
 }
 .filterTitle{
@@ -86,6 +84,22 @@ option{
 	font-family: Yanone Kaffeesatz;
 	letter-spacing: 1px;
 }
+.city{
+	font-family: Oswald-Light;
+	font-size: 20px;
+}
+.genre{
+	font-family: Oswald-Light;
+	font-size: 20px;
+}
+.decade{
+	font-family: Oswald-Light;
+	font-size: 20px;
+}
+.format{
+	font-family: Oswald-Light;
+	font-size: 20px;
+}
 .search{
 	background-color: #EFEFEF;
 	border-radius: 5px;
@@ -96,17 +110,19 @@ option{
 	background-color: #EFEFEF;
 	border-radius: 5px;
 	border: none;
-	height: 25px;
+	height: 20px;
 	width: 400px;
 }
 ::-webkit-input-placeholder{
 	color: #A6A6A6;
 	font-family: Oswald;
-	font-size: 25px;
+	font-size: 23px;
+	font-style: italic;
 }
 .sortText{
 	font-family: Oswald;
-	font-size: 25px;
+	font-size: 23px;
+	font-style: italic;
 }
 .columnWrapper{
 	flex-direction: column;
