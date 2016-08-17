@@ -130,9 +130,9 @@
 }
 .line{
 	border-bottom: 3px #B6B6B6 solid;
-	width: 70%;
+	width: 100%;
 }
 .albumNav{
 	justify-content: space-around;
-	width: 50%;
+	width: 100%;
 }
