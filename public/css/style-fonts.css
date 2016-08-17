@@ -1,29 +1,45 @@
 @font-face {
 	font-family: "Oswald";
-	src: url("Oswald-LightItalic.eot");
-	src: url("Oswald-LightItalic.eot?#iefix") format("embedded-opentype"),
-		url("Oswald-LightItalic.woff") format("woff"),
-		url("Oswald-LightItalic.ttf") format("truetype");
+	src: url(../fonts/oswald/"Oswald-LightItalic.eot");
+	src: url("../fonts/oswald/Oswald-LightItalic.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/oswald/Oswald-LightItalic.woff") format("woff"),
+		url("../fonts/oswald/Oswald-LightItalic.ttf") format("truetype");
 	font-weight: 300;
 	font-style: italic;
 }
-
 @font-face {
 	font-family: "Oswald";
 	src: url("Oswald.eot");
 	src: url("Oswald.eot?#iefix") format("embedded-opentype"),
-		url("Oswald.woff") format("woff"),
-		url("Oswald.ttf") format("truetype");
+		url("../fonts/oswald/Oswald.woff") format("woff"),
+		url("../fonts/oswald/Oswald.ttf") format("truetype");
 	font-weight: normal;
 	font-style: normal;
 }
-
 @font-face {
 	font-family: "Oswald-Light";
 	src: url("Oswald-Light.eot");
 	src: url("Oswald-Light.eot?#iefix") format("embedded-opentype"),
-		url("Oswald-Light.woff") format("woff"),
-		url("Oswald-Light.ttf") format("truetype");
+		url("../fonts/oswald/Oswald-Light.woff") format("woff"),
+		url("../fonts/oswald/Oswald-Light.ttf") format("truetype");
 	font-weight: 300;
+	font-style: normal;
+}
+@font-face {
+	font-family: "HN-icons";
+	src: url("HN-icons.eot");
+	src: url("HN-icons.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/hn-icons/HN-icons.woff") format("woff"),
+		url("../fonts/hn-icons/HN-icons.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: "hn-radio-icons";
+	src: url("hn-radio-icons.eot");
+	src: url("hn-radio-icons.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/hn-icons/hn-radio-icons.woff") format("woff"),
+		url("../fonts/hn-icons/hn-radio-icons.ttf") format("truetype");
+	font-weight: normal;
 	font-style: normal;
 }
