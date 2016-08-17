@@ -9,6 +9,9 @@
 .color-white{
 	color: #FFFFFF;
 }
+.color-lighter-grey{
+	color: #cecece;
+}
 .color-light-grey{
 	color: #A6A6A6;
 }
@@ -29,4 +32,7 @@
 }
 .font-oswald{
 	font-family: Oswald;
+}
+.font-oswald-light{
+	font-family: Oswald-Light;
 }
