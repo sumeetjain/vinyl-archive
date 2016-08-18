@@ -152,3 +152,17 @@
 .icons--next:after{
 	content: "\E608";
 }
+.icons--twitter:after{
+	content: "\E60A";
+	font-size: 23px;
+}
+.icons--fb:after{
+	content: "\E609";
+	font-size: 23px;
+}
+.share{
+}
+.share__text{
+	font-style: italic;
+	font-size: 23px;
+}
