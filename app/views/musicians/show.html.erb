@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <%= @musician.name %> | Musician  <%= link_to 'Edit', edit_admin_musician_path(@musician) %>
+</p>
+
+<p>
+	Albums
+	<% @albums.each do |album| %>
+		<p><%= link_to album.name, album %></p>
+	<% end %>
+</p>
+
+<%= link_to 'Back', artist_path(@musician.artist_id) %>
+<%= link_to "Add An Album", new_album_path %>
