@@ -17,4 +17,14 @@ class Album < ActiveRecord::Base
 		date2 = Date.new(late)
 		return albums.where("release_date >= ? AND release_date <= ?", date1, date2)
 	end
+
+	def Album.formatFilter(albums, format)
+		return albums.where(:format => format)
+	end
+
+	def Album.filter(albums, filter)
+		if filter==("LP"||"EP"||"Single")
+			return Album.formatFilter(albums, filter)
+		end
+	end
 end
