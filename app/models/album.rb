@@ -17,4 +17,14 @@ class Album < ActiveRecord::Base
 		date2 = Date.new(late)
 		return albums.where("release_date >= ? AND release_date <= ?", date1, date2)
 	end
+
+	def self.get_albums_by_city(city)
+		artist_array = Artist.where("city = ?", city)
+		albums = Array.new
+		artist_array.each_with_index do |record, index|
+			albums[index] = Album.where("artist_id = ?", record['id'])
+		end
+		albums = albums.flatten
+		return albums
+	end
 end
