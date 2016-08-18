@@ -2,12 +2,12 @@ require 'rails_helper'
 
 RSpec.describe Album, type: :model do
 
-	let! (:album) {Album.create(name: "Big Kahuna", genre: "Rock", release_date: Date.new(2009))}
-	let! (:album2) {Album.create(name: "Red Rocket", genre: "Blues", release_date: Date.new(1999))}
-	let! (:album3) {Album.create(name: "Dance Dance!", genre: "Electronic", release_date: Date.new(2011))}
-	let! (:album4) {Album.create(name: "Millenium", genre: "Electronic", release_date: Date.new(2000))}
-	let! (:album5) {Album.create(name: "Later", genre: "Electronic", release_date: Date.new(2010))}
-	let! (:album6) {Album.create(name: "Old School", genre: "Electronic", release_date: Date.new(1980))}
+	let! (:album) {Album.create(name: "Big Kahuna", genre: "Rock", format: "LP", release_date: Date.new(2009))}
+	let! (:album2) {Album.create(name: "Red Rocket", genre: "Blues", format: "EP", release_date: Date.new(1999))}
+	let! (:album3) {Album.create(name: "Dance Dance!", genre: "Electronic", format: "Single", release_date: Date.new(2011))}
+	let! (:album4) {Album.create(name: "Millenium", genre: "Electronic", format: "LP", release_date: Date.new(2000))}
+	let! (:album5) {Album.create(name: "Later", genre: "Electronic", format: "EP", release_date: Date.new(2010))}
+	let! (:album6) {Album.create(name: "Old School", genre: "Electronic", format: "Single", release_date: Date.new(1980))}
 
 	it 'sorts by decade' do
 		albums = Album.all
@@ -22,6 +22,15 @@ RSpec.describe Album, type: :model do
 		expect(aughts[1]).to eq(album4)
 		expect(teens[0]).to eq(album3)
 		expect(teens[1]).to eq(album5)
+	end
+
+	it 'filters by format' do
+		visit '/albums'
+		click_link 'LP'
+		page.should have_content('Big Kahuna')
+		page.should have_content('Millenium')
+		page.should have_no_content('Red Rocket')
+		page.should have_no_content('Old School')
 	end
   
 end
