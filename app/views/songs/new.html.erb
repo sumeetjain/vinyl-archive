@@ -16,7 +16,7 @@
   <% end %>
 
   <div class="field">
-    <%= f.collection_select :album_id, Album.all, :id, :album_name, :prompt => 'Select an Album' %>
+    <%= f.collection_select :album_id, Album.all, :id, :name, :prompt => 'Select an Album' %>
     <%= f.label :song_file %><br>
     <%= f.file_field :song_file %>
     <%= f.text_field :song_name %>
