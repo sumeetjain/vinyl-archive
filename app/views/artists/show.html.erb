@@ -1,17 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <%= @artist.name %> | Artist  <%= link_to 'Edit', edit_artist_path(@artist) %>
-</p>
-
-<p>
-  <strong>City:</strong>
-  <%= @artist.city %>
-</p>
-
-<p>
-  <strong>Url:</strong>
-  <%= @artist.url %>
+  <%= @artist.name %> | Artist  <%= link_to 'Edit', edit_admin_artist_path(@artist) %>
 </p>
 
 <p>
@@ -21,7 +11,7 @@
 
 <p>
 	<strong>Members:</strong><br>
-  <%= @artist.musicians.each do |musician| %>
+  <% @artist.musicians.each do |musician| %>
     <h4><%= musician.name %></h4>
     <p><%= musician.instrument %></p>
   <% end %>
@@ -35,5 +25,5 @@
 	<% end %>
 </p>
 
-<%= link_to 'Back', artists_path %>
+<%= link_to 'Back', albums_path %>
 <%= link_to "Add An Album", new_album_path %>
