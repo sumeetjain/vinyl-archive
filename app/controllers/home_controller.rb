@@ -8,21 +8,16 @@ class HomeController < ApplicationController
 			@albums = Album.all
 
 		else
-			artist_array = Artist.where("city = ?", params['city'])
-			albums = Array.new
-			artist_array.each_with_index do |record, index|
-				albums[index] = Album.where("artist_id = ?", record['id'])
-			end
-			@albums = albums.flatten
+ 			@albums = Album.get_albums_by_city(params['city'])
 
 		end
 
-		@needed_array = Array.new
+		@array_of_cities = Array.new
 		artist_array = Artist.all
-		artist_array.each do |stuff|
-			if @needed_array.include? stuff.city
+		artist_array.each do |artist_record|
+			if @array_of_cities.include? artist_record.city
 			else
-				@needed_array.push(stuff.city)
+				@array_of_cities.push(artist_record.city)
 			end
 		end
 	end
