@@ -157,13 +157,16 @@
 }
 .icons--twitter:after{
 	content: "\E60A";
+	padding-left: 5px;
 	font-size: 23px;
 }
 .icons--fb:after{
 	content: "\E609";
+	padding-left: 5px;
 	font-size: 23px;
 }
 .share{
+	justify-content: space-between;
 }
 .share__text{
 	font-style: italic;
