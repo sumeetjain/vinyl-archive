@@ -51,6 +51,14 @@ RSpec.describe Album, type: :model do
 		page.should have_no_content('Big Kahuna')
 		page.should have_no_content('Millenium')
 
+		Album.delete_all
+		click_link 'LP'
+		page.should have_no_content('Details')
+		click_link 'EP'
+		page.should have_no_content('Details')
+		click_link 'Single'
+		page.should have_no_content('Details')
+
 	end
   
 end
