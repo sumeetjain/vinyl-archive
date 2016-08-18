@@ -24,6 +24,9 @@ body{
 	flex-direction: column;
 	width: 67%;
 }
+.leftContainer--albumPage{
+	width: 100%;
+}
 .populateAlbums{
 	margin-top: 25px;
 	flex-wrap: wrap;
