@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160815143957) do
+ActiveRecord::Schema.define(version: 20160816203936) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,6 +35,14 @@ ActiveRecord::Schema.define(version: 20160815143957) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "musicians", force: :cascade do |t|
+    t.integer  "artist_id"
+    t.string   "name"
+    t.string   "instrument"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "pg_search_documents", force: :cascade do |t|
     t.text     "content"
     t.integer  "searchable_id"
@@ -44,6 +52,14 @@ ActiveRecord::Schema.define(version: 20160815143957) do
   end
 
   add_index "pg_search_documents", ["searchable_type", "searchable_id"], name: "index_pg_search_documents_on_searchable_type_and_searchable_id", using: :btree
+
+  create_table "songs", force: :cascade do |t|
+    t.string   "song_file"
+    t.string   "song_name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "album_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false

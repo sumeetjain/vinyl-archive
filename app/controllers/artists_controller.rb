@@ -7,4 +7,7 @@ class ArtistsController < ApplicationController
 		@artist = Artist.find(params[:id])
 		@albums = Album.where(:artist_id => @artist.id)
 	end
+
+	private
+
 end
