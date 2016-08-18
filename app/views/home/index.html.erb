@@ -24,7 +24,7 @@
     <tbody>
       <td><%= link_to "All Cities", root_path %></td>
       <% @array_of_cities.each do |city| %>
-        <td><%= link_to city, root_path(:city => city) %></td>
+        <td><%= link_to city, root_path(:city => city) %> ( <%= @hash_of_city_albums_count[city] %> )</td>
       <% end %>
     </tbody>
   </table>
