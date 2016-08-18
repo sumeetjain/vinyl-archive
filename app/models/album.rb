@@ -34,7 +34,7 @@ class Album < ActiveRecord::Base
 	# filter => filter keyword
 	#
 	def Album.filter(albums, filter)
-		if filter==("LP"||"EP"||"Single")
+		if ((filter=="LP")|| (filter=="EP") || (filter=="Single"))
 			return Album.formatFilter(albums, filter)
 		end
 	end

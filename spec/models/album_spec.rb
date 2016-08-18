@@ -26,11 +26,24 @@ RSpec.describe Album, type: :model do
 
 	it 'filters by format' do
 		visit '/albums'
+
 		click_link 'LP'
 		page.should have_content('Big Kahuna')
 		page.should have_content('Millenium')
 		page.should have_no_content('Red Rocket')
 		page.should have_no_content('Old School')
+
+		click_link 'EP'
+		page.should have_content('Red Rocket')
+		page.should have_content('Later')
+		page.should have_no_content('Big Kahuna')
+		page.should have_no_content('Old School')
+
+		click_link 'Single'
+		page.should have_content('Dance Dance!')
+		page.should have_content('Old School')
+		page.should have_no_content('Red Rocket')
+		page.should have_no_content('Later')
 	end
   
 end
