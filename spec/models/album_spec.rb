@@ -20,8 +20,9 @@ RSpec.describe Album, type: :model do
 		expect(albums[0]).to eq(album4)
 		expect(albums[1]).to eq(album)
 		expect(albums[2]).to eq(album3)
-		expect(albums[3]).to eq(album2)
-		expect(albums[4]).to eq(album5)
+		expect(albums[3]).to eq(album6)
+		expect(albums[4]).to eq(album2)
+		expect(albums[5]).to eq(album5)
 	end
 
 	it 'sorts by artist' do
