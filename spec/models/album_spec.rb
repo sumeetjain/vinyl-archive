@@ -15,7 +15,13 @@ RSpec.describe Album, type: :model do
 		nineties = Album.timeframe(albums, 1990, 1999)
 		aughts = Album.timeframe(albums, 2000, 2009)
 		teens = Album.timeframe(albums, 2010, 2019)
-		binding.pry
+		
+		expect(eighties[0]).to eq(album6)
+		expect(nineties[0]).to eq(album2)
+		expect(aughts[0]).to eq(album)
+		expect(aughts[1]).to eq(album4)
+		expect(teens[0]).to eq(album3)
+		expect(teens[1]).to eq(album5)
 	end
   
 end
