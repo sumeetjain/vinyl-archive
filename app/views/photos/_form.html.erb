@@ -21,7 +21,7 @@
   </div>
   <div class="field">
     <%= f.label :album_id %><br>
-    <%= f.collection_select :album_id, Album.all, :id, :name, :prompt => 'Select an Album' %>
+    <%= f.collection_select :album_id, Album.where("id => ?", params[:id]), :id, :name, :prompt => 'Select An Album' %>
   </div>
   <div class="actions">
     <%= f.submit %>
