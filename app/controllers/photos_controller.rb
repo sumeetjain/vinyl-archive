@@ -28,7 +28,7 @@ class PhotosController < ApplicationController
   def create
     @photo = Photo.new(photo_params)
     @photo.save
-    redirect_to '/albums' action: show, id: photo_params['album_id']
+    redirect_to :controller => 'albums', :action => 'show', :id => photo_params['album_id']
   end
 
   # PATCH/PUT /photos/1
