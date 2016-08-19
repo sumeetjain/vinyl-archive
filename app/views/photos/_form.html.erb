@@ -13,11 +13,15 @@
 
   <div class="field">
     <%= f.label :the_photo %><br>
-    <%= f.text_field :the_photo %>
+    <%= f.file_field :the_photo %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
   </div>
   <div class="field">
     <%= f.label :album_id %><br>
-    <%= f.number_field :album_id %>
+    <%= f.collection_select :album_id, Album.all, :id, :name, :prompt => 'Select an Album' %>
   </div>
   <div class="actions">
     <%= f.submit %>
