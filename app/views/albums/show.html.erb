@@ -6,7 +6,7 @@
 
 <h3> Album Images </h3>
 <p>
-<%= @photo.each do |single_record| %>
+<% @photo.each do |single_record| %>
 	<%= image_tag single_record.the_photo_url %>
 	<% end %>
 </p>
