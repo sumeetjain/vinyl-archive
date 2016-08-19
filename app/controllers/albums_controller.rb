@@ -1,3 +1,4 @@
+require 'pry'
 class AlbumsController < ApplicationController
 
 	def index
@@ -5,7 +6,9 @@ class AlbumsController < ApplicationController
 	end
 
 	def show
+		binding.pry
 		@album = Album.find(params[:id])
+		@photo = Photo.where(:artist_id => params[:id])
 	end
 
 	def new
