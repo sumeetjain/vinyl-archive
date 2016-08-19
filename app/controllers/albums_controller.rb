@@ -6,9 +6,10 @@ class AlbumsController < ApplicationController
 	end
 
 	def show
-		binding.pry
+
 		@album = Album.find(params[:id])
-		@photo = Photo.where(:artist_id => params[:id])
+		@photo = Photo.where(:album_id => params[:id])
+		binding.pry
 	end
 
 	def new
