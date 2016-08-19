@@ -9,7 +9,6 @@
     <link rel="stylesheet" type="text/css" href="css/utility.css">
     <link rel="stylesheet" type="text/css" href="css/style-layout.css">
     <link rel="stylesheet" type="text/css" href="css/style-fonts.css">
-    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 </head>
 
 <body>
@@ -43,7 +42,6 @@
                     <form action="">
                         <input method="" name="" type="text" placeholder="Search for an album, artist or track..." class="search__input padding-10" id="search" required><span class="icons icons--search color-light-grey"></span>
                     </form>
-                    <!-- Formating is still weird where the search image appears -->
                 </div>
             </div>
 
@@ -53,14 +51,13 @@
             <span class="icons icons--fb color-dark-grey"></span>
         </span>
         </div>
-
-        <div class="contentContainer flex">
-            <div class="leftContainer leftContainer--albumPage flex margin-sm">
                 <div class="pageTitle">
                     <div class="pageTitle__text color-white">
                         I'm Wide Awake, It's Morning <span class="filterType">Album</span>
                     </div>
                 </div>
+        <div class="contentContainer flex">
+            <div class="leftContainer leftContainer--albumPage flex margin-sm">
 
                 <div class="populateAlbums flex">
                     <!-- Dynamically populate this div with albums. Each album should be contained in the div class album. -->
@@ -70,7 +67,65 @@
                         </div>
                     </div>
 
+            <div class="albumInfo">
+                <!-- Info should be dynamically created and populated from info entered in form -->
+                <div class="albumInfo__name">
+                    I'm Wide Awake, It's Morning
                 </div>
+                <div class="albumInfo__artist">
+                    by Bright Eyes
+                </div>
+                <div class="albumTracks">
+                    <span class="albumTracks__num">1 </span><span class="albumTracks__name">At the Bottom of Everything</span>
+                </div>
+                <div class="albumTracks">
+                    <span class="albumTracks__num">2 </span><span class="albumTracks__name">We Are Nowhere and It's Now</span>
+                </div>
+                <div class="albumTracks">
+                    <span class="albumTracks__num">3 </span><span class="albumTracks__name">Old Soul Song (For the New World Order)</span>
+                </div>
+                <div class="albumTracks">
+                    <span class="albumTracks__num">4 </span><span class="albumTracks__name">Lua</span>
+                </div>
+                <div class="albumTracks">
+                    <span class="albumTracks__num">5 </span><span class="albumTracks__name">Train Under Water</span>
+                </div>
+                <div class="albumTracks">
+                    <span class="albumTracks__num">6 </span><span class="albumTracks__name">First Day of My Life</span>
+                </div>
+                <div class="albumTracks">
+                    <span class="albumTracks__num">7 </span><span class="albumTracks__name">Another Travelin' Song</span>
+                </div>
+                <div class="albumTracks">
+                    <span class="albumTracks__num">8 </span><span class="albumTracks__name">Land Locked Blues</span>
+                </div>
+                <div class="albumTracks">
+                    <span class="albumTracks__num">9 </span><span class="albumTracks__name">Poison Oak</span>
+                </div>
+                <div class="albumTracks">
+                    <span class="albumTracks__num">10 </span><span class="albumTracks__name">Road to Joy</span>
+                </div>
+            </div>
+
+                </div>
+
+
+            <div class="releaseDate">
+            <!-- Information needs to be dynamically populated from form info -->
+                <span class="released">Released: </span><span class="">January, 25 2005</span>
+            </div>
+            <div class="city">
+                <span class="cityName">City: </span><span class="">Lincoln</span>
+            </div>
+            <div class="genre">
+                <span class="genreName">Genre: </span><span class="">Indie folk</span>
+            </div>
+            <div class="label">
+                <span class="labelName">Label: </span><span class="">Saddle Creek</span>
+            </div>
+            <div class="format">
+                <span class="formatName">Format: </span><span class="">LP</span>
+            </div>
 
         <div class="pagination">
             <div class="line">
