@@ -4,6 +4,9 @@
 <h3>Title</h3>
 <p><%= @album.name %></p>
 
+<h3> Album Images </h3>
+<p><%= image_tag @photo.image_url %></p>
+
 <h3>Artist(s)</h3>
 <p id="artist"><%= link_to @album.artist.name, artist_path(@album.artist.id) %></p>
 
