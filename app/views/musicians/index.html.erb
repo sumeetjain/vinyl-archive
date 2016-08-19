@@ -1,0 +1,21 @@
+<h1>All Musicians</h1>
+
+<table>
+
+	<thead>
+		<tr>
+			<th>Name</th>
+		</tr>
+	</thead>
+
+	<tbody>
+		<% @musicians.each do |musician| %>
+			<tr id="musician_<%= musician.id %>">
+				<td><%= musician.name %></td>
+				<td><%= link_to "Details", musician_path(musician.id) %></td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>
+
+<%= paginate @musicians %>
