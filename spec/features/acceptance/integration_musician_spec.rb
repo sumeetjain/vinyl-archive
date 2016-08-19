@@ -7,7 +7,7 @@ require 'rails_helper'
 
 	let! (:album) {Album.create(artist_id: artist.id, name: "Big Kahuna", genre: "Rock", release_date: Date.new(2009))}
 	let! (:album2) {Album.create(artist_id: artist2.id, name: "Red Rocket", genre: "Blues", release_date: Date.new(1999))}
-	let! (:album3) {Album.create(artist_id: artist3.id, name: "Dance Dance!", genre: "Electronic", release_date: Date.new(2011))}
+	let! (:album3) {Album.create(artist_id: artist2.id, name: "Dance Dance!", genre: "Electronic", release_date: Date.new(2011))}
 	let! (:album4) {Album.create(artist_id: artist2.id, name: "Alpha", genre: "Electronic", release_date: Date.new(2000))}
 	let! (:album5) {Album.create(artist_id: artist.id, name: "Zeta", genre: "Electronic", release_date: Date.new(2010))}
 
