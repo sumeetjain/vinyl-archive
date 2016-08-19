@@ -1,0 +1,18 @@
+.albumInfo{
+	font-size: 23px;
+}
+.albumInfo__name{
+	font-size: 33px;
+}
+.albumTracks__num{
+	color: #868686;
+	margin-right: 10px;
+}
+.info{
+	font-family: Oswald-Light;
+	font-size: 23px;
+}
+.info__title{
+	font-style: italic;
+	margin-right: 5px;
+}

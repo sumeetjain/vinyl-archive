@@ -18,18 +18,15 @@ body{
 .rowWrapper{
 	justify-content: space-between;
 	align-items: center;
-	margin-bottom: 0;
 }
 .leftContainer{
 	flex-direction: column;
 	width: 67%;
 }
 .leftContainer--albumPage{
-	width: 75%;
+	width: 78%;
 }
-.populateAlbums{
-	margin-top: 25px;
-	flex-wrap: wrap;
+.populateAlbums{	flex-wrap: wrap;
 	justify-content: space-between;
 }
 .filterOptions{
