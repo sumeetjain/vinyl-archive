@@ -192,6 +192,13 @@
 }
 .artistInfoTitle{
 	font-family: Oswald;
+	color: #5D5E5E;
 	font-size: 23px;
+	width: 50%;
+}
+.artistBio{
+	width: 50%;
+}
+.artistMembers{
 	width: 50%;
 }
