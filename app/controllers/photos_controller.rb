@@ -25,6 +25,7 @@ class PhotosController < ApplicationController
   # POST /photos.json
   def create
     @photo = Photo.new(photo_params)
+    @photo.image_file = params[:file]
 
     respond_to do |format|
       if @photo.save
