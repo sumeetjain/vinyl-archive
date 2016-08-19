@@ -2,17 +2,17 @@ require 'rails_helper'
 
 RSpec.describe Album, type: :model do
 
+	let! (:album) {Album.create(artist_id: artist.id, name: "Big Kahuna", genre: "Rock", format: "LP", release_date: Date.new(2009))}
+	let! (:album2) {Album.create(artist_id: artist2.id, name: "Red Rocket", genre: "Blues", format: "EP", release_date: Date.new(1999))}
+	let! (:album3) {Album.create(artist_id: artist3.id, name: "Dance Dance!", genre: "Electronic", format: "Single", release_date: Date.new(2011))}
+	let! (:album4) {Album.create(artist_id: artist2.id, name: "Alpha", genre: "Electronic", format: "LP", release_date: Date.new(2000))}
+	let! (:album5) {Album.create(artist_id: artist.id, name: "Zeta", genre: "Electronic", format: "EP", release_date: Date.new(2010))}
+	let! (:album6) {Album.create(name: "Old School", genre: "Electronic", format: "Single", release_date: Date.new(1980))}
 
-  	let! (:artist) {Artist.create(:name=>"New Band", :city=>"Fremont", :url=>"fake.jpg", :bio=>"cool guys")}
-  	let! (:artist2) {Artist.create(:name=>"Zephyrs", :city=>"Nickerson", :url=>"fake.jpg", :bio=>"cool guys")}
-  	let! (:artist3) {Artist.create(:name=>"Agnostics", :city=>"Broken Bow", :url=>"fake.jpg", :bio=>"cool guys")}
+	let! (:artist) {Artist.create(:name=>"New Band", :city=>"Fremont", :url=>"fake.jpg", :bio=>"cool guys")}
+	let! (:artist2) {Artist.create(:name=>"Zephyrs", :city=>"Nickerson", :url=>"fake.jpg", :bio=>"cool guys")}
+	let! (:artist3) {Artist.create(:name=>"Agnostics", :city=>"Broken Bow", :url=>"fake.jpg", :bio=>"cool guys")}
 	
-	let! (:album) {Album.create(artist_id: artist.id, name: "Big Kahuna", genre: "Rock", release_date: Date.new(2009))}
-	let! (:album2) {Album.create(artist_id: artist2.id, name: "Red Rocket", genre: "Blues", release_date: Date.new(1999))}
-	let! (:album3) {Album.create(artist_id: artist3.id, name: "Dance Dance!", genre: "Electronic", release_date: Date.new(2011))}
-	let! (:album4) {Album.create(artist_id: artist2.id, name: "Alpha", genre: "Electronic", release_date: Date.new(2000))}
-	let! (:album5) {Album.create(artist_id: artist.id, name: "Zeta", genre: "Electronic", release_date: Date.new(2010))}
-	let! (:album6) {Album.create(name: "Old School", genre: "Electronic", release_date: Date.new(1980))}
 
 
 	it 'sorts by title' do
@@ -58,6 +58,43 @@ RSpec.describe Album, type: :model do
 		expect(aughts[1]).to eq(album4)
 		expect(teens[0]).to eq(album3)
 		expect(teens[1]).to eq(album5)
+	end
+
+	it 'filters by format' do
+		visit '/albums'
+
+		click_link 'LP'
+		page.should have_content('Big Kahuna')
+		page.should have_content('Alpha')
+		page.should have_no_content('Red Rocket')
+		page.should have_no_content('Old School')
+		page.should have_no_content('Zeta')
+		page.should have_no_content('Dance Dance!')
+
+		click_link 'EP'
+		page.should have_content('Red Rocket')
+		page.should have_content('Zeta')
+		page.should have_no_content('Big Kahuna')
+		page.should have_no_content('Old School')
+		page.should have_no_content('Alpha')
+		page.should have_no_content('Dance Dance!')
+
+		click_link 'Single'
+		page.should have_content('Dance Dance!')
+		page.should have_content('Old School')
+		page.should have_no_content('Red Rocket')
+		page.should have_no_content('Zeta')
+		page.should have_no_content('Big Kahuna')
+		page.should have_no_content('Alpha')
+
+		Album.delete_all
+		click_link 'LP'
+		page.should have_no_content('Details')
+		click_link 'EP'
+		page.should have_no_content('Details')
+		click_link 'Single'
+		page.should have_no_content('Details')
+
 	end
   
 end
