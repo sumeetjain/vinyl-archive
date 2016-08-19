@@ -64,6 +64,10 @@
 	box-shadow: 0 0 8px #888888;
 	margin-bottom: 10px;
 }
+.album__image--bigger{
+	width: 400px;
+	height: 400px;
+}
 .album__image--small{
 	width: 50px;
 	height: 50px;
