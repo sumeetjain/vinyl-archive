@@ -1,3 +1,3 @@
 class Photo < ActiveRecord::Base
-	mount_uploader :the_photo, Image_FileUploader
+	mount_uploader :the_photo, ImageFileUploader
 end

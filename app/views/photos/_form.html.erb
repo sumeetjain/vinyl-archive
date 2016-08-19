@@ -16,12 +16,8 @@
     <%= f.file_field :the_photo %>
   </div>
   <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_area :description %>
-  </div>
-  <div class="field">
     <%= f.label :album_id %><br>
-    <%= f.collection_select :album_id, Album.where("id => ?", params[:id]), :id, :name, :prompt => 'Select An Album' %>
+    <%= f.collection_select :album_id, Album.where("id = ?", params['format']), :id, :name, :prompt => 'Select An Album' %>
   </div>
   <div class="actions">
     <%= f.submit %>
