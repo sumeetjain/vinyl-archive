@@ -9,6 +9,7 @@ class AlbumsController < ApplicationController
 
 		@album = Album.find(params[:id])
 		@photo = Photo.where(:album_id => params[:id])
+
 	end
 
 	def new
