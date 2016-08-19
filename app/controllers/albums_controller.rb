@@ -9,7 +9,6 @@ class AlbumsController < ApplicationController
 
 		@album = Album.find(params[:id])
 		@photo = Photo.where(:album_id => params[:id])
-		binding.pry
 	end
 
 	def new

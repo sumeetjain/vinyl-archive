@@ -5,7 +5,11 @@
 <p><%= @album.name %></p>
 
 <h3> Album Images </h3>
-<p><%= image_tag @photo.image_url %></p>
+<p>
+<%= @photo.each do |single_record| %>
+	<%= image_tag single_record.the_photo_url %>
+	<% end %>
+</p>
 
 <h3>Artist(s)</h3>
 <p id="artist"><%= link_to @album.artist.name, artist_path(@album.artist.id) %></p>
