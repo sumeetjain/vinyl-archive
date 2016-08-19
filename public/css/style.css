@@ -186,3 +186,12 @@
 	font-family: Oswald;
 	font-style: italic;
 }
+.artistImg{
+	height: 70%;
+	width: 70%;
+}
+.artistInfoTitle{
+	font-family: Oswald;
+	font-size: 23px;
+	width: 50%;
+}

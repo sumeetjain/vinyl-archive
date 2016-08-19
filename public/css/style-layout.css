@@ -26,7 +26,8 @@ body{
 .leftContainer--albumPage{
 	width: 78%;
 }
-.populateAlbums{	flex-wrap: wrap;
+.populateAlbums{	
+	flex-wrap: wrap;
 	justify-content: space-between;
 }
 .filterOptions{
@@ -36,4 +37,6 @@ body{
 }
 .filterWrapper{
 	padding: 25px;
+}
+.artistInfoWrapper{
 }
