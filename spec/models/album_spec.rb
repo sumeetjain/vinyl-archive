@@ -22,6 +22,7 @@ RSpec.describe Album, type: :model do
 		expect(aughts[1]).to eq(album4)
 		expect(teens[0]).to eq(album3)
 		expect(teens[1]).to eq(album5)
+
 	end
   
 end

@@ -4,7 +4,6 @@ class HomeController < ApplicationController
 	
 	def index
 		if params.exclude?('city')
-			artist_array = Artist.all
 			@albums = Album.all
 		else
  			@albums = Album.get_albums_by_city(params['city'])
