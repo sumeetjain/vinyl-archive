@@ -27,10 +27,17 @@
 <p><%= @album.genre %></p>
 
 <h3>Release Date</h3>
-<p><%= @album.release_date %></p>
+<p><%= @date %></p>
 
 <h3>Format</h3>
 <p><%= @album.format %></p>
+
+<h3>Album Tracks<h3>
+<ol><% @songs.each do |song| %>
+	<li><%= song.song_name %></li>
+<% end %>
+</ol>
+
 
 <%= link_to "Upload Album Images", new_photo_path(@album.id) %>
 <%= link_to "Home", albums_path %>
