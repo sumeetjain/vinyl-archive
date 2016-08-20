@@ -9,6 +9,8 @@ class AlbumsController < ApplicationController
 
 		@album = Album.find(params[:id])
 		@photo = Photo.where(:album_id => params[:id])
+		@songs = Song.where(:album_id => params[:id])
+		@date = Date.parse(@album.release_date.to_s).strftime('%B %-d, %Y')
 
 	end
 
