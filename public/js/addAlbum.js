@@ -5,10 +5,10 @@ window.addEventListener("load", function(){
   add.addEventListener("click", function(){
 
   	var modal = document.getElementById("modal");
+    var modalWrapper = document.getElementById("modal-wrapper");
 
   	modal.style.display = "flex";
-
-  	modal.style.display = "none";
+    modalWrapper.style.display = "flex";
   });
 
 });
