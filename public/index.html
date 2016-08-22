@@ -80,8 +80,10 @@
             </div>
 
             <div class="sortBy">
-                <select>
-                    <option value="newToOld">UPLOAD DATE, NEW TO OLD</option>
+                <select class="sortBy__dropdown">
+                    <option class="sortBy__Option" value="newToOld">UPLOAD DATE, NEW TO OLD</option>
+                    <option>Option 2</option>
+                    <option>Option 3</option>
                     <!-- Ask what other options records should be able to be sorted by -->
                 </select>
             </div>
@@ -93,14 +95,16 @@
             </div>
         </div>
 
-        <div class="pageTitle margin-sm">
-            <div class="pageTitle__text color-white">
-                Latest Uploads
-            </div>
-        </div>
+        
 
         <div class="contentContainer flex">
             <div class="leftContainer flex margin-sm">
+
+                <div class="pageTitle">
+                    <div class="pageTitle__text color-white">
+                        Latest Uploads
+                    </div>
+                </div>
 
                 <div class="populateAlbums flex">
                     <!-- Dynamically populate this div with albums. Each album should be contained in the div class album. -->

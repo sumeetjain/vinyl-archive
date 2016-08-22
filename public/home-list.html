@@ -38,10 +38,12 @@
 
         <div class="rowWrapper flex margin-sm">
             <div class="searchBox search flex">
+                <div class="">
                     <form action="">
                         <input method="" name="" type="text" placeholder="Search for an album, artist or track..." class="search__input padding-10" id="search" required><span class="icons icons--search color-light-grey"></span>
                     </form>
                     <!-- Formating is still weird where the search image appears -->
+                </div>
             </div>
 
             <div class="sortText color-light-grey">
@@ -62,91 +64,56 @@
             </div>
         </div>
 
+       
 
         <div class="contentContainer flex">
             <div class="leftContainer flex margin-sm">
 
                 <div class="pageTitle">
                     <div class="pageTitle__text color-white">
-                        Bright Eyes <span class="filterType">Artist</span>
+                        Latest Uploads
                     </div>
                 </div>
 
-                <div class="artistImgContainer">
-                    <img src="img/BrightEyes.jpg" class="artistImg" alt="Bright Eyes">
-                </div>
-                
-                <div class="line margin-top">
-                </div>
-
-                <div class="artistInfoWrapper flex">
-                    <div class="artistInfoTitle">
-                        BIO
-                    </div>
-                    <div class="artistInfoTitle">
-                        MEMBERS
-                    </div>
-                </div>
-
-                <div class="line">
-                </div>
-
-                <div class="artistInfoWrapper flex margin-top">
-                    <div class="artistBio font-oswald-light color-darkest-grey">        
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam non luctus nisl. Praesent ut lectus dictum, convallis sapien posuere, semper urna. Aenean congue felis at finibus fermentum. Maecenas fermentum, metus sit amet cursus mattis, ex nisi venenatis elit, sit amet pharetra ipsum purus a elit. Vivamus sed neque erat.
-                    </div>
-
-                    <div class="artistMembers font-oswald-light color-darkest-grey">
-                    <!-- member__name and member__instrument should be dynamically populated from form data -->
-                        <div class="member">
-                            <span class="member__name">Conor Oberst</span> &mdash; <span class="member__instrument">vocals</span>
+                <div class="populateAlbums flex">
+                    <!-- Dynamically populate this div with albums. Each album should be contained in the div class album. -->
+                   <div class="album album--textRight flex">
+                        <div class="album__image album__image--small">
+                            <img src="img/Imwideawake.jpeg" height="50" width="50">
                         </div>
-                        <div class="member">
-                            <span class="member__name">Mike Mogis</span> &mdash;
-                        </div>
-                        <div class="member">
-                            <span class="member__name">Nate Walcott</span> &mdash;
+                        <div class="columnWrapper flex">
+                            <div class="album__albumName color-dark-grey">
+                                I'm Wide Awake, It's Morning
+                                </div>
+                            <div class="album__artistName color-dark-grey">
+                                Bright Eyes
+                            </div>
                         </div>
                     </div>
+
                 </div>
 
-                <div class="line margin-top">
-                </div>
-
-                <div class="artistInfoWrapper flex">
-                    <div class="artistInfoTitle">
-                        ALBUMS
+                <div class="pagination">
+                    <div class="line">
                     </div>
-
-                <div class="sortText color-light-grey">
-                    SORT
-                </div>
-
-                <div class="sortBy">
-                    <select>
-                        <option value="newToOld">UPLOAD DATE, NEW TO OLD</option>
-                        <!-- Ask what other options records should be able to be sorted by -->
-                    </select>
-                </div>
-                </div>
-
-                <div class="line">
-                </div>
-
-                <div class="album margin-top">
-                        <img src="img/Imwideawake.jpeg" class="album__image" alt="I'm Wide Awake, It's Morning">
-
-                        <div class="album__albumName color-dark-grey">
-                            I'm Wide Awake, It's Morning
+                    <div class="albumNav flex">
+                        <div class="prev color-lighter-grey font-oswald font-size-lg">
+                            PREV
+                            <!-- This text is a lighter shade of grey when there is no previous page to show. Use Javascript. -->
                         </div>
-
-                        <div class="album__artistName color-dark-grey">
-                            Bright Eyes
+                        <div class="albumNumbers color-mid-grey font-oswald-light font-size-lg">
+                            1-1 of 1
+                            <!-- Filler text. Numbers are representative of number of albums in system and how many are currently being displayed on the page. -->
+                        </div>
+                        <div class="next color-mid-grey font-oswald font-size-lg">
+                            NEXT
+                            <!-- Probably will use AJAX to give affect of clicking through "pages".  -->
                         </div>
                     </div>
+
+                </div>
 
             </div>
-
 
             <div class="filterOptions flex margin-sm">
                 <div class="filterTitle">
