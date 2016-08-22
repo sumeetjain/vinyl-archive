@@ -43,3 +43,21 @@
 	font-weight: normal;
 	font-style: normal;
 }
+@font-face {
+	font-family: "Montserrat";
+	src: url("Montserrat-Bold.eot");
+	src: url("Montserrat-Bold.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/montserrat/Montserrat-Bold.woff") format("woff"),
+		url("../fonts/montserrat/Montserrat-Bold.ttf") format("truetype");
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Yanone Kaffeesatz";
+	src: url("YanoneKaffeesatz-Bold.eot");
+	src: url("YanoneKaffeesatz-Bold.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/yanone-kafeesatz/YanoneKaffeesatz-Bold.woff") format("woff"),
+		url("../fonts/yanone-kafeesatz/YanoneKaffeesatz-Bold.ttf") format("truetype");
+	font-weight: bold;
+	font-style: normal;
+}
