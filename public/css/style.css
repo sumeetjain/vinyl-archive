@@ -201,6 +201,9 @@
 	height: 595px;
 	width: 1000px;
 }
+#close{
+	align-items: right;
+}
 .filterType{
 	font-family: Oswald;
 	font-style: italic;
