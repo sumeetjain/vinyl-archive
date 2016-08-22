@@ -6,12 +6,12 @@ RSpec.describe Album, type: :model do
 	let! (:artist2) {Artist.create(name: "A brand new band", bio: "We Really Rock", city: "Lincoln", url: "http://www.google.com")}
 	let! (:artist3) {Artist.create(name: "The cool Band", bio: "We are so cool", city: "Beatrice", url: "http://www.google.com")}
 
-	let! (:album) {Album.create(name: "Big Kahuna", genre: "Rock", release_date: Date.new(2009), artist_id: Artist.where("name = ?", "A new band")[0].id))}
-	let! (:album2) {Album.create(name: "Red Rocket", genre: "Blues", release_date: Date.new(1999), artist_id: Artist.where("name = ?", "A new band")[0].id))}
-	let! (:album3) {Album.create(name: "Dance Dance!", genre: "Electronic", release_date: Date.new(2011), artist_id: Artist.where("name = ?", "A brand new band")[0].id))}
-	let! (:album4) {Album.create(name: "Millenium", genre: "Electronic", release_date: Date.new(2000), artist_id: Artist.where("name = ?", "The cool band")[0].id))}
-	let! (:album5) {Album.create(name: "Later", genre: "Electronic", release_date: Date.new(2010), artist_id: Artist.where("name = ?", "A new band")[0].id))}
-	let! (:album6) {Album.create(name: "Old School", genre: "Electronic", release_date: Date.new(1980), artist_id: Artist.where("name = ?", "A brand new band")[0].id))}
+	let! (:album) {Album.create(name: "Big Kahuna", genre: "Rock", release_date: Date.new(2009), artist_id: Artist.where("name = ?", "A new band")[0].id)}
+	let! (:album2) {Album.create(name: "Red Rocket", genre: "Blues", release_date: Date.new(1999), artist_id: Artist.where("name = ?", "A new band")[0].id)}
+	let! (:album3) {Album.create(name: "Dance Dance!", genre: "Electronic", release_date: Date.new(2011), artist_id: Artist.where("name = ?", "A brand new band")[0].id)}
+	let! (:album4) {Album.create(name: "Millenium", genre: "Electronic", release_date: Date.new(2000), artist_id: Artist.where("name = ?", "The cool Band")[0].id)}
+	let! (:album5) {Album.create(name: "Later", genre: "Electronic", release_date: Date.new(2010), artist_id: Artist.where("name = ?", "A new band")[0].id)}
+	let! (:album6) {Album.create(name: "Old School", genre: "Electronic", release_date: Date.new(1980), artist_id: Artist.where("name = ?", "A brand new band")[0].id)}
 
 	it 'sorts by decade' do
 		albums = Album.all
