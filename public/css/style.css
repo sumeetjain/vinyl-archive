@@ -129,6 +129,11 @@
 	font-size: 23px;
 	font-style: italic;
 }
+.search__input{
+	font-family: Oswald-Light;
+	color: #868686;
+	font-size: 23px;
+}
 .sortText{
 	font-family: Oswald;
 	font-size: 23px;
