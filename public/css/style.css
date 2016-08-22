@@ -1,3 +1,6 @@
+#modal{
+	display: none;
+}
 .header{
 	justify-content: space-between;
 	background-image: url("../img/record-background.png");
