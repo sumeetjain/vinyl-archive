@@ -1,5 +1,10 @@
 <h1>All Albums</h1>
 
+<a href="/albums"> All </a>
+<a href="/albums?sort=LP"> LP </a>
+<a href="/albums?sort=EP"> EP </a>
+<a href="/albums?sort=Single"> Single </a>
+
 <table>
 
 	<thead>
@@ -12,7 +17,12 @@
 		<% @albums.each do |album| %>
 			<tr id="album_<%= album.id %>">
 				<td><%= album.name %></td>
+				<td><%= link_to "Details", album_path(album.id) %></td>
 			</tr>
 		<% end %>
 	</tbody>
 </table>
+
+<%= paginate @albums %>
+
+<%= link_to "Add An Album", new_album_path %>
