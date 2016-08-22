@@ -29,6 +29,7 @@ body{
 .populateAlbums{	
 	flex-wrap: wrap;
 	justify-content: space-between;
+	margin-top:25px;
 }
 .filterOptions{
 	flex-direction: column;
@@ -37,4 +38,7 @@ body{
 }
 .filterWrapper{
 	padding: 25px;
+}
+.artistImgContainer{
+	margin-top:25px;
 }
