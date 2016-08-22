@@ -56,8 +56,8 @@
 	font-family: "Yanone Kaffeesatz";
 	src: url("YanoneKaffeesatz-Bold.eot");
 	src: url("YanoneKaffeesatz-Bold.eot?#iefix") format("embedded-opentype"),
-		url("../fonts/yanone-kafeesatz/YanoneKaffeesatz-Bold.woff") format("woff"),
-		url("../fonts/yanone-kafeesatz/YanoneKaffeesatz-Bold.ttf") format("truetype");
+		url("../fonts/yanone-kaffeesatz/YanoneKaffeesatz-Bold.woff") format("woff"),
+		url("../fonts/yanone-kaffeesatz/YanoneKaffeesatz-Bold.ttf") format("truetype");
 	font-weight: bold;
 	font-style: normal;
 }
