@@ -1,5 +1,18 @@
 Rails.application.routes.draw do
 
+  resources :photos
+  namespace :admin do
+    resources :users
+    resources :albums
+    resources :artists
+    resources :musicians
+    resources :songs
+
+    root to: "users#index"
+  end
+
+  resources :songs
+
   devise_for :users do
     get '/users/sign_out' => 'devise/sessions#destroy'
   end
@@ -9,6 +22,7 @@ Rails.application.routes.draw do
   resources :artists
   resources :albums
   resources :search
+  resources :musicians
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

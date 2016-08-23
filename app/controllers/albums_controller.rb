@@ -1,3 +1,4 @@
+require 'pry'
 class AlbumsController < ApplicationController
 
 	def index
@@ -8,11 +9,21 @@ class AlbumsController < ApplicationController
 			@albums = @albums.page(params[:page]).per(3)
 		else
 			@albums = Album.all.page(params[:page]).per(3)
+
+		if params[:sort].nil?
+			@albums = Album.all.page(params[:page]).per(3)
+		else
+			@albums = Album.filter(Album.all, params[:sort]).page(params[:page]).per(3)
 		end
 	end
 
 	def show
+
 		@album = Album.find(params[:id])
+		@photo = Photo.where(:album_id => params[:id])
+		@songs = Song.where(:album_id => params[:id])
+		@date = Date.parse(@album.release_date.to_s).strftime('%B %-d, %Y')
+
 	end
 
 	def new
