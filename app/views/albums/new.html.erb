@@ -1,63 +1,73 @@
-<%= form_for(@album) do |form| %>
+<script type="text/javascript" src="/js/addAlbum.js"></script>
 
-<div>
-	<%= form.label "Album Title" %><br>
-	<%= form.text_field :name %>
-</div>
+<%= stylesheet_link_tag "/css/style-addAlbumJS", "/css/style", "/css/utility" %>
 
-<div>
-	<%= form.label "Genre" %><br>
-	<%= form.text_field :genre %>
-</div>
+    <div class="modal-wrapper">
+        <div class="modal">
+            <div class="close" class="color-white">
+                x
+            </div>
 
-<div>
-	<%= form.label "Release Date" %><br>
-	<%= form.date_select :release_date %>
-</div>
+            <div class="formWrapper">
+            	<%= form_for(@album) do |form| %>
 
-<div>
-	<%= form.label "Format" %><br>
-	<%= form.select :format, ["LP", "EP", "Single"] %>
-</div>
+				<div id="albumTitle" class="font-oswald-light color-white">
+					<%= form.label "Album Title" %><br>
+					<%= form.text_field :name %>
+				</div>
 
+				<div id="albumGenre" class="font-oswald-light color-white">
+					<%= form.label "Genre" %><br>
+					<%= form.text_field :genre %>
+				</div>
 
+				<div id="albumDate" class="font-oswald-light color-white">
+					<%= form.label "Release Date" %><br>
+					<%= form.date_select :release_date %>
+				</div>
 
-	<%= form.fields_for :artist do |artist| %>
+				<div id="albumFormat" class="font-oswald-light color-white">
+					<%= form.label "Format" %><br>
+					<%= form.select :format, ["LP", "EP", "Single"] %>
+				</div>
 
-		<div>
-			<%= artist.label "Artist Name(s)" %><br>
-			<%= artist.text_field :name %>
-		</div>
+				<%= form.fields_for :artist do |artist| %>
 
-		<div>
-			<%= artist.label "City" %><br>
-			<%= artist.text_field :city %>
-		</div>
+				<div id="artistName" class="font-oswald-light color-white">
+					<%= artist.label "Artist Name(s)" %><br>
+					<%= artist.text_field :name %>
+				</div>
 
-		<div>
-			<%= artist.label "Artist URL" %><br>
-			<%= artist.url_field :url %>
-		</div>
+				<div id="artistCity" class="font-oswald-light color-white">
+					<%= artist.label "City" %><br>
+					<%= artist.text_field :city %>
+				</div>
 
-		<div>
-			<%= artist.label "Biography" %><br>
-			<%= artist.text_area :bio %>
-		</div>
+				<div id="artistUrl" class="font-oswald-light color-white">
+					<%= artist.label "Artist URL" %><br>
+					<%= artist.url_field :url %>
+				</div>
 
-			<%= artist.fields_for :musicians do |member| %>
+				<div id="artistBio" class="font-oswald-light color-white">
+					<%= artist.label "Biography" %><br>
+					<%= artist.text_area :bio %>
+				</div>
 
-				<div>
+				<%= artist.fields_for :musicians do |member| %>
+
+				<div id="memberName" class="font-oswald-light color-white">
 					<%= member.label "Band Member Name" %><br>
 					<%= member.text_field :name %>
 				</div>
 
-				<div>
+				<div id="memberInstrument" class="font-oswald-light color-white">
 					<%= member.label "Band Member Instrument" %><br>
 					<%= member.text_field :instrument %>
 				</div>
 
-			<% end %>
-	<% end %>
+					<% end %>
+				<% end %>
+			</div>
 
 
 <div>
@@ -65,5 +75,26 @@
 </div>
 
 <% end %>
+            <div class="headerWrapper headerWrapper--modal flex">
+                <div class="playerImage flex">
+                    <span class="icons icons--recordPlayer"></span>
+                </div>
+                <div class="siteName color-white padding-btm">
+                    THE VINYL ARCHIVE
+                    <!-- Link to homepage -->
+                </div>
+                <div class="siteInfo color-white padding-btm">
+                    by Hear Nebraska
+                    <!-- Link to Hear Nebraska website -->
+                </div>
+            </div>
+            <div class="headerWrapper headerWrapper--modal flex">
+                <div class="addAlbum color-white padding-btm">
+                    ADD ANOTHER ALBUM
+                    <!-- Javascript for add album form -->
+                </div>
+            </div>
+        </div>
+    </div>
 
 <%= link_to "All Albums", albums_path %>

@@ -1,0 +1,54 @@
+.modal-wrapper{
+/*	display: none;*/
+	justify-content: center;
+	background-color: #BBBBBB;
+	position: fixed;
+	z-index: 10;
+    overflow: auto;
+	height: 100%;
+	width: 100%;
+}
+.modal{
+/*	display: none;*/
+	align-content: flex-end;
+	background-image: url("../img/record-background.png"); 
+    position: fixed;
+	z-index: 10;
+    overflow: auto;
+	height: 595px;
+	width: 1000px;
+}
+.close{
+	align-items: right;
+}
+.formWrapper{
+
+}
+#albumTitle{
+}
+#albumGenre{
+	display: none;
+}
+#albumDate{
+	display: none;
+}
+#albumFormat{
+	display: none;	
+}
+#artistName{
+}
+#artistCity{
+	display: none;
+}
+#artistUrl{
+	display: none;
+}
+#artistBio{
+	display: none;
+}
+#memberName{
+	display: none;
+}
+#memberInstrument{
+	display: none;	
+}
