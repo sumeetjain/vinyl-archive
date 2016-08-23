@@ -2,7 +2,6 @@
 	display: flex;
 	justify-content: center;
 	background-color: #BBBBBB;
-	position: fixed;
 	z-index: 10;
     overflow: auto;
 	height: 100%;
@@ -10,16 +9,26 @@
 }
 .modal{
 	display: flex;
-	align-content: flex-end;
 	background-image: url("../img/record-background.png"); 
-    position: fixed;
 	z-index: 10;
     overflow: auto;
 	height: 595px;
 	width: 1000px;
+	flex-direction: column;
+}
+.wrap{
+	display: flex;
+	justify-content: flex-end;	
 }
 .close{
-	align-items: right;
+	font-family: Oswald-Light;
+	color: #A6A6A6;
+	font-size: 35px;
+	background-color: #868686;
+	height: 40px;
+	width: 40px;
+}
+.container{
 }
 .formWrapper{
 	display: flex;
@@ -28,30 +37,42 @@
 	justify-content: center;
 }
 #albumTitle{
+	font-size: 20px;
 }
 #albumGenre{
 	display: none;
+	font-size: 20px;
 }
 #albumDate{
 	display: none;
+	font-size: 20px;
 }
 #albumFormat{
-	display: none;	
+	display: none;
+	font-size: 20px;	
 }
 #artistName{
+	font-size: 20px;
 }
 #artistCity{
 	display: none;
+	font-size: 20px;
 }
 #artistUrl{
 	display: none;
+	font-size: 20px;
 }
 #artistBio{
 	display: none;
+	font-size: 20px;
 }
 #memberName{
 	display: none;
+	font-size: 20px;
 }
 #memberInstrument{
-	display: none;	
+	display: none;
+	font-size: 20px;	
+}
+.headerContainer{
 }

@@ -1,13 +1,16 @@
-<script type="text/javascript" src="/js/addAlbum.js"></script>
-
+<!-- <script type="text/javascript" src="/js/addAlbum.js"></script>
+ -->
 <%= stylesheet_link_tag "/css/style-addAlbumJS", "/css/style", "/css/utility", "/css/style-fonts" %>
 
     <div class="modal-wrapper">
         <div class="modal">
-            <div class="close" class="color-white">
-                x
-            </div>
+        	<div class="wrap">
+            	<div class="close">
+                	x
+           	 	</div>
+           	 </div>
 
+           	<div class="container">
             <div class="formWrapper">
             	<%= form_for(@album) do |form| %>
 
@@ -34,7 +37,7 @@
 				<%= form.fields_for :artist do |artist| %>
 
 				<div id="artistName" class="font-oswald-light color-white">
-					<%= artist.label "Artist Name(s)" %><br>
+					<%= artist.label "Artist Name(s)" %>
 					<%= artist.text_field :name %>
 				</div>
 
@@ -70,11 +73,13 @@
 			</div>
 
 
-<div>
+<div id="submitButton">
 	<%= form.submit %>
 </div>
 
 <% end %>
+</div>
+		<div class="headerContainer flex">
             <div class="headerWrapper headerWrapper--modal flex">
                 <div class="playerImage flex">
                     <span class="icons icons--recordPlayer"></span>
@@ -94,6 +99,7 @@
                     <!-- Javascript for add album form -->
                 </div>
             </div>
+        </div>
         </div>
     </div>
 
