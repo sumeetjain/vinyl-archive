@@ -1,6 +1,7 @@
 class HomeController < ApplicationController
-	
-	# before_action :authenticate_user!
+	if Rails.env.development?	
+		before_action :authenticate_user!
+	end
 	
 	def index
 		if params.exclude?('city')
