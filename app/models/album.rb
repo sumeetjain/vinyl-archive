@@ -6,6 +6,10 @@ class Album < ActiveRecord::Base
 	include PgSearch
 	multisearchable :against => [:artist_id, :name]
 
+	def self.genres(genre={})
+		Album.where(genre)
+	end
+
 	# Returns a sorted array of albums
 	#
 	# albums => array of Albums to be sorted
