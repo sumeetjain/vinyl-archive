@@ -6,6 +6,21 @@ class Album < ActiveRecord::Base
 	include PgSearch
 	multisearchable :against => [:artist_id, :name]
 
+	# Returns a sorted array of albums
+	#
+	# albums => array of Albums to be sorted
+	# sortby => determines if albums are sorted by title, artist or date
+	#
+	def Album.getSortedList(albums, sortby)
+		if sortby=="title"
+			return albums.order("name")
+		elsif sortby=="artist"
+			return albums.joins(:artist).order('artists.name')
+		elsif sortby=="date"
+			return albums.sort_by &:created_at
+		end
+	end
+
 	# Returns all albums between the dates given
 	# 
 	# albums => array of albums to be filtered
@@ -51,6 +66,27 @@ class Album < ActiveRecord::Base
 		end
 
 		return hash_of_city_albums_count
+	end
+
+	# Returns array of Albums filtered by format
+	#
+	# albums => array of albums to filter
+	# format => formatting keyword "LP" "EP" or "Single"
+	#
+	def Album.formatFilter(albums, format)
+		return albums.where(:format => format)
+	end
+
+	# Returns filtered array based on keyword.  
+	# Can be discarded if we use another system for filtering
+	#
+	# albums => array of albums to filter
+	# filter => filter keyword
+	#
+	def Album.filter(albums, filter)
+		if ((filter=="LP")|| (filter=="EP") || (filter=="Single"))
+			return Album.formatFilter(albums, filter)
+		end
 	end
 
 end
