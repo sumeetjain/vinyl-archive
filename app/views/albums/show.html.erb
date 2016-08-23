@@ -4,6 +4,13 @@
 <h3>Title</h3>
 <p><%= @album.name %></p>
 
+<h3> Album Images </h3>
+<p>
+<% @photo.each do |single_record| %>
+	<%= image_tag single_record.the_photo_url %>
+	<% end %>
+</p>
+
 <h3>Artist(s)</h3>
 <p id="artist"><%= link_to @album.artist.name, artist_path(@album.artist.id) %></p>
 
@@ -20,10 +27,18 @@
 <p><%= @album.genre %></p>
 
 <h3>Release Date</h3>
-<p><%= @album.release_date %></p>
+<p><%= @date %></p>
 
 <h3>Format</h3>
 <p><%= @album.format %></p>
 
+<h3>Album Tracks<h3>
+<ol><% @songs.each do |song| %>
+	<li><%= song.song_name %></li>
+<% end %>
+</ol>
+
+
+<%= link_to "Upload Album Images", new_photo_path(@album.id) %>
 <%= link_to "Home", albums_path %>
 <%= link_to "Add An Album", new_album_path %>

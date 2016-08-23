@@ -1,0 +1,13 @@
+<h1>Musician Details</h1>
+
+<h3>Name</h3>
+<p><%= @musician.name %> <%= link_to "Edit Musician", edit_admin_musician_path(@musician.id) %></p>
+
+<p><%= image_tag "#{@img}" %></p>
+
+<h3>Albums</h3>
+<p>
+	<% @albums.each do |album| %>
+		<p><%= link_to album.name, album %></p>
+	<% end %>
+</p>
