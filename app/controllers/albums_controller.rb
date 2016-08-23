@@ -1,3 +1,4 @@
+require 'pry'
 class AlbumsController < ApplicationController
 
 	def index
@@ -9,7 +10,12 @@ class AlbumsController < ApplicationController
 	end
 
 	def show
+
 		@album = Album.find(params[:id])
+		@photo = Photo.where(:album_id => params[:id])
+		@songs = Song.where(:album_id => params[:id])
+		@date = Date.parse(@album.release_date.to_s).strftime('%B %-d, %Y')
+
 	end
 
 	def new
