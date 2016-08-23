@@ -38,48 +38,62 @@
 #albumTitle{
 	display: flex;
 	flex-direction: column;
-	font-size: 20px;
+	align-items: center;
+	font-size: 25px;
 }
 #albumGenre{
 	display: none;
-	font-size: 20px;
+	font-size: 25px;
 }
 #albumDate{
 	display: none;
-	font-size: 20px;
+	font-size: 25px;
 }
 #albumFormat{
 	display: none;
-	font-size: 20px;	
+	font-size: 25px;	
 }
 #artistName{
 	display: flex;
 	flex-direction: column;
-	font-size: 20px;
+	align-items: center;
+	font-size: 25px;
 }
 #artistCity{
 	display: none;
-	font-size: 20px;
+	font-size: 25px;
 }
 #artistUrl{
 	display: none;
-	font-size: 20px;
+	font-size: 25px;
 }
 #artistBio{
 	display: none;
-	font-size: 20px;
+	font-size: 25px;
 }
 #memberName{
 	display: none;
-	font-size: 20px;
+	font-size: 25px;
 }
 #memberInstrument{
 	display: none;
-	font-size: 20px;	
+	font-size: 25px;	
 }
 #submitButton{
 	display: none;
 }
 .headerContainer{
 	flex-direction: row;
+}
+input{
+	background-color: #C8C8C8;
+	font-family: Oswald-Light;
+	color: #2B2B2B;
+	font-size: 20px;
+	border: none;
+	width: 300px;
+	border-radius: 5px;
+	padding-top: 10px;
+	padding-right: 10px;
+}
 }
