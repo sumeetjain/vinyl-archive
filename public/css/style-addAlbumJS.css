@@ -1,5 +1,5 @@
 .modal-wrapper{
-/*	display: none;*/
+	display: flex;
 	justify-content: center;
 	background-color: #BBBBBB;
 	position: fixed;
@@ -9,7 +9,7 @@
 	width: 100%;
 }
 .modal{
-/*	display: none;*/
+	display: flex;
 	align-content: flex-end;
 	background-image: url("../img/record-background.png"); 
     position: fixed;
@@ -22,7 +22,10 @@
 	align-items: right;
 }
 .formWrapper{
-
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	justify-content: center;
 }
 #albumTitle{
 }

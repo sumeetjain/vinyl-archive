@@ -1,6 +1,6 @@
 <script type="text/javascript" src="/js/addAlbum.js"></script>
 
-<%= stylesheet_link_tag "/css/style-addAlbumJS", "/css/style", "/css/utility" %>
+<%= stylesheet_link_tag "/css/style-addAlbumJS", "/css/style", "/css/utility", "/css/style-fonts" %>
 
     <div class="modal-wrapper">
         <div class="modal">
@@ -12,7 +12,7 @@
             	<%= form_for(@album) do |form| %>
 
 				<div id="albumTitle" class="font-oswald-light color-white">
-					<%= form.label "Album Title" %><br>
+					<%= form.label "Album Title" %>
 					<%= form.text_field :name %>
 				</div>
 
