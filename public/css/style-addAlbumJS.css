@@ -29,12 +29,11 @@
 	height: 40px;
 	width: 40px;
 }
-.container{
-}
+
 .formWrapper{
 	display: flex;
-	
-
+	justify-content: center;
+	align-items: center;
 }
 #albumTitle{
 	display: flex;
