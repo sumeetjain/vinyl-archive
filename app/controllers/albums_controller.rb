@@ -2,7 +2,11 @@ require 'pry'
 class AlbumsController < ApplicationController
 
 	def index
-		@albums = Album.all.page(params[:page]).per(3)
+		if params[:sort].nil?
+			@albums = Album.all.page(params[:page]).per(3)
+		else
+			@albums = Album.filter(Album.all, params[:sort]).page(params[:page]).per(3)
+		end
 	end
 
 	def show
