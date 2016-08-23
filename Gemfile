@@ -24,6 +24,8 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'awesome_print'
 
+gem "administrate"
+gem 'bourbon'
 gem 'kaminari'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -70,3 +72,4 @@ end
 
 gem 'devise'
 gem 'carrierwave'
+gem 'mini_magick'
