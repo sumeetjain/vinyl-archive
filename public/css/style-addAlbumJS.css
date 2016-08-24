@@ -23,13 +23,12 @@
 }
 .close{
 	font-family: Oswald-Light;
-	color: #A6A6A6;
+	color: #868686;
 	font-size: 35px;
-	background-color: #868686;
+	background-color: #5D5E5E;
 	height: 40px;
 	width: 40px;
 }
-
 .formWrapper{
 	display: flex;
 	justify-content: center;
@@ -91,9 +90,13 @@ input{
 	color: #2B2B2B;
 	font-size: 20px;
 	border: none;
-	width: 300px;
+	width: 280px;
 	border-radius: 5px;
 	padding-top: 10px;
 	padding-right: 10px;
 }
+.comment{
+	font-family: Oswald;
+	font-style: italic;
+	font-size: 18px;
 }

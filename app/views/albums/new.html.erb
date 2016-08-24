@@ -6,7 +6,6 @@
         <div class="modal">
         	<div class="wrap">
             	<div class="close">
-                	x
            	 	</div>
            	 </div>
 
@@ -35,7 +34,7 @@
 
 				<%= form.fields_for :artist do |artist| %>
 
-				<div id="artistName" class="font-oswald-light color-white">
+				<div id="artistName" class="font-oswald-light color-white form-margin">
 					<%= artist.label "Artist Name(s)" %>
 					<%= artist.text_field :name %>
 				</div>
@@ -69,6 +68,10 @@
 
 					<% end %>
 				<% end %>
+				<div class="comment color-dark-grey form-margin">
+					Separate multiple artists with a comma.
+				</div>
+
 			</div>
 
 
