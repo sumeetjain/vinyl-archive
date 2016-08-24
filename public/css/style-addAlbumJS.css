@@ -21,6 +21,10 @@
 	display: flex;
 	justify-content: flex-end;	
 }
+.headerContainer{
+	display: flex;
+	justify-content: space-between;
+}
 .click{
 	font-family: Oswald-Light;
 	color: #868686;
