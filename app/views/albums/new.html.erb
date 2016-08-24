@@ -3,9 +3,10 @@
 <%= stylesheet_link_tag "/css/style-addAlbumJS", "/css/style", "/css/utility", "/css/style-fonts" %>
 
     <div class="modal-wrapper">
+
         <div class="modal">
         	<div class="wrap">
-            	<div class="close">
+            	<div class="click">
            	 	</div>
            	 </div>
 
@@ -18,17 +19,17 @@
 				</div>
 
 				<div id="albumGenre" class="font-oswald-light color-white">
-					<%= form.label "Genre" %><br>
+					<%= form.label "Genre" %>
 					<%= form.text_field :genre %>
 				</div>
 
 				<div id="albumDate" class="font-oswald-light color-white">
-					<%= form.label "Release Date" %><br>
+					<%= form.label "Release Date" %>
 					<%= form.date_select :release_date %>
 				</div>
 
 				<div id="albumFormat" class="font-oswald-light color-white">
-					<%= form.label "Format" %><br>
+					<%= form.label "Format" %>
 					<%= form.select :format, ["LP", "EP", "Single"] %>
 				</div>
 
@@ -40,29 +41,29 @@
 				</div>
 
 				<div id="artistCity" class="font-oswald-light color-white">
-					<%= artist.label "City" %><br>
+					<%= artist.label "City" %>
 					<%= artist.text_field :city %>
 				</div>
 
 				<div id="artistUrl" class="font-oswald-light color-white">
-					<%= artist.label "Artist URL" %><br>
+					<%= artist.label "Artist URL" %>
 					<%= artist.url_field :url %>
 				</div>
 
 				<div id="artistBio" class="font-oswald-light color-white">
-					<%= artist.label "Biography" %><br>
+					<%= artist.label "Biography" %>
 					<%= artist.text_area :bio %>
 				</div>
 
 				<%= artist.fields_for :musicians do |member| %>
 
 				<div id="memberName" class="font-oswald-light color-white">
-					<%= member.label "Band Member Name" %><br>
+					<%= member.label "Band Member Name" %>
 					<%= member.text_field :name %>
 				</div>
 
 				<div id="memberInstrument" class="font-oswald-light color-white">
-					<%= member.label "Band Member Instrument" %><br>
+					<%= member.label "Band Member Instrument" %>
 					<%= member.text_field :instrument %>
 				</div>
 
@@ -71,7 +72,8 @@
 				<div class="comment color-dark-grey form-margin">
 					Separate multiple artists with a comma.
 				</div>
-
+				    <div class="click click--next">
+				</div>	
 			</div>
 
 

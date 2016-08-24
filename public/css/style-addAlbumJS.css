@@ -21,18 +21,22 @@
 	display: flex;
 	justify-content: flex-end;	
 }
-.close{
+.click{
 	font-family: Oswald-Light;
 	color: #868686;
 	font-size: 35px;
 	background-color: #5D5E5E;
-	height: 40px;
-	width: 40px;
+	height: 35px;
+	width: 35px;
+}
+.click--next{
+	position: absolute;
+	margin-left: 125px;
+	margin-top: 25px;
 }
 .formWrapper{
 	display: flex;
 	justify-content: center;
-	align-items: center;
 }
 #albumTitle{
 	display: flex;
