@@ -4,6 +4,7 @@
 	background-color: #BBBBBB;
 	z-index: 10;
     overflow: auto;
+    position: fixed;
 	height: 100%;
 	width: 100%;
 }
@@ -12,6 +13,7 @@
 	background-image: url("../img/record-background.png"); 
 	z-index: 10;
     overflow: auto;
+    position: fixed;
 	height: 595px;
 	width: 1000px;
 	flex-direction: column;
