@@ -1,11 +1,11 @@
+<%= render "form" %>
+
 <h1>All Albums</h1>
 
 <a href="/albums"> All </a>
 <a href="/albums?sort=LP"> LP </a>
 <a href="/albums?sort=EP"> EP </a>
 <a href="/albums?sort=Single"> Single </a>
-
-<%= render "form" %>
 
 <table>
 
@@ -26,5 +26,3 @@
 </table>
 
 <%= paginate @albums %>
-
-<%= link_to "Add An Album", new_album_path %>
