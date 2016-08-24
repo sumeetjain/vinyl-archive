@@ -1,20 +1,21 @@
 window.addEventListener("load", function(){
 
   var modalWrapper = document.getElementsByClassName("modal-wrapper");
-  var add = document.getElementById("addAlbum");
+  var add = document.getElementsByClassName("addAlbum");
+  var close = document.getElementsByClassName("close");
 
-  add.addEventListener("click", function(){
+  for(i=0; i < add.length; i++){
+	  add[i].addEventListener("click", function(){
 
-    modalWrapper.style.display = "flex";
+		 modalWrapper[0].style.display = "flex";
+		
+	    });
+  }
 
-    var close = document.getElementById("close");
-
-    close.addEventListener("click", function(){
-
-    modalWrapper.style.display = "none";
-
-    });
-
-  });
+  for(i=0; i < close.length; i++){
+  	close[i].addEventListener("click", function(){
+  		modalWrapper[0].style.display = "none";
+  	});
+  }
 
 });
