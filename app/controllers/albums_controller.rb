@@ -6,6 +6,12 @@ class AlbumsController < ApplicationController
 		else
 			@albums = Album.filter(Album.all, params[:sort]).page(params[:page]).per(3)
 		end
+		@album = Album.new
+		@album.build_artist
+
+		3.times do
+			@album.artist.musicians.build
+		end
 	end
 
 	def show
