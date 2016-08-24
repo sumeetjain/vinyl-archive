@@ -1,5 +1,5 @@
 .modal-wrapper{
-	display: flex;
+	display: none;
 	justify-content: center;
 	background-color: #BBBBBB;
 	z-index: 10;
