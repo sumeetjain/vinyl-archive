@@ -35,7 +35,11 @@ window.addEventListener("load", function(){
 
       });
 
-      validate.addEventListener("load", function() {
+      validate.addEventListener("load", function(e) {
+
+        var r = e.target.response;
+        var response = JSON.parse(r);
+        debugger;
 
         document.body.style.cursor = "default";
 
@@ -43,7 +47,7 @@ window.addEventListener("load", function(){
 
       });
 
-      validate.open("get", "test.txt");
+      validate.open("get", "/api");
       validate.send();
 
     albumTitle.style.display = "none";
