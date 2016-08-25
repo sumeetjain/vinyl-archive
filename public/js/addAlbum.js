@@ -4,6 +4,11 @@ window.addEventListener("load", function(){
   var add = document.getElementsByClassName("addAlbum");
   var close = document.getElementsByClassName("close");
   var next = document.getElementById("next");
+  var albumTitle = document.getElementById("albumTitle");
+  var artistName = document.getElementById("artistName");
+  var comment = document.getElementById("comment");
+  var memberName = document.getElementById("memberName");
+  var memberInstrument = document.getElementById("memberInstrument"); 
 
   for(i=0; i < add.length; i++){
 	  add[i].addEventListener("click", function(){
@@ -39,6 +44,12 @@ window.addEventListener("load", function(){
 
       validate.open("get", "test.txt");
       validate.send();
+
+    albumTitle.style.display = "none";
+    artistName.style.display = "none";
+    comment.style.display = "none";
+    memberName.style.display = "flex";
+    memberInstrument.style.display = "flex";
 
   });
 
