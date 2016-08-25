@@ -27,7 +27,7 @@
 	display: flex;
 	justify-content: space-between;
 }
-.click{
+.greyBox{
 	font-family: Oswald-Light;
 	color: #868686;
 	font-size: 35px;
@@ -35,7 +35,7 @@
 	height: 35px;
 	width: 35px;
 }
-.click--next{
+.next{
 	position: absolute;
 	margin-left: 125px;
 	margin-top: 25px;
