@@ -27,7 +27,7 @@
 	display: flex;
 	justify-content: space-between;
 }
-.click{
+.greyBox{
 	font-family: Oswald-Light;
 	color: #868686;
 	font-size: 35px;
@@ -35,7 +35,7 @@
 	height: 35px;
 	width: 35px;
 }
-.click--next{
+#next{
 	position: absolute;
 	margin-left: 125px;
 	margin-top: 25px;
@@ -82,10 +82,14 @@
 }
 #memberName{
 	display: none;
+	flex-direction: column;
+	align-items: center;
 	font-size: 25px;
 }
 #memberInstrument{
 	display: none;
+	flex-direction: column;
+	align-items: center;
 	font-size: 25px;	
 }
 #submitButton{
@@ -105,8 +109,27 @@ input{
 	padding-top: 10px;
 	padding-right: 10px;
 }
-.comment{
+#comment{
 	font-family: Oswald;
 	font-style: italic;
 	font-size: 18px;
+}
+#comment2{
+	display: none;
+	font-family: Oswald;
+	font-style: italic;
+	font-size: 18px;
+}
+#back{
+	background-color: #5D5E5E;
+	width: 15px;
+	height: 40px;
+}
+#plusMember{
+	background-color: #5D5E5E;
+	width: 15px;
+	height: 40px;
+}
+#formRow{
+	flex-direction: row;
 }
