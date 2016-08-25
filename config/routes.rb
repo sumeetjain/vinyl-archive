@@ -10,6 +10,8 @@ Rails.application.routes.draw do
     root to: "users#index"
   end
 
+  resources :api, :only => :index
+
   resources :songs
 
   devise_for :users do
