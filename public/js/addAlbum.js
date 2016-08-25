@@ -40,9 +40,10 @@ window.addEventListener("load", function(){
         var r = e.target.response;
         var response = JSON.parse(r);
         debugger;
+        var albumInput = document.forms["form"]["album"].value;
+        var artistInput = document.forms["form"]["artist"].value;
 
         document.body.style.cursor = "default";
-
         alert("Done");
 
       });

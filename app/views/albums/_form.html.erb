@@ -15,17 +15,17 @@
 
 				<div id="albumTitle" class="font-oswald-light color-white">
 					<%= form.label "Album Title" %>
-					<%= form.text_field :name %>
+					<%= form.text_field :name, name: "albumName" %>
 				</div>
 
 				<div id="albumGenre" class="font-oswald-light color-white">
 					<%= form.label "Genre" %>
-					<%= form.text_field :genre %>
+					<%= form.text_field :genre, name: "genre" %>
 				</div>
 
 				<div id="albumDate" class="font-oswald-light color-white">
 					<%= form.label "Release Date" %>
-					<%= form.date_select :release_date %>
+					<%= form.date_select :release_date, name: "releaseDate" %>
 				</div>
 
 				<div id="albumFormat" class="font-oswald-light color-white">
@@ -37,7 +37,7 @@
 
 				<div id="artistName" class="font-oswald-light color-white form-margin">
 					<%= artist.label "Artist Name(s)" %>
-					<%= artist.text_field :name %>
+					<%= artist.text_field :name, name: "artistNames" %>
 				</div>
 
 				<div id="artistCity" class="font-oswald-light color-white">
