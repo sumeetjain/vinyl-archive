@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="css/style-layout.css">
     <link rel="stylesheet" type="text/css" href="css/style-fonts.css">
     <link rel="stylesheet" type="text/css" href="css/style-album.css">
+    <script type="text/javascript" src="javascript/album-image-switcher.js"></script>
 </head>
 
 <body>
@@ -64,8 +65,15 @@
 
                 <div class="populateAlbums flex">
                     <!-- Dynamically populate this div with albums. Each album should be contained in the div class album. -->
-                    <div class="album">
-                            <img src="img/Imwideawake.jpeg" class="album__image album__image--bigger">
+                    <div class="albumArtContainer">
+                        <div class="album">
+                                <img src="img/Imwideawake.jpeg" class="album__image album__image--bigger albumArt--big">
+                        </div>
+
+                        <div>
+                            <img class="albumArt--sm" src="img/k1.jpeg"/>
+                            <img class="albumArt--sm" src="img/k2.jpeg"/>
+                        </div>
                     </div>
 
             <div class="albumInfo font-oswald-light">
