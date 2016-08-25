@@ -3,6 +3,7 @@ window.addEventListener("load", function(){
   var modalWrapper = document.getElementsByClassName("modal-wrapper");
   var add = document.getElementsByClassName("addAlbum");
   var close = document.getElementsByClassName("close");
+  var next = document.getElementById("next");
 
   for(i=0; i < add.length; i++){
 	  add[i].addEventListener("click", function(){
@@ -17,5 +18,28 @@ window.addEventListener("load", function(){
   		modalWrapper[0].style.display = "none";
   	});
   }
+
+  next.addEventListener("click", function(){
+
+    var validate = new XMLHttpRequest();
+
+      validate.addEventListener("loadstart", function() {
+
+        document.body.style.cursor = "wait";
+
+      });
+
+      validate.addEventListener("load", function() {
+
+        document.body.style.cursor = "default";
+
+        alert("Done");
+
+      });
+
+      validate.open("get", "test.txt");
+      validate.send();
+
+  });
 
 });
