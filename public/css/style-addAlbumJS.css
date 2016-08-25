@@ -82,10 +82,14 @@
 }
 #memberName{
 	display: none;
+	flex-direction: column;
+	align-items: center;
 	font-size: 25px;
 }
 #memberInstrument{
 	display: none;
+	flex-direction: column;
+	align-items: center;
 	font-size: 25px;	
 }
 #submitButton{
@@ -109,4 +113,23 @@ input{
 	font-family: Oswald;
 	font-style: italic;
 	font-size: 18px;
+}
+#comment2{
+	display: none;
+	font-family: Oswald;
+	font-style: italic;
+	font-size: 18px;
+}
+#back{
+	background-color: #5D5E5E;
+	width: 15px;
+	height: 40px;
+}
+#plusMember{
+	background-color: #5D5E5E;
+	width: 15px;
+	height: 40px;
+}
+#formRow{
+	flex-direction: row;
 }

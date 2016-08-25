@@ -9,6 +9,7 @@ window.addEventListener("load", function(){
   var comment = document.getElementById("comment");
   var memberName = document.getElementById("memberName");
   var memberInstrument = document.getElementById("memberInstrument"); 
+  var comment2 = document.getElementById("comment2");
 
   for(i=0; i < add.length; i++){
 	  add[i].addEventListener("click", function(){
@@ -50,6 +51,7 @@ window.addEventListener("load", function(){
     comment.style.display = "none";
     memberName.style.display = "flex";
     memberInstrument.style.display = "flex";
+    comment2.style.display = "block";
 
   });
 

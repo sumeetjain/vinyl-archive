@@ -58,21 +58,23 @@
 				<%= artist.fields_for :musicians do |member| %>
 
 				<div id="memberName" class="font-oswald-light color-white form-margin">
-					<%= member.label "Band Member Name" %>
-					<%= member.text_field :name %>
+					<%= member.label "Add members" %>
+					<%= member.text_field :name, placeholder: "Name" %>
 				</div>
 
 				<div id="memberInstrument" class="font-oswald-light color-white form-margin">
-					<%= member.label "Band Member Instrument" %>
-					<%= member.text_field :instrument %>
+					<%= member.text_field :instrument, placeholder: "Instrument(s)" %>
 				</div>
 
 					<% end %>
 				<% end %>
-				<div id="comment" class= "color-dark-grey form-margin">
+				<div id="comment" class="color-dark-grey form-margin">
 					Separate multiple artists with a comma.
 				</div>
-				    <div id="next" class= "greyBox">
+				<div id="comment2" class="color-dark-grey form-margin">
+					Separate multiple instruments with a comma.
+				</div>
+				    <div id="next" class="greyBox">
 				</div>	
 			</div>
 
