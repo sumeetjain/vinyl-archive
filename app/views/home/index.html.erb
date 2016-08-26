@@ -98,10 +98,11 @@
                     </div>
                 </div>
                 <div class="filterWrapper">
-                    <div class="genre color-dark-grey">
-                        Text
-                        <!-- List of genres will need to be dynamically populated -->
+                    <% @genres.each do |genre| %>
+                    <div>
+                        <%= link_to genre, root_path(:genre => genre), :class => "genre color-dark-grey" %>
                     </div>
+                    <% end %>
                 </div>
 
                 <div class="filterTitle">
