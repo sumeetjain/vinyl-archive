@@ -2,42 +2,43 @@
 body{
 	font-family: 'Open Sans', sans-serif;
 	display: flex;
-	flex-flow: column;
+	flex-direction: column;
 	align-items: center;
 	background: #BBBBBB;
 	margin: 0;
 }
 .bodyContainer{
 	background: white;
-	width: 85%;
-}
-.headerWrapper{
-	align-items: center;
-	justify-content: space-around;
-	width: 50%;
-	padding-left: 20px;
-}
-.headerWrapper--album{
-	align-items: center;
-	padding-right: 20px;
+	width: 1000px;
 }
 .contentContainer{
+	flex-direction: row;
 	justify-content: space-between;
-	padding-left: 20px;
 }
 .rowWrapper{
-	justify-content: space-around;
+	justify-content: space-between;
 	align-items: center;
 }
 .leftContainer{
 	flex-direction: column;
-	width: 75%;
+	width: 670px;
 }
-.populateAlbums{
+.leftContainer--albumPage{
+	width: 780px;
+}
+.populateAlbums{	
 	flex-wrap: wrap;
 	justify-content: space-between;
+	margin-top:25px;
 }
 .filterOptions{
 	flex-direction: column;
-	width: 25%;
+	width: 300px;
+	margin-left: 0;
+}
+.filterWrapper{
+	padding: 25px;
+}
+.artistImgContainer{
+	margin-top:25px;
 }

@@ -51,10 +51,8 @@
             </div>
 
             <div class="sortBy">
-                <select class="sortBy__dropdown">
-                    <option class="sortBy__Option" value="newToOld">UPLOAD DATE, NEW TO OLD</option>
-                    <option>Option 2</option>
-                    <option>Option 3</option>
+                <select>
+                    <option value="newToOld">UPLOAD DATE, NEW TO OLD</option>
                     <!-- Ask what other options records should be able to be sorted by -->
                 </select>
             </div>
@@ -66,7 +64,7 @@
             </div>
         </div>
 
-        
+       
 
         <div class="contentContainer flex">
             <div class="leftContainer flex margin-sm">
@@ -79,15 +77,17 @@
 
                 <div class="populateAlbums flex">
                     <!-- Dynamically populate this div with albums. Each album should be contained in the div class album. -->
-                    <div class="album">
-                        <img src="img/Imwideawake.jpeg" class="album__image" alt="I'm Wide Awake, It's Morning">
-
-                        <div class="album__albumName color-dark-grey">
-                            I'm Wide Awake, It's Morning
+                   <div class="album album--textRight flex">
+                        <div class="album__image album__image--small">
+                            <img src="img/Imwideawake.jpeg" height="50" width="50">
                         </div>
-
-                        <div class="album__artistName color-dark-grey">
-                            Bright Eyes
+                        <div class="columnWrapper flex">
+                            <div class="album__albumName color-dark-grey">
+                                I'm Wide Awake, It's Morning
+                                </div>
+                            <div class="album__artistName color-dark-grey">
+                                Bright Eyes
+                            </div>
                         </div>
                     </div>
 

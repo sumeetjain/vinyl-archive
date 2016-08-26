@@ -1,0 +1,223 @@
+.header{
+	justify-content: space-between;
+	background-image: url("../img/record-background.png");
+	background-position: bottom;
+	background-color: #2B2B2B;
+	height: 90px;
+	width: 1000px;
+}
+.header--footer{
+	background-image: url("../img/footer-background.png");
+}
+.headerWrapper{
+	align-items: center;
+	justify-content: space-around;
+	width: 475px;
+	padding-left: 20px;
+}
+.headerWrapper--album{
+	align-items: center;
+	padding-right: 20px;
+}
+.headerWrapper--modal{
+	align-items: flex-end;
+}
+.playerImage{
+	align-items: center;
+	justify-content: center;
+	width: 90px;
+	height: 90px;
+	background-color: white;
+}
+.siteName{
+	font-size: 30px;
+	font-family: Yanone Kaffeesatz;
+	letter-spacing: 1px;
+}
+.siteInfo{
+	font-family: Oswald-Light;
+	font-size: 25px;
+}
+.addAlbum{
+	font-family: Montserrat;
+	font-size: 25px;
+}
+.pageTitle{
+	background-color: #5D5E5E;
+	padding-top: 6px;
+	padding-bottom: 6px;
+	padding-left: 15px;
+}
+.pageTitle__text{
+	font-family: Montserrat;
+	font-size: 23px;
+}
+.album{
+	width: 200px;
+	margin-bottom: 25px;
+}
+.album__image{
+	width: 200px;
+	height: 200px;
+	-moz-box-shadow: 0 0 8px #888888;
+	-webkit-box-shadow: 0 0 8px #888888;
+	box-shadow: 0 0 8px #888888;
+	margin-bottom: 10px;
+}
+.album__image--bigger{
+	width: 400px;
+	height: 400px;
+}
+.album__image--small{
+	width: 50px;
+	height: 50px;
+	margin-right: 10px;
+}
+.album__albumName{
+	font-family: Oswald;
+	font-size: 20px;
+}
+.album__artistName{
+	font-family: Oswald;
+	font-style: italic;
+	font-size: 20px;
+}
+.filterTitle{
+	background-color: #A6A6A6;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 15px;
+}
+.filterTitle__text{
+	font-size: 25px;
+	color: white;
+	font-family: Yanone Kaffeesatz;
+	letter-spacing: 1px;
+}
+.city{
+	font-family: Oswald-Light;
+	font-size: 20px;
+}
+.genre{
+	font-family: Oswald-Light;
+	font-size: 20px;
+}
+.decade{
+	font-family: Oswald-Light;
+	font-size: 20px;
+}
+.format{
+	font-family: Oswald-Light;
+	font-size: 20px;
+}
+.search{
+	background-color: #EFEFEF;
+	border-radius: 5px;
+	padding-top: 10px;
+	padding-right: 10px;
+}
+.search__input{
+	background-color: #EFEFEF;
+	border-radius: 5px;
+	border: none;
+	height: 20px;
+	width: 375px;
+}
+::-webkit-input-placeholder{
+	color: #A6A6A6;
+	font-family: Oswald;
+	font-size: 23px;
+	font-style: italic;
+}
+.search__input{
+	font-family: Oswald-Light;
+	color: #868686;
+	font-size: 23px;
+}
+.sortText{
+	font-family: Oswald;
+	font-size: 23px;
+	font-style: italic;
+}
+.columnWrapper{
+	flex-direction: column;
+}
+.line{
+	border-bottom: 3px #B6B6B6 solid;
+	width: 100%;
+}
+.albumNav{
+	justify-content: space-around;
+	width: 100%;
+}
+.icons{
+	font-family: HN-icons;
+}
+.icons--recordPlayer:after{
+ 	content: "\E605";
+ 	font-size: 70px;
+}
+.icons--search:after{
+	content: "\E607";
+	font-size: 23px;
+}
+.icons--next:after{
+	content: "\E608";
+}
+.icons--twitter:after{
+	content: "\E60A";
+	padding-left: 5px;
+	font-size: 23px;
+}
+.icons--fb:after{
+	content: "\E609";
+	padding-left: 5px;
+	font-size: 23px;
+}
+.share{
+	justify-content: space-between;
+}
+.share__text{
+	font-style: italic;
+	font-size: 23px;
+}
+.modal{
+	align-content: flex-end;
+	background-image: url("../img/record-background.png");
+	height: 595px;
+	width: 1000px;
+}
+.filterType{
+	font-family: Oswald;
+	font-style: italic;
+}
+.artistImg{
+	display: block;
+	width: 100% !important;
+	height: auto !important;
+}
+.artistInfoTitle{
+	font-family: Oswald;
+	color: #5D5E5E;
+	font-size: 23px;
+	width: 50%;
+}
+.artistBio{
+	width: 45%;
+	font-size: 23px;
+	margin-right: 30px;
+}
+.artistMembers{
+	width: 45%;
+	font-size: 23px;
+}
+.member__name{
+	text-decoration: underline;
+}
+.sortBy__dropdown{
+	height:30px;
+	width:275px;
+	border: 2px solid silver;
+	font-size:15px;
+	font-family: Oswald;
+}
