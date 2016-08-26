@@ -1,0 +1,35 @@
+<h1>Listing Albums</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Artist</th>
+      <th>Name</th>
+      <th colspan="8"></th>
+    </tr>
+  </thead>
+
+  <tbody>   
+    <% @albums.each do |album| %>
+      <tr>
+        <td><%= album.artist_id %></td>
+        <td><%= album.name %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+  <table>
+    <tbody>
+      <td><%= link_to "All Cities", root_path %></td>
+      <% @array_of_cities.each do |city| %>
+        <td><%= link_to city, root_path(:city => city) %> ( <%= @hash_of_city_albums_count[city] %> )</td>
+      <% end %>
+    </tbody>
+  </table>
+
+
+
+
+<a href="/users/sign_out">Log out</a>

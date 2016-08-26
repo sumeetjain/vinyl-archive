@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>New Song</h1>
+
+<%= form_for @song do |f| %>
+  <% if @song.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@song.errors.count, "error") %> prohibited this song from being saved:</h2>
+
+      <ul>
+      <% @song.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.collection_select :album_id, Album.all, :id, :name, :prompt => 'Select an Album' %>
+    <%= f.label :song_file %><br>
+    <%= f.file_field :song_file %>
+    <%= f.text_field :song_name %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
