@@ -56,6 +56,10 @@
 	width: 200px;
 	margin-bottom: 25px;
 }
+.albumArt--sm{
+	height:98px;
+	width:98px;
+}
 .album__image{
 	width: 200px;
 	height: 200px;
