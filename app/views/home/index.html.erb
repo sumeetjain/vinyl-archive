@@ -28,37 +28,7 @@
             </div>
         </div>
 
-<!-- <table>
-  <thead>
-    <tr>
-      <th>Artist</th>
-      <th>Name</th>
-      <th colspan="8"></th>
-    </tr>
-  </thead> -->
-
- <!--  <tbody>   
-    <% @albums.each do |album| %>
-      <%= Artist.find(album.artist_id).name %>
-      <tr>
-        
-        <td><%= album.name %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table> -->
-
-
-<!--   <table>
-    <tbody>
-       <td><%= link_to "All Cities", root_path %></td> 
-      <% @array_of_cities.each do |city| %>
-        <td><%= link_to city, root_path(:city => city) %> ( <%= @hash_of_city_albums_count[city] %> )</td>
-      <% end %>
-    </tbody>
-  </table> -->
-
-  <div class="contentContainer flex">
+        <div class="contentContainer flex">
             <div class="leftContainer flex margin-sm">
 
                 <div class="pageTitle">
@@ -68,7 +38,6 @@
                 </div>
 
                 <div class="populateAlbums flex">
-                    <!-- Dynamically populate this div with albums. Each album should be contained in the div class album. -->
                     <% @albums.each do |album| %>
                     <div class="album">               
                         <img src="img/Imwideawake.jpeg" class="album__image" alt="ALBUM IMAGE GOES HERE">
@@ -120,10 +89,6 @@
                     </div>
                   <% end %>
                     
-                    <!-- <div class="city color-dark-grey">
-                        Text
-                    </div> -->
-                    <!-- List of cities will need to be dynamically populated -->
                 </div>
 
                 <div class="filterTitle">

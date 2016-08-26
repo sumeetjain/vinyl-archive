@@ -195,6 +195,9 @@
 	font-family: Oswald;
 	font-style: italic;
 }
+.filteredLink{
+	text-decoration: none;
+}
 .artistImg{
 	display: block;
 	width: 100% !important;
