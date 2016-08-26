@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Component Gallery</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/utility.css">
+	<link rel="stylesheet" type="text/css" href="css/style-fonts.css">
+	<h1>Component Gallery</h1>
+</head>
+
+<body>
+	<h3>Page header (replace with image)</h3>
+	<!-- Main header located on top of page. Background is image instead of a solid color. -->
+	<div class="header flex">
+        <div class="headerWrapper flex">
+            <div class="playerImage flex">
+                <span class="icons icons--recordPlayer"></span>
+            </div>
+            <div class="siteName color-white">
+                THE VINYL ARCHIVE
+                <!-- Link to homepage -->
+            </div>
+            <div class="siteInfo color-white">
+                by Hear Nebraska
+                <!-- Link to Hear Nebraska website -->
+            </div>
+        </div>
+        <div class="headerWrapper--album flex">
+            <div class="addAlbum color-white">
+                ADD AN ALBUM
+                <!-- Javascript for add album form -->
+            </div>
+        </div>
+    </div>
+
+<br><br><br>
+
+	<h3>Page title element</h3>
+<!-- 	This style appears on the homepage where the text "Latest uploads" apperas. It will be reused in the same position on all other pages of the main website where the specific page title appers. -->
+	<div class="pageTitle padding-10">
+		<div class="pageTitle__text color-white font-size-lg">Latest uploads</div>
+	</div>
+
+<br><br><br>
+
+	<h3>Album block</h3>
+	<div class="album">
+		<div class="album__image">
+			<img src="img/Imwideawake.jpeg" height="200" width="200">
+		</div>
+		<div class="album__albumName color-dark-grey">
+			I'm Wide Awake, It's Morning
+		</div>
+		<div class="album__artistName color-dark-grey">
+			Bright Eyes
+		</div>
+	</div>
+
+<br><br><br>
+
+	<h3>Filter title block</h3>
+<!-- 	Filter title refers to all possible filters used to narrow down which albums want to be viewed. Style will be reused for other filters which are genres, decades and format. -->
+	<div class="filterTitle">
+		<div class="filterTitle__text color-white font-size-lg">
+			CITIES
+		</div>
+	</div>
+	<div class="city">
+		Omaha (86)
+	</div>
+	<div class="city">
+		Lincoln (75)
+	</div>
+	<div class="city">
+		Kearney (42)
+	</div>
+	<!-- List of cities and numbers will need to be dynamically populated -->
+
+	<div class="filterTitle">
+		<div class="filterTitle__text color-white font-size-lg">
+			GENRES
+		</div>
+	</div>
+		<div class="genre">
+			Rock (138)
+		</div>
+		<div class="genre">
+			Folk (64)
+		</div>
+		<div class="genre">
+			Ska (1)
+		</div>
+	<!-- List of genres and numbers will need to be dynamically populated -->
+
+	<div class="filterTitle">
+		<div class="filterTitle__text color-white font-size-lg">
+			DECADES
+		</div>
+	</div>
+	<div class="decade">
+		2010s (120)
+	</div>
+	<div class="decade">
+		2000s (35)
+	</div>
+	<div class="decade">
+		1990s (18)
+	</div>
+	<div class="decade">
+		1980s (15)
+	</div>
+	<div class="decade">
+		1970s (13)
+	</div>
+	<div class="decade">
+		1960s (2)
+	</div>
+	<!-- List of decades and numbers will need to be dynamically populated -->
+
+	<div class="filterTitle">
+		<div class="filterTitle__text color-white font-size-lg">
+			FORMAT
+		</div>
+	</div>
+		<div class="format">
+			LP (174)
+		</div>
+		<div class="format">
+			EP (23)
+		</div>
+		<div class="format">
+			Single (7)
+		</div>
+	<!-- List of formats and numbers will need to be dynamically populated -->
+
+<br><br><br>
+
+	<h3>Sort dropdown element</h3>
+	<div class="sortBy">
+		<select>
+  			<option value="newToOld">UPLOAD DATE, NEW TO OLD</option>
+  			<!-- Ask what other options records should be able to be sorted by -->
+		</select>
+	</div>
+
+<br><br><br>
+
+	<h3>Search bar element</h3>
+		<div class="search">
+			<form action="">
+				<input method="" name="" type="text" placeholder="Search for an album, artist or track..." class="search__input padding-10" id="search" required><span class="icons icons--search"></span>
+			</form>
+			<!-- Formating is still weird where the search image appears -->
+		</div>
+
+<br><br><br>
+
+	<h3>Album block-- smaller image, text on side</h3>
+	<div class="album album--textRight flex">
+		<div class="album__image album__image--small">
+			<img src="img/Imwideawake.jpeg" height="50" width="50">
+		</div>
+		<div class="columnWrapper flex">
+			<div class="album__albumName color-dark-grey">
+				I'm Wide Awake, It's Morning
+				</div>
+			<div class="album__artistName color-dark-grey">
+				Bright Eyes
+			</div>
+		</div>
+	</div>
+
+<br><br><br>
+
+	<h3>Pagination</h3>
+ <div class="pagination">
+            <div class="line">
+            </div>
+            <div class="albumNav flex">
+                <div class="prev color-lighter-grey font-oswald font-size-lg">
+                    PREV
+                    <!-- This text is a lighter shade of grey when there is no previous page to show. Use Javascript. -->
+                </div>
+                <div class="albumNumbers color-mid-grey font-oswald-light font-size-lg">
+                    1-1 of 1
+                    <!-- Filler text. Numbers are representative of number of albums in system and how many are currently being displayed on the page. -->
+                </div>
+                <div class="next color-mid-grey font-oswald font-size-lg">
+                    NEXT <span class="icons icons--next"></span>
+                    <!-- Probably will use AJAX to give affect of clicking through "pages".  -->
+                </div>
+            </div>
+
+        </div>
+
+
+<br><br><br>
+
+	<h3>Footer</h3>
+	<div class="header header--footer flex">
+        <div class="headerWrapper flex">
+
+        </div>
+    </div>
+
+<br><br><br>
+
+	<h3>Share Artist</h3>
+		<span class="share">
+			<span class="share__text font-oswald color-mid-grey">SHARE THIS ARTIST</span>
+			<span class="icons icons--twitter color-dark-grey"></span>
+			<span class="icons icons--fb color-dark-grey"></span>
+		</span>
+
+<br><br><br>
+
+	<h3>Share Album</h3>
+		<span class="share">
+			<span class="share__text font-oswald color-mid-grey">SHARE THIS ALBUM</span>
+			<span class="icons icons--twitter color-dark-grey"></span>
+			<span class="icons icons--fb color-dark-grey"></span>
+		</span>
+
+<br><br><br>
+
+	<h3>Share Musician</h3>
+		<span class="share">
+			<span class="share__text font-oswald color-mid-grey">SHARE THIS MUSICIAN</span>
+			<span class="icons icons--twitter color-dark-grey"></span>
+			<span class="icons icons--fb color-dark-grey"></span>
+		</span>
+
+<br><br><br>
+
+	<h3>Add album modal</h3>
+	<div class="modal flex">
+		<div class="headerWrapper headerWrapper--modal flex">
+            <div class="playerImage flex">
+                <span class="icons icons--recordPlayer"></span>
+            </div>
+            <div class="siteName color-white padding-btm">
+                THE VINYL ARCHIVE
+                <!-- Link to homepage -->
+            </div>
+            <div class="siteInfo color-white padding-btm">
+                by Hear Nebraska
+                <!-- Link to Hear Nebraska website -->
+            </div>
+        </div>
+        <div class="headerWrapper headerWrapper--modal flex">
+            <div class="addAlbum color-white padding-btm">
+                ADD ANOTHER ALBUM
+                <!-- Javascript for add album form -->
+            </div>
+        </div>
+	</div>
+
+</body>
+
+</html>
+
