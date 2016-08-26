@@ -23,6 +23,10 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'awesome_print'
+
+gem "administrate"
+gem 'bourbon'
+gem 'kaminari'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -32,12 +36,16 @@ gem 'awesome_print'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# Use pg_search for extra database search functionality
+gem 'pg_search'
+
 group :development, :test do
   gem "dotenv-rails"
   gem "pry-byebug"
   gem "pry-rails"
   gem 'rspec-rails'
 end
+
 
 group :development do
   gem "quiet_assets"
@@ -51,6 +59,7 @@ end
 
 group :test do
   gem "capybara"
+
   gem "database_cleaner"
   gem "webmock"
 end
@@ -58,3 +67,7 @@ end
 group :staging, :production do
   gem 'rails_12factor'
 end
+
+gem 'devise'
+gem 'carrierwave'
+gem 'mini_magick'
