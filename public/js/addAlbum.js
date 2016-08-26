@@ -39,9 +39,53 @@ window.addEventListener("load", function(){
 
         var r = e.target.response;
         var response = JSON.parse(r);
-        debugger;
-        var albumInput = document.forms["form"]["album"].value;
-        var artistInput = document.forms["form"]["artist"].value;
+
+        var albumInput = document.forms["new_album"]["album[name]"].value;
+        var artistInput = document.forms["new_album"]["artistNames"].value;
+
+        for (i = 0; i < response.albums.length; i++) {
+            for (x = 0; x < response.artists.length; x++) {
+            debugger;
+                if (response.albums[i].name == albumInput && artistInput == response.artists[x].name) {
+                    debugger;
+                    alert("Nope");
+                    break;
+                    // error.style.display = "block";
+                // } else if (apiResponse.blah.albums[i].albumTitle != albumInput && artistInput == apiResponse.blah.artist) {
+                //     albumArtistDiv.style.display = "none";
+                //     albumImagesText.style.display = "block";
+                //     submit4.style.display = "block";
+
+                //     var selectAlbumArt = document.createElement("select");
+                //     selectAlbumArt.setAttribute("value", "Album Cover");
+                //     selectAlbumArt.id = "albumArt";
+                //     document.getElementById("wrapper").appendChild(selectAlbumArt);
+
+                // } else {
+                //     albumArtistDiv.style.display = "none";
+                //     addMembersText.style.display = "block";
+                //     submit2.style.display = "block";
+
+                //     var addMember = document.createElement("input");
+                //     addMember.setAttribute("type", "text");
+                //     addMember.setAttribute("placeholder", "Name");
+                //     addMember.setAttribute("name", "member");
+                //     addMember.id = "newMember" + memberNumber;
+                //     addMember.className = "memberInput";
+                //     document.getElementById("wrapper").appendChild(addMember);
+
+                //     var addInstrument = document.createElement("input");
+                //     addInstrument.setAttribute("type", "text");
+                //     addInstrument.setAttribute("placeholder", "Instrument(s)");
+                //     addInstrument.setAttribute("name", "instrument");
+                //     addInstrument.id = "newInstrument" + memberNumber;
+                //     addInstrument.className = "memberInput";
+                //     document.getElementById("wrapper").appendChild(addInstrument);
+
+                //     addMembersNote.style.display = "block";
+                  }
+                }
+            }
 
         document.body.style.cursor = "default";
         alert("Done");

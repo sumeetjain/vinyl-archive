@@ -15,7 +15,7 @@
 
 				<div id="albumTitle" class="font-oswald-light color-white">
 					<%= form.label "Album Title" %>
-					<%= form.text_field :name, name: "albumName" %>
+					<%= form.text_field :name %>
 				</div>
 
 				<div id="albumGenre" class="font-oswald-light color-white">
@@ -37,7 +37,7 @@
 
 				<div id="artistName" class="font-oswald-light color-white form-margin">
 					<%= artist.label "Artist Name(s)" %>
-					<%= artist.text_field :name, name: "artistNames" %>
+					<%= artist.text_field :name, "name"=> "artistNames" %>
 				</div>
 
 				<div id="artistCity" class="font-oswald-light color-white">
