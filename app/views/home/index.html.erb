@@ -33,7 +33,13 @@
 
                 <div class="pageTitle">
                     <div class="pageTitle__text color-white">
-                        Latest Uploads
+                        <% if params[:genre] %>
+                            <% params[:genre] %> | Genres
+                        <% elsif params[:city] %>
+                            <% params[:city] %> | Cities
+                        <% else %>
+                            Latest Uploads
+                         <% end %>
                     </div>
                 </div>
 
@@ -124,9 +130,9 @@
                 </div>
                 <div class="filterWrapper">
                     <div>
-                        <a class="format color-mid-grey" href="/albums?sort=LP"> LP </a><br>
-                        <a class="format color-mid-grey" href="/albums?sort=EP"> EP </a><br>
-                        <a class="format color-mid-grey" href="/albums?sort=Single"> Single </a>
+                        <a class="format color-mid-grey" href="?format=LP"> LP </a><br>
+                        <a class="format color-mid-grey" href="?format=EP"> EP </a><br>
+                        <a class="format color-mid-grey" href="?format=Single"> Single </a>
                     </div>
                 </div>
             </div>
