@@ -20,6 +20,7 @@ class HomeController < ApplicationController
 		@array_of_cities = Album.list_of_locations
 
 		@hash_of_city_albums_count = Album.count_of_albums_per_city
+		# @genre_album_count = Album.count_of_albums_per_genre
 
 	end
 	
