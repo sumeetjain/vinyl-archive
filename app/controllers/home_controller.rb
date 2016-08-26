@@ -4,10 +4,17 @@ class HomeController < ApplicationController
 	end
 	
 	def index
-		if params.exclude?('city')
-			@albums = Album.all
+		@genres = Album.uniq.pluck(:genre)
+		if params[:city]
+			@albums = Album.get_albums_by_city(params['city'])
+			# @albums = @albums.page(params[:page]).per(9)
+
+		elsif params[:genre]
+			@albums = Album.genres(genre: params[:genre])
+			# @albums = @albums.page(params[:page]).per(9)
+			
 		else
- 			@albums = Album.get_albums_by_city(params['city'])
+ 			@albums = Album.all
 		end
 
 		@array_of_cities = Album.list_of_locations
