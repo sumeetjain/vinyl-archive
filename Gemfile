@@ -58,8 +58,6 @@ group :development do
 end
 
 group :test do
-  # gem "capybara-webkit"
-
   gem "capybara"
 
   gem "database_cleaner"
@@ -72,3 +70,4 @@ end
 
 gem 'devise'
 gem 'carrierwave'
+gem 'mini_magick'
