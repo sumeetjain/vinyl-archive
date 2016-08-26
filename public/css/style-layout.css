@@ -1,0 +1,44 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+body{
+	font-family: 'Open Sans', sans-serif;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background: #BBBBBB;
+	margin: 0;
+}
+.bodyContainer{
+	background: white;
+	width: 1000px;
+}
+.contentContainer{
+	flex-direction: row;
+	justify-content: space-between;
+}
+.rowWrapper{
+	justify-content: space-between;
+	align-items: center;
+}
+.leftContainer{
+	flex-direction: column;
+	width: 670px;
+}
+.leftContainer--albumPage{
+	width: 780px;
+}
+.populateAlbums{	
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-top:25px;
+}
+.filterOptions{
+	flex-direction: column;
+	width: 300px;
+	margin-left: 0;
+}
+.filterWrapper{
+	padding: 25px;
+}
+.artistImgContainer{
+	margin-top:25px;
+}
