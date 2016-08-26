@@ -1,4 +1,32 @@
-<h1>Listing Albums</h1>
+    <div class="bodyContainer">
+
+        <div class="rowWrapper flex margin-sm">
+            <div class="searchBox search flex">
+                <div class="">
+                    <form action="">
+                        <input method="" name="" type="text" placeholder="Search for an album, artist or track..." class="search__input padding-10" id="search" required><span class="icons icons--search color-light-grey"></span>
+                    </form>
+                    <!-- Formating is still weird where the search image appears -->
+                </div>
+            </div>
+
+            <div class="sortText color-light-grey">
+                SORT
+            </div>
+
+            <div class="sortBy">
+                <select class="sortBy__dropdown">
+                    <option class="sortBy__Option" value="newToOld">UPLOAD DATE, NEW TO OLD</option>
+                    <!-- Ask what other options records should be able to be sorted by -->
+                </select>
+            </div>
+
+            <div class="sortIcon">
+            </div>
+
+            <div class="justifyIcon">
+            </div>
+        </div>
 
 <table>
   <thead>
@@ -11,8 +39,9 @@
 
   <tbody>   
     <% @albums.each do |album| %>
+      <%= Artist.find(album.artist_id).name %>
       <tr>
-        <td><%= album.artist_id %></td>
+        
         <td><%= album.name %></td>
       </tr>
     <% end %>
@@ -20,14 +49,71 @@
 </table>
 
 
-  <table>
+<!--   <table>
     <tbody>
-      <td><%= link_to "All Cities", root_path %></td>
+       <td><%= link_to "All Cities", root_path %></td> 
       <% @array_of_cities.each do |city| %>
         <td><%= link_to city, root_path(:city => city) %> ( <%= @hash_of_city_albums_count[city] %> )</td>
       <% end %>
     </tbody>
-  </table>
+  </table> -->
+
+  <div class="filterOptions flex margin-sm">
+                <div class="filterTitle">
+                    <div class="filterTitle__text">
+                        CITIES
+                    </div>
+                </div>
+                <div class="filterWrapper">
+                    
+                  <% @array_of_cities.each do |city| %>
+                    <div class="city color-dark-grey">
+                      <%= link_to city, root_path(:city => city) %> ( <%= @hash_of_city_albums_count[city] %> )
+                    </div>
+                  <% end %>
+                    
+                    <!-- <div class="city color-dark-grey">
+                        Text
+                    </div> -->
+                    <!-- List of cities will need to be dynamically populated -->
+                </div>
+
+                <div class="filterTitle">
+                    <div class="filterTitle__text">
+                        GENRES
+                    </div>
+                </div>
+                <div class="filterWrapper">
+                    <div class="genre color-dark-grey">
+                        Text
+                        <!-- List of genres will need to be dynamically populated -->
+                    </div>
+                </div>
+
+                <div class="filterTitle">
+                    <div class="filterTitle__text">
+                        DECADES
+                    </div>
+                </div>
+                <div class="filterWrapper">
+                    <div class="decade color-dark-grey">
+                        Text
+                        <!-- List of decades will need to be dynamically populated -->
+                    </div>
+                </div>
+
+                <div class="filterTitle">
+                    <div class="filterTitle__text">
+                        FORMAT
+                    </div>
+                </div>
+                <div class="filterWrapper">
+                    <div class="format color-dark-grey">
+                        Text
+                        <!-- List of decades will need to be dynamically populated -->
+                    </div>
+                </div>
+            </div>
 
 
 
