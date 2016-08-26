@@ -8,10 +8,38 @@
 </head>
 <body>
 
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
+<!-- <p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p> -->
+
+<div class="header flex">
+        <div class="headerWrapper flex">
+            <div class="playerImage flex">
+                <span class="icons icons--recordPlayer"></span>
+            </div>
+            <div class="siteName color-white">
+                THE VINYL ARCHIVE
+                <!-- Link to homepage -->
+            </div>
+            <div class="siteInfo color-white">
+                by Hear Nebraska
+                <!-- Link to Hear Nebraska website -->
+            </div>
+        </div>
+        <div class="headerWrapper--album flex">
+            <div class="addAlbum color-white">
+                ADD AN ALBUM
+                <!-- Javascript for add album form -->
+            </div>
+        </div>
+    </div>
+
 
 <%= yield %>
+
+<div class="header header--footer flex">
+    <div class="headerWrapper flex">
+	</div>
+</div>
 
 </body>
 </html>

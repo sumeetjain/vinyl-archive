@@ -1,13 +1,13 @@
 .header{
 	justify-content: space-between;
-	background-image: url("../img/record-background.png");
+	background-image: url("record-background.png");
 	background-position: bottom;
 	background-color: #2B2B2B;
 	height: 90px;
 	width: 1000px;
 }
 .header--footer{
-	background-image: url("../img/footer-background.png");
+	background-image: url("footer-background.png");
 }
 .headerWrapper{
 	align-items: center;
@@ -187,7 +187,7 @@
 }
 .modal{
 	align-content: flex-end;
-	background-image: url("../img/record-background.png");
+	background-image: url("record-background.png");
 	height: 595px;
 	width: 1000px;
 }
