@@ -100,7 +100,7 @@
                 <div class="filterWrapper">
                     <% @genres.each do |genre| %>
                     <div>
-                        <%= link_to genre, root_path(:genre => genre), :class => "genre color-dark-grey" %>
+                        <%= link_to genre, root_path(:genre => genre), :class => "genre color-mid-grey" %>
                     </div>
                     <% end %>
                 </div>
@@ -111,7 +111,7 @@
                     </div>
                 </div>
                 <div class="filterWrapper">
-                    <div class="decade color-dark-grey">
+                    <div class="decade color-mid-grey">
                         Text
                         <!-- List of decades will need to be dynamically populated -->
                     </div>
@@ -124,9 +124,9 @@
                 </div>
                 <div class="filterWrapper">
                     <div>
-                        <a class="format color-dark-grey" href="/albums?sort=LP"> LP </a><br>
-                        <a class="format color-dark-grey" href="/albums?sort=EP"> EP </a><br>
-                        <a class="format color-dark-grey" href="/albums?sort=Single"> Single </a>
+                        <a class="format color-mid-grey" href="/albums?sort=LP"> LP </a><br>
+                        <a class="format color-mid-grey" href="/albums?sort=EP"> EP </a><br>
+                        <a class="format color-mid-grey" href="/albums?sort=Single"> Single </a>
                     </div>
                 </div>
             </div>
