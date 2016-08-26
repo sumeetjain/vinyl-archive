@@ -1,9 +1,9 @@
 @font-face {
 	font-family: "Oswald";
-	src: url(../fonts/oswald/"Oswald-LightItalic.eot");
-	src: url("../fonts/oswald/Oswald-LightItalic.eot?#iefix") format("embedded-opentype"),
-		url("../fonts/oswald/Oswald-LightItalic.woff") format("woff"),
-		url("../fonts/oswald/Oswald-LightItalic.ttf") format("truetype");
+	src: url(oswald/"Oswald-LightItalic.eot");
+	src: url("oswald/Oswald-LightItalic.eot?#iefix") format("embedded-opentype"),
+		url("oswald/Oswald-LightItalic.woff") format("woff"),
+		url("oswald/Oswald-LightItalic.ttf") format("truetype");
 	font-weight: 300;
 	font-style: italic;
 }
@@ -11,8 +11,8 @@
 	font-family: "Oswald";
 	src: url("Oswald.eot");
 	src: url("Oswald.eot?#iefix") format("embedded-opentype"),
-		url("../fonts/oswald/Oswald.woff") format("woff"),
-		url("../fonts/oswald/Oswald.ttf") format("truetype");
+		url("oswald/Oswald.woff") format("woff"),
+		url("oswald/Oswald.ttf") format("truetype");
 	font-weight: normal;
 	font-style: normal;
 }
@@ -20,8 +20,8 @@
 	font-family: "Oswald-Light";
 	src: url("Oswald-Light.eot");
 	src: url("Oswald-Light.eot?#iefix") format("embedded-opentype"),
-		url("../fonts/oswald/Oswald-Light.woff") format("woff"),
-		url("../fonts/oswald/Oswald-Light.ttf") format("truetype");
+		url("oswald/Oswald-Light.woff") format("woff"),
+		url("oswald/Oswald-Light.ttf") format("truetype");
 	font-weight: 300;
 	font-style: normal;
 }
@@ -29,8 +29,8 @@
 	font-family: "HN-icons";
 	src: url("HN-icons.eot");
 	src: url("HN-icons.eot?#iefix") format("embedded-opentype"),
-		url("../fonts/hn-icons/HN-icons.woff") format("woff"),
-		url("../fonts/hn-icons/HN-icons.ttf") format("truetype");
+		url("hn-icons/HN-icons.woff") format("woff"),
+		url("hn-icons/HN-icons.ttf") format("truetype");
 	font-weight: normal;
 	font-style: normal;
 }
@@ -38,8 +38,8 @@
 	font-family: "hn-radio-icons";
 	src: url("hn-radio-icons.eot");
 	src: url("hn-radio-icons.eot?#iefix") format("embedded-opentype"),
-		url("../fonts/hn-icons/hn-radio-icons.woff") format("woff"),
-		url("../fonts/hn-icons/hn-radio-icons.ttf") format("truetype");
+		url("hn-icons/hn-radio-icons.woff") format("woff"),
+		url("hn-icons/hn-radio-icons.ttf") format("truetype");
 	font-weight: normal;
 	font-style: normal;
 }
@@ -47,8 +47,8 @@
 	font-family: "Montserrat";
 	src: url("Montserrat-Bold.eot");
 	src: url("Montserrat-Bold.eot?#iefix") format("embedded-opentype"),
-		url("../fonts/montserrat/Montserrat-Bold.woff") format("woff"),
-		url("../fonts/montserrat/Montserrat-Bold.ttf") format("truetype");
+		url("montserrat/Montserrat-Bold.woff") format("woff"),
+		url("montserrat/Montserrat-Bold.ttf") format("truetype");
 	font-weight: bold;
 	font-style: normal;
 }
@@ -56,8 +56,8 @@
 	font-family: "Yanone Kaffeesatz";
 	src: url("YanoneKaffeesatz-Bold.eot");
 	src: url("YanoneKaffeesatz-Bold.eot?#iefix") format("embedded-opentype"),
-		url("../fonts/yanone-kaffeesatz/YanoneKaffeesatz-Bold.woff") format("woff"),
-		url("../fonts/yanone-kaffeesatz/YanoneKaffeesatz-Bold.ttf") format("truetype");
+		url("yanone-kaffeesatz/YanoneKaffeesatz-Bold.woff") format("woff"),
+		url("yanone-kaffeesatz/YanoneKaffeesatz-Bold.ttf") format("truetype");
 	font-weight: bold;
 	font-style: normal;
 }
