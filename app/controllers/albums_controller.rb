@@ -9,6 +9,7 @@ class AlbumsController < ApplicationController
 			@albums = @albums.page(params[:page]).per(3)
 		else
 			@albums = Album.all.page(params[:page]).per(3)
+		end
 
 		if params[:sort].nil?
 			@albums = Album.all.page(params[:page]).per(3)
