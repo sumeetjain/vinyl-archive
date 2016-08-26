@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Vinyl Archive by Hear Nebraska</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/utility.css">
+    <link rel="stylesheet" type="text/css" href="css/style-layout.css">
+    <link rel="stylesheet" type="text/css" href="css/style-fonts.css">
+</head>
+
+<body>
+    <div class="header flex">
+        <div class="headerWrapper flex">
+            <div class="playerImage flex">
+                <span class="icons icons--recordPlayer"></span>
+            </div>
+            <div class="siteName color-white">
+                THE VINYL ARCHIVE
+                <!-- Link to homepage -->
+            </div>
+            <div class="siteInfo color-white">
+                by Hear Nebraska
+                <!-- Link to Hear Nebraska website -->
+            </div>
+        </div>
+        <div class="headerWrapper--album flex">
+            <div class="addAlbum color-white">
+                ADD AN ALBUM
+                <!-- Javascript for add album form -->
+            </div>
+        </div>
+    </div>
+
+    <div class="bodyContainer">
+
+        <div class="rowWrapper flex margin-sm">
+            <div class="searchBox search flex">
+                <div class="">
+                    <form action="">
+                        <input method="" name="" type="text" placeholder="Search for an album, artist or track..." class="search__input padding-10" id="search" required><span class="icons icons--search color-light-grey"></span>
+                    </form>
+                    <!-- Formating is still weird where the search image appears -->
+                </div>
+            </div>
+
+            <div class="sortText color-light-grey">
+                SORT
+            </div>
+
+            <div class="sortBy">
+                <select>
+                    <option value="newToOld">UPLOAD DATE, NEW TO OLD</option>
+                    <!-- Ask what other options records should be able to be sorted by -->
+                </select>
+            </div>
+
+            <div class="sortIcon">
+            </div>
+
+            <div class="justifyIcon">
+            </div>
+        </div>
+
+
+        <div class="contentContainer flex">
+            <div class="leftContainer flex margin-sm">
+
+                <div class="pageTitle">
+                    <div class="pageTitle__text color-white">
+                        "Bright Eyes" <span class="filterType">Search</span>
+                    </div>
+                </div>
+
+                <div class="populateAlbums flex">
+                    <!-- Dynamically populate this div with albums. Each album should be contained in the div class album. -->
+                    <div class="album">
+                            <img src="img/Imwideawake.jpeg" class="album__image">
+
+                        <div class="album__albumName color-dark-grey">
+                            I'm Wide Awake, It's Morning
+                        </div>
+
+                        <div class="album__artistName color-dark-grey">
+                            Bright Eyes
+                        </div>
+                    </div>
+
+                </div>
+
+        <div class="pagination">
+            <div class="line">
+            </div>
+            <div class="albumNav flex">
+                <div class="prev color-lighter-grey font-oswald font-size-lg">
+                    PREV
+                    <!-- This text is a lighter shade of grey when there is no previous page to show. Use Javascript. -->
+                </div>
+                <div class="albumNumbers color-mid-grey font-oswald-light font-size-lg">
+                    1-1 of 1
+                    <!-- Filler text. Numbers are representative of number of albums in system and how many are currently being displayed on the page. -->
+                </div>
+                <div class="next color-mid-grey font-oswald font-size-lg">
+                    NEXT
+                    <!-- Probably will use AJAX to give affect of clicking through "pages".  -->
+                </div>
+            </div>
+
+        </div>
+
+            </div>
+
+            <div class="filterOptions flex margin-sm">
+                <div class="filterTitle">
+                    <div class="filterTitle__text">
+                        CITIES
+                    </div>
+                </div>
+                <div class="filterWrapper">
+                    <div class="city color-dark-grey">
+                        Text
+                    </div>
+                    <div class="city color-dark-grey">
+                        Text
+                    </div>
+                    <!-- List of cities will need to be dynamically populated -->
+                </div>
+
+                <div class="filterTitle">
+                    <div class="filterTitle__text">
+                        GENRES
+                    </div>
+                </div>
+                <div class="filterWrapper">
+                    <div class="genre color-dark-grey">
+                        Text
+                        <!-- List of genres will need to be dynamically populated -->
+                    </div>
+                </div>
+
+                <div class="filterTitle">
+                    <div class="filterTitle__text">
+                        DECADES
+                    </div>
+                </div>
+                <div class="filterWrapper">
+                    <div class="decade color-dark-grey">
+                        Text
+                        <!-- List of decades will need to be dynamically populated -->
+                    </div>
+                </div>
+
+                <div class="filterTitle">
+                    <div class="filterTitle__text">
+                        FORMAT
+                    </div>
+                </div>
+                <div class="filterWrapper">
+                    <div class="format color-dark-grey">
+                        Text
+                        <!-- List of decades will need to be dynamically populated -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="header header--footer flex">
+        <div class="headerWrapper flex">
+
+        </div>
+    </div>
+</body>
+
+</html>
