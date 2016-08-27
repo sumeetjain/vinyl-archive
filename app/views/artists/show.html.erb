@@ -1,13 +1,10 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <%= @artist.name %> | Artist  <%= link_to 'Edit', edit_admin_artist_path(@artist) %>
+  <%= link_to 'Edit', edit_admin_artist_path(@artist) %>
 </p>
 
-<p>
-  <strong>Bio:</strong><br>
-  <%= @artist.bio %>
-</p>
+
 
 <p>
 	<strong>Members:</strong><br>
@@ -18,12 +15,182 @@
 </p>
 
 
-<p>
-	Albums
-	<% @albums.each do |album| %>
-		<p><%= link_to album.name, album %></p>
-	<% end %>
-</p>
+
 
 <%= link_to 'Back', albums_path %>
 <%= link_to "Add An Album", new_album_path %>
+
+
+<div class="bodyContainer">
+
+        <div class="rowWrapper flex margin-sm">
+            <div class="searchBox search flex">
+                    <form action="">
+                        <input method="" name="" type="text" placeholder="Search for an album, artist or track..." class="search__input padding-10" id="search" required><span class="icons icons--search color-light-grey"></span>
+                    </form>
+                    <!-- Formating is still weird where the search image appears -->
+            </div>
+
+            <div class="sortText color-light-grey">
+                SORT
+            </div>
+
+            <div class="sortBy">
+                <select>
+                    <option value="newToOld">UPLOAD DATE, NEW TO OLD</option>
+                    <!-- Ask what other options records should be able to be sorted by -->
+                </select>
+            </div>
+
+            <div class="sortIcon">
+            </div>
+
+            <div class="justifyIcon">
+            </div>
+        </div>
+
+
+        <div class="contentContainer flex">
+            <div class="leftContainer flex margin-sm">
+
+                <div class="pageTitle">
+                    <div class="pageTitle__text color-white">
+                        <%= @artist.name %> <span class="filterType"> | Artist</span>
+                    </div>
+                </div>
+
+                <div class="artistImgContainer">
+                    <img src="img/BrightEyes.jpg" class="artistImg" alt="Bright Eyes">
+                </div>
+                
+                <div class="line margin-top">
+                </div>
+
+                <div class="artistInfoWrapper flex">
+                    <div class="artistInfoTitle">
+                        BIO
+                    </div>
+                    <div class="artistInfoTitle">
+                        MEMBERS
+                    </div>
+                </div>
+
+                <div class="line">
+                </div>
+
+                <div class="artistInfoWrapper flex margin-top">
+                    <div class="artistBio font-oswald-light color-darkest-grey">        
+                    <%= @artist.bio %>
+                    </div>
+
+                    <div class="artistMembers font-oswald-light color-darkest-grey">
+                    <!-- member__name and member__instrument should be dynamically populated from form data -->
+                        <div class="member">
+                            <span class="member__name">Conor Oberst</span> &mdash; <span class="member__instrument">vocals</span>
+                        </div>
+                        <div class="member">
+                            <span class="member__name">Mike Mogis</span> &mdash;
+                        </div>
+                        <div class="member">
+                            <span class="member__name">Nate Walcott</span> &mdash;
+                        </div>
+                    </div>
+                </div>
+
+                <div class="line margin-top">
+                </div>
+
+                <div class="artistInfoWrapper flex">
+                    <div class="artistInfoTitle">
+                        ALBUMS
+                    </div>
+
+                <div class="sortText color-light-grey">
+                    SORT
+                </div>
+
+                <div class="sortBy">
+                    <select>
+                        <option value="newToOld">UPLOAD DATE, NEW TO OLD</option>
+                        <!-- Ask what other options records should be able to be sorted by -->
+                    </select>
+                </div>
+                </div>
+
+                <div class="line">
+                </div>
+                
+                <div class="margin-top flex populateAlbums">
+                    <% @albums.each do |album| %>
+                    <div class="album">
+                        <img src="img/Imwideawake.jpeg" class="album__image" alt="I'm Wide Awake, It's Morning">
+                        
+                        <div class="album__albumName color-dark-grey">
+                            <%= album.name %>
+                        </div>
+
+                        <div class="album__artistName color-dark-grey">
+                            <%= @artist.name %>
+                        </div>
+                    </div>
+                        <% end %>
+                    </div>
+
+            </div>
+
+             <div class="filterOptions flex margin-sm">
+                <div class="filterTitle">
+                    <div class="filterTitle__text">
+                        CITIES
+                    </div>
+                </div>
+                <div class="filterWrapper">
+                    <% @array_of_cities.each do |city| %>
+                    <div>
+                      <%= link_to "#{city} (#{@hash_of_city_albums_count[city]})", root_path(:city => city), :class => "filteredLink city color-mid-grey" %>
+                    </div>
+                  <% end %>
+                    
+                </div>
+
+                <div class="filterTitle">
+                    <div class="filterTitle__text">
+                        GENRES
+                    </div>
+                </div>
+                <div class="filterWrapper">
+                    <% @genres.each do |genre| %>
+                    <div>
+                        <%= link_to genre, root_path(:genre => genre), :class => "genre color-mid-grey" %>
+                    </div>
+                    <% end %>
+                </div>
+
+                <div class="filterTitle">
+                    <div class="filterTitle__text">
+                        DECADES
+                    </div>
+                </div>
+                <div class="filterWrapper">
+                    <div class="decade color-mid-grey">
+                        Text
+                        <!-- List of decades will need to be dynamically populated -->
+                    </div>
+                </div>
+
+                <div class="filterTitle">
+                    <div class="filterTitle__text">
+                        FORMAT
+                    </div>
+                </div>
+                <div class="filterWrapper">
+                    <div>
+                        <a class="format color-mid-grey" href="?format=LP"> LP </a><br>
+                        <a class="format color-mid-grey" href="?format=EP"> EP </a><br>
+                        <a class="format color-mid-grey" href="?format=Single"> Single </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
