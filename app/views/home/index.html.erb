@@ -54,8 +54,8 @@
                             <%= link_to album.name, album_path(album.id), :class => "album__albumName color-dark-grey" %>
                         </div>
 
-                        <div class="album__artistName color-dark-grey">
-                            <%= Artist.find(album.artist_id).name %>
+                        <div>
+                            <%=  link_to Artist.find(album.artist_id).name, artist_path(Artist.find(album.artist_id)), :class => "album__artistName color-dark-grey" %>
                         </div>
 
                     </div>
