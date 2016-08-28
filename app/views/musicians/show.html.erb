@@ -71,7 +71,7 @@
                         </div>
 
                         <div class="album__artistName color-dark-grey">
-                            <%= @artist.name %>
+                            <%= Artist.find(album.artist_id).name %>
                         </div>
                     </div>
                         <% end %>
