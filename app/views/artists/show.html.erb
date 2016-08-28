@@ -73,7 +73,7 @@
                     <!-- member__name and member__instrument should be dynamically populated from form data -->
                         <% @artist.musicians.each do |musician| %>
                         <div class="member">
-                            <span class="member__name"><%= musician.name %></span> &mdash; <span class="member__instrument"><%= musician.instrument %></span>
+                            <span><%= link_to musician.name, musician_path(musician.id), :class => "member__name color-darkest-grey" %></span> &mdash; <span class="member__instrument"><%= musician.instrument %></span>
                         </div>
                         <% end %>
                       
