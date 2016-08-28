@@ -1,8 +1,47 @@
-<h1>Musician Details</h1>
+<p><%= link_to "Edit Musician", edit_admin_musician_path(@musician.id) %></p>
+<div class="bodyContainer">
 
-<h3>Name</h3>
-<p><%= @musician.name %> <%= link_to "Edit Musician", edit_admin_musician_path(@musician.id) %></p>
+        <div class="rowWrapper flex margin-sm">
+            <div class="searchBox search flex">
+                    <form action="">
+                        <input method="" name="" type="text" placeholder="Search for an album, artist or track..." class="search__input padding-10" id="search" required><span class="icons icons--search color-light-grey"></span>
+                    </form>
+            </div>
 
+            <div class="sortText color-light-grey">
+                SORT
+            </div>
+
+            <div class="sortBy">
+                <select>
+                    <option value="newToOld">UPLOAD DATE, NEW TO OLD</option>
+                    <!-- Ask what other options records should be able to be sorted by -->
+                </select>
+            </div>
+
+            <div class="sortIcon">
+            </div>
+
+            <div class="justifyIcon">
+            </div>
+        </div>
+
+
+        <div class="contentContainer flex">
+            <div class="leftContainer flex margin-sm">
+
+                <div class="pageTitle">
+                    <div class="pageTitle__text color-white">
+                    <%= @musician.name %>
+                    </div>
+                </div>
+
+                <div class="artistImgContainer">
+                    <img src="img/BrightEyes.jpg" class="artistImg" alt="Bright Eyes">
+                </div>
+                
+                <div class="line margin-top">
+                </div>
 <p><%= image_tag "#{@img}" %></p>
 
 <h3>Albums</h3>
@@ -11,3 +50,84 @@
 		<p><%= link_to album.name, album %></p>
 	<% end %>
 </p>
+<div class="line margin-top">
+                </div>
+
+                <div class="artistInfoWrapper flex">
+                    <div class="artistInfoTitle">
+                        ALBUMS
+                    </div>
+
+                <div class="sortText color-light-grey">
+                    SORT
+                </div>
+
+                <div class="sortBy">
+                    <select>
+                        <option value="newToOld">UPLOAD DATE, NEW TO OLD</option>
+                        <!-- Ask what other options records should be able to be sorted by -->
+                    </select>
+                </div>
+                </div>
+
+                <div class="line">
+                </div>
+                
+      
+
+             <div class="filterOptions flex margin-sm">
+                <div class="filterTitle">
+                    <div class="filterTitle__text">
+                        CITIES
+                    </div>
+                </div>
+                <div class="filterWrapper">
+                    <% @array_of_cities.each do |city| %>
+                    <div>
+                      <%= link_to "#{city} (#{@hash_of_city_albums_count[city]})", root_path(:city => city), :class => "filteredLink city color-mid-grey" %>
+                    </div>
+                  <% end %>
+                    
+                </div>
+
+                <div class="filterTitle">
+                    <div class="filterTitle__text">
+                        GENRES
+                    </div>
+                </div>
+                <div class="filterWrapper">
+                    <% @genres.each do |genre| %>
+                    <div>
+                        <%= link_to genre, root_path(:genre => genre), :class => "genre color-mid-grey" %>
+                    </div>
+                    <% end %>
+                </div>
+
+                <div class="filterTitle">
+                    <div class="filterTitle__text">
+                        DECADES
+                    </div>
+                </div>
+                <div class="filterWrapper">
+                    <div class="decade color-mid-grey">
+                        Text
+                        <!-- List of decades will need to be dynamically populated -->
+                    </div>
+                </div>
+
+                <div class="filterTitle">
+                    <div class="filterTitle__text">
+                        FORMAT
+                    </div>
+                </div>
+                <div class="filterWrapper">
+                    <div>
+                        <a class="format color-mid-grey" href="?format=LP"> LP </a><br>
+                        <a class="format color-mid-grey" href="?format=EP"> EP </a><br>
+                        <a class="format color-mid-grey" href="?format=Single"> Single </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
