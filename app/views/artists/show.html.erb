@@ -46,6 +46,7 @@
 
                 <div class="artistImgContainer">
                     <img src="img/BrightEyes.jpg" class="artistImg" alt="Bright Eyes">
+                    <!-- Need to populate image from database -->
                 </div>
                 
                 <div class="line margin-top">
@@ -105,8 +106,7 @@
                 <div class="margin-top flex populateAlbums">
                     <% @albums.each do |album| %>
                     <div class="album">
-                        <img src="img/Imwideawake.jpeg" class="album__image" alt="I'm Wide Awake, It's Morning">
-                        
+
                         <div class="album__albumName color-dark-grey">
                             <%= album.name %>
                         </div>
