@@ -4,9 +4,7 @@
 
 <h3> Album Images </h3>
 <p>
-<% @photo.each do |single_record| %>
-	<%= image_tag single_record.the_photo_url %>
-	<% end %>
+
 </p>
 
 <h3>Artist(s)</h3>
@@ -65,7 +63,9 @@
                     <!-- Dynamically populate this div with albums. Each album should be contained in the div class album. -->
                     <div class="albumArtContainer">
                         <div class="album">
-                                <img src="img/Imwideawake.jpeg" class="album__image album__image--bigger albumArt--big">
+                            <% @photo.each do |single_record| %>
+                            <%= image_tag single_record.the_photo_url %>
+                            <% end %>
                         </div>
 
                         <div>
