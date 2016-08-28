@@ -37,20 +37,10 @@
                 </div>
 
                 <div class="artistImgContainer">
-                    <img src="img/BrightEyes.jpg" class="artistImg" alt="Bright Eyes">
+                	<%= image_tag "#{@img}" %>
                 </div>
                 
                 <div class="line margin-top">
-                </div>
-<p><%= image_tag "#{@img}" %></p>
-
-<h3>Albums</h3>
-<p>
-	<% @albums.each do |album| %>
-		<p><%= link_to album.name, album %></p>
-	<% end %>
-</p>
-<div class="line margin-top">
                 </div>
 
                 <div class="artistInfoWrapper flex">
@@ -73,7 +63,21 @@
                 <div class="line">
                 </div>
                 
-      
+                <div class="margin-top flex populateAlbums">
+                    <% @albums.each do |album| %>
+                    <div class="album">                        
+                        <div class="album__albumName color-dark-grey">
+                            <%= album.name %>
+                        </div>
+
+                        <div class="album__artistName color-dark-grey">
+                            <%= @artist.name %>
+                        </div>
+                    </div>
+                        <% end %>
+                    </div>
+
+            </div>
 
              <div class="filterOptions flex margin-sm">
                 <div class="filterTitle">
