@@ -73,22 +73,9 @@
                     <div class="line">
                     </div>
                     <div class="albumNav flex">
-                        <span class="prev color-lighter-grey font-oswald font-size-lg"><%= link_to_previous_page @albums, '< Prev' %></span>
-                        <span class="color-mid-grey font-oswald-light font-size-lg"><%= page_entries_info @albums, :entry_name => 'Albums' %></span>
-                        <span class="next color-mid-grey font-oswald font-size-lg"><%= link_to_next_page @albums, 'Next >' %></span>
-                        
-                        <div class="prev color-lighter-grey font-oswald font-size-lg">
-                            PREV
-                            <!-- This text is a lighter shade of grey when there is no previous     page to show. Use Javascript. -->
-                        </div>
-                        <div class="albumNumbers color-mid-grey font-oswald-light font-size-lg">
-                            1-1 of 1
-                            <!-- Filler text. Numbers are representative of number of albums in system and how many are currently being displayed on the page. -->
-                        </div>
-                        <div class="next color-mid-grey font-oswald font-size-lg">
-                            NEXT
-                            <!-- Probably will use AJAX to give affect of clicking through "pages".  -->
-                        </div>
+                        <span><%= link_to_previous_page @albums, '< PREV', :class => "prev color-lighter-grey font-oswald font-size-lg" %></span>
+                        <span class="color-mid-grey font-oswald-light font-size-lg"><%= page_entries_info @albums, :entry_name => '' %></span>
+                        <span><%= link_to_next_page @albums, 'NEXT >', :class => "next color-mid-grey font-oswald font-size-lg" %></span>
                         
                     </div>
 
