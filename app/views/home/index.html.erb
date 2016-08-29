@@ -43,11 +43,11 @@
                          <% end %>
                     </div>
                 </div>
+                
 
                 <div class="populateAlbums flex">
                     <% @albums.each do |album| %>
-                    <div class="album">
-                    <%= paginate @albums %>               
+                    <div class="album">               
                         <%= link_to image_tag("img/ALBUM_IMAGE_GOES_HERE.jpeg", :class => "album__image"), album_path(album.id) %>
 
                         <div class="album__albumName color-dark-grey">
@@ -80,6 +80,7 @@
                             NEXT
                             <!-- Probably will use AJAX to give affect of clicking through "pages".  -->
                         </div>
+                        
                     </div>
 
                 </div>
