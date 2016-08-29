@@ -93,4 +93,13 @@ class Album < ActiveRecord::Base
 		end
 	end
 
+	def self.album_count(genres)
+        count = {}
+        genres.each do |genre|
+            album_count = Album.where(genre: genre)
+            count[genre] = album_count.count
+        end
+        return count
+    end
+
 end
