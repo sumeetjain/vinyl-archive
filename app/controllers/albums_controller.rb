@@ -1,4 +1,3 @@
-require 'pry'
 class AlbumsController < ApplicationController
 
 	def index
