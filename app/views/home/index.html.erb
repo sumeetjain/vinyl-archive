@@ -46,7 +46,8 @@
 
                 <div class="populateAlbums flex">
                     <% @albums.each do |album| %>
-                    <div class="album">               
+                    <div class="album">
+                    <%= paginate @albums %>               
                         <%= link_to image_tag("img/ALBUM_IMAGE_GOES_HERE.jpeg", :class => "album__image"), album_path(album.id) %>
 
                         <div class="album__albumName color-dark-grey">
