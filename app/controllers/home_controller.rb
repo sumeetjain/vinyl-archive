@@ -7,17 +7,17 @@ class HomeController < ApplicationController
 		@genres = Album.uniq.pluck(:genre)
 		if params[:city]
 			@albums = Album.get_albums_by_city(params['city'])
-			#@albums = @albums.page(params[:page]).per(3)
+			@albums = @albums.page(params[:page]).per(9)
 
 		elsif params[:genre]
 			@albums = Album.genres(genre: params[:genre])
-			#@albums = @albums.page(params[:page]).per(3)
+			@albums = @albums.page(params[:page]).per(9)
 		
 		elsif params[:format]
 			@albums = Album.filter(Album.all, params[:format])
 			
 		else
- 			@albums = Album.all
+ 			@albums = Album.all.page(params[:page]).per(9)
 		end
 
 		@array_of_cities = Album.list_of_locations
