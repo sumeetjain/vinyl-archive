@@ -73,10 +73,13 @@
                     <div class="line">
                     </div>
                     <div class="albumNav flex">
-                    <%= paginate @albums %>
+                        <span class="prev color-lighter-grey font-oswald font-size-lg"><%= link_to_previous_page @albums, '< Prev' %></span>
+                        <span class="color-mid-grey font-oswald-light font-size-lg"><%= page_entries_info @albums, :entry_name => 'Albums' %></span>
+                        <span class="next color-mid-grey font-oswald font-size-lg"><%= link_to_next_page @albums, 'Next >' %></span>
+                        
                         <div class="prev color-lighter-grey font-oswald font-size-lg">
                             PREV
-                            <!-- This text is a lighter shade of grey when there is no previous page to show. Use Javascript. -->
+                            <!-- This text is a lighter shade of grey when there is no previous     page to show. Use Javascript. -->
                         </div>
                         <div class="albumNumbers color-mid-grey font-oswald-light font-size-lg">
                             1-1 of 1
