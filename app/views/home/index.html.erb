@@ -96,7 +96,7 @@
                 <div class="filterWrapper">
                     <% @array_of_cities.each do |city| %>
                     <div>
-                      <%= link_to "#{city} (#{@hash_of_city_albums_count[city]})", root_path(:city => city), :class => "filteredLink city color-mid-grey" %>
+                      <%= link_to "#{city} (#{@hash_of_city_albums_count[city]})", root_path(:city => city), :class => "filteredLink filterText color-mid-grey" %>
                     </div>
                   <% end %>
                     
@@ -111,7 +111,7 @@
                     <% @genres.each do |name, count| %>
 
                     <div>
-                        <%= link_to "#{name} (#{count})", root_path( genre: name), :class => "genre color-mid-grey" %>
+                        <%= link_to "#{name} (#{count})", root_path( genre: name), :class => "filterText color-mid-grey" %>
                     </div>
                     <% end %>
                 </div>
@@ -122,7 +122,7 @@
                     </div>
                 </div>
                 <div class="filterWrapper">
-                    <div class="decade color-mid-grey">
+                    <div class="filterText color-mid-grey">
                         Text
                         <!-- List of decades will need to be dynamically populated -->
                     </div>
