@@ -1,6 +1,6 @@
     <div class="bodyContainer">
 
-        <div class="rowWrapper flex margin-sm">
+        <div class="rowWrapper flex margin-top margin-left margin-right">
             <div class="searchBox search flex">
                 <div class="">
                     <form action="">
@@ -9,21 +9,29 @@
                 </div>
             </div>
 
-            <div class="sortText color-light-grey">
-                SORT
-            </div>
+            <div class="sort flex">
+                <div class="sortText color-light-grey">
+                    SORT
+                </div>
 
-            <div class="sortBy">
-                <select class="sortBy__dropdown">
-                    <option class="sortBy__Option" value="newToOld">UPLOAD DATE, NEW TO OLD</option>
+                <div class="sortBy">
+                    <select class="sortBy__dropdown">
+                        <option class="sortBy__Option" value="newToOld">UPLOAD DATE, NEW TO OLD</option>
                     <!-- Ask what other options records should be able to be sorted by -->
                 </select>
+                </div>
             </div>
 
-            <div class="sortIcon">
-            </div>
+            <div class="view flex">
+                <div class="viewBig">
+                <!-- Currently placeholder text that needs to be replaced with a text icon. Make sure to edit font size and width in style-layout.css for view class. -->
+                    XXX
+                </div>
 
-            <div class="justifyIcon">
+                <div class="viewSmall">
+                <!-- Currently placeholder text that needs to be replaced with a text icon. Make sure to edit font size and width in style-layout.css for view class. -->
+                    XXX
+                </div>
             </div>
         </div>
 
@@ -46,10 +54,6 @@
 
 
                 <div class="populateAlbums flex">
-
-        
-
-
                     
                     <% @albums.each do |album| %>
                     <div class="album">               
