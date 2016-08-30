@@ -96,7 +96,7 @@
                 <div class="filterWrapper">
                     <% @array_of_cities.each do |city| %>
                     <div>
-                      <%= link_to "#{city} (#{@hash_of_city_albums_count[city]})", root_path(:city => city), :class => "filteredLink filterText color-mid-grey" %>
+                      <%= link_to "#{city} (#{@hash_of_city_albums_count[city]})", root_path(:city => city), :class => "filterText color-mid-grey" %>
                     </div>
                   <% end %>
                     
