@@ -107,7 +107,7 @@
                     <% @genres.each do |name, count| %>
 
                     <div>
-                        <%= link_to "#{name} (#{count})", albums_path(genre: name), :class => "genre color-mid-grey" %>
+                        <%= link_to "#{name} (#{count})", root_path(genre: name), :class => "genre color-mid-grey" %>
                     </div>
                     <% end %>
                 </div>
@@ -130,11 +130,11 @@
                     </div>
                 </div>
                 <div class="filterWrapper">
-                    <div>
-                        <a class="format color-mid-grey" href="?format=LP"> LP </a><br>
-                        <a class="format color-mid-grey" href="?format=EP"> EP </a><br>
-                        <a class="format color-mid-grey" href="?format=Single"> Single </a>
-                    </div>
+                        <% @format.each do |name, count| %>
+                        <div>
+                            <%= link_to "#{name} (#{count})", root_path(format: name), :class => "format color-mid-grey" %>
+                        </div>
+                        <% end %>
                 </div>
             </div>
         </div>
