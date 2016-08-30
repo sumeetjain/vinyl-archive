@@ -60,3 +60,6 @@
 .margin-btm{
 	margin-bottom: 25px;
 }
+.space-between{
+	justify-content: space-between;
+}

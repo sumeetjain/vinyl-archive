@@ -1,11 +1,4 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <%= link_to 'Edit', edit_admin_artist_path(@artist) %>
-</p>
-
-<%= link_to "Add An Album", new_album_path %>
-
+<!-- <p id="notice"><%= notice %></p> -->
 
 <div class="bodyContainer">
 
@@ -39,8 +32,12 @@
             <div class="leftContainer flex margin-sm">
 
                 <div class="pageTitle">
-                    <div class="pageTitle__text color-white">
-                        <%= @artist.name %> <span class="filterType"> | Artist</span>
+                    <div class="pageTitle__text color-white flex space-between">
+                        <div>
+                            <%= @artist.name %> 
+                            <span class="filterType"> | Artist</span>
+                        </div>
+                            <span><%= link_to 'EDIT ARTIST', edit_admin_artist_path(@artist), :class => "editLink" %></span>
                     </div>
                 </div>
 

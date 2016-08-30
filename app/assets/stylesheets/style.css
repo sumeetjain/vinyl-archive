@@ -228,3 +228,10 @@ a{
 	font-size:15px;
 	font-family: Oswald;
 }
+.editLink{
+	font-size: 25px;
+	color: white;
+	font-family: Yanone Kaffeesatz;
+	letter-spacing: 1px;
+	margin:25px;
+}
