@@ -98,21 +98,9 @@
 	font-family: Yanone Kaffeesatz;
 	letter-spacing: 1px;
 }
-.city{
+.filterText{
 	font-family: Oswald-Light;
-	font-size: 25px;
-}
-.genre{
-	font-family: Oswald-Light;
-	font-size: 25px;
-}
-.decade{
-	font-family: Oswald-Light;
-	font-size: 25px;
-}
-.format{
-	font-family: Oswald-Light;
-	font-size: 25px;
+	font-size: 23px;
 }
 .search{
 	background-color: #EFEFEF;
