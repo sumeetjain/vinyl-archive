@@ -107,7 +107,7 @@
                     <% @genres.each do |name, count| %>
 
                     <div>
-                        <%= link_to "#{name}(#{count})", root_path( genre: name), :class => "genre color-mid-grey" %>
+                        <%= link_to "#{name} (#{count})", root_path( genre: name), :class => "genre color-mid-grey" %>
                     </div>
                     <% end %>
                 </div>
