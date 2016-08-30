@@ -21,7 +21,7 @@
 
                 <div class="pageTitle">
                     <div class="pageTitle__text color-white">
-                        <%= @musician.name %> <span class="filterType"> | Musician</span><span class="editEntry"> | EDIT MUSICIAN</span>
+                        <%= @musician.name %>
                     </div>
                 </div>
 
@@ -37,16 +37,19 @@
                         ALBUMS
                     </div>
 
-                <div class="sortText color-light-grey">
-                    SORT
-                </div>
+                    <div class="sort flex">
+                        <div class="sortText color-light-grey">
+                            SORT
+                        </div>
 
-                <div class="sortBy">
-                    <select>
-                        <option value="newToOld">UPLOAD DATE, NEW TO OLD</option>
-                        <!-- Ask what other options records should be able to be sorted by -->
-                    </select>
-                </div>
+                        <div class="sortBy">
+                            <select class="sortBy__dropdown">
+                                <option class="sortBy__Option" value="newToOld">UPLOAD DATE, NEW TO OLD</option>
+                            <!-- Ask what other options records should be able to be sorted by -->
+                            </select>
+                        </div>
+                    </div>
+
                 </div>
 
                 <div class="line">
