@@ -93,11 +93,16 @@ class Album < ActiveRecord::Base
 		end
 	end
 
-	def self.album_count(genres)
+	def self.album_count(input)
         count = {}
-        genres.each do |genre|
-            album_count = Album.where(genre: genre)
-            count[genre] = album_count.count
+        if input == ["LP", "EP", "Single"]
+            column = :format
+        else
+            column = :genre
+        end
+        input.each do |input|
+            album_count = Album.where(column => input)
+            count[input] = album_count.count
         end
         return count
     end

@@ -9,8 +9,10 @@ class ArtistsController < ApplicationController
 
 		@array_of_cities = Album.list_of_locations
 		@hash_of_city_albums_count = Album.count_of_albums_per_city
-		@genres = Album.uniq.pluck(:genre)
-		@genres = Album.album_count(@genres)
+
+		@genres = Album.album_count(Album.uniq.pluck(:genre))
+		@format = Album.album_count(Album.uniq.pluck(:format))
+
 	end
 
 	private
