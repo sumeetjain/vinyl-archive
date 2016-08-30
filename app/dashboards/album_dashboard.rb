@@ -11,6 +11,7 @@ class AlbumDashboard < Administrate::BaseDashboard
     artist: Field::BelongsTo,
     musicians: Field::HasMany,
     id: Field::Number,
+    label: Field::String,
     name: Field::String,
     genre: Field::String,
     release_date: Field::DateTime,
@@ -28,6 +29,7 @@ class AlbumDashboard < Administrate::BaseDashboard
     :artist,
     :musicians,
     :id,
+    :label,
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
