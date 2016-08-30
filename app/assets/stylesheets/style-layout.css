@@ -48,6 +48,10 @@ body{
 .filterWrapper{
 	margin: 20px;
 }
+.artistInfoWrapper{
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
 .artistImgContainer{
 	margin-top:25px;
 }
