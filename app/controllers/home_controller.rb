@@ -4,8 +4,8 @@ class HomeController < ApplicationController
 	end
 	
 	def index
-		@genres = Album.uniq.pluck(:genre)
-		@genres = Album.album_count(@genres)
+		@genres = Album.album_count(Album.uniq.pluck(:genre))
+		@format = Album.album_count(Album.uniq.pluck(:format))
 		if params[:city]
 			@albums = Album.get_albums_by_city(params['city'])
 			@albums = @albums.page(params[:page]).per(9)
