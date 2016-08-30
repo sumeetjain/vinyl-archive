@@ -12,7 +12,7 @@ class MusiciansController < ApplicationController
 
 		@hash_of_city_albums_count = Album.count_of_albums_per_city
 		@genres = Album.uniq.pluck(:genre)
-
+		@genres = Album.album_count(@genres)
 		@artist = Artist.find(params[:id])
 	end
 	
