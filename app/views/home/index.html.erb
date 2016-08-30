@@ -111,7 +111,7 @@
                     <% @genres.each do |name, count| %>
 
                     <div>
-                        <%= link_to "#{name} (#{count})", root_path(genre: name), :class => "genre color-mid-grey" %>
+                        <%= link_to "#{name} (#{count})", root_path(genre: name), :class => "filterText color-mid-grey" %>
                     </div>
                     <% end %>
                 </div>
@@ -136,7 +136,7 @@
                 <div class="filterWrapper">
                     <% @format.each do |name, count| %>
                     <div>
-                        <%= link_to "#{name} (#{count})", root_path(format: name), :class => "format color-mid-grey" %>
+                        <%= link_to "#{name} (#{count})", root_path(format: name), :class => "filterText color-mid-grey" %>
                     </div>
                     <% end %>
                 </div>
