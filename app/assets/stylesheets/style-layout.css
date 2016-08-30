@@ -30,7 +30,7 @@ body{
 }
 .leftContainer{
 	flex-direction: column;
-	width: 680px;
+	width: 700px;
 }
 .leftContainer--albumPage{
 	width: 780px;
@@ -42,7 +42,7 @@ body{
 }
 .filterOptions{
 	flex-direction: column;
-	width: 300px;
+	width: 280px;
 	margin-left: 0;
 }
 .filterWrapper{
