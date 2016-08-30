@@ -1,34 +1,42 @@
 <p><%= link_to "Edit Musician", edit_admin_musician_path(@musician.id) %></p>
 <div class="bodyContainer">
 
-        <div class="rowWrapper flex margin-sm">
+        <div class="rowWrapper flex margin-top margin-left margin-right-big"">
             <div class="searchBox search flex">
                     <form action="">
                         <input method="" name="" type="text" placeholder="Search for an album, artist or track..." class="search__input padding-10" id="search" required><span class="icons icons--search color-light-grey"></span>
                     </form>
             </div>
 
-            <div class="sortText color-light-grey">
-                SORT
-            </div>
+            <div class="sort flex">
+                <div class="sortText color-light-grey">
+                    SORT
+                </div>
 
-            <div class="sortBy">
-                <select>
-                    <option value="newToOld">UPLOAD DATE, NEW TO OLD</option>
+                <div class="sortBy">
+                    <select class="sortBy__dropdown">
+                        <option class="sortBy__Option" value="newToOld">UPLOAD DATE, NEW TO OLD</option>
                     <!-- Ask what other options records should be able to be sorted by -->
                 </select>
+                </div>
             </div>
 
-            <div class="sortIcon">
-            </div>
+            <div class="view flex">
+                <div class="viewBig">
+                <!-- Currently placeholder text that needs to be replaced with a text icon. Make sure to edit font size and width in style-layout.css for view class. -->
+                    XXX
+                </div>
 
-            <div class="justifyIcon">
+                <div class="viewSmall">
+                <!-- Currently placeholder text that needs to be replaced with a text icon. Make sure to edit font size and width in style-layout.css for view class. -->
+                    XXX
+                </div>
             </div>
         </div>
 
 
         <div class="contentContainer flex">
-            <div class="leftContainer flex margin-sm">
+            <div class="leftContainer flex margin-top margin-left margin-btm">
 
                 <div class="pageTitle">
                     <div class="pageTitle__text color-white">
@@ -79,7 +87,7 @@
 
             </div>
 
-             <div class="filterOptions flex margin-sm">
+             <div class="filterOptions flex margin-sm margin-right-big">
                 <div class="filterTitle">
                     <div class="filterTitle__text">
                         CITIES
@@ -88,7 +96,7 @@
                 <div class="filterWrapper">
                     <% @array_of_cities.each do |city| %>
                     <div>
-                      <%= link_to "#{city} (#{@hash_of_city_albums_count[city]})", root_path(:city => city), :class => "filteredLink city color-mid-grey" %>
+                      <%= link_to "#{city} (#{@hash_of_city_albums_count[city]})", root_path(:city => city), :class => "filterText color-mid-grey" %>
                     </div>
                   <% end %>
                     
@@ -102,7 +110,7 @@
                 <div class="filterWrapper">
                     <% @genres.each do |name, count| %>
                     <div>
-                        <%= link_to "#{name} (#{count})", root_path(:genre => name), :class => "genre color-mid-grey" %>
+                        <%= link_to "#{name} (#{count})", root_path(:genre => name), :class => "filterText color-mid-grey" %>
                     </div>
                     <% end %>
                 </div>
@@ -113,7 +121,7 @@
                     </div>
                 </div>
                 <div class="filterWrapper">
-                    <div class="decade color-mid-grey">
+                    <div class="filterText color-mid-grey">
                         Text
                         <!-- List of decades will need to be dynamically populated -->
                     </div>
@@ -127,7 +135,7 @@
                 <div class="filterWrapper">
                     <% @format.each do |name, count| %>
                     <div>
-                        <%= link_to "#{name} (#{count})", root_path(format: name), :class => "format color-mid-grey" %>
+                        <%= link_to "#{name} (#{count})", root_path(format: name), :class => "filterText color-mid-grey" %>
                     </div>
                     <% end %>
                 </div>

@@ -1,40 +1,6 @@
+    <div class="bodyContainer">
 
-<!-- <h3>Title</h3>
-<p><%= @album.name %></p>
-
-<h3> Album Images </h3>
-<p>
-
-</p>
-
-<h3>Artist(s)</h3>
-<p id="artist"><%= link_to @album.artist.name, artist_path(@album.artist.id) %></p>
-
-<h3>City</h3>
-<p><%= @album.artist.city %></p>
-
-
-<h3>Biography</h3>
-<p><%= @album.artist.bio %></p>
-
-<h3>Genre</h3>
-<p><%= @album.genre %></p>
-
-<h3>Release Date</h3>
-<p><%= @date %></p>
-
-<h3>Format</h3>
-<p><%= @album.format %></p>
-
-<h3>Album Tracks<h3>
-<ol><% @songs.each do |song| %>
-	<li><%= song.song_name %></li>
-<% end %>
-</ol> -->
-
-<div class="bodyContainer">
-
-        <div class="rowWrapper flex margin-sm">
+        <div class="rowWrapper flex margin-top margin-left margin-right-big">
             <div class="searchBox search flex">
                 <div class="">
                     <form action="">
@@ -57,7 +23,7 @@
         </div>
 
         <div class="contentContainer flex">
-            <div class="leftContainer leftContainer--albumPage flex margin-sm">
+            <div class="leftContainer leftContainer--albumPage flex margin-top margin-left margin-btm">
 
                 <div class="populateAlbums flex">
                     <!-- Dynamically populate this div with albums. Each album should be contained in the div class album. -->
