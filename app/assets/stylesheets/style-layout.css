@@ -30,7 +30,7 @@ body{
 }
 .leftContainer{
 	flex-direction: column;
-	width: 700px;
+	width: 695px;
 }
 .leftContainer--albumPage{
 	width: 780px;
