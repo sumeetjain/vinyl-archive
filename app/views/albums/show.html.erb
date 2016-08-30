@@ -51,8 +51,9 @@
         </div>
                 
         <div class="pageTitle margin-sm">
-            <div class="pageTitle__text color-white">
-                 <%= @album.name %> | Album<span class="editAlbum"> | EDIT ALBUM</span>
+            <div class="pageTitle__text color-white flex space-between">
+                 <%= @album.name %> | Album
+                 <span><%= link_to 'EDIT ALBUM', edit_admin_album_path(@album), :class => "editLink" %></span>
             </div>
         </div>
 
