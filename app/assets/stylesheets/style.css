@@ -192,9 +192,9 @@ a{
 	height: auto !important;
 }
 .artistInfoTitle{
-	font-family: Oswald;
+	font-family: Yanone Kaffeesatz;
 	color: #5D5E5E;
-	font-size: 23px;
+	font-size: 30px;
 	width: 50%;
 }
 .artistBio{
@@ -214,5 +214,8 @@ a{
 	width:250px;
 	border: 2px solid silver;
 	font-size:15px;
+	font-family: Oswald;
+}
+.editEntry{
 	font-family: Oswald;
 }
