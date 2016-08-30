@@ -19,9 +19,18 @@ body{
 	justify-content: space-between;
 	align-items: center;
 }
+.sort{
+	justify-content: space-between;
+	width: 310px;
+}
+.view{
+	justify-content: space-between;
+	width: 100px;
+	font-size: 25px;
+}
 .leftContainer{
 	flex-direction: column;
-	width: 670px;
+	width: 680px;
 }
 .leftContainer--albumPage{
 	width: 780px;
