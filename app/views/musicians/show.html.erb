@@ -1,4 +1,4 @@
-<p><%= link_to "Edit Musician", edit_admin_musician_path(@musician.id) %></p>
+
 <div class="bodyContainer">
 
         <div class="rowWrapper flex margin-sm">
@@ -31,8 +31,12 @@
             <div class="leftContainer flex margin-sm">
 
                 <div class="pageTitle">
-                    <div class="pageTitle__text color-white">
-                    <%= @musician.name %> <span class="filterType"> | Musician</span>
+                    <div class="pageTitle__text color-white flex space-between">
+                        <div>
+                            <%= @musician.name %>
+                            <span class="filterType"> | Musician</span>
+                        </div>
+                        <span><%= link_to "EDIT MUSICIAN", edit_admin_musician_path(@musician.id), :class => "editLink" %></span>
                     </div>
                 </div>
 
