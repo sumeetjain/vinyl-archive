@@ -8,30 +8,11 @@
                     </form>
             </div>
 
-            <div class="sort flex">
-                <div class="sortText color-light-grey">
-                    SORT
-                </div>
-
-                <div class="sortBy">
-                    <select class="sortBy__dropdown">
-                        <option class="sortBy__Option" value="newToOld">UPLOAD DATE, NEW TO OLD</option>
-                    <!-- Ask what other options records should be able to be sorted by -->
-                </select>
-                </div>
-            </div>
-
-            <div class="view flex">
-                <div class="viewBig">
-                <!-- Currently placeholder text that needs to be replaced with a text icon. Make sure to edit font size and width in style-layout.css for view class. -->
-                    XXX
-                </div>
-
-                <div class="viewSmall">
-                <!-- Currently placeholder text that needs to be replaced with a text icon. Make sure to edit font size and width in style-layout.css for view class. -->
-                    XXX
-                </div>
-            </div>
+            <span class="share">
+                <span class="share__text font-oswald color-mid-grey">SHARE THIS MUSICIAN</span>
+                <span class="icons icons--twitter color-dark-grey"></span>
+                <span class="icons icons--fb color-dark-grey"></span>
+            </span>
         </div>
 
 
@@ -40,7 +21,7 @@
 
                 <div class="pageTitle">
                     <div class="pageTitle__text color-white">
-                    <%= @musician.name %> <span class="filterType"> | Musician</span>
+                        <%= @musician.name %>
                     </div>
                 </div>
 
@@ -56,16 +37,19 @@
                         ALBUMS
                     </div>
 
-                <div class="sortText color-light-grey">
-                    SORT
-                </div>
+                    <div class="sort flex">
+                        <div class="sortText color-light-grey">
+                            SORT
+                        </div>
 
-                <div class="sortBy">
-                    <select>
-                        <option value="newToOld">UPLOAD DATE, NEW TO OLD</option>
-                        <!-- Ask what other options records should be able to be sorted by -->
-                    </select>
-                </div>
+                        <div class="sortBy">
+                            <select class="sortBy__dropdown">
+                                <option class="sortBy__Option" value="newToOld">UPLOAD DATE, NEW TO OLD</option>
+                            <!-- Ask what other options records should be able to be sorted by -->
+                            </select>
+                        </div>
+                    </div>
+
                 </div>
 
                 <div class="line">
