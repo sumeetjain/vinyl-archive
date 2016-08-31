@@ -41,7 +41,7 @@
                 <div class="pageTitle">
                     <div class="pageTitle__text color-white">
                         <% if params[:genre] %>
-                            <% params[:genre] %> | <span class="filterType">Genres</span>
+                            <%= @genre %> | <span class="filterType">Genres</span>
                         <% elsif params[:city] %>
                             <% params[:city] %> | Cities
                         <% elsif params[:format] %>
