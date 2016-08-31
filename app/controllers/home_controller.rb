@@ -9,6 +9,7 @@ class HomeController < ApplicationController
 		if params[:city]
 			@albums = Album.get_albums_by_city(params['city'])
 			@albums = @albums.page(params[:page]).per(9)
+			@city = params ['city']
 
 		elsif params[:genre]
 			@albums = Album.genres(genre: params[:genre])
@@ -17,6 +18,7 @@ class HomeController < ApplicationController
 		
 		elsif params[:format]
 			@albums = Album.filter(Album.all, params[:format])
+			@format = params['format']
 			
 		else
  			@albums = Album.all.page(params[:page]).per(9)
