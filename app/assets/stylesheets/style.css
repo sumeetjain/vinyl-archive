@@ -44,9 +44,10 @@
 }
 .pageTitle{
 	background-color: #5D5E5E;
-	padding-top: 10px;
-	padding-bottom: 10px;
+	display: flex;
+	align-items: center;
 	padding-left: 15px;
+	height: 46px;
 }
 .pageTitle__text{
 	font-family: Montserrat;
@@ -88,8 +89,9 @@
 }
 .filterTitle{
 	background-color: #A6A6A6;
-	padding-top: 7px;
-	padding-bottom: 7px;
+	display: flex;
+	align-items: center;
+	height: 46px;
 	padding-left: 20px;
 }
 .filterTitle__text{
@@ -182,6 +184,7 @@
 .filterType{
 	font-family: Oswald;
 	font-style: italic;
+	font-size: 23px;
 }
 a{
 	text-decoration: none;
