@@ -5,7 +5,7 @@ class SearchController < ApplicationController
 	end
 
 	def show
-		@albums = Search.keywordSearch(params[:query])
+		@albums = Search.keywordSearch(params[:id])
 	end
 
 end
