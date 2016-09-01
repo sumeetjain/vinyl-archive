@@ -44,10 +44,26 @@
 		<% @albums.each do |album| %>
 			<tr id="album_<%= album.id %>">
 				<td><%= album.name %></td>
+				<td><%= Artist.find(album.artist_id).name %></td>
 				<td><%= link_to "Details", album_path(album.id) %></td>
 			</tr>
 		<% end %>
 	</tbody>
 </table>
 
+
 <%= paginate @albums %>
+
+<% @genres.each do |genre| %>
+
+		<div>
+			<%= link_to genre, albums_path(genre: genre) %><br>
+		<div>
+
+<% end %>
+
+
+
+<%= link_to "Add An Album", new_album_path %><br>
+<%= link_to "All Albums", albums_path %>
+>>>>>>> master

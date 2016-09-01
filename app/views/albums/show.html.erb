@@ -1,29 +1,82 @@
-<h1>Album Details</h1>
+    <div class="bodyContainer">
 
+        <div class="rowWrapper flex margin-top margin-left margin-right-big">
+            <div class="searchBox search flex">
+                <div class="">
+                    <form action="">
+                        <input method="" name="" type="text" placeholder="Search for an album, artist or track..." class="search__input padding-10" id="search" required><span class="icons icons--search color-light-grey"></span>
+                    </form>
+                </div>
+            </div>
 
-<h3>Title</h3>
-<p><%= @album.name %></p>
+            <span class="share">
+                <span class="share__text font-oswald color-mid-grey">SHARE THIS ALBUM</span>
+                <span class="icons icons--twitter color-dark-grey"></span>
+                <span class="icons icons--fb color-dark-grey"></span>
+            </span>
+        </div>
+                
+        <div class="pageTitle margin-sm">
+            <div class="pageTitle__text color-white">
+                 <%= @album.name %> | Album<span class="editAlbum"> | EDIT ALBUM</span>
+            </div>
+        </div>
 
-<h3>Artist(s)</h3>
-<p id="artist"><%= link_to @album.artist.name, artist_path(@album.artist.id) %></p>
+        <div class="contentContainer flex">
+            <div class="leftContainer leftContainer--albumPage flex margin-top margin-left margin-btm">
 
-<h3>City</h3>
-<p><%= @album.artist.city %></p>
+                <div class="populateAlbums flex">
+                    <!-- Dynamically populate this div with albums. Each album should be contained in the div class album. -->
+                    <div class="albumArtContainer">
+                        <div class="album">
+                            <% @photo.each do |single_record| %>
+                            <%= image_tag single_record.the_photo_url %>
+                            <% end %>
+                        </div>
 
-<h3>URL</h3>
-<p><%= @album.artist.url %></p>
+                        <div>
+                            <img class="albumArt--sm" src="img/k1.jpeg"/>
+                            <img class="albumArt--sm" src="img/k2.jpeg"/>
+                        </div>
+                    </div>
 
-<h3>Biography</h3>
-<p><%= @album.artist.bio %></p>
+            <div class="albumInfo font-oswald-light">
+                <!-- Info should be dynamically created and populated from info entered in form -->
+                <div class="albumInfo__name font-yanone color-dark-grey">
+                    <%= @album.name %>
+                </div>
+                <div class="albumInfo__artist">
+                    by <%= @album.artist.name %>
+                </div>
+                <div class="albumTracks">
+                	<ol><% @songs.each do |song| %>
+                    <span class="albumTracks__num">1</span><span class="albumTracks__name">
+                    
+						<li><%= song.song_name %></li></span>
+					<% end %>
+					</ol>
+                </div>
+            </div>
 
-<h3>Genre</h3>
-<p><%= @album.genre %></p>
+                </div>
 
-<h3>Release Date</h3>
-<p><%= @album.release_date %></p>
+            <!-- Information needs to be dynamically populated from form info -->
+            <div class="info">
+                <span class="info__title">Released:</span><span class=""><%= @date %></span>
+            </div>
+            <div class="info">
+                <span class="info__title">City:</span><span class=""><%= @album.artist.city %></span>
+            </div>
+            <div class="info">
+                <span class="info__title">Genre:</span><span class=""><%= @album.genre %></span>
+            </div>
+            <div class="info">
+                <span class="info__title">Label:</span><span class="">NEED THIS INFO!!</span>
+            </div>
+            <div class="info">
+                <span class="info__title">Format:</span><span class=""><%= @album.format %></span>
+            </div>
 
-<h3>Format</h3>
-<p><%= @album.format %></p>
+            </div>
 
-<%= link_to "Home", albums_path %>
-<%= link_to "Add An Album", new_album_path %>
+        </div>

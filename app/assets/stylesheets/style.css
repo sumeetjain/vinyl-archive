@@ -1,13 +1,13 @@
 .header{
 	justify-content: space-between;
-	background-image: url("../img/record-background.png");
+	background-image: url("record-background.png");
 	background-position: bottom;
 	background-color: #2B2B2B;
 	height: 90px;
 	width: 1000px;
 }
 .header--footer{
-	background-image: url("../img/footer-background.png");
+	background-image: url("footer-background.png");
 }
 .headerWrapper{
 	align-items: center;
@@ -44,9 +44,9 @@
 }
 .pageTitle{
 	background-color: #5D5E5E;
-	padding-top: 6px;
-	padding-bottom: 6px;
-	padding-left: 15px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 20px;
 }
 .pageTitle__text{
 	font-family: Montserrat;
@@ -55,6 +55,10 @@
 .album{
 	width: 200px;
 	margin-bottom: 25px;
+}
+.albumArt--sm{
+	height:98px;
+	width:98px;
 }
 .album__image{
 	width: 200px;
@@ -84,31 +88,19 @@
 }
 .filterTitle{
 	background-color: #A6A6A6;
-	padding-top: 5px;
-	padding-bottom: 5px;
-	padding-left: 15px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	padding-left: 20px;
 }
 .filterTitle__text{
-	font-size: 25px;
+	font-size: 27px;
 	color: white;
 	font-family: Yanone Kaffeesatz;
 	letter-spacing: 1px;
 }
-.city{
+.filterText{
 	font-family: Oswald-Light;
-	font-size: 20px;
-}
-.genre{
-	font-family: Oswald-Light;
-	font-size: 20px;
-}
-.decade{
-	font-family: Oswald-Light;
-	font-size: 20px;
-}
-.format{
-	font-family: Oswald-Light;
-	font-size: 20px;
+	font-size: 23px;
 }
 .search{
 	background-color: #EFEFEF;
@@ -181,9 +173,18 @@
 	font-style: italic;
 	font-size: 23px;
 }
+.modal{
+	align-content: flex-end;
+	background-image: url("record-background.png");
+	height: 595px;
+	width: 1000px;
+}
 .filterType{
 	font-family: Oswald;
 	font-style: italic;
+}
+a{
+	text-decoration: none;
 }
 .artistImg{
 	display: block;
@@ -191,9 +192,9 @@
 	height: auto !important;
 }
 .artistInfoTitle{
-	font-family: Oswald;
+	font-family: Yanone Kaffeesatz;
 	color: #5D5E5E;
-	font-size: 23px;
+	font-size: 30px;
 	width: 50%;
 }
 .artistBio{
@@ -210,8 +211,11 @@
 }
 .sortBy__dropdown{
 	height:30px;
-	width:275px;
+	width:250px;
 	border: 2px solid silver;
 	font-size:15px;
+	font-family: Oswald;
+}
+.editEntry{
 	font-family: Oswald;
 }

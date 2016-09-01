@@ -1,3 +1,151 @@
-Yayyyye you're authenticated!
+    <div class="bodyContainer">
+
+        <div class="rowWrapper flex margin-top margin-left margin-right-big">
+            <div class="searchBox search flex">
+                <div class="">
+                    <form action="">
+                        <input method="" name="" type="text" placeholder="Search for an album, artist or track..." class="search__input padding-10" id="search" required><span class="icons icons--search color-light-grey"></span>
+                    </form>
+                </div>
+            </div>
+
+            <div class="sort flex">
+                <div class="sortText color-light-grey">
+                    SORT
+                </div>
+
+                <div class="sortBy">
+                    <select class="sortBy__dropdown">
+                        <option class="sortBy__Option" value="newToOld">UPLOAD DATE, NEW TO OLD</option>
+                    <!-- Ask what other options records should be able to be sorted by -->
+                </select>
+                </div>
+            </div>
+
+            <div class="view flex">
+                <div class="viewBig">
+                <!-- Currently placeholder text that needs to be replaced with a text icon. Make sure to edit font size and width in style-layout.css for view class. -->
+                    XXX
+                </div>
+
+                <div class="viewSmall">
+                <!-- Currently placeholder text that needs to be replaced with a text icon. Make sure to edit font size and width in style-layout.css for view class. -->
+                    XXX
+                </div>
+            </div>
+        </div>
+
+        <div class="contentContainer flex">
+            <div class="leftContainer flex margin-top margin-left margin-btm">
+
+                <div class="pageTitle">
+                    <div class="pageTitle__text color-white">
+                        <% if params[:genre] %>
+                            <% params[:genre] %> | Genres
+                        <% elsif params[:city] %>
+                            <% params[:city] %> | Cities
+                        <% elsif params[:format] %>
+                            <% params[:format] %> | Formats
+                        <% else %>
+                            Latest Uploads
+                        <% end %>
+                    </div>
+                </div>
+
+
+                <div class="populateAlbums flex">
+                    
+                    <% @albums.each do |album| %>
+                    <div class="album">               
+                        <%= link_to image_tag("img/ALBUM_IMAGE_GOES_HERE.jpeg", :class => "album__image"), album_path(album.id) %>
+
+                        <div class="album__albumName color-dark-grey">
+                            <%= link_to album.name, album_path(album.id), :class => "album__albumName color-dark-grey" %>
+                        </div>
+
+                        <div>
+                            <%=  link_to Artist.find(album.artist_id).name, artist_path(Artist.find(album.artist_id)), :class => "album__artistName color-dark-grey" %>
+                        </div>
+
+                    </div>
+                    <% end %>
+                    
+
+                </div>
+
+                <div class="pagination">
+                    <div class="line">
+                    </div>
+                    <div class="albumNav flex">
+                        <span><%= link_to_previous_page @albums, '< PREV', :class => "prev color-lighter-grey font-oswald font-size-lg" %></span>
+                        <span class="color-mid-grey font-oswald-light font-size-lg"><%= page_entries_info @albums, :entry_name => '' %></span>
+                        <span><%= link_to_next_page @albums, 'NEXT >', :class => "next color-mid-grey font-oswald font-size-lg" %></span>
+                        
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="filterOptions flex margin-sm margin-right-big">
+                <div class="filterTitle">
+                    <div class="filterTitle__text">
+                        CITIES
+                    </div>
+                </div>
+                <div class="filterWrapper">
+                    <% @array_of_cities.each do |city| %>
+                    <div>
+                      <%= link_to "#{city} (#{@hash_of_city_albums_count[city]})", root_path(:city => city), :class => "filterText color-mid-grey" %>
+                    </div>
+                  <% end %>
+                    
+                </div>
+
+                <div class="filterTitle">
+                    <div class="filterTitle__text">
+                        GENRES
+                    </div>
+                </div>
+                <div class="filterWrapper">
+                    <% @genres.each do |name, count| %>
+
+                    <div>
+                        <%= link_to "#{name} (#{count})", root_path(genre: name), :class => "filterText color-mid-grey" %>
+                    </div>
+                    <% end %>
+                </div>
+
+                <div class="filterTitle">
+                    <div class="filterTitle__text">
+                        DECADES
+                    </div>
+                </div>
+                <div class="filterWrapper">
+                    <div class="filterText color-mid-grey">
+                        Text
+                        <!-- List of decades will need to be dynamically populated -->
+                    </div>
+                </div>
+
+                <div class="filterTitle">
+                    <div class="filterTitle__text">
+                        FORMAT
+                    </div>
+                </div>
+                <div class="filterWrapper">
+                    <% @format.each do |name, count| %>
+                    <div>
+                        <%= link_to "#{name} (#{count})", root_path(format: name), :class => "filterText color-mid-grey" %>
+                    </div>
+                    <% end %>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+  
+
 
 <a href="/users/sign_out">Log out</a>

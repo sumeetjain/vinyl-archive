@@ -19,9 +19,18 @@ body{
 	justify-content: space-between;
 	align-items: center;
 }
+.sort{
+	justify-content: space-between;
+	width: 310px;
+}
+.view{
+	justify-content: space-between;
+	width: 100px;
+	font-size: 25px;
+}
 .leftContainer{
 	flex-direction: column;
-	width: 670px;
+	width: 695px;
 }
 .leftContainer--albumPage{
 	width: 780px;
@@ -33,11 +42,15 @@ body{
 }
 .filterOptions{
 	flex-direction: column;
-	width: 300px;
+	width: 280px;
 	margin-left: 0;
 }
 .filterWrapper{
-	padding: 25px;
+	margin: 20px;
+}
+.artistInfoWrapper{
+	margin-top: 5px;
+	margin-bottom: 5px;
 }
 .artistImgContainer{
 	margin-top:25px;
