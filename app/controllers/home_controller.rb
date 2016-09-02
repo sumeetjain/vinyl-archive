@@ -16,6 +16,7 @@ class HomeController < ApplicationController
 		
 		elsif params[:format]
 			@albums = Album.filter(Album.all, params[:format])
+			
 		elsif params[:query]
 			@albums = Search.keywordSearch(params[:query])
 			@albums = Album.where(id: @albums.map(&:id))
