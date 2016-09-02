@@ -1,8 +1,0 @@
-<h1>Search results for "<%= params[:query] %>"</h1>
-
-<p>
-	Albums
-	<% @albums.each do |album| %>
-		<p><%= link_to album.name, album %></p>
-	<% end %>
-</p>
