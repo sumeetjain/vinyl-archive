@@ -1,42 +1,33 @@
 
 <div class="bodyContainer">
 
-        <div class="rowWrapper flex margin-sm">
+        <div class="rowWrapper flex margin-top margin-left margin-right-big"">
             <div class="searchBox search flex">
                     <form action="">
                         <input method="" name="" type="text" placeholder="Search for an album, artist or track..." class="search__input padding-10" id="search" required><span class="icons icons--search color-light-grey"></span>
                     </form>
             </div>
 
-            <div class="sortText color-light-grey">
-                SORT
-            </div>
-
-            <div class="sortBy">
-                <select>
-                    <option value="newToOld">UPLOAD DATE, NEW TO OLD</option>
-                    <!-- Ask what other options records should be able to be sorted by -->
-                </select>
-            </div>
-
-            <div class="sortIcon">
-            </div>
-
-            <div class="justifyIcon">
-            </div>
+            <span class="share">
+                <span class="share__text font-oswald color-mid-grey">SHARE THIS MUSICIAN</span>
+                <span class="icons icons--twitter color-dark-grey"></span>
+                <span class="icons icons--fb color-dark-grey"></span>
+            </span>
         </div>
 
 
         <div class="contentContainer flex">
-            <div class="leftContainer flex margin-sm">
+            <div class="leftContainer flex margin-top margin-left margin-btm">
 
                 <div class="pageTitle">
+
                     <div class="pageTitle__text color-white flex space-between">
                         <div>
                             <%= @musician.name %>
                             <span class="filterType"> | Musician</span>
                         </div>
                         <span><%= link_to "EDIT MUSICIAN", edit_admin_musician_path(@musician.id), :class => "editLink" %></span>
+
                     </div>
                 </div>
 
@@ -52,16 +43,25 @@
                         ALBUMS
                     </div>
 
-                <div class="sortText color-light-grey">
-                    SORT
-                </div>
+                    <div class="sort flex">
+                        <div class="sortText color-light-grey">
+                            SORT
+                        </div>
 
-                <div class="sortBy">
-                    <select>
-                        <option value="newToOld">UPLOAD DATE, NEW TO OLD</option>
-                        <!-- Ask what other options records should be able to be sorted by -->
-                    </select>
-                </div>
+                        <div class="sortBy">
+                             <select>
+                                <option>UPLOAD DATE, NEW TO OLD</option>
+                                <option>Option 2</option>
+                                <option>Option 3</option>
+                            </select>
+
+                            <div class="arrows">
+                                <i class="arr-up"></i>
+                                <i class="arr-down"></i>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
 
                 <div class="line">
@@ -83,7 +83,7 @@
 
             </div>
 
-             <div class="filterOptions flex margin-sm">
+             <div class="filterOptions flex margin-sm margin-right-big">
                 <div class="filterTitle">
                     <div class="filterTitle__text">
                         CITIES
@@ -92,7 +92,7 @@
                 <div class="filterWrapper">
                     <% @array_of_cities.each do |city| %>
                     <div>
-                      <%= link_to "#{city} (#{@hash_of_city_albums_count[city]})", root_path(:city => city), :class => "filteredLink city color-mid-grey" %>
+                      <%= link_to "#{city} (#{@hash_of_city_albums_count[city]})", root_path(:city => city), :class => "filterText color-mid-grey" %>
                     </div>
                   <% end %>
                     
@@ -106,7 +106,7 @@
                 <div class="filterWrapper">
                     <% @genres.each do |name, count| %>
                     <div>
-                        <%= link_to "#{name} (#{count})", root_path(:genre => name), :class => "genre color-mid-grey" %>
+                        <%= link_to "#{name} (#{count})", root_path(:genre => name), :class => "filterText color-mid-grey" %>
                     </div>
                     <% end %>
                 </div>
@@ -117,7 +117,7 @@
                     </div>
                 </div>
                 <div class="filterWrapper">
-                    <div class="decade color-mid-grey">
+                    <div class="filterText color-mid-grey">
                         Text
                         <!-- List of decades will need to be dynamically populated -->
                     </div>
@@ -131,7 +131,7 @@
                 <div class="filterWrapper">
                     <% @format.each do |name, count| %>
                     <div>
-                        <%= link_to "#{name} (#{count})", root_path(format: name), :class => "format color-mid-grey" %>
+                        <%= link_to "#{name} (#{count})", root_path(format: name), :class => "filterText color-mid-grey" %>
                     </div>
                     <% end %>
                 </div>
