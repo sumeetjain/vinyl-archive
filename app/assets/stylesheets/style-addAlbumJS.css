@@ -10,7 +10,7 @@
 }
 .modal{
 	display: flex;
-	background-image: url("../img/record-background.png"); 
+	background-image: url("record-background.png"); 
 	z-index: 10;
     overflow: auto;
     position: fixed;

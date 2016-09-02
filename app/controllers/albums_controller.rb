@@ -20,6 +20,13 @@ class AlbumsController < ApplicationController
 
 		@hash_of_city_albums_count = Album.count_of_albums_per_city
 		# @genre_album_count = Album.count_of_albums_per_genre
+
+		@album = Album.new
+		@album.build_artist
+
+		3.times do
+			@album.artist.musicians.build
+		end
 	end
 
 	def show
