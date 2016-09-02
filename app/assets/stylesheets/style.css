@@ -44,13 +44,14 @@
 }
 .pageTitle{
 	background-color: #5D5E5E;
-	padding-top: 6px;
-	padding-bottom: 6px;
+	display: flex;
+	align-items: center;
 	padding-left: 15px;
+	height: 46px;
 }
 .pageTitle__text{
 	font-family: Montserrat;
-	font-size: 23px;
+	font-size: 22px;
 }
 .album{
 	width: 200px;
@@ -88,44 +89,37 @@
 }
 .filterTitle{
 	background-color: #A6A6A6;
-	padding-top: 5px;
-	padding-bottom: 5px;
-	padding-left: 15px;
+	display: flex;
+	align-items: center;
+	height: 46px;
+	padding-left: 20px;
 }
 .filterTitle__text{
-	font-size: 25px;
+	font-size: 27px;
 	color: white;
 	font-family: Yanone Kaffeesatz;
 	letter-spacing: 1px;
 }
-.city{
+.filterText{
 	font-family: Oswald-Light;
-	font-size: 25px;
-}
-.genre{
-	font-family: Oswald-Light;
-	font-size: 25px;
-}
-.decade{
-	font-family: Oswald-Light;
-	font-size: 25px;
-}
-.format{
-	font-family: Oswald-Light;
-	font-size: 25px;
+	font-size: 23px;
 }
 .search{
 	background-color: #EFEFEF;
 	border-radius: 5px;
-	padding-top: 10px;
-	padding-right: 10px;
+	height: 44px;
+	padding-left: 5px;
+	padding-right: 15px;
+	display: flex;
+	align-items: center;
 }
 .search__input{
 	background-color: #EFEFEF;
 	border-radius: 5px;
 	border: none;
 	height: 20px;
-	width: 375px;
+	width: 370px;
+	outline: 0;
 }
 ::-webkit-input-placeholder{
 	color: #A6A6A6;
@@ -194,6 +188,7 @@
 .filterType{
 	font-family: Oswald;
 	font-style: italic;
+	font-size: 23px;
 }
 a{
 	text-decoration: none;
@@ -204,9 +199,9 @@ a{
 	height: auto !important;
 }
 .artistInfoTitle{
-	font-family: Oswald;
+	font-family: Yanone Kaffeesatz;
 	color: #5D5E5E;
-	font-size: 23px;
+	font-size: 30px;
 	width: 50%;
 }
 .artistBio{
@@ -228,6 +223,7 @@ a{
 	font-size:15px;
 	font-family: Oswald;
 }
+
 .editLink{
 	font-size: 25px;
 	color: white;

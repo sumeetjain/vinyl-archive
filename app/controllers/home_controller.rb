@@ -9,14 +9,21 @@ class HomeController < ApplicationController
 		if params[:city]
 			@albums = Album.get_albums_by_city(params['city'])
 			@albums = @albums.page(params[:page]).per(9)
+			@city = params['city']
 
 		elsif params[:genre]
 			@albums = Album.genres(genre: params[:genre])
 			@albums = @albums.page(params[:page]).per(9)
+			@genre = params['genre']
 		
 		elsif params[:format]
-			@albums = Album.filter(Album.all, params[:format])
+			@albums = Album.filter(Album.all, params[:format]).page(params[:page]).per(9)
+			@format = params['format']
 			
+		elsif params[:query]
+			@albums = Search.keywordSearch(params[:query])
+			@albums = Album.where(id: @albums.map(&:id))
+			@albums = @albums.page(params[:page]).per(9)
 		else
  			@albums = Album.all.page(params[:page]).per(9)
 		end

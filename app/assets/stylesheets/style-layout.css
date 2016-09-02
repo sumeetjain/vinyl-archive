@@ -30,7 +30,7 @@ body{
 }
 .leftContainer{
 	flex-direction: column;
-	width: 680px;
+	width: 695px;
 }
 .leftContainer--albumPage{
 	width: 780px;
@@ -42,11 +42,18 @@ body{
 }
 .filterOptions{
 	flex-direction: column;
-	width: 300px;
+	width: 280px;
 	margin-left: 0;
 }
 .filterWrapper{
-	padding: 25px;
+	margin-top: 20px;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-bottom: 30px;
+}
+.artistInfoWrapper{
+	margin-top: 5px;
+	margin-bottom: 5px;
 }
 .artistImgContainer{
 	margin-top:25px;
