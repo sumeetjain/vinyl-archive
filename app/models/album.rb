@@ -39,11 +39,11 @@ class Album < ActiveRecord::Base
 
 	def self.get_albums_by_city(city)
 		artist_array = Artist.where("city = ?", city)
-		albums = Array.new
+		artist_ids = []
 		artist_array.each_with_index do |record, index|
-			albums[index] = Album.where("artist_id = ?", record['id'])
+			artist_ids.push(record.id)
 		end
-		albums = albums.flatten
+		albums = Album.where(:artist_id => artist_ids)
 		return albums
 	end
 

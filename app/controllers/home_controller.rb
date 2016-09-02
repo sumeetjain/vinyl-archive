@@ -17,7 +17,7 @@ class HomeController < ApplicationController
 			@genre = params['genre']
 		
 		elsif params[:format]
-			@albums = Album.filter(Album.all, params[:format])
+			@albums = Album.filter(Album.all, params[:format]).page(params[:page]).per(9)
 			@format = params['format']
 			
 		else
