@@ -1,6 +1,11 @@
 <%= form_for(@album) do |form| %>
 
 <div>
+	<%= form.label "Choose File" %><br>
+	<%= form.file_field :file %>
+</div>
+
+<div>
 	<%= form.label "Album Title" %><br>
 	<%= form.text_field :name %>
 </div>
