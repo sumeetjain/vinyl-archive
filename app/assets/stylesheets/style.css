@@ -44,13 +44,14 @@
 }
 .pageTitle{
 	background-color: #5D5E5E;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	padding-left: 20px;
+	display: flex;
+	align-items: center;
+	padding-left: 15px;
+	height: 46px;
 }
 .pageTitle__text{
 	font-family: Montserrat;
-	font-size: 23px;
+	font-size: 22px;
 }
 .album{
 	width: 200px;
@@ -88,8 +89,9 @@
 }
 .filterTitle{
 	background-color: #A6A6A6;
-	padding-top: 7px;
-	padding-bottom: 7px;
+	display: flex;
+	align-items: center;
+	height: 46px;
 	padding-left: 20px;
 }
 .filterTitle__text{
@@ -105,15 +107,19 @@
 .search{
 	background-color: #EFEFEF;
 	border-radius: 5px;
-	padding-top: 10px;
-	padding-right: 10px;
+	height: 44px;
+	padding-left: 5px;
+	padding-right: 15px;
+	display: flex;
+	align-items: center;
 }
 .search__input{
 	background-color: #EFEFEF;
 	border-radius: 5px;
 	border: none;
 	height: 20px;
-	width: 375px;
+	width: 370px;
+	outline: 0;
 }
 ::-webkit-input-placeholder{
 	color: #A6A6A6;
@@ -182,6 +188,7 @@
 .filterType{
 	font-family: Oswald;
 	font-style: italic;
+	font-size: 23px;
 }
 a{
 	text-decoration: none;
