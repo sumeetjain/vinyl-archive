@@ -20,8 +20,6 @@
 	<%= form.select :format, ["LP", "EP", "Single"] %>
 </div>
 
-
-
 	<%= form.fields_for :artist do |artist| %>
 
 		<div>
@@ -59,6 +57,14 @@
 			<% end %>
 	<% end %>
 
+	<%= form.fields_for :photos do |image| %>
+
+		<div>
+			<%= image.label "Album Images" %><br>
+			<%= image.file_field :the_photo %>
+		</div>
+
+	<% end %>
 
 <div>
 	<%= form.submit %>
