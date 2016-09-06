@@ -1,5 +1,6 @@
 class AlbumsController < ApplicationController
-	layout false, :only => :new
+	# layout false, :only => :new
+	# Uncomment above to apply layout remover for new action
 
 	def index
 		@genres = Album.uniq.pluck(:genre)
