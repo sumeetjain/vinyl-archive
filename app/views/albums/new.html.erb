@@ -55,16 +55,19 @@
 				</div>
 
 			<% end %>
+
 	<% end %>
 
-	<%= form.fields_for :photos do |image| %>
+	<%= form.fields_for :photos do |photo| %>
 
 		<div>
-			<%= image.label "Album Images" %><br>
-			<%= image.file_field :the_photo %>
+			<%= photo.label "Album Images" %><br>
+			<%= photo.file_field :the_photo %>
 		</div>
 
 	<% end %>
+
+	
 
 <div>
 	<%= form.submit %>

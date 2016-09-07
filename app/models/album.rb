@@ -1,7 +1,9 @@
 class Album < ActiveRecord::Base
 	belongs_to :artist
 	has_many :musicians, :through => :artist
+	has_many :photos
 	accepts_nested_attributes_for :artist
+	accepts_nested_attributes_for :photos
 
 	include PgSearch
 	multisearchable :against => [:artist_id, :name]
