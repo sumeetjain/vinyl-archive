@@ -13,7 +13,9 @@ window.addEventListener("load", function() {
     var comment2 = document.getElementById("comment2");
     var addAnother = document.getElementsByClassName("addAnother");
     var artistCity = document. getElementById("artistCity");
-
+    var albumGenre = document.getElementById("albumGenre");
+    var albumDate = document.getElementById("albumDate");
+    var albumFormat = document.getElementById("albumFormat");
 
     for(i=0; i<next.length; i++){
         next[i].style.display = "none";
@@ -114,6 +116,17 @@ window.addEventListener("load", function() {
         previous[2].style.display = "block";
         previous[1].style.display = "none";
 
+    });
+
+    next[3].addEventListener("click", function(){
+        addAnother[1].style.display = "none";
+        albumGenre.style.display = "flex";
+        albumDate.style.display = "flex";
+        albumFormat.style.display = "flex";
+        next[3].style.display = "none";
+        next[4].style.display = "inline";
+        previous[3].style.display = "block";
+        previous[2].style.display = "none";
     });
 
 });
