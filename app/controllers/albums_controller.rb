@@ -1,3 +1,5 @@
+require 'pry'
+
 class AlbumsController < ApplicationController
 	# layout false, :only => :new
 	# Uncomment above to apply layout remover for new action
@@ -40,13 +42,16 @@ class AlbumsController < ApplicationController
 	def new
 		@album = Album.new
 		@album.build_artist
+		@album.photos.build
 
 		3.times do
 			@album.artist.musicians.build
 		end
+
 	end
 
 	def create
+		binding.pry
 		@album = Album.new(album_params)
 
 		if @album.save
@@ -58,8 +63,9 @@ class AlbumsController < ApplicationController
 	end
 
 	private
+
 	def album_params
-		params.require(:album).permit(:name, :genre, :release_date, :format,
+		params.require(:album).permit(:name, :genre, :release_date, :format, photos_attributes: [:the_photo],
 																 artist_attributes: [:name, :city, :url, :bio, musicians_attributes: [:name, :instrument]])
 	end
 end
