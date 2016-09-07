@@ -1,5 +1,3 @@
-require 'pry'
-
 class AlbumsController < ApplicationController
 	# layout false, :only => :new
 	# Uncomment above to apply layout remover for new action
@@ -51,7 +49,7 @@ class AlbumsController < ApplicationController
 	end
 
 	def create
-		binding.pry
+
 		@album = Album.new(album_params)
 
 		if @album.save
