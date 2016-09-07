@@ -3,19 +3,31 @@ window.addEventListener("load", function() {
     var modalWrapper = document.getElementsByClassName("modal-wrapper");
     var add = document.getElementsByClassName("addAlbum");
     var close = document.getElementsByClassName("close");
-    var next = document.getElementById("next");
+    var next = document.getElementsByClassName("next");
+    var previous = document.getElementsByClassName("previous");
     var albumTitle = document.getElementById("albumTitle");
     var artistName = document.getElementById("artistName");
     var comment = document.getElementById("comment");
     var memberName = document.getElementById("memberName");
     var memberInstrument = document.getElementById("memberInstrument");
     var comment2 = document.getElementById("comment2");
+    var addAnother = document.getElementsByClassName("addAnother");
+    var artistCity = document. getElementById("artistCity");
+
+
+    for(i=0; i<next.length; i++){
+        next[i].style.display = "none";
+    }
+
+    for(i=0; i<previous.length; i++){
+        previous[i].style.display = "none";
+    }
 
     for (i = 0; i < add.length; i++) {
         add[i].addEventListener("click", function() {
 
             modalWrapper[0].style.display = "flex";
-
+            next[0].style.display = "inline";
         });
     }
 
@@ -25,8 +37,9 @@ window.addEventListener("load", function() {
         });
     }
 
-    next.addEventListener("click", function() {
 
+
+    next[0].addEventListener("click", function() {
         var validate = new XMLHttpRequest();
 
         validate.addEventListener("loadstart", function() {
@@ -59,7 +72,6 @@ window.addEventListener("load", function() {
             }
 
             document.body.style.cursor = "default";
-            alert("Done");
 
         });
 
@@ -72,6 +84,35 @@ window.addEventListener("load", function() {
         memberName.style.display = "flex";
         memberInstrument.style.display = "flex";
         comment2.style.display = "block";
+        next[0].style.display = "none";
+        next[1].style.display = "inline";
+        addAnother[0].style.display = "inline";
+        previous[0].style.display = "inline";
+
+
+    });
+
+    next[1].addEventListener("click", function(){
+        artistCity.style.display = "flex";
+        memberName.style.display = "none";
+        memberInstrument.style.display = "none";
+        comment2.style.display = "none";
+        next[1].style.display = "none";
+        next[2].style.display = "inline";
+        addAnother[0].style.display = "none";
+        previous[1].style.display = "inline";
+        previous[0].style.display = "none";
+
+
+    });
+
+    next[2].addEventListener("click", function(){
+        addAnother[1].style.display = "inline";
+        artistCity.style.display = "none";
+        next[2].style.display = "none";
+        next[3].style.display = "inline";
+        previous[2].style.display = "inline";
+        previous[1].style.display = "none";
 
     });
 

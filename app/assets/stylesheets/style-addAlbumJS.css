@@ -35,10 +35,15 @@
 	height: 35px;
 	width: 35px;
 }
-#next{
+.next{
 	position: absolute;
 	margin-left: 125px;
 	margin-top: 25px;
+}
+.previous{
+	height:35px;
+	width:35px;
+	background-color: #5D5E5E;
 }
 .formWrapper{
 	display: flex;
@@ -132,4 +137,11 @@ input{
 }
 #formRow{
 	flex-direction: row;
+}
+.addAnother{
+	height:80px;
+	width:35px;
+	background-color: #5D5E5E;
+	float:right;
+	display: none;
 }

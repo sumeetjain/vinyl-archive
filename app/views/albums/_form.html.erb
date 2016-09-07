@@ -39,7 +39,7 @@
 				</div>
 
 				<div id="artistCity" class="font-oswald-light color-white">
-					<%= artist.label "City" %>
+					<%= artist.label "Location" %>
 					<%= artist.text_field :city %>
 				</div>
 
@@ -72,8 +72,19 @@
 				<div id="comment2" class="color-dark-grey form-margin">
 					Separate multiple instruments with a comma.
 				</div>
-				    <div id="next" class="greyBox">
-				</div>	
+
+				<% (0..4).each do |num| %>
+					<div id="next_<%= num %>" class="next greyBox">
+					</div>
+				<% end %>
+
+				<% (0..4).each do |num| %>
+					<div id="previous_<%= num %>" class="previous greyBox"></div>
+				<% end %>
+
+				<% (0..2).each do |num| %>
+					<div id="addAnother_<%= num %>" class="addAnother"></div>
+				<% end %>	
 			</div>
 
 
