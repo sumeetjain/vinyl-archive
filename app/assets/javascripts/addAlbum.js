@@ -87,7 +87,7 @@ window.addEventListener("load", function() {
         next[0].style.display = "none";
         next[1].style.display = "inline";
         addAnother[0].style.display = "inline";
-        previous[0].style.display = "inline";
+        previous[0].style.display = "block";
 
 
     });
@@ -100,7 +100,7 @@ window.addEventListener("load", function() {
         next[1].style.display = "none";
         next[2].style.display = "inline";
         addAnother[0].style.display = "none";
-        previous[1].style.display = "inline";
+        previous[1].style.display = "block";
         previous[0].style.display = "none";
 
 
@@ -111,7 +111,7 @@ window.addEventListener("load", function() {
         artistCity.style.display = "none";
         next[2].style.display = "none";
         next[3].style.display = "inline";
-        previous[2].style.display = "inline";
+        previous[2].style.display = "block";
         previous[1].style.display = "none";
 
     });
