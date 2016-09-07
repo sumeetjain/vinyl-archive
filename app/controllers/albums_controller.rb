@@ -1,4 +1,6 @@
 class AlbumsController < ApplicationController
+	# layout false, :only => :new
+	# Uncomment above to apply layout remover for new action
 
 	def index
 		@genres = Album.uniq.pluck(:genre)
@@ -15,7 +17,7 @@ class AlbumsController < ApplicationController
 		else
 			@albums = Album.filter(Album.all, params[:sort]).page(params[:page]).per(3)
 		end
-				@array_of_cities = Album.list_of_locations
+		@array_of_cities = Album.list_of_locations
 
 		@hash_of_city_albums_count = Album.count_of_albums_per_city
 		# @genre_album_count = Album.count_of_albums_per_genre
