@@ -1,3 +1,5 @@
+require 'pry'
+
 class HomeController < ApplicationController
 	if Rails.env.development?	
 		before_action :authenticate_user!
@@ -18,8 +20,7 @@ class HomeController < ApplicationController
 		
 		elsif params[:format]
 			@albums = Album.filter(Album.all, params[:format]).page(params[:page]).per(9)
-			@format = params['format']
-			
+			@format = Album.album_count(Album.uniq.pluck(:format))
 		elsif params[:query]
 			@albums = Search.keywordSearch(params[:query])
 			@albums = Album.where(id: @albums.map(&:id))
