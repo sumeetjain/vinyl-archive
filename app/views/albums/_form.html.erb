@@ -1,7 +1,7 @@
 <div class="modal-wrapper">
   <div class="modal">
     <div class="wrap">
-      <div class="close greyBox">x</div>
+      <%= image_tag("add_album/close.gif", class: "close", alt: "Close") %>
     </div>
 
     <div class="formWrapper">
@@ -69,16 +69,18 @@
 					Separate multiple instruments with a comma.
 				</div>
 
-				<% (0..4).each do |num| %>
-					<div id="next_<%= num %>" class="next greyBox"></div>
-				<% end %>
+        <div class="addAlbumFormControls cf">
+          <% (0..4).each do |num| %>
+            <%= image_tag("add_album/rightArrow.gif", class: "next", id: "next_#{num}", alt: "Next") %>
+          <% end %>
 
-				<% (0..4).each do |num| %>
-					<div id="previous_<%= num %>" class="previous greyBox"></div>
-				<% end %>
+          <% (0..4).each do |num| %>
+          <%= image_tag("add_album/leftArrow.gif", class: "previous", id: "previous_#{num}", alt: "Previous") %>
+          <% end %>
+        </div>
 
 				<% (0..2).each do |num| %>
-					<div id="addAnother_<%= num %>" class="addAnother"></div>
+          <%= image_tag("add_album/addLong.gif", class: "addAnother", id: "addAnother_#{num}", alt: "Add Another") %>
 				<% end %>	
 			</div>
 

@@ -58,7 +58,7 @@
                     
                     <% @albums.each do |album| %>
                     <div class="album">               
-                        <%= link_to image_tag("img/ALBUM_IMAGE_GOES_HERE.jpeg", :class => "album__image"), album_path(album.id) %>
+                        <%= link_to image_tag("https://placekitten.com/300/300", :class => "album__image"), album_path(album.id) %>
 
                         <div class="album__albumName color-dark-grey">
                             <%= link_to album.name, album_path(album.id), :class => "album__albumName color-dark-grey" %>

@@ -29,7 +29,8 @@ window.addEventListener("load", function() {
         add[i].addEventListener("click", function() {
 
             modalWrapper[0].style.display = "flex";
-            next[0].style.display = "inline";
+            next[0].style.display = "block";
+            $("#album_name").focus();
         });
     }
 
@@ -87,8 +88,8 @@ window.addEventListener("load", function() {
         memberInstrument.style.display = "flex";
         comment2.style.display = "block";
         next[0].style.display = "none";
-        next[1].style.display = "inline";
-        addAnother[0].style.display = "inline";
+        next[1].style.display = "block";
+        addAnother[0].style.display = "block";
         previous[0].style.display = "block";
 
 
@@ -100,7 +101,7 @@ window.addEventListener("load", function() {
         memberInstrument.style.display = "none";
         comment2.style.display = "none";
         next[1].style.display = "none";
-        next[2].style.display = "inline";
+        next[2].style.display = "block";
         addAnother[0].style.display = "none";
         previous[1].style.display = "block";
         previous[0].style.display = "none";
@@ -109,10 +110,10 @@ window.addEventListener("load", function() {
     });
 
     next[2].addEventListener("click", function(){
-        addAnother[1].style.display = "inline";
+        addAnother[1].style.display = "block";
         artistCity.style.display = "none";
         next[2].style.display = "none";
-        next[3].style.display = "inline";
+        next[3].style.display = "block";
         previous[2].style.display = "block";
         previous[1].style.display = "none";
 
@@ -124,7 +125,7 @@ window.addEventListener("load", function() {
         albumDate.style.display = "flex";
         albumFormat.style.display = "flex";
         next[3].style.display = "none";
-        next[4].style.display = "inline";
+        next[4].style.display = "block";
         previous[3].style.display = "block";
         previous[2].style.display = "none";
     });

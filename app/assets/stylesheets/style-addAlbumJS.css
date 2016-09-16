@@ -35,10 +35,17 @@
 	height: 35px;
 	width: 35px;
 }
+.addAlbumFormControls{
+	width: 82px;
+	margin: 0 auto;
+	margin-top: 12px;
+}
 .next{
-	position: absolute;
-	margin-left: 125px;
-	margin-top: 25px;
+	float: right;
+}
+.next:first-child{
+	position: relative;
+	left: -20px;
 }
 .formWrapper{
 	display: flex;
@@ -134,9 +141,6 @@ input{
 	flex-direction: row;
 }
 .addAnother{
-	height:80px;
-	width:35px;
-	background-color: #5D5E5E;
 	float:right;
 	display: none;
 }
