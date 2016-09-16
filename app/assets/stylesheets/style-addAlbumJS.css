@@ -1,10 +1,9 @@
 .modal-wrapper{
 	display: none;
-	justify-content: center;
 	background-color: #BBBBBB;
 	z-index: 10;
-    overflow: auto;
-    position: fixed;
+  overflow: auto;
+  position: fixed;
 	height: 100%;
 	width: 100%;
 }
@@ -12,12 +11,13 @@
 	display: flex;
 	background-image: url("record-background.png"); 
 	z-index: 10;
-    overflow: auto;
-    position: fixed;
+  overflow: auto;
+  position: fixed;
 	height: 595px;
 	width: 1000px;
+	margin-left: 50%;
+	left: -500px;
 	flex-direction: column;
-	justify-content: space-between;
 }
 .wrap{
 	display: flex;
@@ -26,6 +26,9 @@
 .headerContainer{
 	display: flex;
 	justify-content: space-between;
+}
+.l-addAlbumFooter{
+	margin-top: auto;
 }
 .greyBox{
 	font-family: Oswald-Light;
@@ -43,58 +46,31 @@
 .next{
 	float: right;
 }
-.next:first-child{
-	position: relative;
-	left: -20px;
+.previous{
+	float: left;
 }
 .formWrapper{
+	margin: auto;
+	text-align: center;
+	position: relative;
+	top: 40px;
+}
+.addAlbumLabel{
 	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-size: 25px;
+}
+.addAlbumLabel.addAlbumLabel--inlineElements{
+	flex-direction: row;
 	justify-content: center;
 }
-#albumTitle{
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	font-size: 25px;
-}
-#albumGenre{
-	display: none;
-	font-size: 25px;
-}
-#albumDate{
-	display: none;
-	font-size: 25px;
-}
-#albumFormat{
-	display: none;
-	font-size: 25px;	
-}
-#artistName{
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	font-size: 25px;
-}
-#artistCity{
-	display: none;
-	font-size: 25px;
-}
-#artistUrl{
-	display: none;
-	font-size: 25px;
-}
-#artistBio{
-	display: none;
-	font-size: 25px;
-}
 #memberName{
-	display: none;
 	flex-direction: column;
 	align-items: center;
 	font-size: 25px;
 }
 #memberInstrument{
-	display: none;
 	flex-direction: column;
 	align-items: center;
 	font-size: 25px;	
@@ -122,7 +98,6 @@ input{
 	font-size: 18px;
 }
 #comment2{
-	display: none;
 	font-family: Oswald;
 	font-style: italic;
 	font-size: 18px;
@@ -142,5 +117,4 @@ input{
 }
 .addAnother{
 	float:right;
-	display: none;
 }

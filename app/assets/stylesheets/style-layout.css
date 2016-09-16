@@ -1,15 +1,17 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 body{
 	font-family: 'Open Sans', sans-serif;
-	display: flex;
-	flex-direction: column;
 	align-items: center;
 	background: #BBBBBB;
 	margin: 0;
 }
+.wrapper{
+	width: 1000px;
+	margin: 0 auto;
+	background: white;
+}
 .bodyContainer{
 	background: white;
-	width: 1000px;
 }
 .contentContainer{
 	flex-direction: row;

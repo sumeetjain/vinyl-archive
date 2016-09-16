@@ -1,96 +1,122 @@
 <div class="modal-wrapper">
   <div class="modal">
     <div class="wrap">
-      <%= image_tag("add_album/close.gif", class: "close", alt: "Close") %>
+      <%= image_tag("add_album/close.gif", class: "close", id: "addAlbumClose", alt: "Close") %>
     </div>
 
     <div class="formWrapper">
       <%= form_for(album) do |form| %>
-				<div id="albumTitle" class="font-oswald-light color-white">
-					<%= form.label "Album Title" %>
-					<%= form.text_field :name %>
-				</div>
 
-				<div id="albumGenre" class="font-oswald-light color-white">
-					<%= form.label "Genre" %>
-					<%= form.text_field :genre, name: "genre" %>
-				</div>
+        <!-- Album Title and Artist Name -->
+        <div class="newAlbumPage" id="newAlbumPage1">
+          <div class="addAlbumLabel font-oswald-light color-white">
+            <%= form.label "Album Title" %>
+            <%= form.text_field :name %>
+          </div>
 
-				<div id="albumDate" class="font-oswald-light color-white">
-					<%= form.label "Release Date" %>
-					<%= form.date_select :release_date, name: "releaseDate" %>
-				</div>
-
-				<div id="albumFormat" class="font-oswald-light color-white">
-					<%= form.label "Format" %>
-					<%= form.select :format, ["LP", "EP", "Single"] %>
-				</div>
-
-				<%= form.fields_for :artist do |artist| %>
-
-  				<div id="artistName" class="font-oswald-light color-white form-margin">
-  					<%= artist.label "Artist Name(s)" %>
-  					<%= artist.text_field :name, "name"=> "artistNames" %>
-  				</div>
-
-  				<div id="artistCity" class="font-oswald-light color-white">
-  					<%= artist.label "Location" %>
-  					<%= artist.text_field :city %>
-  				</div>
-
-  				<div id="artistUrl" class="font-oswald-light color-white">
-  					<%= artist.label "Artist URL" %>
-  					<%= artist.url_field :url %>
-  				</div>
-
-  				<div id="artistBio" class="font-oswald-light color-white">
-  					<%= artist.label "Biography" %>
-  					<%= artist.text_area :bio %>
-  				</div>
-
-				  <%= artist.fields_for :musicians do |member| %>
-
-    				<div id="memberName" class="font-oswald-light color-white form-margin">
-    					<%= member.label "Add members" %>
-    					<%= member.text_field :name, placeholder: "Name" %>
-    				</div>
-
-    				<div id="memberInstrument" class="font-oswald-light color-white form-margin">
-    					<%= member.text_field :instrument, placeholder: "Instrument(s)" %>
-    				</div>
-					<% end %>
-				<% end %>
-
-				<div id="comment" class="color-dark-grey form-margin">
-					Separate multiple artists with a comma.
-				</div>
-
-				<div id="comment2" class="color-dark-grey form-margin">
-					Separate multiple instruments with a comma.
-				</div>
-
-        <div class="addAlbumFormControls cf">
-          <% (0..4).each do |num| %>
-            <%= image_tag("add_album/rightArrow.gif", class: "next", id: "next_#{num}", alt: "Next") %>
+          <%= form.fields_for :artist do |artist| %>
+            <div class="addAlbumLabel font-oswald-light color-white font-oswald-light color-white form-margin">
+              <%= artist.label "Artist Name(s)" %>
+              <%= artist.text_field :name, "name"=> "artistNames" %>
+            </div>
           <% end %>
 
-          <% (0..4).each do |num| %>
-          <%= image_tag("add_album/leftArrow.gif", class: "previous", id: "previous_#{num}", alt: "Previous") %>
+          <div id="comment" class="color-dark-grey form-margin">
+            <!-- TODO: Does this actually work though? -->
+            Separate multiple artists with a comma.
+          </div>
+        </div>
+
+        <!-- Add Members -->
+        <div class="newAlbumPage" id="newAlbumPage2">
+          <div class="newAlbumAdditionalFieldsContainer cf">
+            <div class="addAlbumLabel font-oswald-light color-white form-margin">
+              Add members
+            </div>
+            <div class="newAlbumAdditionalFieldsContainer__pages">
+              <%= form.fields_for :artist do |artist| %>
+                <%= artist.fields_for :musicians do |member| %>
+                  <div class="newAlbumAdditionalFieldsContainer__page">
+                    <div id="memberName" class="font-oswald-light color-white form-margin">
+                      <%= member.text_field :name, placeholder: "Name" %>
+                    </div>
+
+                    <div id="memberInstrument" class="font-oswald-light color-white form-margin">
+                      <%= member.text_field :instrument, placeholder: "Instrument(s)" %>
+                    </div>
+                  </div>
+                <% end %>
+              <% end %>
+            </div>
+
+            <%= image_tag("add_album/addLong.gif", class: "newAlbumAdditionalFieldsContainer__addButton", id: "addAlbumAddAnother", alt: "Add Another") %>
+          </div>
+
+          <div id="comment2" class="color-dark-grey form-margin">
+            Separate multiple instruments with a comma.
+          </div>
+        </div>
+
+        <!-- Location -->
+        <div class="newAlbumPage" id="newAlbumPage3">
+          <%= form.fields_for :artist do |artist| %>
+            <div class="addAlbumLabel font-oswald-light color-white">
+              <%= artist.label "Location" %>
+              <%= artist.text_field :city %>
+            </div>
+
+            <!-- TODO: Artist Image Uploader -->
+
+            <!-- TODO: Extra fields: -->
+            <%# artist.label "Artist URL" %>
+            <%# artist.url_field :url %>
+
+            <%# artist.label "Biography" %>
+            <%# artist.text_area :bio %>
           <% end %>
         </div>
 
-				<% (0..2).each do |num| %>
-          <%= image_tag("add_album/addLong.gif", class: "addAnother", id: "addAnother_#{num}", alt: "Add Another") %>
-				<% end %>	
+        <!-- TODO: Album Images Uploader -->
+        <div class="newAlbumPage">
+          (WIP - Album Images)
+        </div>
+
+        <!-- Genre, Release Date, Format -->
+        <div class="newAlbumPage" id="newAlbumPage4">
+          <div class="addAlbumLabel font-oswald-light color-white">
+            <%= form.label "Genre" %>
+            <%= form.text_field :genre, name: "genre" %>
+          </div>
+
+          <div class="addAlbumLabel font-oswald-light color-white form-margin">
+            Release Date
+          </div>
+          <div class="addAlbumLabel addAlbumLabel--inlineElements font-oswald-light color-white">
+            <%= form.date_select :release_date, {}, {class: "addAlbumInlineSelect"} %>
+          </div>
+
+          <div class="addAlbumLabel font-oswald-light color-white">
+            <%= form.label "Format" %>
+            <%= form.select :format, ["LP", "EP", "Single"] %>
+          </div>
+        </div>
+
+        <!-- TODO: Tracks Uploader -->
+        <div class="newAlbumPage">
+          (WIP - Tracks)
+        </div>
+
+        <div class="addAlbumFormControls cf">
+          <%= image_tag("add_album/rightArrow.gif", class: "next", id: "addAlbumNext", alt: "Next") %>
+          
+          <%= image_tag("add_album/leftArrow.gif", class: "previous", id: "addAlbumPrev", alt: "Previous") %>
+        </div>
 			</div>
 
-      <div id="submitButton">
-      	<%= form.submit %>
-      </div>
-
+    	<%= form.submit "SAVE ALBUM", class: "addAlbum color-white addAlbumSaveButton addAlbumSaveButton--disabled", id: "addAlbumSaveButton" %>
     <% end %>
     
-    <div class="headerContainer flex">
+    <div class="headerContainer flex l-addAlbumFooter">
       <div class="headerWrapper flex">
         <div class="playerImage flex">
           <span class="icons icons--recordPlayer"></span>
@@ -104,15 +130,6 @@
           <!-- Link to Hear Nebraska website -->
         </div>
       </div>
-
-      <div class="headerWrapper headerWrapper--modal flex">
-        <div class="addAlbum color-white">
-          ADD ANOTHER ALBUM
-          <!-- Javascript for add album form -->
-        </div>
-      </div>
     </div>
   </div>
 </div>
-
-<%= link_to "All Albums", albums_path %>

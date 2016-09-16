@@ -10,38 +10,36 @@
 
 <%= render "albums/form", album: @new_album %>
 
-
-<!-- <p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p> -->
-
-<div class="header flex">
-        <div class="headerWrapper flex">
-            <div class="playerImage flex">
-            <%= link_to "", root_path, :class => "icons icons--recordPlayer color-black" %>
+<div class="wrapper">
+    <div class="header flex">
+            <div class="headerWrapper flex">
+                <div class="playerImage flex">
+                <%= link_to "", root_path, :class => "icons icons--recordPlayer color-black" %>
+                </div>
+                <div>
+                <%= link_to "THE VINYL ARCHIVE", root_path, :class => "siteName color-white" %>
+                    <!-- Link to homepage -->
+                </div>
+                <div>
+                <%= link_to "by Hear Nebraska", "http://hearnebraska.org/", :class => "siteInfo color-white" %>
+                    <!-- Link to Hear Nebraska website -->
+                </div>
             </div>
-            <div>
-            <%= link_to "THE VINYL ARCHIVE", root_path, :class => "siteName color-white" %>
-                <!-- Link to homepage -->
-            </div>
-            <div>
-            <%= link_to "by Hear Nebraska", "http://hearnebraska.org/", :class => "siteInfo color-white" %>
-                <!-- Link to Hear Nebraska website -->
+            <div class="headerWrapper--album flex">
+                <div class="addAlbum color-white" id="addAlbumLink">
+                    ADD AN ALBUM
+                    <!-- Javascript for add album form -->
+                </div>
             </div>
         </div>
-        <div class="headerWrapper--album flex">
-            <div class="addAlbum color-white">
-                ADD AN ALBUM
-                <!-- Javascript for add album form -->
-            </div>
+
+
+    <%= yield %>
+
+    <div class="header header--footer flex">
+        <div class="headerWrapper flex">
         </div>
     </div>
-
-
-<%= yield %>
-
-<div class="header header--footer flex">
-    <div class="headerWrapper flex">
-	</div>
 </div>
 
 </body>

@@ -1,0 +1,43 @@
+.newAlbumPage{
+  display: none;
+}
+
+.newAlbumAdditionalFieldsContainer__pages{
+  float: left;
+  width: 230px;
+}
+.newAlbumAdditionalFieldsContainer__pages input,
+.newAlbumAdditionalFieldsContainer__pages select,
+.newAlbumAdditionalFieldsContainer__pages label{
+  width: 100%;
+}
+.newAlbumAdditionalFieldsContainer__addButton{
+  float: right;
+  margin-top: 8px;
+}
+.newAlbumAdditionalFieldsContainer__page{
+  display: none;
+}
+.newAlbumAdditionalFieldsContainer__page:first-child{
+  display: block;
+}
+
+.newAlbumAdditionalFieldsContainer__header{
+  font-size: 25px;
+}
+
+.addAlbumInlineSelect{
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.addAlbumSaveButton{
+  background: transparent;
+  position: absolute;
+  bottom: 27px;
+  right: 33px;
+}
+.addAlbumSaveButton.addAlbumSaveButton--disabled{
+  cursor: not-allowed;
+  opacity: .35;
+}
