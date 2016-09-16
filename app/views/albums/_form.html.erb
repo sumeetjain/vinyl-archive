@@ -1,16 +1,11 @@
+<div class="modal-wrapper">
+  <div class="modal">
+    <div class="wrap">
+      <div class="close greyBox">x</div>
+    </div>
 
-    <div class="modal-wrapper">
-
-        <div class="modal">
-        	<div class="wrap">
-            	<div class="close greyBox">
-            	x
-           	 	</div>
-           	 </div>
-
-            <div class="formWrapper">
-            	<%= form_for(@album) do |form| %>
-
+    <div class="formWrapper">
+      <%= form_for(@album) do |form| %>
 				<div id="albumTitle" class="font-oswald-light color-white">
 					<%= form.label "Album Title" %>
 					<%= form.text_field :name %>
@@ -33,49 +28,49 @@
 
 				<%= form.fields_for :artist do |artist| %>
 
-				<div id="artistName" class="font-oswald-light color-white form-margin">
-					<%= artist.label "Artist Name(s)" %>
-					<%= artist.text_field :name, "name"=> "artistNames" %>
-				</div>
+  				<div id="artistName" class="font-oswald-light color-white form-margin">
+  					<%= artist.label "Artist Name(s)" %>
+  					<%= artist.text_field :name, "name"=> "artistNames" %>
+  				</div>
 
-				<div id="artistCity" class="font-oswald-light color-white">
-					<%= artist.label "Location" %>
-					<%= artist.text_field :city %>
-				</div>
+  				<div id="artistCity" class="font-oswald-light color-white">
+  					<%= artist.label "Location" %>
+  					<%= artist.text_field :city %>
+  				</div>
 
-				<div id="artistUrl" class="font-oswald-light color-white">
-					<%= artist.label "Artist URL" %>
-					<%= artist.url_field :url %>
-				</div>
+  				<div id="artistUrl" class="font-oswald-light color-white">
+  					<%= artist.label "Artist URL" %>
+  					<%= artist.url_field :url %>
+  				</div>
 
-				<div id="artistBio" class="font-oswald-light color-white">
-					<%= artist.label "Biography" %>
-					<%= artist.text_area :bio %>
-				</div>
+  				<div id="artistBio" class="font-oswald-light color-white">
+  					<%= artist.label "Biography" %>
+  					<%= artist.text_area :bio %>
+  				</div>
 
-				<%= artist.fields_for :musicians do |member| %>
+				  <%= artist.fields_for :musicians do |member| %>
 
-				<div id="memberName" class="font-oswald-light color-white form-margin">
-					<%= member.label "Add members" %>
-					<%= member.text_field :name, placeholder: "Name" %>
-				</div>
+    				<div id="memberName" class="font-oswald-light color-white form-margin">
+    					<%= member.label "Add members" %>
+    					<%= member.text_field :name, placeholder: "Name" %>
+    				</div>
 
-				<div id="memberInstrument" class="font-oswald-light color-white form-margin">
-					<%= member.text_field :instrument, placeholder: "Instrument(s)" %>
-				</div>
-
+    				<div id="memberInstrument" class="font-oswald-light color-white form-margin">
+    					<%= member.text_field :instrument, placeholder: "Instrument(s)" %>
+    				</div>
 					<% end %>
 				<% end %>
+
 				<div id="comment" class="color-dark-grey form-margin">
 					Separate multiple artists with a comma.
 				</div>
+
 				<div id="comment2" class="color-dark-grey form-margin">
 					Separate multiple instruments with a comma.
 				</div>
 
 				<% (0..4).each do |num| %>
-					<div id="next_<%= num %>" class="next greyBox">
-					</div>
+					<div id="next_<%= num %>" class="next greyBox"></div>
 				<% end %>
 
 				<% (0..4).each do |num| %>
@@ -87,34 +82,35 @@
 				<% end %>	
 			</div>
 
+      <div id="submitButton">
+      	<%= form.submit %>
+      </div>
 
-<div id="submitButton">
-	<%= form.submit %>
-</div>
+    <% end %>
+    
+    <div class="headerContainer flex">
+      <div class="headerWrapper flex">
+        <div class="playerImage flex">
+          <span class="icons icons--recordPlayer"></span>
+        </div>
+        <div class="siteName color-white">
+          THE VINYL ARCHIVE
+          <!-- Link to homepage -->
+        </div>
+        <div class="siteInfo color-white">
+          by Hear Nebraska
+          <!-- Link to Hear Nebraska website -->
+        </div>
+      </div>
 
-<% end %>
-		<div class="headerContainer flex">
-            <div class="headerWrapper flex">
-                <div class="playerImage flex">
-                    <span class="icons icons--recordPlayer"></span>
-                </div>
-                <div class="siteName color-white">
-                    THE VINYL ARCHIVE
-                    <!-- Link to homepage -->
-                </div>
-                <div class="siteInfo color-white">
-                    by Hear Nebraska
-                    <!-- Link to Hear Nebraska website -->
-                </div>
-            </div>
-            <div class="headerWrapper headerWrapper--modal flex">
-                <div class="addAlbum color-white">
-                    ADD ANOTHER ALBUM
-                    <!-- Javascript for add album form -->
-                </div>
-            </div>
+      <div class="headerWrapper headerWrapper--modal flex">
+        <div class="addAlbum color-white">
+          ADD ANOTHER ALBUM
+          <!-- Javascript for add album form -->
         </div>
-        </div>
+      </div>
     </div>
+  </div>
+</div>
 
 <%= link_to "All Albums", albums_path %>
