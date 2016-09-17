@@ -1,8 +1,4 @@
 class HomeController < ApplicationController
-	if Rails.env.development?	
-		before_action :authenticate_user!
-	end
-	
 	def index
 		@genres = Album.album_count(Album.uniq.pluck(:genre))
 		@format = Album.album_count(Album.uniq.pluck(:format))
