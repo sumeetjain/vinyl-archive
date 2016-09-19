@@ -1,6 +1,5 @@
 window.addEventListener("load", function() {
 
-
     var addAlbumMultiStepForm = function(){
         var currentPage = 1;
 
@@ -26,22 +25,62 @@ window.addEventListener("load", function() {
             .removeClass("addAlbumSaveButton--disabled");
         }
 
-        var advancePage = function(e){
-            currentPage++;
-            console.log("Advancing to page " + currentPage);
-            showPage(currentPage);
+        var pageFormIsValid = function(page){
+            console.log("Validating Page " + page);
 
-            var nextPage = currentPage + 1;
-            
-            if ($("#newAlbumPage" + nextPage).length < 1){
-                disableAdvancing();
-                endOfForm();
+            if (page === 1){
+                var validate = new XMLHttpRequest();
+                var albumInput = document.forms["new_album"]["album[name]"].value;
+                var artistInput = document.forms["new_album"]["artistNames"].value;
+
+                validate.addEventListener("loadstart", function() {
+                    document.body.style.cursor = "wait";
+                });
+
+                validate.addEventListener("load", function(e) {
+                    document.body.style.cursor = "default";
+
+                    var r = e.target.response;
+                    var response = JSON.parse(r);
+
+                    if (response.album === "exists" && response.artist == "exists"){
+                        console.log("Record already exists. Do not proceed.");
+                        return false;
+                    }
+                    else{
+                        return true;
+                    }
+                });
+
+                validate.open("get", "/api?artist=" + artistInput + "&album=" + albumInput);
+                validate.send();
             }
+        }
 
-            if ($("#addAlbumPrev").hasClass("disabled")){
-                console.log("Re-enabling 'Previous' button.");
-                $("#addAlbumPrev").removeClass("disabled");
-                $("#addAlbumPrev").on("click", backUpPage);
+        var advancePage = function(e){
+            var poop = pageFormIsValid(currentPage);
+            debugger;
+
+            if (pageFormIsValid(currentPage)){
+                currentPage++;
+                console.log("Advancing to page " + currentPage);
+                showPage(currentPage);
+
+                var nextPage = currentPage + 1;
+                
+                if ($("#newAlbumPage" + nextPage).length < 1){
+                    disableAdvancing();
+                    endOfForm();
+                }
+
+                if ($("#addAlbumPrev").hasClass("disabled")){
+                    console.log("Re-enabling 'Previous' button.");
+                    $("#addAlbumPrev").removeClass("disabled");
+                    $("#addAlbumPrev").on("click", backUpPage);
+                }
+            }
+            else{
+                console.log("Form was invalid.");
             }
         }
 
@@ -146,43 +185,7 @@ window.addEventListener("load", function() {
 
 
     // next[0].addEventListener("click", function() {
-    //     var validate = new XMLHttpRequest();
-
-    //     validate.addEventListener("loadstart", function() {
-
-    //         document.body.style.cursor = "wait";
-
-    //     });
-
-    //     validate.addEventListener("load", function(e) {
-
-    //         var r = e.target.response;
-    //         var response = JSON.parse(r);
-
-    //         var albumInput = document.forms["new_album"]["album[name]"].value;
-    //         var artistInput = document.forms["new_album"]["artistNames"].value;
-
-    //         var breakCheck = false;
-
-    //         for (i = 0; i < response.albums.length; i++) {
-    //             for (x = 0; x < response.artists.length; x++) {
-    //                 if (response.albums[i].name == albumInput && artistInput == response.artists[x].name) {
-    //                     breakCheck = true;
-    //                     alert("Nope");
-    //                     break;
-
-    //                 }
-    //             }
-    //             if (breakCheck)
-    //               {break;}
-    //         }
-
-    //         document.body.style.cursor = "default";
-
-    //     });
-
-    //     validate.open("get", "/api");
-    //     validate.send();
+    
 
     //     albumTitle.style.display = "none";
     //     artistName.style.display = "none";
