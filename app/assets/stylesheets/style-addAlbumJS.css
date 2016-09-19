@@ -82,13 +82,15 @@
 	flex-direction: row;
 }
 input{
-	background-color: #C8C8C8;
 	font-family: Oswald-Light;
-	color: #2B2B2B;
 	font-size: 20px;
 	border: none;
-	width: 280px;
 	border-radius: 5px;
+}
+input[type=text]{
+	background-color: #C8C8C8;
+	color: #2B2B2B;
+	width: 280px;
 	padding-top: 10px;
 	padding-right: 10px;
 }

@@ -12,5 +12,13 @@ class ApplicationController < ActionController::Base
     3.times do
       @new_album.artist.musicians.build
     end
+
+    6.times do
+      @new_album.photos.build
+    end
+
+    20.times do
+      @new_album.songs.build
+    end
   end
 end

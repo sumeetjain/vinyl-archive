@@ -77,12 +77,27 @@
         </div>
 
         <!-- TODO: Album Images Uploader -->
-        <div class="newAlbumPage">
-          (WIP - Album Images)
+        <div class="newAlbumPage" id="newAlbumPage4">
+          <div class="newAlbumAdditionalFieldsContainer cf">
+            <div class="addAlbumLabel font-oswald-light color-white form-margin">
+              Album images
+            </div>
+            <div class="newAlbumAdditionalFieldsContainer__pages">
+              <%= form.fields_for :photos do |p| %>
+                <div class="newAlbumAdditionalFieldsContainer__page">
+                  <div class="font-oswald-light color-white form-margin">
+                    <%= p.file_field :the_photo %>
+                  </div>
+                </div>
+              <% end %>
+            </div>
+
+            <%= image_tag("add_album/addLong.gif", class: "newAlbumAdditionalFieldsContainer__addButton", id: "addAlbumAddAnother", alt: "Add Another") %>
+          </div>
         </div>
 
         <!-- Genre, Release Date, Format -->
-        <div class="newAlbumPage" id="newAlbumPage4">
+        <div class="newAlbumPage" id="newAlbumPage5">
           <div class="addAlbumLabel font-oswald-light color-white">
             <%= form.label "Genre" %>
             <%= form.text_field :genre, name: "genre" %>

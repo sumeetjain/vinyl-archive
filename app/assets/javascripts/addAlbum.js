@@ -58,10 +58,9 @@ window.addEventListener("load", function() {
         }
 
         var advancePage = function(e){
-            var poop = pageFormIsValid(currentPage);
-            debugger;
+            // var poop = pageFormIsValid(currentPage);
 
-            if (pageFormIsValid(currentPage)){
+            if (true){
                 currentPage++;
                 console.log("Advancing to page " + currentPage);
                 showPage(currentPage);
