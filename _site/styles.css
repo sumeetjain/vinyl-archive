@@ -76,22 +76,198 @@ a {
   flex-direction: row;
   justify-content: space-around; }
 
-.album-art-full {
-  width: 400px;
-  height: 400px; }
+.style_guide {
+  margin: 20px; }
+  .style_guide h1 {
+    border-bottom: solid 1px grey;
+    padding: 10px 0px;
+    margin-bottom: 10px; }
 
-.album-art-thumb {
-  width: 110px;
-  height: 110px; }
+.color-swatch {
+  width: 100px;
+  height: 100px;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px;
+  font-size: 20px; }
 
-h1 {
-  font-size: 40px;
-  font-weight: 900;
-  text-decoration: underline; }
+.album-display-main {
+  display: flex;
+  flex-direction: column;
+  line-height: 25px;
+  margin: 25px 0px 10px 0px; }
 
-h2 {
-  font-size: 25px;
-  font-weight: 600; }
+.album-art {
+  box-shadow: 0px 0px 7px #343434; }
+  .album-art.album-art-full {
+    width: 425px;
+    height: 425px; }
+  .album-art.album-art-grid {
+    width: 200px;
+    height: 200px; }
+  .album-art.album-art-thumb {
+    width: 90px;
+    height: 90px; }
+  .album-art.album-art-list {
+    width: 55px;
+    height: 55px; }
+
+.white.color-swatch, .color-swatch.sort-background-color, .color-swatch.footer-text-color, .color-swatch.header-text-color, .color-swatch.main-head-text-color {
+  border: 1px solid black; }
+
+.main-head-background-color {
+  background-color: #5D5E5E; }
+  .main-head-background-color.color-swatch {
+    color: #EF5B34; }
+
+.page-background-color {
+  background-color: #BBBBBB; }
+  .page-background-color.color-swatch {
+    color: #EF5B34; }
+
+.search-background-color {
+  background-color: #EFEFEF; }
+  .search-background-color.color-swatch {
+    color: #EF5B34; }
+
+.sidebar-head-background-color {
+  background-color: #A1A0A1; }
+  .sidebar-head-background-color.color-swatch {
+    color: #EF5B34; }
+
+.sort-background-color {
+  background-color: #FFFFFF; }
+  .sort-background-color.color-swatch {
+    color: #EF5B34; }
+
+.main-body-text-color {
+  color: #5D5E5E; }
+  .main-body-text-color.color-swatch {
+    background-color: #5D5E5E;
+    color: #EF5B34; }
+
+.footer-text-color {
+  color: #FFFFFF; }
+  .footer-text-color.color-swatch {
+    background-color: #FFFFFF;
+    color: #EF5B34; }
+
+.header-text-color {
+  color: #FFFFFF; }
+  .header-text-color.color-swatch {
+    background-color: #FFFFFF;
+    color: #EF5B34; }
+
+.main-head-text-color {
+  color: #FFFFFF; }
+  .main-head-text-color.color-swatch {
+    background-color: #FFFFFF;
+    color: #EF5B34; }
+
+.search-text-color {
+  color: #A1A0A1; }
+  .search-text-color.color-swatch {
+    background-color: #A1A0A1;
+    color: #EF5B34; }
+
+.sidebar-head-text-color {
+  color: #A1A0A1; }
+  .sidebar-head-text-color.color-swatch {
+    background-color: #A1A0A1;
+    color: #EF5B34; }
+
+.sidebar-list-text-color {
+  color: #5D5E5E; }
+  .sidebar-list-text-color.color-swatch {
+    background-color: #5D5E5E;
+    color: #EF5B34; }
+
+.sort-text-color {
+  color: #A1A0A1; }
+  .sort-text-color.color-swatch {
+    background-color: #A1A0A1;
+    color: #EF5B34; }
+
+.prev-next-text-color {
+  color: #A1A0A1; }
+  .prev-next-text-color.color-swatch {
+    background-color: #A1A0A1;
+    color: #EF5B34; }
+
+.share-text-color {
+  color: #5D5E5E; }
+  .share-text-color.color-swatch {
+    background-color: #5D5E5E;
+    color: #EF5B34; }
+
+.album-title-text-color {
+  color: #5D5E5E; }
+  .album-title-text-color.color-swatch {
+    background-color: #5D5E5E;
+    color: #EF5B34; }
+
+.album-artist-text-color {
+  color: black; }
+  .album-artist-text-color.color-swatch {
+    background-color: black;
+    color: #EF5B34; }
+
+.numbers-text-color {
+  color: #EFEFEF; }
+  .numbers-text-color.color-swatch {
+    background-color: #EFEFEF;
+    color: #EF5B34; }
+
+.album-info-text-color {
+  color: black; }
+  .album-info-text-color.color-swatch {
+    background-color: black;
+    color: #EF5B34; }
+
+.song-title-text-color {
+  color: black; }
+  .song-title-text-color.color-swatch {
+    background-color: black;
+    color: #EF5B34; }
+
+.song-info-text-color {
+  color: #EFEFEF; }
+  .song-info-text-color.color-swatch {
+    background-color: #EFEFEF;
+    color: #EF5B34; }
+
+.grid-icon-color {
+  color: #5D5E5E; }
+  .grid-icon-color.color-swatch {
+    background-color: #5D5E5E;
+    color: #EF5B34; }
+
+.list-icon-color {
+  color: #EFEFEF; }
+  .list-icon-color.color-swatch {
+    background-color: #EFEFEF;
+    color: #EF5B34; }
+
+.style-guide-grid {
+  display: grid;
+  grid-template-columns: 120px 120px 120px 120px 120px; }
+
+.grid-main {
+  display: grid;
+  grid-template-columns: 225px 225px 225px; }
+
+.grid-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr; }
+
+.style_guide {
+  font-family: 'Anton', sans-serif; }
+  .style_guide h1 {
+    font-size: 40px;
+    font-weight: 900; }
+  .style_guide h2 {
+    font-size: 25px;
+    font-weight: 600; }
 
 .highlight .hll {
   background-color: #ffffcc; }
