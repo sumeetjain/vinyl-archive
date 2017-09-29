@@ -1,1 +1,32 @@
+$gray: #d3d3d3;
+$darkgray: #a9a9a9;
+$size: 25px;
 
+
+// Album Song List
+.song_list {
+	color: $gray; 
+	font-size: $size;
+	counter-reset: item;
+    list-style-type: none;
+}
+
+li.song_numbers { display: block; }
+li.song_numbers:before { 
+    content: counter(item) "  "; 
+    counter-increment: item 
+}
+
+// Cities 
+.cities_list,
+.genres_list,
+.decades_list,
+.format_list
+ {
+ 	color: $darkgray;
+	font-size: $size; 
+}
+
+.members_list {
+	font-size: $size; 
+}

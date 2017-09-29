@@ -1,3 +1,4 @@
+// Headings
 h1{
 	font-size:40px;
 	font-weight:900;
@@ -7,5 +8,84 @@ h1{
 h2{
 	font-size:25px;
 	font-weight:600;
-
 }
+
+
+// SASS
+$gray: #d3d3d3;
+$darkgray: #a9a9a9;
+$darkestgray: #6a6a6a;
+$size: 25px;
+
+@mixin italic-darkgray {
+	font-size: 25px; 
+	color: $darkgray;
+	font-style: italic;
+}
+
+@mixin regular-black {
+	font-size:25px;
+	color: black; 
+}
+
+@mixin white {
+	font-size:25px;
+	color: #fff; 
+}
+
+
+// Album Page 
+
+.share_album {
+	@include italic-darkgray;
+	text-transform: uppercase; 
+}
+
+.album_list_song,
+.album_by,
+.info,
+.about_info
+ {
+	@include regular-black;
+}
+
+.album_list_artist,
+.search_text {
+	@include italic-darkgray;
+}
+
+.artist_album_background,
+.edit_album {
+	@include white;
+	background: $darkestgray;
+}
+
+.background_artist {
+	font-weight: bold;
+}
+
+.background_album {
+	font-weight: 300; 
+	font-style: italic;
+}
+
+.verticle_line {
+	font-weight: 300;
+}
+
+.edit_album {
+	text-transform: uppercase; 
+}
+
+.album_title {
+	font-size: 30px;
+	color: $darkestgray; 
+}
+
+
+.other_info,
+.about_title  {
+	@include regular-black;
+	font-style: italic;
+}
+
