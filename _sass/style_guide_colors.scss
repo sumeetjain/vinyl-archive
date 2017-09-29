@@ -1,0 +1,143 @@
+$white: #FFFFFF;
+$back_grey: #BBBBBB;
+$light_grey: #EFEFEF;
+$medium_grey: #A1A0A1;
+$dark_grey: #5D5E5E;
+$black: black; 
+$swatch: #EF5B34;
+
+// formatting-------------------------------------
+
+.white {
+	&.color-swatch{
+  		border: 1px solid black;
+  	}
+} 
+
+@mixin backcolor($color){
+	background-color: $color;
+	&.color-swatch{
+		color: $swatch;
+	}
+}
+
+@mixin textcolor($color){
+	color: $color;
+	&.color-swatch{
+		background-color: $color;
+		color: $swatch;
+	}
+}
+
+@mixin iconcolor($color){
+	color: $color;
+	&.color-swatch{
+		background-color: $color;
+		color: $swatch;
+	}
+}
+
+// background-------------------------------------
+
+.main-head-background-color{
+	@include backcolor($dark_grey);
+}
+
+.page-background-color{
+	@include backcolor($back_grey);
+}
+
+.search-background-color{
+	@include backcolor($light_grey);
+}
+
+.sidebar-head-background-color{
+	@include backcolor($medium_grey);
+}
+
+.sort-background-color{
+	@include backcolor($white);
+	@extend .white;
+}
+
+// text------------------------------------------
+
+.main-body-text-color{ 
+	@include textcolor($dark_grey);
+}
+
+.footer-text-color{
+	@include textcolor($white);
+	@extend .white;
+}  
+
+.header-text-color{ 
+	@include textcolor($white);
+	@extend .white;
+}
+
+.main-head-text-color{
+	@include textcolor($white);
+	@extend .white;
+}
+
+.search-text-color{
+	@include textcolor($medium_grey);
+}
+
+.sidebar-head-text-color{
+	@include textcolor($medium_grey);	
+}
+
+.sidebar-list-text-color{
+	@include textcolor($dark_grey);	
+}
+
+.sort-text-color{
+	@include textcolor($medium_grey);
+}
+
+.prev-next-text-color{
+	@include textcolor($medium_grey);
+}
+
+.share-text-color{
+	@include textcolor($dark_grey);
+}
+
+.album-title-text-color{
+	@include textcolor($dark_grey);
+}
+
+.album-artist-text-color{
+	@include textcolor($black);
+}
+
+.numbers-text-color{
+	@include textcolor($light_grey);
+	
+}
+
+.album-info-text-color{
+	@include textcolor($black);
+}
+
+.song-title-text-color{
+	@include textcolor($black);	
+}
+
+.song-info-text-color{
+	@include textcolor($light_grey);	
+}
+
+
+
+// icons------------------------------------------
+
+.grid-icon-color{
+	@include iconcolor($dark_grey);
+}
+
+.list-icon-color{
+	@include iconcolor($light_grey);
+}
