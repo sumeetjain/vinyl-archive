@@ -1,16 +1,25 @@
 .style-guide-grid{
 	display:grid;
-	grid-template-columns:120px 120px 120px 120px 120px;
+	grid-template-columns: 120px 120px 120px 120px 120px;
 }
 
 .grid-main{
 	display:grid;
-	grid-template-columns: 225px 225px 225px;
+	max-width:675px;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 300px 300px 300px;
+	margin: 20px 0px;
 }
 
 .grid-list{
 	display:grid;
+	max-width:675px;
 	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 125px 125px 125px 125px 125px
+						125px 125px 125px 125px 125px 
+						125px 125px 125px 125px 125px 
+						125px 125px 125px 125px 125px;
+	margin: 20px 0px;
 }
 
 
