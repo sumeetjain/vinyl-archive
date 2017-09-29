@@ -1,0 +1,19 @@
+.vinyl-icon{
+	width:110px;
+}
+
+.grid-icon{
+	display: grid;
+	width: 50px;
+	height: 50px;
+	grid-template-columns: 20fr 4fr 20fr;
+	grid-template-rows: 20fr 4fr 20fr;
+}
+
+.list-icon{
+	display: grid;
+	width: 60px;
+	height: 50px;
+	grid-template-columns: 1fr;
+	grid-template-rows: 5fr 4fr 5fr 4fr 5fr 4fr 5fr;
+}

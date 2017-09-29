@@ -1,10 +1,11 @@
 $white: #FFFFFF;
 $back_grey: #BBBBBB;
-$light_grey: #EFEFEF;
+$lightest_grey: #EFEFEF;
+$light_grey: #A8A8A8;
 $medium_grey: #A1A0A1;
 $dark_grey: #5D5E5E;
 $black: black; 
-$swatch: #EF5B34;
+$swatch: #f15a29;
 
 // formatting-------------------------------------
 
@@ -30,9 +31,8 @@ $swatch: #EF5B34;
 }
 
 @mixin iconcolor($color){
-	color: $color;
+	background-color: $color;
 	&.color-swatch{
-		background-color: $color;
 		color: $swatch;
 	}
 }
@@ -48,7 +48,7 @@ $swatch: #EF5B34;
 }
 
 .search-background-color{
-	@include backcolor($light_grey);
+	@include backcolor($lightest_grey);
 }
 
 .sidebar-head-background-color{
@@ -114,7 +114,7 @@ $swatch: #EF5B34;
 }
 
 .numbers-text-color{
-	@include textcolor($light_grey);
+	@include textcolor($lightest_grey);
 	
 }
 
@@ -127,7 +127,7 @@ $swatch: #EF5B34;
 }
 
 .song-info-text-color{
-	@include textcolor($light_grey);	
+	@include textcolor($lightest_grey);	
 }
 
 
@@ -135,9 +135,9 @@ $swatch: #EF5B34;
 // icons------------------------------------------
 
 .grid-icon-color{
-	@include iconcolor($dark_grey);
+	@include iconcolor($light_grey);
 }
 
 .list-icon-color{
-	@include iconcolor($light_grey);
+	@include iconcolor($dark_grey);
 }
