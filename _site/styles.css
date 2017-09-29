@@ -93,18 +93,18 @@ a {
   border-radius: 5px;
   font-size: 20px; }
 
-.album-display-main {
+.grid-main .album-display {
   display: flex;
   flex-direction: column;
   line-height: 25px; }
-  .album-display-main .album-art-grid {
+  .grid-main .album-display .album-art {
     margin-bottom: 12px; }
 
-.album-display-list {
+.grid-list .album-display {
   display: flex;
   flex-direction: row;
   line-height: 25px; }
-  .album-display-list .album-art-list {
+  .grid-list .album-display .album-art {
     margin-right: 20px; }
 
 .album-art {
@@ -112,13 +112,13 @@ a {
   .album-art.album-art-full {
     width: 425px;
     height: 425px; }
-  .album-art.album-art-grid {
+  .album-art.album-art-grid, .grid-main .album-display .album-art {
     width: 200px;
     height: 200px; }
   .album-art.album-art-thumb {
     width: 90px;
     height: 90px; }
-  .album-art.album-art-list {
+  .album-art.album-art-list, .grid-list .album-display .album-art {
     width: 55px;
     height: 55px; }
 
@@ -314,14 +314,16 @@ li.song_numbers:before {
 .members_list {
   font-size: 25px; }
 
-h1 {
+.style_guide h1 {
   font-size: 40px;
   font-weight: 900;
-  text-decoration: underline; }
-
-h2 {
+  text-decoration: underline;
+  font: arial; }
+.style_guide h2 {
   font-size: 25px;
-  font-weight: 600; }
+  font-weight: 600;
+  text-decoration: underline;
+  font: arial; }
 
 .vinyl_archive {
   font-size: 25px;

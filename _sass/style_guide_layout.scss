@@ -25,21 +25,27 @@
 	font-size:20px; 
 }
 
-.album-display-main{
-	display: flex;
-	flex-direction: column;
-	line-height: 25px; 
-	.album-art-grid{
-		margin-bottom: 12px;
+.grid-main{
+	.album-display{
+		display: flex;
+		flex-direction: column;
+		line-height: 25px; 
+		.album-art{
+			@extend .album-art-grid;
+			margin-bottom: 12px;
+		}
 	}
 }
 
-.album-display-list{
-	display: flex;
-	flex-direction: row;
-	line-height: 25px; 
-	.album-art-list{
-		margin-right: 20px;
+.grid-list{
+	.album-display{
+		display: flex;
+		flex-direction: row;
+		line-height: 25px; 
+		.album-art{
+			@extend .album-art-list;
+			margin-right: 20px;
+		}
 	}
 }
 

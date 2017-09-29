@@ -4,15 +4,19 @@
 
 // Headings
 
-h1{
-	font-size:40px;
-	font-weight:900;
-	text-decoration:underline;
-}
-
-h2{
-	font-size:25px;
-	font-weight:600;
+.style_guide{
+	h1{
+		font-size:40px;
+		font-weight:900;
+		text-decoration:underline;
+		font:arial; 
+	}
+	h2{
+		font-size:25px;
+		font-weight:600;
+		text-decoration:underline;
+		font:arial;
+	}
 }
 
 // SASS

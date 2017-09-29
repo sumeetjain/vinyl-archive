@@ -1,24 +1,34 @@
+$album_full: 425px;
+
+$album_grid: 200px;
+
+$album_thumb:90px;
+
+$album_list: 55px; 
+
+
+
 .album-art{
 	box-shadow: 0px 0px 7px #343434; 
 
 	&.album-art-full{
-		width: 425px;
-		height: 425px;
+		width: $album_full;
+		height: $album_full;
 	}
 
 	&.album-art-grid{
-		width: 200px;
-		height: 200px;	 
+		width: $album_grid;
+		height: $album_grid;	 
 	}
 
 	&.album-art-thumb{
-		width: 90px;
-		height: 90px;
+		width: $album_thumb;
+		height: $album_thumb;
 	}
 
 	&.album-art-list{
-		width: 55px;
-		height: 55px;
+		width: $album_list;
+		height: $album_list;
 	}
 }
 
