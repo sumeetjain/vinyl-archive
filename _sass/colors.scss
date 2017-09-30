@@ -1,0 +1,147 @@
+
+// color pallette---------------------------------
+
+$white: #FFFFFF;
+$back_grey: #BBBBBB;
+$lightest_grey: #EFEFEF;
+$light_grey: #A8A8A8;
+$medium_grey: #A1A0A1;
+$dark_grey: #5D5E5E;
+$black: black; 
+$swatch: #f15a29;
+
+// color key-------------------------------------
+
+// background-------------------------------------
+
+$main-head-background-color: $dark_grey;
+$page-background-color: $back_grey;
+$search-background-color: $lightest_grey;
+$sidebar-head-background-color: $medium_grey;
+$sort-background-color: $white;
+
+// text------------------------------------------
+
+$main-body-text-color: $dark_grey;
+$footer-text-color: $white;
+$header-text-color: $white;
+$main-head-text-color: $white;
+$search-text-color: $medium_grey;
+$sidebar-head-text-color: $medium_grey;	
+$sidebar-list-text-color: $dark_grey;	
+$sort-text-color: $medium_grey;
+$prev-next-text-color: $medium_grey;
+$share-text-color: $dark_grey;
+$album-title-text-color: $dark_grey;
+$album-artist-text-color: $black;
+$numbers-text-color: $lightest_grey;
+$album-info-text-color: $black;
+$song-title-text-color: $black;	
+$song-info-text-color: $light_grey;	
+
+// icons------------------------------------------
+$grid-icon-color: $light_grey;
+$list-icon-color: $dark_grey;
+
+
+
+// color application------------------------------
+
+// background-------------------------------------
+
+.main-head-background-color{
+	background-color: $main-head-background-color;
+}
+
+.page-background-color{
+	background-color: $page-background-color;
+}
+
+.search-background-color{
+	background-color: $search-background-color;
+}
+
+.sidebar-head-background-color{
+	background-color: $sidebar-head-background-color;
+}
+
+.sort-background-color{
+	background-color: $sort-background-color;
+}
+
+// text------------------------------------------
+
+.main-body-text-color{
+	color: $main-body-text-color;
+}
+
+.footer-text-color{
+	color: $footer-text-color;
+}  
+
+.header-text-color{
+	color: $header-text-color;
+}
+
+.main-head-text-color{
+	color: $main-head-text-color;
+}
+
+.search-text-color{
+	color: $search-text-color;
+}
+
+.sidebar-head-text-color{
+	color: $sidebar-head-text-color;	
+}
+
+.sidebar-list-text-color{
+	color: $sidebar-list-text-color;	
+}
+
+.sort-text-color{
+	color: $sort-text-color;
+}
+
+.prev-next-text-color{
+	color: $prev-next-text-color;
+}
+
+.share-text-color{
+	color: $share-text-color;
+}
+
+.album-title-text-color{
+	color: $album-title-text-color;
+}
+
+.album-artist-text-color{
+	color: $album-artist-text-color;
+}
+
+.numbers-text-color{
+	color: $numbers-text-color;
+	
+}
+
+.album-info-text-color{
+	color: $album-info-text-color;
+}
+
+.song-title-text-color{
+	color: $song-title-text-color;	
+}
+
+.song-info-text-color{
+		color: $light_grey;	
+}
+
+// icons------------------------------------------
+
+.grid-icon-color{
+	color: $grid-icon-color;
+}
+
+.list-icon-color{
+	color: $grid-icon-color;
+}

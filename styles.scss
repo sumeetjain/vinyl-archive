@@ -2,10 +2,11 @@
 ---
 
 @import "reset";
-@import "style_guide_layout";
-@import "style_guide_albums";
-@import "style_guide_colors";
-@import "style_guide_grid";
-@import "style_guide_icons";
-@import "style_guide_lists";
-@import "style_guide_typography";
+@import "layout";
+@import "albums";
+@import "colors";
+@import "grid";
+@import "icons";
+@import "lists";
+@import "typography";
+@import "style_guide.scss";
