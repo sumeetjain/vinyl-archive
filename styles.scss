@@ -2,11 +2,11 @@
 ---
 
 @import "reset";
-@import "layout";
-@import "albums";
+@import "album_display";
 @import "colors";
 @import "grid";
 @import "icons";
 @import "lists";
 @import "typography";
-@import "style_guide.scss";
+@import "style_guide";
+@import "mediaquery";

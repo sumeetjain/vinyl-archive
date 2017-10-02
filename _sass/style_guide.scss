@@ -100,6 +100,7 @@
 
 .sg-main-head-text-color{
 	background-color: $main-head-text-color;
+	@extend .white;
 }
 
 .sg-search-text-color{
@@ -158,6 +159,6 @@
 }
 
 .sg-list-icon-color{
-	background-color: $grid-icon-color;
+	background-color: $list-icon-color;
 }
 

@@ -71,20 +71,6 @@ a {
 .clearfix {
   display: inline-block; }
 
-.grid-main .album-display {
-  display: flex;
-  flex-direction: column;
-  line-height: 35px; }
-  .grid-main .album-display .album-art {
-    margin-bottom: 12px; }
-
-.grid-list .album-display {
-  display: flex;
-  flex-direction: row;
-  line-height: 35px; }
-  .grid-list .album-display .album-art {
-    margin-right: 20px; }
-
 .album-art {
   box-shadow: 0px 0px 7px #343434; }
   .album-art.album-art-full {
@@ -99,6 +85,20 @@ a {
   .album-art.album-art-list, .grid-list .album-display .album-art {
     width: 55px;
     height: 55px; }
+
+.grid-main .album-display {
+  display: flex;
+  flex-direction: column;
+  line-height: 35px; }
+  .grid-main .album-display .album-art {
+    margin-bottom: 12px; }
+
+.grid-list .album-display {
+  display: flex;
+  flex-direction: row;
+  line-height: 35px; }
+  .grid-list .album-display .album-art {
+    margin-right: 20px; }
 
 .main-head-background-color {
   background-color: #5D5E5E; }
@@ -187,18 +187,12 @@ a {
   width: 110px; }
 
 .grid-icon {
-  display: grid;
   width: 50px;
-  height: 50px;
-  grid-template-columns: 20fr 4fr 20fr;
-  grid-template-rows: 20fr 4fr 20fr; }
+  height: 50px; }
 
 .list-icon {
-  display: grid;
-  width: 60px;
-  height: 50px;
-  grid-template-columns: 1fr;
-  grid-template-rows: 5fr 4fr 5fr 4fr 5fr 4fr 5fr; }
+  width: 80px;
+  height: 50px; }
 
 .song_list {
   font-size: 25px;
@@ -380,7 +374,7 @@ li.song_numbers:before {
   font-size: 20px;
   color: #f15a29; }
 
-.white, .sg-sort-background-color, .sg-footer-text-color, .sg-header-text-color {
+.white, .sg-sort-background-color, .sg-footer-text-color, .sg-header-text-color, .sg-main-head-text-color {
   border: solid 1px black; }
 
 .sg-main-head-background-color {
@@ -450,4 +444,4 @@ li.song_numbers:before {
   background-color: #A8A8A8; }
 
 .sg-list-icon-color {
-  background-color: #A8A8A8; }
+  background-color: #5D5E5E; }
