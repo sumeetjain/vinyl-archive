@@ -115,6 +115,9 @@ a {
 .sort-background-color {
   background-color: #FFFFFF; }
 
+.main-background-color {
+  background-color: #FFFFFF; }
+
 .main-body-text-color {
   color: #5D5E5E; }
 
@@ -183,6 +186,14 @@ a {
   grid-template-rows: 125px 125px 125px 125px 125px  125px 125px 125px 125px 125px;
   margin: 20px 0px; }
 
+.main-container {
+  max-width: 80%;
+  margin: auto; }
+
+.main-header {
+  width: 100%;
+  height: 90px; }
+
 .vinyl-icon {
   width: 110px; }
 
@@ -214,6 +225,117 @@ li.song_numbers:before {
 
 .members_list {
   font-size: 25px; }
+
+.style_guide h1 {
+  font-size: 40px;
+  font-weight: 900;
+  text-decoration: underline;
+  font: arial; }
+.style_guide h2 {
+  font-size: 25px;
+  font-weight: 600;
+  text-decoration: underline;
+  font: arial; }
+
+.style-guide-grid {
+  display: grid;
+  grid-template-columns: 120px 120px 120px 120px 120px; }
+
+.style-guide-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around; }
+
+.style_guide {
+  margin: 20px; }
+  .style_guide h1 {
+    border-bottom: solid 1px grey;
+    padding: 10px 0px;
+    margin-bottom: 10px; }
+
+.color-swatch {
+  width: 100px;
+  height: 100px;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px;
+  font-size: 20px;
+  color: #f15a29; }
+
+.white, .sg-sort-background-color, .sg-main-background-color, .sg-footer-text-color, .sg-header-text-color, .sg-main-head-text-color {
+  border: solid 1px black; }
+
+.sg-main-head-background-color {
+  background-color: #5D5E5E; }
+
+.sg-page-background-color {
+  background-color: #BBBBBB; }
+
+.sg-search-background-color {
+  background-color: #EFEFEF; }
+
+.sg-sidebar-head-background-color {
+  background-color: #A1A0A1; }
+
+.sg-sort-background-color {
+  background-color: #FFFFFF; }
+
+.sg-main-background-color {
+  background-color: #FFFFFF; }
+
+.sg-main-body-text-color {
+  background-color: #5D5E5E; }
+
+.sg-footer-text-color {
+  background-color: #FFFFFF; }
+
+.sg-header-text-color {
+  background-color: #FFFFFF; }
+
+.sg-main-head-text-color {
+  background-color: #FFFFFF; }
+
+.sg-search-text-color {
+  background-color: #A1A0A1; }
+
+.sg-sidebar-head-text-color {
+  background-color: #A1A0A1; }
+
+.sg-sidebar-list-text-color {
+  background-color: #5D5E5E; }
+
+.sg-sort-text-color {
+  background-color: #A1A0A1; }
+
+.sg-prev-next-text-color {
+  background-color: #A1A0A1; }
+
+.sg-share-text-color {
+  background-color: #5D5E5E; }
+
+.sg-album-title-text-color {
+  background-color: #5D5E5E; }
+
+.sg-album-artist-text-color {
+  background-color: black; }
+
+.sg-numbers-text-color {
+  background-color: #EFEFEF; }
+
+.sg-album-info-text-color {
+  background-color: black; }
+
+.sg-song-title-text-color {
+  background-color: black; }
+
+.sg-song-info-text-color {
+  background-color: #A8A8A8; }
+
+.sg-grid-icon-color {
+  background-color: #A8A8A8; }
+
+.sg-list-icon-color {
+  background-color: #5D5E5E; }
 
 .vinyl_archive_title {
   font-size: 25px;
@@ -337,111 +459,3 @@ li.song_numbers:before {
   font-style: italic;
   font-family: 'Oswald', sans-serif;
   font-weight: 300; }
-
-.style_guide h1 {
-  font-size: 40px;
-  font-weight: 900;
-  text-decoration: underline;
-  font: arial; }
-.style_guide h2 {
-  font-size: 25px;
-  font-weight: 600;
-  text-decoration: underline;
-  font: arial; }
-
-.style-guide-grid {
-  display: grid;
-  grid-template-columns: 120px 120px 120px 120px 120px; }
-
-.style-guide-flex {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around; }
-
-.style_guide {
-  margin: 20px; }
-  .style_guide h1 {
-    border-bottom: solid 1px grey;
-    padding: 10px 0px;
-    margin-bottom: 10px; }
-
-.color-swatch {
-  width: 100px;
-  height: 100px;
-  padding: 5px;
-  margin: 5px;
-  border-radius: 5px;
-  font-size: 20px;
-  color: #f15a29; }
-
-.white, .sg-sort-background-color, .sg-footer-text-color, .sg-header-text-color, .sg-main-head-text-color {
-  border: solid 1px black; }
-
-.sg-main-head-background-color {
-  background-color: #5D5E5E; }
-
-.sg-page-background-color {
-  background-color: #BBBBBB; }
-
-.sg-search-background-color {
-  background-color: #EFEFEF; }
-
-.sg-sidebar-head-background-color {
-  background-color: #A1A0A1; }
-
-.sg-sort-background-color {
-  background-color: #FFFFFF; }
-
-.sg-main-body-text-color {
-  background-color: #5D5E5E; }
-
-.sg-footer-text-color {
-  background-color: #FFFFFF; }
-
-.sg-header-text-color {
-  background-color: #FFFFFF; }
-
-.sg-main-head-text-color {
-  background-color: #FFFFFF; }
-
-.sg-search-text-color {
-  background-color: #A1A0A1; }
-
-.sg-sidebar-head-text-color {
-  background-color: #A1A0A1; }
-
-.sg-sidebar-list-text-color {
-  background-color: #5D5E5E; }
-
-.sg-sort-text-color {
-  background-color: #A1A0A1; }
-
-.sg-prev-next-text-color {
-  background-color: #A1A0A1; }
-
-.sg-share-text-color {
-  background-color: #5D5E5E; }
-
-.sg-album-title-text-color {
-  background-color: #5D5E5E; }
-
-.sg-album-artist-text-color {
-  background-color: black; }
-
-.sg-numbers-text-color {
-  background-color: #EFEFEF; }
-
-.sg-album-info-text-color {
-  background-color: black; }
-
-.sg-song-title-text-color {
-  background-color: black; }
-
-.sg-song-info-text-color {
-  background-color: #A8A8A8; }
-
-.sg-grid-icon-color {
-  background-color: #A8A8A8; }
-
-.sg-list-icon-color {
-  background-color: #5D5E5E; }
