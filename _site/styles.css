@@ -260,8 +260,8 @@ li.song_numbers:before {
 
 .search {
   display: flex;
-  margin-left: 103px;
-  width: 38%; }
+  margin-top: 10px;
+  width: 40%; }
 
 .searchTerm {
   width: 100%;
