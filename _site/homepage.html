@@ -8,18 +8,74 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
   
 </head>
-<body class="page-background-color">
-	<div class="main-container main-background-color">
-		<div class="main-header main-head-background-color main-head-text-color">
-			some content
-		</div>
-		<div>
-	some content
-</div>
 
-<div>
-some content
-</div>
+<body class="page-background-color">
+
+	<div class="main-header main-head-background-color main-head-text-color">
+		<div class="header-content">
+		
+			<a href="homepage.html">
+				<img src="images/vinyl.gif" alt="vinyl animated" class="vinyl-icon header_logo">
+			</a>
+
+			<a href="homepage.html" class="header-text-color vinyl_archive_title header-title">
+					the vinyl archive
+			</a>
+
+			<a href="http://hearnebraska.org" class="header-text-color hear_nebraska header-organization">
+					by Hear Nebraska
+			</a>
+
+		</div>
+
+		<a href="#" class="add_button header-text-color">
+				add an album 
+		</a>
+
+	</div>
+
+	<div class="main-container main-background-color">
+
+		<nav class="navbar">
+
+			<div class="search">
+				<input type="text" class="searchTerm search_text search-text-color search-background-color" placeholder="Search for an album, artist, or track...">
+
+				<button type="submit" class="searchButton search-background-color">
+					<img src="images/search.svg" alt="search icon" class="search-icon">
+				</button>
+			</div>
+
+
+
+
+
+			<div class="sort-text-color"
+
+
+			<form>
+				<select id="mySelect" onchange="myFunction()">
+					<option>upload date, new to old </option>
+					<option>upload date, old to new </option>
+					<option>album year, new to old </option>
+					<option>album year, old to new </option>
+					<option>album title, a to z </option>
+					<option>album title, z to a </option>
+					<option>album artist, a to z </option>
+					<option>album artist, z to a </option>	
+				</select>
+			</form>
+
+		</nav>
+
+
+
+
+
+
+
+
+		
 	</div>
 
 </body>

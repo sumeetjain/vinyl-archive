@@ -42,9 +42,10 @@
 	}
 }
 
+$swatch-size: 110px; 
 .color-swatch{
-	width: 100px;
-	height:100px;
+	width: $swatch-size;
+	height:$swatch-size;
 	padding: 5px; 
 	margin:5px;
 	border-radius: 5px;
@@ -113,7 +114,8 @@
 }
 
 .sg-sidebar-head-text-color{
-	background-color: $sidebar-head-text-color;	
+	background-color: $sidebar-head-text-color;
+	@extend .white;
 }
 
 .sg-sidebar-list-text-color{
@@ -166,4 +168,9 @@
 .sg-list-icon-color{
 	background-color: $list-icon-color;
 }
+
+.sg-search-icon-color{
+	background-color: $search-text-color;
+}
+
 

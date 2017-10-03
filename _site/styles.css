@@ -57,6 +57,11 @@ a {
   text-decoration: none;
   /* no underline */ }
 
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
 /*----------------------------clearfix----------------------------*/
 .clear {
   clear: both; }
@@ -134,7 +139,7 @@ a {
   color: #A1A0A1; }
 
 .sidebar-head-text-color {
-  color: #A1A0A1; }
+  color: #FFFFFF; }
 
 .sidebar-list-text-color {
   color: #5D5E5E; }
@@ -186,16 +191,34 @@ a {
   grid-template-rows: 125px 125px 125px 125px 125px  125px 125px 125px 125px 125px;
   margin: 20px 0px; }
 
+.main-header {
+  max-width: 80%;
+  margin: auto;
+  height: 90px;
+  padding: 30px 30px 0px 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+
+.header-content {
+  display: flex;
+  flex-direction: row; }
+
+.header-title {
+  margin-left: 20px; }
+
+.header-organization {
+  margin-left: 12px; }
+
 .main-container {
   max-width: 80%;
-  margin: auto; }
-
-.main-header {
-  width: 100%;
-  height: 90px; }
+  margin: auto;
+  padding: 20px 30px; }
 
 .vinyl-icon {
-  width: 110px; }
+  width: 85px; }
+  .vinyl-icon.header_logo {
+    margin-top: -20px; }
 
 .grid-icon {
   width: 50px;
@@ -204,6 +227,10 @@ a {
 .list-icon {
   width: 80px;
   height: 50px; }
+
+.search-icon {
+  width: 22px;
+  height: 22px; }
 
 .song_list {
   font-size: 25px;
@@ -225,6 +252,29 @@ li.song_numbers:before {
 
 .members_list {
   font-size: 25px; }
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center; }
+
+.search {
+  display: flex;
+  margin-left: 103px;
+  width: 38%; }
+
+.searchTerm {
+  width: 100%;
+  border: none;
+  padding: 2px 10px 5px 10px;
+  border-radius: 4px; }
+
+.searchButton {
+  margin-left: -5px;
+  padding-right: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer; }
 
 .style_guide h1 {
   font-size: 40px;
@@ -254,15 +304,15 @@ li.song_numbers:before {
     margin-bottom: 10px; }
 
 .color-swatch {
-  width: 100px;
-  height: 100px;
+  width: 110px;
+  height: 110px;
   padding: 5px;
   margin: 5px;
   border-radius: 5px;
   font-size: 20px;
   color: #f15a29; }
 
-.white, .sg-sort-background-color, .sg-main-background-color, .sg-footer-text-color, .sg-header-text-color, .sg-main-head-text-color {
+.white, .sg-sort-background-color, .sg-main-background-color, .sg-footer-text-color, .sg-header-text-color, .sg-main-head-text-color, .sg-sidebar-head-text-color {
   border: solid 1px black; }
 
 .sg-main-head-background-color {
@@ -299,7 +349,7 @@ li.song_numbers:before {
   background-color: #A1A0A1; }
 
 .sg-sidebar-head-text-color {
-  background-color: #A1A0A1; }
+  background-color: #FFFFFF; }
 
 .sg-sidebar-list-text-color {
   background-color: #5D5E5E; }
@@ -335,27 +385,24 @@ li.song_numbers:before {
   background-color: #A8A8A8; }
 
 .sg-list-icon-color {
-  background-color: #5D5E5E; }
+  background-color: #A8A8A8; }
+
+.sg-search-icon-color {
+  background-color: #A1A0A1; }
 
 .vinyl_archive_title {
   font-size: 25px;
-  color: #fff;
   font-family: 'Oswald', sans-serif;
   font-weight: 500;
-  background: black;
   text-transform: uppercase; }
 
 .hear_nebraska {
   font-size: 25px;
-  color: #fff;
   font-family: 'Oswald', sans-serif;
-  font-weight: 300;
-  background: black; }
+  font-weight: 200; }
 
 .add_button {
-  background: black;
   font-size: 25px;
-  color: #fff;
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
   text-transform: uppercase; }
@@ -366,15 +413,19 @@ li.song_numbers:before {
   font-style: italic;
   text-transform: uppercase;
   font-family: 'Oswald', sans-serif;
-  font-weight: 300; }
+  font-weight: 200; }
+
+.sort_text {
+  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 200;
+  font-size: 18px; }
 
 .sidebar_titles {
   text-transform: uppercase;
   font-size: 25px;
-  color: #fff;
   font-family: 'Oswald', sans-serif;
-  font-weight: 400;
-  background: #a9a9a9; }
+  font-weight: 400; }
 
 .items_in_sidebar {
   font-family: 'Oswald', sans-serif;
@@ -388,7 +439,7 @@ li.song_numbers:before {
 
 .mp_artist {
   font-family: 'Oswald', sans-serif;
-  font-weight: 300;
+  font-weight: 200;
   font-size: 25px;
   font-style: italic; }
 
@@ -410,23 +461,20 @@ li.song_numbers:before {
 .info,
 .about_info {
   font-size: 25px;
-  color: black;
   font-family: 'Oswald', sans-serif;
-  font-weight: 300; }
+  font-weight: 200; }
 
 .album_list_artist,
 .search_text {
   font-size: 25px;
   font-style: italic;
   font-family: 'Oswald', sans-serif;
-  font-weight: 300; }
+  font-weight: 200; }
 
 .artist_album_background,
 .edit_a,
 .uploads {
-  font-size: 25px;
-  color: #fff;
-  background: black; }
+  font-size: 25px; }
 
 .background_artist,
 .uploads {
@@ -435,7 +483,7 @@ li.song_numbers:before {
 
 .background_album {
   font-family: 'Oswald', sans-serif;
-  font-weight: 300;
+  font-weight: 200;
   font-style: italic; }
 
 .verticle_line {
@@ -455,7 +503,6 @@ li.song_numbers:before {
 .other_info,
 .about_title {
   font-size: 25px;
-  color: black;
   font-style: italic;
   font-family: 'Oswald', sans-serif;
-  font-weight: 300; }
+  font-weight: 200; }
