@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>{{page.title}}</title>
+  <title>Vinyl Archive | Home</title>
 
   <link rel="stylesheet" type="text/css" href="/styles.css">
   <link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700" rel="stylesheet">
@@ -35,7 +35,47 @@
 	</div>
 
 	<div class="main-container main-background-color">
-		{{ content }}
+
+		<nav class="navbar">
+
+			<div class="search">
+				<input type="text" class="searchTerm search_text search-text-color search-background-color" placeholder="Search for an album, artist, or track...">
+
+				<button type="submit" class="searchButton search-background-color">
+					<img src="images/search.svg" alt="search icon" class="search-icon">
+				</button>
+			</div>
+
+
+
+
+
+			<div class="sort-text-color"
+
+
+			<form>
+				<select id="mySelect" onchange="myFunction()">
+					<option>upload date, new to old </option>
+					<option>upload date, old to new </option>
+					<option>album year, new to old </option>
+					<option>album year, old to new </option>
+					<option>album title, a to z </option>
+					<option>album title, z to a </option>
+					<option>album artist, a to z </option>
+					<option>album artist, z to a </option>	
+				</select>
+			</form>
+
+		</nav>
+
+
+
+
+
+
+
+
+		
 	</div>
 
 </body>

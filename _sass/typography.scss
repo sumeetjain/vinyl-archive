@@ -1,56 +1,45 @@
+$main-font-size:  25px; 
+
+
 @mixin Oswald_gray {
 	font-family: 'Oswald', sans-serif;
 	font-weight: 300;	
-	font-size: 25px; 
+	font-size:  $main-font-size; 
 }
 
 @mixin italic-darkgray {
-	font-size: 25px; 
+	font-size:  $main-font-size; 
 	font-style: italic;
-}
-
-@mixin regular-black {
-	font-size:25px;
-	color: black; 
-}
-
-@mixin white {
-	font-size:25px;
-	color: #fff; 
 }
 
 @mixin Oswald_light {
 	font-family: 'Oswald', sans-serif;
-	font-weight: 300;	
+	font-weight: 200;	
 }
 
 @mixin prev_next {
 	font-family: 'Oswald', sans-serif;
 	font-weight: 400;
-	font-size: 25px;
+	font-size:  $main-font-size;
 	text-transform: uppercase; 
 }
 
 // Main Page 
 
 .vinyl_archive_title {
-	@include white; 
+	font-size: $main-font-size; 
 	font-family: 'Oswald', sans-serif;
 	font-weight: 500;
-	background: black;
 	text-transform: uppercase; 
 }
 
 .hear_nebraska {
-	@include white;
-	@include Oswald_light;
-	background: black; 
+	font-size: $main-font-size;
+	@include Oswald_light; 
 }
 
-
-.add_button {
-	background: black; 
-	@include white; 
+.add_button { 
+	font-size: $main-font-size; 
 	font-family: 'Roboto', sans-serif;
 	font-weight: 700;
 	text-transform: uppercase; 
@@ -64,12 +53,17 @@
 	@include Oswald_light;
 }
 
+.sort_text{
+	text-transform: uppercase; 
+	@include Oswald_light;
+	font-size:18px;
+}
+
 .sidebar_titles {
 	text-transform: uppercase; 
-	@include white;
+	font-size: $main-font-size;
 	font-family: 'Oswald', sans-serif;
 	font-weight: 400;
-	background: #a9a9a9;
 }
 
 .items_in_sidebar {
@@ -79,12 +73,12 @@
 .mp_album {
 	font-family: 'Oswald', sans-serif;
 	font-weight: 400;
-	font-size: 25px;
+	font-size:  $main-font-size;
 }
 
 .mp_artist{
 	@include Oswald_light;
-	font-size: 25px;
+	font-size:  $main-font-size;
 	font-style: italic;
 }
 
@@ -97,7 +91,6 @@
 	@include prev_next;
 }
 
-
 // Album Page 
 
 .album_list_song,
@@ -105,7 +98,7 @@
 .info,
 .about_info
  {
-	@include regular-black;
+	font-size: $main-font-size;
 	@include Oswald_light;
 }
 
@@ -119,8 +112,7 @@
 .edit_a,
 .uploads
 {
-	@include white;
-	background: black;
+	font-size: $main-font-size;
 }
 
 
@@ -155,7 +147,7 @@
 
 .other_info,
 .about_title  {
-	@include regular-black;
+	font-size: $main-font-size;
 	font-style: italic;
 	@include Oswald_light;
 }
