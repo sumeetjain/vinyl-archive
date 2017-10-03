@@ -19,6 +19,7 @@ $page-background-color: $back_grey;
 $search-background-color: $lightest_grey;
 $sidebar-head-background-color: $medium_grey;
 $sort-background-color: $white;
+$main-background-color: $white;
 
 // text------------------------------------------
 
@@ -67,6 +68,10 @@ $list-icon-color: $dark_grey;
 
 .sort-background-color{
 	background-color: $sort-background-color;
+}
+
+.main-background-color{
+	background-color: $main-background-color;
 }
 
 // text------------------------------------------

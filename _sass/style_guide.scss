@@ -82,6 +82,11 @@
 	@extend .white;
 }
 
+.sg-main-background-color{
+	background-color: $main-background-color;
+	@extend .white;
+}
+
 // text------------------------------------------
 
 .sg-main-body-text-color{

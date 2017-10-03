@@ -37,19 +37,16 @@
 	@include white; 
 	font-family: 'Oswald', sans-serif;
 	font-weight: 500;
-	background: black;
 	text-transform: uppercase; 
 }
 
 .hear_nebraska {
 	@include white;
 	@include Oswald_light;
-	background: black; 
 }
 
 
 .add_button {
-	background: black; 
 	@include white; 
 	font-family: 'Roboto', sans-serif;
 	font-weight: 700;
@@ -69,7 +66,6 @@
 	@include white;
 	font-family: 'Oswald', sans-serif;
 	font-weight: 400;
-	background: #a9a9a9;
 }
 
 .items_in_sidebar {
@@ -120,7 +116,6 @@
 .uploads
 {
 	@include white;
-	background: black;
 }
 
 
@@ -131,7 +126,8 @@
 }
 
 .background_album {
-	@include Oswald_light;
+	font-family: 'Oswald', sans-serif;
+	font-weight: 200;
 	font-style: italic;
 }
 
