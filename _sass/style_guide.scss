@@ -1,0 +1,176 @@
+// headers-----------------------
+
+.style_guide{
+	h1{
+		font-size:40px;
+		font-weight:900;
+		text-decoration:underline;
+		font:arial; 
+	}
+	h2{
+		font-size:25px;
+		font-weight:600;
+		text-decoration:underline;
+		font:arial;
+	}
+}
+
+// grid------------------------
+
+.style-guide-grid{
+	display:grid;
+	grid-template-columns: 120px 120px 120px 120px 120px;
+}
+
+// flex------------------------
+
+.style-guide-flex{
+	display:flex;
+	flex-direction:row;
+	justify-content: space-around;
+}
+
+// formating-------------------
+
+.style_guide{
+	margin:20px; 
+
+	h1{
+		border-bottom: solid 1px grey;
+		padding: 10px 0px;
+		margin-bottom: 10px;
+	}
+}
+
+$swatch-size: 110px; 
+.color-swatch{
+	width: $swatch-size;
+	height:$swatch-size;
+	padding: 5px; 
+	margin:5px;
+	border-radius: 5px;
+	font-size:20px; 
+	color: $swatch;
+}
+
+.white{
+	border: solid 1px black; 
+}
+
+// color application------------------------------
+
+// background-------------------------------------
+
+.sg-main-head-background-color{
+	background-color: $main-head-background-color;
+}
+
+.sg-page-background-color{
+	background-color: $page-background-color;
+}
+
+.sg-search-background-color{
+	background-color: $search-background-color;
+
+}
+
+.sg-sidebar-head-background-color{
+	background-color: $sidebar-head-background-color;
+}
+
+.sg-sort-background-color{
+	background-color: $sort-background-color;
+	@extend .white;
+}
+
+.sg-main-background-color{
+	background-color: $main-background-color;
+	@extend .white;
+}
+
+// text------------------------------------------
+
+.sg-main-body-text-color{
+	background-color: $main-body-text-color;
+}
+
+.sg-footer-text-color{
+	background-color: $footer-text-color;
+	@extend .white;
+}  
+
+.sg-header-text-color{
+	background-color: $header-text-color;
+	@extend .white;
+}
+
+.sg-main-head-text-color{
+	background-color: $main-head-text-color;
+	@extend .white;
+}
+
+.sg-search-text-color{
+	background-color: $search-text-color;
+}
+
+.sg-sidebar-head-text-color{
+	background-color: $sidebar-head-text-color;
+	@extend .white;
+}
+
+.sg-sidebar-list-text-color{
+	background-color: $sidebar-list-text-color;	
+}
+
+.sg-sort-text-color{
+	background-color: $sort-text-color;
+}
+
+.sg-prev-next-text-color{
+	background-color: $prev-next-text-color;
+}
+
+.sg-share-text-color{
+	background-color: $share-text-color;
+}
+
+.sg-album-title-text-color{
+	background-color: $album-title-text-color;
+}
+
+.sg-album-artist-text-color{
+	background-color: $album-artist-text-color;
+}
+
+.sg-numbers-text-color{
+	background-color: $numbers-text-color;
+	
+}
+
+.sg-album-info-text-color{
+	background-color: $album-info-text-color;
+}
+
+.sg-song-title-text-color{
+	background-color: $song-title-text-color;	
+}
+
+.sg-song-info-text-color{
+	background-color: $light_grey;	
+}
+
+// icons------------------------------------------
+
+.sg-grid-icon-color{
+	background-color: $grid-icon-color;
+}
+
+.sg-list-icon-color{
+	background-color: $list-icon-color;
+}
+
+.sg-search-icon-color{
+	background-color: $search-text-color;
+}
+
+

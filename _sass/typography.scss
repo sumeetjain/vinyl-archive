@@ -1,0 +1,153 @@
+$main-font-size:  25px; 
+
+
+@mixin Oswald_gray {
+	font-family: 'Oswald', sans-serif;
+	font-weight: 300;	
+	font-size:  $main-font-size; 
+}
+
+@mixin italic-darkgray {
+	font-size:  $main-font-size; 
+	font-style: italic;
+}
+
+@mixin Oswald_light {
+	font-family: 'Oswald', sans-serif;
+	font-weight: 200;	
+}
+
+@mixin prev_next {
+	font-family: 'Oswald', sans-serif;
+	font-weight: 400;
+	font-size:  $main-font-size;
+	text-transform: uppercase; 
+}
+
+// Main Page 
+
+.vinyl_archive_title {
+	font-size: $main-font-size; 
+	font-family: 'Oswald', sans-serif;
+	font-weight: 500;
+	text-transform: uppercase; 
+}
+
+.hear_nebraska {
+	font-size: $main-font-size;
+	@include Oswald_light; 
+}
+
+.add_button { 
+	font-size: $main-font-size; 
+	font-family: 'Roboto', sans-serif;
+	font-weight: 700;
+	text-transform: uppercase; 
+}
+
+
+.share_album,
+.sort {
+	@include italic-darkgray;
+	text-transform: uppercase; 
+	@include Oswald_light;
+}
+
+.sort_text{
+	text-transform: uppercase; 
+	@include Oswald_light;
+	font-size:18px;
+}
+
+.sidebar_titles {
+	text-transform: uppercase; 
+	font-size: $main-font-size;
+	font-family: 'Oswald', sans-serif;
+	font-weight: 400;
+}
+
+.items_in_sidebar {
+	@include Oswald_gray;
+}
+
+.mp_album {
+	font-family: 'Oswald', sans-serif;
+	font-weight: 400;
+	font-size:  $main-font-size;
+}
+
+.mp_artist{
+	@include Oswald_light;
+	font-size:  $main-font-size;
+	font-style: italic;
+}
+
+.prev {
+	@include prev_next;
+}
+
+.next,
+.apage_subheadings {
+	@include prev_next;
+}
+
+// Album Page 
+
+.album_list_song,
+.album_by,
+.info,
+.about_info
+ {
+	font-size: $main-font-size;
+	@include Oswald_light;
+}
+
+.album_list_artist,
+.search_text {
+	@include italic-darkgray;
+	@include Oswald_light;
+}
+
+.artist_album_background,
+.edit_a,
+.uploads
+{
+	font-size: $main-font-size;
+}
+
+
+.background_artist,
+.uploads {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 700;
+}
+
+.background_album {
+	@include Oswald_light;
+	font-style: italic;
+}
+
+.verticle_line {
+	font-family: 'Oswald', sans-serif;
+	font-weight: 100;
+}
+
+.edit_a {
+	text-transform: uppercase; 
+	font-family: 'Oswald', sans-serif;
+	font-weight: 400;
+}
+
+.album_title {
+	font-size: 30px;
+	font-family: 'Oswald', sans-serif;
+	font-weight: 500;
+}
+
+
+.other_info,
+.about_title  {
+	font-size: $main-font-size;
+	font-style: italic;
+	@include Oswald_light;
+}

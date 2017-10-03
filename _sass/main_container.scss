@@ -1,0 +1,37 @@
+// header----------------------------
+
+.main-header{
+	max-width: 80%;
+	margin:auto; 
+	height: 90px;
+	padding: 30px 30px 0px 30px; 
+	display:flex;
+	flex-direction: row; 
+	justify-content:space-between;
+}
+
+.header-content{
+	display:flex;
+	flex-direction: row;
+}
+
+.header-title{
+	margin-left: 20px; 
+}
+
+.header-organization{
+	margin-left: 12px;
+}
+
+
+
+
+// body------------------------------
+
+.main-container{
+	max-width: 80%;
+	margin:auto; 
+	padding: 20px 30px; 
+	
+}
+
