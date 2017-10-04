@@ -18,24 +18,44 @@
 				<img src="images/vinyl.gif" alt="vinyl animated" class="vinyl-icon header_logo">
 			</a>
 
-			<a href="homepage.html" class="header-text-color vinyl_archive_title header-title">
-					the vinyl archive
-			</a>
+			<div class= "header-info">
 
-			<a href="http://hearnebraska.org" class="header-text-color hear_nebraska header-organization">
-					by Hear Nebraska
-			</a>
+				<a href="homepage.html" class="header-text-color vinyl_archive_title header-title">
+						nebraska vinyl archive
+				</a>
+
+				<a href="http://hearnebraska.org" class="header-text-color hear_nebraska header-organization">
+						by Hear Nebraska
+				</a>
+
+			</div>
 
 		</div>
 
-		<a href="#" class="add_button header-text-color">
+		<a href="#" class="add_button add-button header-text-color">
 				add an album 
 		</a>
 
 	</div>
 
 	<div class="main-container main-background-color">
+
+		<nav class="navbar">
+
+			<div class="search">
+				<input type="text" class="searchTerm search_text search-text-color search-background-color" placeholder="Search for an album, artist, or track...">
+
+				<button type="submit" class="searchButton search-background-color">
+					<img src="images/search.svg" alt="search icon" class="search-icon">
+				</button>
+
+			</div>
+
+
+		</nav>
+
 		{{ content }}
+		
 	</div>
 
 <script src="main.js"></script>
