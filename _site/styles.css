@@ -71,6 +71,13 @@ a {
 .clearfix {
   display: inline-block; }
 
+.share_social_media {
+  font-size: 25px; }
+
+.share_container {
+  display: flex;
+  right: 10px; }
+
 .album-art {
   box-shadow: 0px 0px 7px #343434; }
   .album-art.album-art-full {
