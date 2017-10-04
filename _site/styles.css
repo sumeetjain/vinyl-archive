@@ -71,12 +71,22 @@ a {
 .clearfix {
   display: inline-block; }
 
+.ablum_page {
+  background: white; }
+
 .share_social_media {
-  font-size: 25px; }
+  font-size: 25px;
+  margin-left: 10px; }
+
+.fa-twitter,
+.fa-facebook-square {
+  color: #5D5E5E; }
 
 .share_container {
   display: flex;
-  right: 10px; }
+  position: absolute;
+  right: 150px;
+  top: 100px; }
 
 .album-art {
   box-shadow: 0px 0px 7px #343434; }
