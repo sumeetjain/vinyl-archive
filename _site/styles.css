@@ -1,0 +1,530 @@
+/*-----------------------page resets-------------------------------*/
+/* A basic reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline; }
+
+/* remember to define focus styles! */
+:focus {
+  outline: 0; }
+
+html {
+  position: relative;
+  height: 100%; }
+
+body {
+  position: relative;
+  min-height: 100%;
+  line-height: 1;
+  color: black;
+  background: white; }
+
+ol, ul {
+  list-style: none; }
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+  border-collapse: separate;
+  border-spacing: 0; }
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: ""; }
+
+blockquote, q {
+  quotes: "" ""; }
+
+a {
+  color: black;
+  text-decoration: none;
+  /* no underline */ }
+
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/*----------------------------clearfix----------------------------*/
+.clear {
+  clear: both; }
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
+
+.clearfix {
+  display: inline-block; }
+
+.album-art {
+  box-shadow: 0px 0px 7px #343434; }
+  .album-art.album-art-full {
+    width: 425px;
+    height: 425px; }
+  .album-art.album-art-grid, .grid-main .album-display .album-art {
+    width: 200px;
+    height: 200px; }
+  .album-art.album-art-thumb {
+    width: 90px;
+    height: 90px; }
+  .album-art.album-art-list, .grid-list .album-display .album-art {
+    width: 55px;
+    height: 55px; }
+
+.grid-main .album-display {
+  display: flex;
+  flex-direction: column;
+  line-height: 35px; }
+  .grid-main .album-display .album-art {
+    margin-bottom: 12px; }
+
+.grid-list .album-display {
+  display: flex;
+  flex-direction: row;
+  line-height: 35px; }
+  .grid-list .album-display .album-art {
+    margin-right: 20px; }
+
+.main-head-background-color {
+  background-color: #5D5E5E; }
+
+.page-background-color {
+  background-color: #BBBBBB; }
+
+.search-background-color {
+  background-color: #EFEFEF; }
+
+.sidebar-head-background-color {
+  background-color: #A1A0A1; }
+
+.sort-background-color {
+  background-color: #FFFFFF; }
+
+.main-background-color {
+  background-color: #FFFFFF; }
+
+.main-body-text-color {
+  color: #5D5E5E; }
+
+.footer-text-color {
+  color: #FFFFFF; }
+
+.header-text-color {
+  color: #FFFFFF; }
+
+.main-head-text-color {
+  color: #FFFFFF; }
+
+.search-text-color {
+  color: #A1A0A1; }
+
+.sidebar-head-text-color {
+  color: #FFFFFF; }
+
+.sidebar-list-text-color {
+  color: #5D5E5E; }
+
+.sort-text-color {
+  color: #A1A0A1; }
+
+.prev-next-text-color {
+  color: #A1A0A1; }
+
+.share-text-color {
+  color: #5D5E5E; }
+
+.album-title-text-color {
+  color: #5D5E5E; }
+
+.album-artist-text-color {
+  color: black; }
+
+.numbers-text-color {
+  color: #EFEFEF; }
+
+.album-info-text-color {
+  color: black; }
+
+.song-title-text-color {
+  color: black; }
+
+.song-info-text-color {
+  color: #A8A8A8; }
+
+.grid-icon-color {
+  color: #A8A8A8; }
+
+.list-icon-color {
+  color: #A8A8A8; }
+
+.grid-main {
+  display: grid;
+  max-width: 675px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 300px 300px 300px;
+  margin: 20px 0px; }
+
+.grid-list {
+  display: grid;
+  max-width: 675px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 125px 125px 125px 125px 125px  125px 125px 125px 125px 125px;
+  margin: 20px 0px; }
+
+.main-header {
+  max-width: 80%;
+  margin: auto;
+  height: 90px;
+  padding: 20px 30px 0px 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+
+.header-content {
+  display: flex;
+  flex-direction: row; }
+
+.header-info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px; }
+
+.header-organization {
+  margin-top: 3px; }
+
+.add-button {
+  padding-top: 10px; }
+
+.main-container {
+  max-width: 80%;
+  margin: auto;
+  padding: 80px 30px 20px 30px; }
+
+.vinyl-icon {
+  width: 115px; }
+  .vinyl-icon.header_logo {
+    margin-top: -10px; }
+
+.grid-icon {
+  width: 50px;
+  height: 50px; }
+
+.list-icon {
+  width: 80px;
+  height: 50px; }
+
+.search-icon {
+  width: 22px;
+  height: 22px; }
+
+.song_list {
+  font-size: 25px;
+  counter-reset: item;
+  list-style-type: none; }
+
+li.song_numbers {
+  display: block; }
+
+li.song_numbers:before {
+  content: counter(item) "  ";
+  counter-increment: item; }
+
+.cities_list,
+.genres_list,
+.decades_list,
+.format_list {
+  font-size: 25px; }
+
+.members_list {
+  font-size: 25px; }
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center; }
+
+.search {
+  display: flex;
+  width: 44%; }
+
+.searchTerm {
+  width: 100%;
+  border: none;
+  padding: 2px 10px 5px 10px;
+  border-radius: 4px; }
+
+.searchButton {
+  margin-left: -5px;
+  padding-right: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer; }
+
+.sort-bar {
+  padding-left: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center; }
+
+.dropdown {
+  padding-left: 10px; }
+
+.sort-selection {
+  padding: 5px; }
+
+.style_guide h1 {
+  font-size: 40px;
+  font-weight: 900;
+  text-decoration: underline;
+  font: arial; }
+.style_guide h2 {
+  font-size: 25px;
+  font-weight: 600;
+  text-decoration: underline;
+  font: arial; }
+
+.style-guide-grid {
+  display: grid;
+  grid-template-columns: 120px 120px 120px 120px 120px; }
+
+.style-guide-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around; }
+
+.style_guide {
+  margin: 20px; }
+  .style_guide h1 {
+    border-bottom: solid 1px grey;
+    padding: 10px 0px;
+    margin-bottom: 10px; }
+
+.color-swatch {
+  width: 110px;
+  height: 110px;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px;
+  font-size: 20px;
+  color: #f15a29; }
+
+.white, .sg-sort-background-color, .sg-main-background-color, .sg-footer-text-color, .sg-header-text-color, .sg-main-head-text-color, .sg-sidebar-head-text-color {
+  border: solid 1px black; }
+
+.sg-main-head-background-color {
+  background-color: #5D5E5E; }
+
+.sg-page-background-color {
+  background-color: #BBBBBB; }
+
+.sg-search-background-color {
+  background-color: #EFEFEF; }
+
+.sg-sidebar-head-background-color {
+  background-color: #A1A0A1; }
+
+.sg-sort-background-color {
+  background-color: #FFFFFF; }
+
+.sg-main-background-color {
+  background-color: #FFFFFF; }
+
+.sg-main-body-text-color {
+  background-color: #5D5E5E; }
+
+.sg-footer-text-color {
+  background-color: #FFFFFF; }
+
+.sg-header-text-color {
+  background-color: #FFFFFF; }
+
+.sg-main-head-text-color {
+  background-color: #FFFFFF; }
+
+.sg-search-text-color {
+  background-color: #A1A0A1; }
+
+.sg-sidebar-head-text-color {
+  background-color: #FFFFFF; }
+
+.sg-sidebar-list-text-color {
+  background-color: #5D5E5E; }
+
+.sg-sort-text-color {
+  background-color: #A1A0A1; }
+
+.sg-prev-next-text-color {
+  background-color: #A1A0A1; }
+
+.sg-share-text-color {
+  background-color: #5D5E5E; }
+
+.sg-album-title-text-color {
+  background-color: #5D5E5E; }
+
+.sg-album-artist-text-color {
+  background-color: black; }
+
+.sg-numbers-text-color {
+  background-color: #EFEFEF; }
+
+.sg-album-info-text-color {
+  background-color: black; }
+
+.sg-song-title-text-color {
+  background-color: black; }
+
+.sg-song-info-text-color {
+  background-color: #A8A8A8; }
+
+.sg-grid-icon-color {
+  background-color: #A8A8A8; }
+
+.sg-list-icon-color {
+  background-color: #A8A8A8; }
+
+.sg-search-icon-color {
+  background-color: #A1A0A1; }
+
+.vinyl_archive_title {
+  font-size: 25px;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 500;
+  text-transform: uppercase; }
+
+.hear_nebraska {
+  font-size: 23px;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 200; }
+
+.add_button {
+  font-size: 25px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase; }
+
+.share_album {
+  font-size: 25px;
+  font-style: italic;
+  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 200; }
+
+.sort {
+  font-style: italic;
+  text-transform: uppercase;
+  font-size: 22px;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 200; }
+
+.sort_text {
+  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 200;
+  font-size: 18px; }
+
+.sidebar_titles {
+  text-transform: uppercase;
+  font-size: 25px;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400; }
+
+.items_in_sidebar {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+  font-size: 25px; }
+
+.mp_album {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+  font-size: 25px; }
+
+.mp_artist {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 200;
+  font-size: 25px;
+  font-style: italic; }
+
+.prev {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+  font-size: 25px;
+  text-transform: uppercase; }
+
+.next,
+.apage_subheadings {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+  font-size: 25px;
+  text-transform: uppercase; }
+
+.album_list_song,
+.album_by,
+.info,
+.about_info {
+  font-size: 25px;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 200; }
+
+.album_list_artist,
+.search_text {
+  font-size: 25px;
+  font-style: italic;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 200; }
+
+.artist_album_background,
+.edit_a,
+.uploads {
+  font-size: 25px; }
+
+.background_artist,
+.uploads {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700; }
+
+.background_album {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 200;
+  font-style: italic; }
+
+.verticle_line {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 100; }
+
+.edit_a {
+  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400; }
+
+.album_title {
+  font-size: 30px;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 500; }
+
+.other_info,
+.about_title {
+  font-size: 25px;
+  font-style: italic;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 200; }

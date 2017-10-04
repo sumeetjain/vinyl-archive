@@ -18,17 +18,21 @@
 				<img src="images/vinyl.gif" alt="vinyl animated" class="vinyl-icon header_logo">
 			</a>
 
-			<a href="homepage.html" class="header-text-color vinyl_archive_title header-title">
-					the vinyl archive
-			</a>
+			<div class= "header-info">
 
-			<a href="http://hearnebraska.org" class="header-text-color hear_nebraska header-organization">
-					by Hear Nebraska
-			</a>
+				<a href="homepage.html" class="header-text-color vinyl_archive_title header-title">
+						nebraska vinyl archive
+				</a>
+
+				<a href="http://hearnebraska.org" class="header-text-color hear_nebraska header-organization">
+						by Hear Nebraska
+				</a>
+
+			</div>
 
 		</div>
 
-		<a href="#" class="add_button header-text-color">
+		<a href="#" class="add_button add-button header-text-color">
 				add an album 
 		</a>
 
@@ -44,27 +48,33 @@
 				<button type="submit" class="searchButton search-background-color">
 					<img src="images/search.svg" alt="search icon" class="search-icon">
 				</button>
+
 			</div>
 
 
 
 
+			<div class="sort-bar">
 
-			<div class="sort-text-color"
+				<div class="sort-text-color sort">
+					sort
+				</div>
 
 
-			<form>
-				<select id="mySelect" onchange="myFunction()">
-					<option>upload date, new to old </option>
-					<option>upload date, old to new </option>
-					<option>album year, new to old </option>
-					<option>album year, old to new </option>
-					<option>album title, a to z </option>
-					<option>album title, z to a </option>
-					<option>album artist, a to z </option>
-					<option>album artist, z to a </option>	
-				</select>
-			</form>
+				<form class="dropdown">
+					<select id="mySelect" class="sort-text-color sort_text sort-selection"onchange="myFunction()">
+						<option >upload date, new to old </option>
+						<option>upload date, old to new </option>
+						<option>album year, new to old </option>
+						<option>album year, old to new </option>
+						<option>album title, a to z </option>
+						<option>album title, z to a </option>
+						<option>album artist, a to z </option>
+						<option>album artist, z to a </option>	
+					</select>
+				</form>
+
+			</div>
 
 		</nav>
 
@@ -77,6 +87,8 @@
 
 		{{ content }}
 	</div>
+
+<script src="main.js"></script>
 
 </body>
 </html>
