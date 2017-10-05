@@ -28,7 +28,7 @@ $dark_grey: #5D5E5E;
 	padding-bottom: 7px;
 }
 
-// Album and Text 
+// Album Containers
 .ap_containers {
 	display: flex; 
 }
@@ -37,6 +37,8 @@ $dark_grey: #5D5E5E;
 	margin-top: 30px; 
 	margin-left: 25px;
 }
+
+// Album Info
 
 .other_info_title, 
 .album_info,
@@ -48,6 +50,20 @@ $dark_grey: #5D5E5E;
 	margin-top: 35px;
 }
 
+.about_album_container {
+	display: flex; 
+}
+
+.about_title {
+	margin-right: 10px;
+	color: $dark_grey;
+}
+
+.album_dets {
+	margin-top: 10px;
+}
+
+// Thumbnails
 .album_page_thumbnail_container {
 	display: flex; 
 }
@@ -57,18 +73,7 @@ $dark_grey: #5D5E5E;
 	margin-top: 15px; 
 }
 
-.about_album_container {
-	display: flex; 
-}
-
-.about_title {
-	margin-right: 10px;
-}
-
-.album_dets {
-	margin-top: 10px;
-}
-
+// Song List
 ol {
 	display: block; 
 }
