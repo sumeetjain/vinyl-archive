@@ -1,0 +1,48 @@
+.navbar{
+  display: flex;
+  flex-direction: row;
+  align-items: center; 
+  justify-content: space-between; 
+}
+
+// search bar------------------------------------------------------------
+
+
+$border-radius: 4px; 
+
+.search {
+  display: flex; 
+  width: 44%;
+}
+
+.searchTerm {
+  width: 100%;
+  border: none;
+  padding: 2px 10px 5px 10px; 
+  border-radius: $border-radius;
+}
+
+.searchButton {
+  margin-left: -5px;
+  padding-right: 10px; 
+  border: none;
+  border-radius: $border-radius;
+  cursor: pointer;
+}
+
+// sort bar--------------------------------------------------------------
+
+.sort-bar{
+  padding-left:40px; 
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.dropdown{
+  padding-left:10px; 
+}
+
+.sort-selection{
+  padding:5px; 
+}

@@ -13,36 +13,37 @@ $swatch: #f15a29;
 // color key-------------------------------------
 
 // background-------------------------------------
-
+$main-background-color: $white;
 $main-head-background-color: $dark_grey;
 $page-background-color: $back_grey;
 $search-background-color: $lightest_grey;
 $sidebar-head-background-color: $medium_grey;
 $sort-background-color: $white;
-$main-background-color: $white;
+
 
 // text------------------------------------------
 
-$main-body-text-color: $dark_grey;
-$footer-text-color: $white;
-$header-text-color: $white;
-$main-head-text-color: $white;
-$search-text-color: $medium_grey;
-$sidebar-head-text-color: $medium_grey;	
-$sidebar-list-text-color: $dark_grey;	
-$sort-text-color: $medium_grey;
-$prev-next-text-color: $medium_grey;
-$share-text-color: $dark_grey;
+$album-info-text-color: $black;
 $album-title-text-color: $dark_grey;
 $album-artist-text-color: $black;
+$footer-text-color: $white;
+$header-text-color: $white;
+$main-body-text-color: $dark_grey;
+$main-head-text-color: $white;
 $numbers-text-color: $lightest_grey;
-$album-info-text-color: $black;
+$prev-next-text-color: $medium_grey;
+$search-text-color: $medium_grey;
+$share-text-color: $dark_grey;
+$sidebar-head-text-color: $white;	
+$sidebar-list-text-color: $dark_grey;	
 $song-title-text-color: $black;	
 $song-info-text-color: $light_grey;	
+$sort-text-color: $medium_grey;
 
 // icons------------------------------------------
 $grid-icon-color: $light_grey;
-$list-icon-color: $dark_grey;
+$list-icon-color: $light_grey;
+
 
 
 
@@ -148,5 +149,5 @@ $list-icon-color: $dark_grey;
 }
 
 .list-icon-color{
-	color: $grid-icon-color;
+	color: $list-icon-color;
 }

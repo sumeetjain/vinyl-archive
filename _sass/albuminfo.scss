@@ -1,3 +1,5 @@
+//Album Info Header 
+
 $dark_grey: #5D5E5E;
 
 .share_social_media {
@@ -12,7 +14,57 @@ $dark_grey: #5D5E5E;
 
 .share_container {
 	display: flex; 
-	position: absolute; 
-	right: 150px;
-	top: 100px;
+}
+
+// Subheader 
+.subheader_container {
+	background-color: $dark_grey;
+	display: flex; 
+	justify-content: space-between;
+	margin-top: 25px;
+	padding-left: 15px; 
+	padding-right: 15px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+}
+
+// Album and Text 
+.ap_containers {
+	display: flex; 
+}
+
+.ap_container_two {
+	margin-top: 30px; 
+	margin-left: 25px;
+}
+
+.other_info_title, 
+.album_info,
+.album-list {
+	margin-top: 30px;
+}
+
+.album_page_cover {
+	margin-top: 35px;
+}
+
+.album_page_thumbnail_container {
+	display: flex; 
+}
+
+.album_page_thumbnail {
+	margin-right: 15px;
+	margin-top: 15px; 
+}
+
+.about_album_container {
+	display: flex; 
+}
+
+.about_title {
+	margin-right: 10px;
+}
+
+.album_dets {
+	margin-top: 10px;
 }
