@@ -72,9 +72,13 @@ $main-font-size:  25px;
 	font-weight: 400;
 }
 
+.page_number,
 .items_in_sidebar {
 	@include Oswald_gray;
+	line-height:32px;
 }
+
+
 
 .mp_album {
 	font-family: 'Oswald', sans-serif;
@@ -88,13 +92,15 @@ $main-font-size:  25px;
 	font-style: italic;
 }
 
-.prev {
-	@include prev_next;
-}
-
+.prev,
 .next,
 .apage_subheadings {
 	@include prev_next;
+}
+
+.prev_next_arrows{
+	font-size: 40px; 
+	font-weight:100;
 }
 
 // Album Page-----------------------------------------------
@@ -120,6 +126,7 @@ $main-font-size:  25px;
 {
 	font-size: $main-font-size;
 }
+
 
 
 .background_artist,

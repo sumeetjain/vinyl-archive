@@ -94,9 +94,8 @@ a {
 .grid-main .album-display {
   display: flex;
   flex-direction: column;
-  line-height: 35px; }
-  .grid-main .album-display .album-art {
-    margin-bottom: 12px; }
+  line-height: 35px;
+  margin: 10px 0px 20px 0px; }
 
 .grid-list .album-display {
   display: flex;
@@ -104,6 +103,10 @@ a {
   line-height: 35px; }
   .grid-list .album-display .album-art {
     margin-right: 20px; }
+
+.album-details {
+  display: flex;
+  flex-direction: column; }
 
 .main-head-background-color {
   background-color: #5D5E5E; }
@@ -172,33 +175,91 @@ a {
   color: #A8A8A8; }
 
 .grid-icon-color {
-  color: #A8A8A8; }
+  fill: #A8A8A8; }
 
 .list-icon-color {
-  color: #A8A8A8; }
-
-.grid-main {
-  display: grid;
-  max-width: 675px;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 300px 300px 300px;
-  margin: 20px 0px; }
+  fill: #A8A8A8; }
 
 .grid-list {
-  display: grid;
-  max-width: 675px;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 125px 125px 125px 125px 125px  125px 125px 125px 125px 125px;
-  margin: 20px 0px; }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 650px;
+  border-bottom: 1px solid #5D5E5E; }
+  .grid-list .album-display {
+    width: 325px;
+    height: 120px;
+    padding: 25px 0px 25px 0px; }
+    .grid-list .album-display .album-details {
+      margin-top: -10px; }
+
+.grid-main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 650px;
+  margin: 15px 0px 0px 0px;
+  border-bottom: 1px solid #5D5E5E; }
+
+.latest-uploads {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 8px;
+  width: 70%;
+  margin-top: 20px; }
+  .latest-uploads .uploads {
+    padding: 10px;
+    max-width: 650px; }
+
+.page-nav {
+  max-width: 650px;
+  padding-top: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; }
+  .page-nav .prev,
+  .page-nav .next {
+    display: flex;
+    align-items: center; }
+    .page-nav .prev .prev_next_arrows,
+    .page-nav .next .prev_next_arrows {
+      margin: -8px 8px 0px 8px; }
+  .page-nav .page_number {
+    margin: 0px 80px; }
+
+.main-sidebar {
+  margin-top: 20px;
+  margin-left: 8px;
+  width: 30%; }
+  .main-sidebar .sidebar_titles {
+    padding: 10px 20px; }
+
+.sidebar-sort {
+  padding: 20px 0px 30px 20px; }
+
+a:hover {
+  color: #f15a29; }
+
+.grid-icon:hover {
+  fill: #f15a29; }
+
+.list-icon:hover {
+  fill: #f15a29; }
+
+.active {
+  fill: #5D5E5E !important; }
 
 .main-header {
-  max-width: 80%;
+  width: 80%;
   margin: auto;
   height: 90px;
   padding: 20px 30px 0px 30px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between; }
+  justify-content: space-between;
+  background-image: url("record.svg"); }
 
 .header-content {
   display: flex;
@@ -216,9 +277,29 @@ a {
   padding-top: 10px; }
 
 .main-container {
-  max-width: 80%;
+  width: 80%;
   margin: auto;
   padding: 80px 30px 20px 30px; }
+
+.main-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+
+.main-footer {
+  width: 80%;
+  margin: auto;
+  height: 90px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+
+.footer-content {
+  display: flex;
+  flex-direction: row; }
+
+.footer-info {
+  display: flex; }
 
 .vinyl-icon {
   width: 115px; }
@@ -230,7 +311,7 @@ a {
   height: 50px; }
 
 .list-icon {
-  width: 80px;
+  width: 75px;
   height: 50px; }
 
 .search-icon {
@@ -261,7 +342,8 @@ li.song_numbers:before {
 .navbar {
   display: flex;
   flex-direction: row;
-  align-items: center; }
+  align-items: center;
+  justify-content: space-between; }
 
 .search {
   display: flex;
@@ -281,16 +363,23 @@ li.song_numbers:before {
   cursor: pointer; }
 
 .sort-bar {
-  padding-left: 40px;
   display: flex;
   flex-direction: row;
   align-items: center; }
 
 .dropdown {
-  padding-left: 10px; }
+  margin-left: 10px; }
 
-.sort-selection {
-  padding: 5px; }
+select {
+  padding: 2px 10px;
+  border: 1px solid #A1A0A1; }
+
+.album-views {
+  display: flex;
+  flex-direction: row; }
+
+.list-icon-margin {
+  margin-left: 8px; }
 
 .style_guide h1 {
   font-size: 40px;
@@ -449,10 +538,12 @@ li.song_numbers:before {
   font-family: 'Oswald', sans-serif;
   font-weight: 400; }
 
+.page_number,
 .items_in_sidebar {
   font-family: 'Oswald', sans-serif;
   font-weight: 300;
-  font-size: 25px; }
+  font-size: 25px;
+  line-height: 32px; }
 
 .mp_album {
   font-family: 'Oswald', sans-serif;
@@ -465,18 +556,17 @@ li.song_numbers:before {
   font-size: 25px;
   font-style: italic; }
 
-.prev {
-  font-family: 'Oswald', sans-serif;
-  font-weight: 400;
-  font-size: 25px;
-  text-transform: uppercase; }
-
+.prev,
 .next,
 .apage_subheadings {
   font-family: 'Oswald', sans-serif;
   font-weight: 400;
   font-size: 25px;
   text-transform: uppercase; }
+
+.prev_next_arrows {
+  font-size: 40px;
+  font-weight: 100; }
 
 .album_list_song,
 .album_by,

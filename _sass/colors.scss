@@ -8,7 +8,7 @@ $light_grey: #A8A8A8;
 $medium_grey: #A1A0A1;
 $dark_grey: #5D5E5E;
 $black: black; 
-$swatch: #f15a29;
+$hear-nebraska-orange: #f15a29;
 
 // color key-------------------------------------
 
@@ -145,9 +145,9 @@ $list-icon-color: $light_grey;
 // icons------------------------------------------
 
 .grid-icon-color{
-	color: $grid-icon-color;
+	fill: $grid-icon-color;
 }
 
 .list-icon-color{
-	color: $list-icon-color;
+	fill: $list-icon-color;
 }

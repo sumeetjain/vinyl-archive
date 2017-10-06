@@ -1,0 +1,29 @@
+// .grid-list{
+// 	display:grid;
+// 	max-width:675px;
+// 	grid-template-columns: 1fr 1fr;
+// 	grid-template-rows: 125px 125px 125px 125px 125px 
+// 						125px 125px 125px 125px 125px;
+// 	margin: 15px 0px 0px 0px;
+// 	border-bottom: 1px solid $main-body-text-color;
+// }
+
+.grid-list{
+	display:flex;
+	flex-wrap: wrap; 
+	justify-content: space-between;
+	max-width:650px;
+	border-bottom: 1px solid $main-body-text-color;
+	.album-display{
+		width:325px; 
+		height:120px; 
+		padding:25px 0px 25px 0px; 
+		.album-details{
+			margin-top:-10px;
+		}
+
+	}
+}
+
+
+
