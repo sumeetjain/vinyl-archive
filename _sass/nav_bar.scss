@@ -1,6 +1,5 @@
 .navbar{
   display: flex;
-  flex-direction: row;
   align-items: center; 
   justify-content:space-between; 
 }
@@ -56,5 +55,9 @@ select {
 }
 
 .list-icon-margin{
+  margin-left:8px; 
+}
+
+.grid-icon-margin{
   margin-left:8px; 
 }
