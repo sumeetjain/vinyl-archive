@@ -2,13 +2,14 @@
 ---
 @import "reset";
 
-
-
 @import "colors";
-@import "grid";
-@import "main_container";
+
+@import "album_display";
+@import "hover";
 @import "icons";
 @import "lists";
+@import "main_container";
+@import "main_list";
 @import "media_query";
 @import "nav_bar";
 @import "style_guide";
@@ -16,4 +17,5 @@
 @import "artistpage";
 @import "albuminfo";
 @import "album_display";
+
 

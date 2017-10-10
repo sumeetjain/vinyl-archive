@@ -17,7 +17,7 @@
 		<div class="header-content">
 		
 			<a href="index.html">
-				<img src="images/vinyl.gif" alt="vinyl animated" class="vinyl-icon header_logo">
+				<img id="logoAnimate" src="images/vinyl.png" alt="vinyl still" class="vinyl-icon header_logo">
 			</a>
 
 			<div class= "header-info">
@@ -34,7 +34,7 @@
 
 		</div>
 
-		<a href="#" class="add_button add-button header-text-color">
+		<a href="#" class="add-album-display add_button add-button header-text-color">
 				add an album 
 		</a>
 
@@ -53,9 +53,6 @@
 
 			</div>
 
-
-
-
 			<div class="sort-bar">
 
 				<div class="sort-text-color sort">
@@ -64,7 +61,7 @@
 
 
 				<form class="dropdown">
-					<select id="mySelect" class="sort-text-color sort_text sort-selection" onchange="myFunction()">
+					<select id="mySelect" class="sort-text-color sort_text sort-selection" onchange="sortfunction()">
 						<option >upload date, new to old </option>
 						<option>upload date, old to new </option>
 						<option>album year, new to old </option>
@@ -81,10 +78,8 @@
 			<div class="album-views">
 
 
-
-
-					<a href="index.html">
-						<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="512px" height="512px" viewBox="0 0 223.48 223.48" style="enable-background:new 0 0 223.48 223.48;" xml:space="preserve" alt="grid display icon" class="grid-icon grid-icon-color gridactive">
+					<a href="index.html" class="icon-display">
+						<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="512px" height="512px" viewBox="0 0 223.48 223.48" style="enable-background:new 0 0 223.48 223.48;" xml:space="preserve" alt="grid display icon" class="grid-icon grid-icon-color grid-icon-margin">
 
 							<g>
 								<rect x="124.96" y="0.003" width="98.521" height="98.505"/>
@@ -96,8 +91,8 @@
 					</a>
 				
 
-					<a href="list.html">
-						<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="512px" height="512px" viewBox="0 0 92.732 92.731" style="enable-background:new 0 0 92.732 92.731;" xml:space="preserve" alt="list display icon" class="list-icon list-icon-color list-icon-margin listactive">
+					<a href="list.html" class="icon-display">
+						<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="512px" height="512px" viewBox="0 0 92.732 92.731" style="enable-background:new 0 0 92.732 92.731;" xml:space="preserve" alt="list display icon" class="list-icon list-icon-color list-icon-margin">
 							<g>
 								<rect x="1.134" width="110.463" height="14.214"/>
 								<rect x="1.186" y="25.721" width="110.357" height="14.215"/>
