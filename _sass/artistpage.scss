@@ -1,0 +1,15 @@
+$light_grey: #A8A8A8;
+
+.artist_page {
+	display: flex; 
+	justify-content: space-between;
+	border-top: 2px solid $light_grey;
+	border-bottom: 2px solid $light_grey; 
+	margin-top: 15px;
+	margin-bottom: 15px; 
+}
+
+.apage_subheadings {
+	padding-top: 10px; 
+	padding-bottom: 10px;
+}

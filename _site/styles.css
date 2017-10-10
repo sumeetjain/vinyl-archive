@@ -198,6 +198,81 @@ a {
   display: flex;
   flex-direction: column; }
 
+.share_social_media {
+  font-size: 25px;
+  margin-left: 10px; }
+
+.fa-twitter,
+.fa-facebook-square {
+  color: #5D5E5E; }
+
+.share_container {
+  display: flex; }
+
+.subheader_container {
+  background-color: #5D5E5E;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 7px;
+  padding-bottom: 7px; }
+
+.ap_containers {
+  display: flex; }
+
+.ap_container_two {
+  margin-top: 30px;
+  margin-left: 25px; }
+
+.other_info_title,
+.album_info,
+.album-list {
+  margin-top: 30px; }
+
+.album_page_cover {
+  margin-top: 35px; }
+
+.about_album_container {
+  display: flex; }
+
+.about_title {
+  margin-right: 10px;
+  color: #5D5E5E; }
+
+.album_dets {
+  margin-top: 10px; }
+
+.album_page_thumbnail_container {
+  display: flex; }
+
+.album_page_thumbnail {
+  margin-right: 15px;
+  margin-top: 15px; }
+
+ol {
+  display: block; }
+
+.song_numbers {
+  color: #A8A8A8;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+  font-size: 25px;
+  margin-bottom: 10px; }
+
+.artist_page {
+  display: flex;
+  justify-content: space-between;
+  border-top: 2px solid #A8A8A8;
+  border-bottom: 2px solid #A8A8A8;
+  margin-top: 15px;
+  margin-bottom: 15px; }
+
+.apage_subheadings {
+  padding-top: 10px;
+  padding-bottom: 10px; }
+
 a:hover {
   color: #f15a29; }
 
@@ -408,6 +483,29 @@ li.song_numbers:before {
 
   #filters {
     margin-top: 20px; } }
+@media only screen and (max-width: 420px) {
+  .header-info {
+    margin-left: 10px; }
+    .header-info .vinyl_archive_title {
+      font-size: 21px; }
+    .header-info .hear_nebraska {
+      font-size: 20px; }
+
+  .navbar {
+    margin-top: -30px; }
+    .navbar .sort-bar {
+      margin: 0px 0px 20px 90px; } }
+@media only screen and (max-width: 380px) {
+  .navbar {
+    margin-top: -10px; }
+    .navbar .sort-bar {
+      margin: 0px 0px 20px 55px; } }
+@media only screen and (max-width: 325px) {
+  .navbar .sort-bar {
+    margin: 0px 0px 20px 0px; }
+
+  .page-nav .page_number {
+    margin: 0px 60px; } }
 .navbar {
   display: flex;
   align-items: center;
