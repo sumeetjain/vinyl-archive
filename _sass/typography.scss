@@ -24,7 +24,7 @@ $main-font-size:  25px;
 	text-transform: uppercase; 
 }
 
-// Main Page 
+// Main Page-----------------------------------------------
 
 .vinyl_archive_title {
 	font-size: $main-font-size; 
@@ -34,7 +34,7 @@ $main-font-size:  25px;
 }
 
 .hear_nebraska {
-	font-size: $main-font-size;
+	font-size: 23px;
 	@include Oswald_light; 
 }
 
@@ -46,10 +46,16 @@ $main-font-size:  25px;
 }
 
 
-.share_album,
-.sort {
+.share_album {
 	@include italic-darkgray;
 	text-transform: uppercase; 
+	@include Oswald_light;
+}
+
+.sort{
+	font-style: italic;
+	text-transform: uppercase;
+	font-size: 22px;
 	@include Oswald_light;
 }
 
@@ -66,9 +72,13 @@ $main-font-size:  25px;
 	font-weight: 400;
 }
 
+.page_number,
 .items_in_sidebar {
 	@include Oswald_gray;
+	line-height:32px;
 }
+
+
 
 .mp_album {
 	font-family: 'Oswald', sans-serif;
@@ -82,16 +92,18 @@ $main-font-size:  25px;
 	font-style: italic;
 }
 
-.prev {
-	@include prev_next;
-}
-
+.prev,
 .next,
 .apage_subheadings {
 	@include prev_next;
 }
 
-// Album Page 
+.prev_next_arrows{
+	font-size: 40px; 
+	font-weight:100;
+}
+
+// Album Page-----------------------------------------------
 
 .album_list_song,
 .album_by,
@@ -114,6 +126,7 @@ $main-font-size:  25px;
 {
 	font-size: $main-font-size;
 }
+
 
 
 .background_artist,

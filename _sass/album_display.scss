@@ -28,26 +28,55 @@ $album_list: 55px;
 
 // album display formatting------------------------
 
+// grid view---------------------------------------
+
 .grid-main{
+	display:flex;
+	flex-wrap: wrap; 
+	justify-content: space-between;
+	max-width:650px;
+	margin: 15px 0px 0px 0px;
+	border-bottom: 1px solid $main-body-text-color;
+
 	.album-display{
 		display: flex;
 		flex-direction: column;
 		line-height: 35px; 
+		margin: 10px 0px 20px 0px;
 		.album-art{
 			@extend .album-art-grid;
-			margin-bottom: 12px;
 		}
 	}
 }
 
+// list view---------------------------------------
+
 .grid-list{
+	display:flex;
+	flex-wrap: wrap; 
+	justify-content: space-between;
+	max-width:650px;
+	border-bottom: 1px solid $main-body-text-color;
+
 	.album-display{
 		display: flex;
 		flex-direction: row;
-		line-height: 35px; 
+		line-height: 35px;
+		width:325px; 
+		height:120px; 
+		padding:25px 0px 25px 0px; 
+
+		.album-details{
+			margin-top:-10px;
+		}
 		.album-art{
 			@extend .album-art-list;
 			margin-right: 20px;
 		}
 	}
+}
+
+.album-details{
+	display: flex;
+	flex-direction: column; 
 }
