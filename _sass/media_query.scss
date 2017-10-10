@@ -1,7 +1,4 @@
 @media only screen and (max-width: 980px) {
-    .main-header{
-        background-color: blue; 
-    }
     .main-sidebar{
         width: 275px;
     }
@@ -18,16 +15,24 @@
     }
 }
 
-@media only screen and (max-width: 750px) {
-    .main-header{
-        background-color: green; 
-    }
 
+
+
+@media only screen and (min-width: 750px) {
+    .main-body{
+        .main-sidebar{
+            display: inline;
+        }
+    }
+}
+
+@media only screen and (max-width: 750px) {
     .grid-main{
         display:flex;
         flex-wrap: wrap; 
         justify-content: space-between;
         max-width:650px;
+        padding-bottom: 15px; 
         border-bottom: 1px solid $main-body-text-color;
 
         .album-display{
@@ -35,7 +40,7 @@
             flex-direction: row;
             line-height: 35px;
             width:325px; 
-            height:120px; 
+            height:100px; 
             padding:25px 0px 25px 0px; 
 
             .album-details{
@@ -54,16 +59,45 @@
 }
 
 @media only screen and (max-width: 655px) {
-    .main-header{
-        background-color: red; 
-    }
     .navbar{
         flex-direction: column;
-        margin-top: -60px;
-        margin-left: 135px; 
+        margin-top: -50px;
         .search{
             width: 100%;
+            order:1;
         }
-    }    
+        .sort-bar{
+            margin:0px 0px 20px 100px;
+        }
+    }  
+
+    .add-album-display{
+        display:none; 
+    } 
+
+    .main-body{
+        flex-direction: column; 
+        .latest-uploads{
+            width:100%;
+        }
+        .main-sidebar{
+            display:none; 
+            order:-1; 
+            width:100%;
+            margin-left: 0px;
+        }
+    }
+
+    .filter-button{
+        display:inline-block; 
+        margin:20px 0px 0px 0px;
+        border:none; 
+        order:-2;
+    }
+
+
+    #filters {
+        margin-top: 20px;
+    }
 }
 

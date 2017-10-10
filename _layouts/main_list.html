@@ -17,7 +17,7 @@
 		<div class="header-content">
 		
 			<a href="index.html">
-				<img src="images/vinyl.gif" alt="vinyl animated" class="vinyl-icon header_logo">
+				<img id="logoAnimate" src="images/vinyl.png" alt="vinyl still" class="vinyl-icon header_logo">
 			</a>
 
 			<div class= "header-info">
@@ -34,7 +34,7 @@
 
 		</div>
 
-		<a href="#" class="add_button add-button header-text-color">
+		<a href="#" class="add-album-display add_button add-button header-text-color">
 				add an album 
 		</a>
 
@@ -60,7 +60,7 @@
 				</div>
 
 				<form class="dropdown">
-					<select id="mySelect" class="sort-text-color sort_text sort-selection" onchange="myFunction()">
+					<select id="mySelect" class="sort-text-color sort_text sort-selection" onchange="sortfunction()">
 						<option >upload date, new to old </option>
 						<option>upload date, old to new </option>
 						<option>album year, new to old </option>
