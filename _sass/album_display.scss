@@ -33,9 +33,9 @@ $album_list: 55px;
 		display: flex;
 		flex-direction: column;
 		line-height: 35px; 
+		margin: 10px 0px 20px 0px;
 		.album-art{
 			@extend .album-art-grid;
-			margin-bottom: 12px;
 		}
 	}
 }
@@ -50,4 +50,9 @@ $album_list: 55px;
 			margin-right: 20px;
 		}
 	}
+}
+
+.album-details{
+	display: flex;
+	flex-direction: column; 
 }
