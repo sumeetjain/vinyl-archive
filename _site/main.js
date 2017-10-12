@@ -1,7 +1,6 @@
 // sort bar functionality----------------------------
 
 
-
 // function sortfunction() {
 //     var x = document.getElementById("mySelect");
 //     var i = x.selectedIndex;
@@ -56,4 +55,6 @@ $(document).ready(function()
             $(this).attr("src", "images/vinyl.png");
         });
 });
+
+
 

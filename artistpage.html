@@ -3,9 +3,12 @@ layout: artist_page
 title: Vinyl Archive | Artist Info 
 ---
 
+<div class="main-body">
+
+	<button class="filter-button sidebar_titles sidebar-head-text-color sidebar-head-background-color"onclick="myFunction()">Filters</button>
+
 	<div class="artist_container">
-		
-		<div class="subheader_container">
+		<div class="subheader_container uploads">
 			<div class="artist_album_background main-head-text-color main-head-background-color">
 				<span class="background_artist">Artist</span> <span class="verticle_line"> | </span> <span class="background_album">Album</span>
 			</div>
@@ -13,7 +16,7 @@ title: Vinyl Archive | Artist Info
 		</div>
 		
 		<div class="artist_photo">
-			<img src="images/mariachi.jpg">
+			<img src="images/mariachi.jpg" class="band_photo">
 		</div>
 
 		<div class="subheadings_container">
@@ -21,22 +24,49 @@ title: Vinyl Archive | Artist Info
 				<div class="apage_subheadings main-body-text-color">Bio</div>
 				<div class="apage_subheadings main-body-text-color">Members</div>
 			</div>
-		</div>
-		<div class="artist_info_container">
 			<div class="artist_info">
 				<div class="info album-info-text-color">Here is where all the information about the bio will go...</div>
 			</div>
+			<div class="artist__name_info">
+				<div class="info album-info-text-color">Juan Delgado - singer</div>
+				<div class="info album-info-text-color">Juan Delgado - singer</div>
+				<div class="info album-info-text-color">Juan Delgado - singer</div>
+				<div class="info album-info-text-color">Juan Delgado - singer</div>
+				<div class="info album-info-text-color">Juan Delgado - singer</div>
+			</div>
 		</div>
+		
 		<div class="artist_page">
 			<div class="apage_subheadings main-body-text-color">Albums</div>
+			<div class="sort-bar">
+
+				<div class="sort-text-color sort">
+					sort
+				</div>
+
+				<form class="dropdown">
+					<select id="mySelect" class="sort-text-color sort_text sort-selection" onchange="sortfunction()">
+						<option >upload date, new to old </option>
+						<option>upload date, old to new </option>
+						<option>album year, new to old </option>
+						<option>album year, old to new </option>
+						<option>album title, a to z </option>
+						<option>album title, z to a </option>
+						<option>album artist, a to z </option>
+						<option>album artist, z to a </option>	
+					</select>
+				</form>
+
+			</div>
 		</div>
+
+
 	</div>
+	
 
 
+	<div id="filters" class="main-sidebar">
 
-
-
-	<div class="main-sidebar">
 		<div class="sidebar_titles sidebar-head-text-color sidebar-head-background-color">Cities</div>
 
 		<div class="sidebar-sort">
@@ -70,3 +100,5 @@ title: Vinyl Archive | Artist Info
 			<div><a href="#" class="items_in_sidebar sidebar-list-text-color">Format (#)</a></div>
 		</div>
 	</div>
+
+</div>

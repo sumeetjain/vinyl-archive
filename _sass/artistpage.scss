@@ -1,4 +1,14 @@
 $light_grey: #A8A8A8;
+$main-margin-top: 20px; 
+$album_grid: 200px;
+
+.artist_container{
+	display: flex;
+	flex-direction: column; 
+	margin-right: 8px;
+	width: 70%;
+	margin-top:$main-margin-top; 
+}
 
 .artist_page {
 	display: flex; 
@@ -7,9 +17,28 @@ $light_grey: #A8A8A8;
 	border-bottom: 2px solid $light_grey; 
 	margin-top: 15px;
 	margin-bottom: 15px; 
+
 }
 
 .apage_subheadings {
 	padding-top: 10px; 
 	padding-bottom: 10px;
 }
+
+.band_photo {
+	margin-top: 20px;
+	width: 100%;
+	height: auto; 
+}
+
+.subheader_container {
+	margin: 0px;
+}
+
+.subheadings_container {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column; 
+}
+
+

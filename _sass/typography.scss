@@ -17,6 +17,11 @@ $main-font-size:  25px;
 	font-weight: 200;	
 }
 
+@mixin Oswald_norm {
+	font-family: 'Oswald', sans-serif;
+	font-weight: 300;	
+}
+
 @mixin prev_next {
 	font-family: 'Oswald', sans-serif;
 	font-weight: 400;
@@ -102,7 +107,6 @@ $main-font-size:  25px;
 	font-size: 40px; 
 	font-weight:100;
 }
-
 
 // Album Page-----------------------------------------------
 
