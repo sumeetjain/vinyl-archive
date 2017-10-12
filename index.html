@@ -8,209 +8,45 @@ title: Vinyl Archive | Home
 
 	<div class="latest-uploads">
 
-		<div class="main-head-text-color main-head-background-color uploads">
-		Latest Uploads
-		</div>
+		{% include main_content_head.html 
+		   header_content= "Latest Uploads"
+		%}
 
 		<div class="grid-main">
+
+			{% for post in paginator.posts %}
+
+				{% include album_input.html 
+					album_url=post.url
+					artist_url="#"
+					album_cover=post.album_cover
+					album_title=post.album_title
+					album_artist=post.album_artist
+				%}
+
+			{% endfor %}
 			
-			<div class="album-display">
-				<a href="#">
-					<img src="images/albumcover.jpg" alt="album cover" class="album-art">
-				</a>
-
-				<div class="album-details">	
-					<a href="#" class="album-title-text-color mp_album">
-						Storyboards
-					</a>
-
-					<a href="#" class="main-body-text-color mp_artist">
-						Sleeping at Last
-					</a>
-				</div>	
-			</div>
-
-			<div class="album-display">
-				<a href="#">
-					<img src="images/albumcover.jpg" alt="album cover" class="album-art">
-				</a>
-
-				<div class="album-details">	
-					<a href="#" class="album-title-text-color mp_album">
-						Storyboards
-					</a>
-
-					<a href="#" class="main-body-text-color mp_artist">
-						Sleeping at Last
-					</a>
-				</div>	
-			</div>
-
-			<div class="album-display">
-				<a href="#">
-					<img src="images/albumcover.jpg" alt="album cover" class="album-art">
-				</a>
-
-				<div class="album-details">	
-					<a href="#" class="album-title-text-color mp_album">
-						Storyboards
-					</a>
-
-					<a href="#" class="main-body-text-color mp_artist">
-						Sleeping at Last
-					</a>
-				</div>	
-			</div>
-
-			<div class="album-display">
-				<a href="#">
-					<img src="images/albumcover.jpg" alt="album cover" class="album-art">
-				</a>
-
-				<div class="album-details">	
-					<a href="#" class="album-title-text-color mp_album">
-						Storyboards
-					</a>
-
-					<a href="#" class="main-body-text-color mp_artist">
-						Sleeping at Last
-					</a>
-				</div>	
-			</div>
-
-			<div class="album-display">
-				<a href="#">
-					<img src="images/albumcover.jpg" alt="album cover" class="album-art">
-				</a>
-
-				<div class="album-details">	
-					<a href="#" class="album-title-text-color mp_album">
-						Storyboards
-					</a>
-
-					<a href="#" class="main-body-text-color mp_artist">
-						Sleeping at Last
-					</a>
-				</div>	
-			</div>
-
-			<div class="album-display">
-				<a href="#">
-					<img src="images/albumcover.jpg" alt="album cover" class="album-art">
-				</a>
-
-				<div class="album-details">	
-					<a href="#" class="album-title-text-color mp_album">
-						Storyboards
-					</a>
-
-					<a href="#" class="main-body-text-color mp_artist">
-						Sleeping at Last
-					</a>
-				</div>	
-			</div>
-
-			<div class="album-display">
-				<a href="#">
-					<img src="images/albumcover.jpg" alt="album cover" class="album-art">
-				</a>
-
-				<div class="album-details">	
-					<a href="#" class="album-title-text-color mp_album">
-						Storyboards
-					</a>
-
-					<a href="#" class="main-body-text-color mp_artist">
-						Sleeping at Last
-					</a>
-				</div>	
-			</div>
-
-			<div class="album-display">
-				<a href="#">
-					<img src="images/albumcover.jpg" alt="album cover" class="album-art">
-				</a>
-
-				<div class="album-details">	
-					<a href="#" class="album-title-text-color mp_album">
-						Storyboards
-					</a>
-
-					<a href="#" class="main-body-text-color mp_artist">
-						Sleeping at Last
-					</a>
-				</div>	
-			</div>
-
-			<div class="album-display">
-				<a href="#">
-					<img src="images/albumcover.jpg" alt="album cover" class="album-art">
-				</a>
-
-				<div class="album-details">	
-					<a href="#" class="album-title-text-color mp_album">
-						Storyboards
-					</a>
-
-					<a href="#" class="main-body-text-color mp_artist">
-						Sleeping at Last
-					</a>
-				</div>	
-			</div>
-		</div>
+		</div> 
 
 		<div class="page-nav prev-next-text-color ">
-			<a href="#" class="prev prev-next-text-color"> 
+			<a href="{{ paginator.previous_page_path }}" class="prev prev-next-text-color"> 
 				<div class="prev_next_arrows"> < </div>
 				<div> prev </div>
 			</a>
 
 
-			<div class="page_number"> 1-9 of 100 </div>
+			<div class="page_number"> {{ paginator.page }} of {{ paginator.total_pages }} </div>
 
 
-			<a href="#" class="next prev-next-text-color"> 
+			<a href="{{ paginator.next_page_path }}" class="next prev-next-text-color"> 
 				<div> next </div>
 				<div class="prev_next_arrows"> > </div>	
 			</a>
 		</div>
 	</div>
 
-	<div id="filters" class="main-sidebar">
+	{% include filters.html %}
 
-		<div class="sidebar_titles sidebar-head-text-color sidebar-head-background-color">Cities</div>
-
-		<div class="sidebar-sort">
-			<div><a href="#" class="items_in_sidebar sidebar-list-text-color">City (#)</a></div>
-			<div><a href="#" class="items_in_sidebar sidebar-list-text-color">City (#)</a></div>
-			<div><a href="#" class="items_in_sidebar sidebar-list-text-color">City (#)</a></div>
-		</div>
-
-		<div class="sidebar_titles sidebar-head-text-color sidebar-head-background-color">Genres</div>
-
-		<div class="sidebar-sort">
-			<div><a href="#" class="items_in_sidebar sidebar-list-text-color">Genre (#)</a></div>
-			<div><a href="#" class="items_in_sidebar sidebar-list-text-color">Genre (#)</a></div>
-			<div><a href="#" class="items_in_sidebar sidebar-list-text-color">Genre (#)</a></div>
-		</div>
-
-		<div class="sidebar_titles sidebar-head-text-color sidebar-head-background-color">Decades</div>
-
-
-		<div class="sidebar-sort">
-			<div><a href="#" class="items_in_sidebar sidebar-list-text-color">Decade (#)</a></div>
-			<div><a href="#" class="items_in_sidebar sidebar-list-text-color">Decade (#)</a></div>
-			<div><a href="#" class="items_in_sidebar sidebar-list-text-color">Decade (#)</a></div>
-		</div>
-
-		<div class="sidebar_titles sidebar-head-text-color sidebar-head-background-color">Format</div>	
-
-		<div class="sidebar-sort">
-			<div><a href="#" class="items_in_sidebar sidebar-list-text-color">Format (#)</a></div>
-			<div><a href="#" class="items_in_sidebar sidebar-list-text-color">Format (#)</a></div>
-			<div><a href="#" class="items_in_sidebar sidebar-list-text-color">Format (#)</a></div>
-		</div>
-	</div>
 </div>
 
 

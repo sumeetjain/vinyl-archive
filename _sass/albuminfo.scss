@@ -1,0 +1,87 @@
+//Album Info Header 
+
+$dark_grey: #5D5E5E;
+
+.share_social_media {
+	font-size: 25px; 
+	margin-left: 10px;
+}
+
+.fa-twitter,
+.fa-facebook-square {
+	color: $dark_grey;
+}
+
+.share_container {
+	display: flex; 
+}
+
+// Subheader 
+.subheader_container {
+	background-color: $dark_grey;
+	display: flex; 
+	justify-content: space-between;
+	margin-top: 25px;
+	padding-left: 15px; 
+	padding-right: 15px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+}
+
+// Album Containers
+.ap_containers {
+	display: flex; 
+}
+
+.ap_container_two {
+	margin-top: 30px; 
+	margin-left: 25px;
+}
+
+// Album Info
+
+.other_info_title, 
+.album_info,
+.album-list {
+	margin-top: 30px;
+}
+
+.album_page_cover {
+	margin-top: 35px;
+}
+
+.about_album_container {
+	display: flex; 
+}
+
+.about_title {
+	margin-right: 10px;
+	color: $dark_grey;
+}
+
+.album_dets {
+	margin-top: 10px;
+}
+
+// Thumbnails
+.album_page_thumbnail_container {
+	display: flex; 
+}
+
+.album_page_thumbnail {
+	margin-right: 15px;
+	margin-top: 15px; 
+}
+
+// Song List
+ol {
+	display: block; 
+}
+
+.song_numbers {
+	color: #A8A8A8;
+	font-family: 'Oswald', sans-serif;
+	font-weight: 300;	
+	font-size:  25px; 
+	margin-bottom: 10px; 
+}

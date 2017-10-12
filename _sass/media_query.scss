@@ -15,9 +15,6 @@
     }
 }
 
-
-
-
 @media only screen and (min-width: 750px) {
     .main-body{
         .main-sidebar{
@@ -95,9 +92,52 @@
         order:-2;
     }
 
-
     #filters {
         margin-top: 20px;
     }
 }
+
+@media only screen and (max-width: 420px) {
+    .header-info{
+        margin-left:10px;
+        .vinyl_archive_title {
+            font-size: 21px; 
+        }
+
+        .hear_nebraska {
+            font-size: 20px;
+        }
+    }
+    .navbar{
+        margin-top: -30px;
+        .sort-bar{
+            margin: 0px 0px 20px 90px;
+        }
+    }
+}
+
+@media only screen and (max-width: 380px){
+    .navbar{
+        margin-top: -10px;
+        .sort-bar{
+            margin: 0px 0px 20px 55px;
+        }
+    }
+}
+
+@media only screen and (max-width: 325px){
+    .navbar{
+        .sort-bar{
+            margin: 0px 0px 20px 0px;
+        }
+    }
+    .page-nav{
+        .page_number{
+            margin: 0px 60px;
+        }
+    }
+}
+
+
+
 

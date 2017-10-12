@@ -39,6 +39,7 @@ $album_list: 55px;
 	border-bottom: 1px solid $main-body-text-color;
 
 	.album-display{
+		width: 31%;
 		display: flex;
 		flex-direction: column;
 		line-height: 35px; 

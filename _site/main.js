@@ -48,11 +48,11 @@ $(document).ready(function()
     $("#logoAnimate").hover(
         function()
         {
-            $(this).attr("src", "images/vinyl.gif");
+            $(this).attr("src", "/images/vinyl.gif");
         },
         function()
         {
-            $(this).attr("src", "images/vinyl.png");
+            $(this).attr("src", "/images/vinyl.png");
         });
 });
 
