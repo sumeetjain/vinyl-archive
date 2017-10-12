@@ -1,1 +1,3 @@
 name: Vinyl Archive
+paginate: 5
+plugins: [jekyll-paginate]
