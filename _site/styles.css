@@ -171,6 +171,7 @@ a {
   margin: 15px 0px 0px 0px;
   border-bottom: 1px solid #5D5E5E; }
   .grid-main .album-display {
+    width: 31%;
     display: flex;
     flex-direction: column;
     line-height: 35px;
@@ -366,14 +367,22 @@ li.song_numbers:before {
   height: 90px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between; }
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 30px; }
 
-.footer-content {
+.footer-info-sponsors {
   display: flex;
-  flex-direction: row; }
+  align-items: center; }
 
-.footer-info {
-  display: flex; }
+.sponsors {
+  padding: 15px;
+  margin: 5px;
+  background-color: lightblue; }
+
+.footer-info-credit {
+  display: flex;
+  align-items: center; }
 
 .latest-uploads {
   display: flex;
@@ -787,3 +796,9 @@ select {
   font-style: italic;
   font-family: 'Oswald', sans-serif;
   font-weight: 200; }
+
+.footer_type {
+  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+  font-size: 20px; }

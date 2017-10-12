@@ -164,3 +164,12 @@ $main-font-size:  25px;
 	font-style: italic;
 	@include Oswald_light;
 }
+
+//footer-----------------------
+
+.footer_type{
+	text-transform: uppercase;
+	font-family: 'Oswald', sans-serif;
+	font-weight: 400;	
+	font-size:  20px;
+}

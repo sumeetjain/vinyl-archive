@@ -8,9 +8,9 @@ title: Vinyl Archive | Home
 
 	<div class="latest-uploads">
 
-		<div class="main-head-text-color main-head-background-color uploads">
-		Latest Uploads
-		</div>
+		{% include main_content_head.html 
+		   header_content= "Latest Uploads"
+		%}
 
 		<div class="grid-main">
 
@@ -45,41 +45,8 @@ title: Vinyl Archive | Home
 		</div>
 	</div>
 
-	<div id="filters" class="main-sidebar">
+	{% include filters.html %}
 
-		<div class="sidebar_titles sidebar-head-text-color sidebar-head-background-color">Cities</div>
-
-		<div class="sidebar-sort">
-			<div><a href="#" class="items_in_sidebar sidebar-list-text-color">City (#)</a></div>
-			<div><a href="#" class="items_in_sidebar sidebar-list-text-color">City (#)</a></div>
-			<div><a href="#" class="items_in_sidebar sidebar-list-text-color">City (#)</a></div>
-		</div>
-
-		<div class="sidebar_titles sidebar-head-text-color sidebar-head-background-color">Genres</div>
-
-		<div class="sidebar-sort">
-			<div><a href="#" class="items_in_sidebar sidebar-list-text-color">Genre (#)</a></div>
-			<div><a href="#" class="items_in_sidebar sidebar-list-text-color">Genre (#)</a></div>
-			<div><a href="#" class="items_in_sidebar sidebar-list-text-color">Genre (#)</a></div>
-		</div>
-
-		<div class="sidebar_titles sidebar-head-text-color sidebar-head-background-color">Decades</div>
-
-
-		<div class="sidebar-sort">
-			<div><a href="#" class="items_in_sidebar sidebar-list-text-color">Decade (#)</a></div>
-			<div><a href="#" class="items_in_sidebar sidebar-list-text-color">Decade (#)</a></div>
-			<div><a href="#" class="items_in_sidebar sidebar-list-text-color">Decade (#)</a></div>
-		</div>
-
-		<div class="sidebar_titles sidebar-head-text-color sidebar-head-background-color">Format</div>	
-
-		<div class="sidebar-sort">
-			<div><a href="#" class="items_in_sidebar sidebar-list-text-color">Format (#)</a></div>
-			<div><a href="#" class="items_in_sidebar sidebar-list-text-color">Format (#)</a></div>
-			<div><a href="#" class="items_in_sidebar sidebar-list-text-color">Format (#)</a></div>
-		</div>
-	</div>
 </div>
 
 
