@@ -1,0 +1,16 @@
+<div class="album-display">
+	<a href="{{ include.album_url }}">
+		<img src="images/{{ include.album_cover }}" alt="{{ include.album_artist }} | {{ include.album_title }}" class="album-art">
+	</a>
+
+	<div class="album-details">	
+		<a href="{{ include.album_url }}" class="album-title-text-color mp_album">
+			{{ include.album_title }}
+		</a>
+
+		<a href="{{ include.artist_url }}" class="main-body-text-color mp_artist">
+			{{ include.album_artist }}
+		</a>
+	</div>	
+</div>
+
