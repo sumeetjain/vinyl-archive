@@ -14,7 +14,7 @@ $main-font-size:  25px;
 
 @mixin Oswald_light {
 	font-family: 'Oswald', sans-serif;
-	font-weight: 200;	
+	font-weight: 300;	
 }
 
 @mixin Oswald_norm {
@@ -168,4 +168,13 @@ $main-font-size:  25px;
 	font-size: $main-font-size;
 	font-style: italic;
 	@include Oswald_light;
+}
+
+//footer-----------------------
+
+.footer_type{
+	text-transform: uppercase;
+	font-family: 'Oswald', sans-serif;
+	font-weight: 400;	
+	font-size:  20px;
 }
