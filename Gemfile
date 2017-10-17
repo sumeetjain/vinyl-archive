@@ -5,5 +5,6 @@ gem "jekyll"
 gem "kramdown"
 
 group :jekyll_plugins do
-  gem 'octopress-paginate'
+  gem "jekyll-paginate-v2"
 end
+

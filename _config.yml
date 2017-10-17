@@ -1,6 +1,8 @@
 name: Vinyl Archive
 pagination:
-  limit: false
-  per_page: 9
-  title_suffix: " (page :num)"
-plugins: [octopress-paginate]
+  enabled: true
+  collection: 'posts'
+  limit: 0
+plugins: [jekyll-paginate-v2]
+
+
