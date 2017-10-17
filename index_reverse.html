@@ -1,11 +1,12 @@
 ---
 layout: main_list
 title: Vinyl Archive | Home 
-
-paginate:
-  collection:   posts
-  per_page:     9                                      
-  reversed:     true     
+pagination: 
+  enabled: true
+  per_page: 9
+  sort_reverse: true   
+  permalink: '/index_reverse/:num/'
+  indexpage: 'index_reverse'
 ---
 <div class="main-body">
 
