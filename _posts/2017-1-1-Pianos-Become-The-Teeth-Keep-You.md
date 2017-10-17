@@ -2,8 +2,8 @@
 album_url: "#" 
 artist_url: "#"
 album_cover: "albumcover.jpg"
-album_title: "It's Morning I'm Wide Awake"
-album_artist: "Bright Eyes"
+album_title: "Keep You"
+album_artist: "Pianos Become The Teeth"
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod

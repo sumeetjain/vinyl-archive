@@ -2,8 +2,8 @@
 album_url: "#" 
 artist_url: "#"
 album_cover: "albumcover.jpg"
-album_title: "It's Morning I'm Wide Awake"
-album_artist: "Bright Eyes"
+album_title: "Always Foreign"
+album_artist: "The World Is A Beautiful Place And I Am No Longer Afraid To Die"
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
