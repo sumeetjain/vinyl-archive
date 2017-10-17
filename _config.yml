@@ -3,5 +3,4 @@ pagination:
   limit: false
   per_page: 9
   title_suffix: " (page :num)"
-  reversed: true
 plugins: [octopress-paginate]
