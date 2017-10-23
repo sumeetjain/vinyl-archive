@@ -53,9 +53,24 @@
     .icon-display{
         display:none; 
     }
+    .edit_a{
+        visibility: hidden;
+    }
+    .ap_containers {
+        display: block; 
+    }
 }
 
 @media only screen and (max-width: 655px) {
+    
+    .artist_container{
+        width: 100%;
+    }
+
+    .edit_a{
+        visibility: hidden;
+    }
+
     .navbar{
         flex-direction: column;
         margin-top: -50px;
@@ -95,6 +110,19 @@
     #filters {
         margin-top: 20px;
     }
+
+}
+
+
+@media only screen and (max-width: 490px) {
+    .album-art.album-art-full {
+        width: 90%;
+        height: 90%;
+    }
+    .album_page_thumbnail_container {
+    display: flex;
+    flex-wrap: wrap;
+    }   
 }
 
 @media only screen and (max-width: 420px) {

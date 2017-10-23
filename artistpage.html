@@ -18,6 +18,7 @@ title: Vinyl Archive | Artist Info
 		<div class="artist_photo">
 			<img src="images/mariachi.jpg" class="band_photo">
 		</div>
+		
 
 		<div class="subheadings_container">
 			<div class="artist_subheadings_titles">
@@ -40,28 +41,14 @@ title: Vinyl Archive | Artist Info
 				</div>
 			</div>
 		</div>
-		
+
 		<div class="artist_page">
 			<div class="apage_subheadings main-body-text-color">Albums</div>
-			
-			{%include sort.html%}
 		</div>
-
-
-
-	</div>
-
-	
-	{%include filters.html%}
-
-	
-
-</div>
-
 
 		<div class="grid-main">
 
-			{% for post in paginator.posts %}
+			{% for post in site.posts %}
 
 				{% include album_input.html 
 					album_url=post.url
@@ -72,5 +59,11 @@ title: Vinyl Archive | Artist Info
 				%}
 
 			{% endfor %}
-			
+	
 		</div> 
+
+	</div>
+
+	{%include filters.html%}
+
+</div>

@@ -21,11 +21,14 @@ $dark_grey: #5D5E5E;
 	background-color: $dark_grey;
 	display: flex; 
 	justify-content: space-between;
-	margin-top: 25px;
 	padding-left: 15px; 
 	padding-right: 15px;
 	padding-top: 7px;
 	padding-bottom: 7px;
+}
+
+.subs_album {
+	margin-top: 25px;
 }
 
 // Album Containers
@@ -77,6 +80,7 @@ $dark_grey: #5D5E5E;
 ol {
 	display: block; 
 }
+
 
 .song_numbers {
 	color: #A8A8A8;
