@@ -4,6 +4,7 @@ artist_url: "#"
 album_cover: "albumcover.jpg"
 album_title: "Lay Low And Pretty"
 album_artist: "Skypiper"
+release_date: "2003-02-15"
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod

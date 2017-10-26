@@ -4,6 +4,7 @@ artist_url: "#"
 album_cover: "albumcover.jpg"
 album_title: "Always Foreign"
 album_artist: "The World Is A Beautiful Place And I Am No Longer Afraid To Die"
+release_date: "2007-02-15"
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod

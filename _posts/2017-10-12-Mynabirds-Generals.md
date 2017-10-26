@@ -4,6 +4,7 @@ artist_url: "#"
 album_cover: "albumcover.jpg"
 album_title: "Generals"
 album_artist: "Mynabirds"
+release_date: "2005-02-15"
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod

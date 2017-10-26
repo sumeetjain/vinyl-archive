@@ -9,9 +9,39 @@ pagination:
   indexpage: 'index'
 
 ---
+
+<nav class="navbar">
+
+	{%include search_bar.html%}
+
+	<div class="sort-bar">
+
+		<div class="sort-text-color sort">
+			sort
+		</div>
+
+		<form class="dropdown">
+			<select class="sort-text-color sort_text sort-selection" onChange="window.location.href=this.value">
+				<option value="/views-sorting/sort_date_upload">upload date, new to old </option>
+				<option value="/views-sorting/sort_date_upload_reverse">upload date, old to new </option>
+				<option value="/views-sorting/sort_date_release">album year, new to old </option>
+				<option value="/views-sorting/sort_date_release_reverse">album year, old to new </option>
+				<option value="/views-sorting/sort_album_title">album title, a to z </option>
+				<option value="/views-sorting/sort_album_title_reverse">album title, z to a </option>
+				<option value="/views-sorting/sort_album_artist">album artist, a to z </option>
+				<option value="/views-sorting/sort_album_artist_reverse">album artist, z to a </option>	
+			</select>
+		</form>
+
+	</div>
+
+	{%include album_views.html%}
+	
+</nav>
+
 <div class="main-body">
 
-	<button class=" filter-button sidebar_titles sidebar-head-text-color sidebar-head-background-color"onclick="myFunction()">Filters</button>
+	<button class=" filter-button sidebar_titles sidebar-head-text-color sidebar-head-background-color"onclick="filters()">Filters</button>
 
 	<div class="latest-uploads">
 

@@ -4,7 +4,11 @@ artist_url: "#"
 album_cover: "albumcover.jpg"
 album_title: "Real Milkshakes"
 album_artist: "Applebees"
-date: "1999-02-15"
+release_date: "1999-02-15"
+production_city: "Omaha"
+release_date: "1927"
+genre: "Alternative"
+format: "LP"
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod

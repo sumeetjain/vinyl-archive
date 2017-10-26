@@ -4,6 +4,7 @@ artist_url: "#"
 album_cover: "albumcover.jpg"
 album_title: "3 Rounds And A Sound"
 album_artist: "Blind Pilot"
+release_date: "2000-02-15"
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod

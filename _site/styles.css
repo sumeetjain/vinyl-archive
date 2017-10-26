@@ -387,7 +387,6 @@ li.song_numbers:before {
 .latest-uploads {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   margin-right: 8px;
   width: 70%;
   margin-top: 20px; }

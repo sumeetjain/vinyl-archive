@@ -4,6 +4,7 @@ artist_url: "#"
 album_cover: "albumcover.jpg"
 album_title: "Keep You"
 album_artist: "Pianos Become The Teeth"
+release_date: "2002-02-15"
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
