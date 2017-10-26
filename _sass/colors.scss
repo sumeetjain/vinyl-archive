@@ -43,6 +43,8 @@ $sort-text-color: $medium_grey;
 // icons------------------------------------------
 $grid-icon-color: $light_grey;
 $list-icon-color: $light_grey;
+$grid-icon-color-active: $dark_grey;
+$list-icon-color-active: $dark_grey;
 
 
 
@@ -151,3 +153,13 @@ $list-icon-color: $light_grey;
 .list-icon-color{
 	fill: $list-icon-color;
 }
+
+.grid-icon-color-active{
+	fill: $grid-icon-color-active;
+}
+
+.list-icon-color-active{
+	fill: $list-icon-color-active;
+}
+
+

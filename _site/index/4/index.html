@@ -60,14 +60,14 @@
 
 		<form class="dropdown">
 			<select class="sort-text-color sort_text sort-selection" onChange="window.location.href=this.value">
-				<option value="/views-sorting/sort_date_upload">upload date, new to old </option>
-				<option value="/views-sorting/sort_date_upload_reverse">upload date, old to new </option>
-				<option value="/views-sorting/sort_date_release">album year, new to old </option>
-				<option value="/views-sorting/sort_date_release_reverse">album year, old to new </option>
-				<option value="/views-sorting/sort_album_title">album title, a to z </option>
-				<option value="/views-sorting/sort_album_title_reverse">album title, z to a </option>
-				<option value="/views-sorting/sort_album_artist">album artist, a to z </option>
-				<option value="/views-sorting/sort_album_artist_reverse">album artist, z to a </option>	
+				<option value="/views-sorting/grid/sort_date_upload">upload date, new to old </option>
+				<option value="/views-sorting/grid/sort_date_upload_reverse">upload date, old to new </option>
+				<option value="/views-sorting/grid/sort_date_release">album year, new to old </option>
+				<option value="/views-sorting/grid/sort_date_release_reverse">album year, old to new </option>
+				<option value="/views-sorting/grid/sort_album_title">album title, a to z </option>
+				<option value="/views-sorting/grid/sort_album_title_reverse">album title, z to a </option>
+				<option value="/views-sorting/grid/sort_album_artist">album artist, a to z </option>
+				<option value="/views-sorting/grid/sort_album_artist_reverse">album artist, z to a </option>	
 			</select>
 		</form>
 
@@ -76,7 +76,7 @@
 	<div class="album-views">
 
 		<a href="/index.html" class="icon-display">
-			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="512px" height="512px" viewBox="0 0 223.48 223.48" style="enable-background:new 0 0 223.48 223.48;" xml:space="preserve" alt="grid display icon" class="grid-icon grid-icon-color grid-icon-margin">
+			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="512px" height="512px" viewBox="0 0 223.48 223.48" style="enable-background:new 0 0 223.48 223.48;" xml:space="preserve" alt="grid display icon" class="grid-icon grid-icon-color-active grid-icon-margin">
 
 				<g>
 					<rect x="124.96" y="0.003" width="98.521" height="98.505"/>
@@ -98,8 +98,7 @@
 				</g>
 			</svg>
 		</a>
-</div>
-
+	</div>
 	
 </nav>
 
@@ -201,41 +200,38 @@
 	<div class="sidebar_titles sidebar-head-text-color sidebar-head-background-color">Cities</div>
 
 	<div class="sidebar-sort">
-		<div><a href="/views-filters/cities/omaha" class="items_in_sidebar sidebar-list-text-color">Omaha (#)</a></div>
-		<div><a href="/views-filters/cities/Lincoln" class="items_in_sidebar sidebar-list-text-color">Lincoln (#)</a></div>
-		<div><a href="/views-filters/cities/Kearney" class="items_in_sidebar sidebar-list-text-color">Kearney (#)</a></div>
+		<div><a href="/views-filters/grid/cities/omaha" class="items_in_sidebar sidebar-list-text-color">Omaha (#)</a></div>
+		<div><a href="/views-filters/grid/cities/Lincoln" class="items_in_sidebar sidebar-list-text-color">Lincoln (#)</a></div>
+		<div><a href="/views-filters/grid/cities/Kearney" class="items_in_sidebar sidebar-list-text-color">Kearney (#)</a></div>
 	</div>
 
 	<div class="sidebar_titles sidebar-head-text-color sidebar-head-background-color">Genres</div>
 
 	<div class="sidebar-sort">
-		<div><a href="/views-filters/genres/Alternative" class="items_in_sidebar sidebar-list-text-color">Alternative (#)</a></div>
-		<div><a href="/views-filters/genres/Folk" class="items_in_sidebar sidebar-list-text-color">Folk (#)</a></div>
-		<div><a href="/views-filters/genres/Rock" class="items_in_sidebar sidebar-list-text-color">Rock (#)</a></div>
+		<div><a href="/views-filters/grid/genres/Alternative" class="items_in_sidebar sidebar-list-text-color">Alternative (#)</a></div>
+		<div><a href="/views-filters/grid/genres/Folk" class="items_in_sidebar sidebar-list-text-color">Folk (#)</a></div>
+		<div><a href="/views-filters/grid/genres/Rock" class="items_in_sidebar sidebar-list-text-color">Rock (#)</a></div>
 	</div>
 
 	<div class="sidebar_titles sidebar-head-text-color sidebar-head-background-color">Decades</div>
 
 
 	<div class="sidebar-sort">
-		<div><a href="/views-filters/decades/1920's" class="items_in_sidebar sidebar-list-text-color">1920's (#)</a></div>
-		<div><a href="/views-filters/decades/1930's" class="items_in_sidebar sidebar-list-text-color">1930's (#)</a></div>
-		<div><a href="/views-filters/decades/1940's" class="items_in_sidebar sidebar-list-text-color">1940's (#)</a></div>
-		<div><a href="/views-filters/decades/1950's" class="items_in_sidebar sidebar-list-text-color">1950's (#)</a></div>
-		<div><a href="/views-filters/decades/1960's" class="items_in_sidebar sidebar-list-text-color">1960's (#)</a></div>
-		<div><a href="/views-filters/decades/1970's" class="items_in_sidebar sidebar-list-text-color">1970's (#)</a></div>
-		<div><a href="/views-filters/decades/1980's" class="items_in_sidebar sidebar-list-text-color">1980's (#)</a></div>
-		<div><a href="/views-filters/decades/1990's" class="items_in_sidebar sidebar-list-text-color">1990's (#)</a></div>
-		<div><a href="/views-filters/decades/2000's" class="items_in_sidebar sidebar-list-text-color">2000's (#)</a></div>
-		<div><a href="/views-filters/decades/2010's" class="items_in_sidebar sidebar-list-text-color">2010's (#)</a></div>
+		<div><a href="/views-filters/grid/decades/1950's" class="items_in_sidebar sidebar-list-text-color">1950's (#)</a></div>
+		<div><a href="/views-filters/grid/decades/1960's" class="items_in_sidebar sidebar-list-text-color">1960's (#)</a></div>
+		<div><a href="/views-filters/grid/decades/1970's" class="items_in_sidebar sidebar-list-text-color">1970's (#)</a></div>
+		<div><a href="/views-filters/grid/decades/1980's" class="items_in_sidebar sidebar-list-text-color">1980's (#)</a></div>
+		<div><a href="/views-filters/grid/decades/1990's" class="items_in_sidebar sidebar-list-text-color">1990's (#)</a></div>
+		<div><a href="/views-filters/grid/decades/2000's" class="items_in_sidebar sidebar-list-text-color">2000's (#)</a></div>
+		<div><a href="/views-filters/grid/decades/2010's" class="items_in_sidebar sidebar-list-text-color">2010's (#)</a></div>
 	</div>
 
 	<div class="sidebar_titles sidebar-head-text-color sidebar-head-background-color">Format</div>	
 
 	<div class="sidebar-sort">
-		<div><a href="/views-filters/formats/LP" class="items_in_sidebar sidebar-list-text-color">LP (#)</a></div>
-		<div><a href="/views-filters/formats/EP" class="items_in_sidebar sidebar-list-text-color">EP (#)</a></div>
-		<div><a href="/views-filters/formats/Singles" class="items_in_sidebar sidebar-list-text-color">Single (#)</a></div>
+		<div><a href="/views-filters/grid/formats/LP" class="items_in_sidebar sidebar-list-text-color">LP (#)</a></div>
+		<div><a href="/views-filters/grid/formats/EP" class="items_in_sidebar sidebar-list-text-color">EP (#)</a></div>
+		<div><a href="/views-filters/grid/formats/Single" class="items_in_sidebar sidebar-list-text-color">Single (#)</a></div>
 	</div>
 </div>
 
