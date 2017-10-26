@@ -148,6 +148,12 @@ a {
 .list-icon-color {
   fill: #A8A8A8; }
 
+.grid-icon-color-active {
+  fill: #5D5E5E; }
+
+.list-icon-color-active {
+  fill: #5D5E5E; }
+
 .album-art {
   box-shadow: 0px 0px 7px #343434; }
   .album-art.album-art-full {
@@ -188,7 +194,6 @@ a {
     flex-direction: row;
     line-height: 35px;
     width: 325px;
-    height: 120px;
     padding: 25px 0px 25px 0px; }
     .grid-list .album-display .album-details {
       margin-top: -10px; }
@@ -472,116 +477,6 @@ li.song_numbers:before {
 .sidebar-sort {
   padding: 20px 0px 30px 20px; }
 
-@media only screen and (max-width: 980px) {
-  .main-sidebar {
-    width: 275px; }
-
-  .grid-main .album-display {
-    width: 48%; }
-  .grid-main .album-art-grid, .grid-main .album-display .album-art {
-    width: 100%;
-    height: 100%; } }
-@media only screen and (min-width: 750px) {
-  .main-body .main-sidebar {
-    display: inline; } }
-@media only screen and (max-width: 750px) {
-  .grid-main {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    max-width: 650px;
-    padding-bottom: 15px;
-    border-bottom: 1px solid #5D5E5E; }
-    .grid-main .album-display {
-      display: flex;
-      flex-direction: row;
-      line-height: 35px;
-      width: 325px;
-      height: 100px;
-      padding: 25px 0px 25px 0px; }
-      .grid-main .album-display .album-details {
-        margin-top: -10px; }
-      .grid-main .album-display .album-art-grid, .grid-main .album-display .album-art {
-        width: 90px;
-        height: 90px;
-        margin-right: 20px; }
-
-  .icon-display {
-    display: none; }
-
-  .edit_a {
-    visibility: hidden; }
-
-  .ap_containers {
-    display: block; } }
-@media only screen and (max-width: 655px) {
-  .artist_container {
-    width: 100%; }
-
-  .edit_a {
-    visibility: hidden; }
-
-  .navbar {
-    flex-direction: column;
-    margin-top: -50px; }
-    .navbar .search {
-      width: 100%;
-      order: 1; }
-    .navbar .sort-bar {
-      margin: 0px 0px 20px 100px; }
-
-  .add-album-display {
-    display: none; }
-
-  .main-body {
-    flex-direction: column; }
-    .main-body .latest-uploads {
-      width: 100%; }
-    .main-body .main-sidebar {
-      display: none;
-      order: -1;
-      width: 100%;
-      margin-left: 0px; }
-
-  .filter-button {
-    display: inline-block;
-    margin: 20px 0px 0px 0px;
-    border: none;
-    order: -2; }
-
-  #filters {
-    margin-top: 20px; } }
-@media only screen and (max-width: 490px) {
-  .album-art.album-art-full {
-    width: 90%;
-    height: 90%; }
-
-  .album_page_thumbnail_container {
-    display: flex;
-    flex-wrap: wrap; } }
-@media only screen and (max-width: 420px) {
-  .header-info {
-    margin-left: 10px; }
-    .header-info .vinyl_archive_title {
-      font-size: 21px; }
-    .header-info .hear_nebraska {
-      font-size: 20px; }
-
-  .navbar {
-    margin-top: -30px; }
-    .navbar .sort-bar {
-      margin: 0px 0px 20px 90px; } }
-@media only screen and (max-width: 380px) {
-  .navbar {
-    margin-top: -10px; }
-    .navbar .sort-bar {
-      margin: 0px 0px 20px 55px; } }
-@media only screen and (max-width: 325px) {
-  .navbar .sort-bar {
-    margin: 0px 0px 20px 0px; }
-
-  .page-nav .page_number {
-    margin: 0px 60px; } }
 .navbar {
   display: flex;
   align-items: center;
@@ -869,3 +764,114 @@ select {
   font-family: 'Oswald', sans-serif;
   font-weight: 400;
   font-size: 20px; }
+
+@media only screen and (max-width: 980px) {
+  .main-sidebar {
+    width: 275px; }
+
+  .grid-main .album-display {
+    width: 48%; }
+  .grid-main .album-art-grid, .grid-main .album-display .album-art {
+    width: 100%;
+    height: 100%; } }
+@media only screen and (min-width: 750px) {
+  .main-body .main-sidebar {
+    display: inline; } }
+@media only screen and (max-width: 750px) {
+  .grid-main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 650px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #5D5E5E; }
+    .grid-main .album-display {
+      display: flex;
+      flex-direction: row;
+      line-height: 35px;
+      width: 325px;
+      height: 100px;
+      padding: 25px 0px 25px 0px; }
+      .grid-main .album-display .album-details {
+        margin-top: -10px; }
+      .grid-main .album-display .album-art-grid, .grid-main .album-display .album-art {
+        width: 90px;
+        height: 90px;
+        margin-right: 20px; }
+
+  .icon-display {
+    display: none; }
+
+  .edit_a {
+    visibility: hidden; }
+
+  .ap_containers {
+    display: block; } }
+@media only screen and (max-width: 655px) {
+  .artist_container {
+    width: 100%; }
+
+  .edit_a {
+    visibility: hidden; }
+
+  .navbar {
+    flex-direction: column;
+    margin-top: -50px; }
+    .navbar .search {
+      width: 100%;
+      order: 1; }
+    .navbar .sort-bar {
+      margin: 0px 0px 20px 100px; }
+
+  .add-album-display {
+    display: none; }
+
+  .main-body {
+    flex-direction: column; }
+    .main-body .latest-uploads {
+      width: 100%; }
+    .main-body .main-sidebar {
+      display: none;
+      order: -1;
+      width: 100%;
+      margin-left: 0px; }
+
+  .filter-button {
+    display: inline-block;
+    margin: 20px 0px 0px 0px;
+    border: none;
+    order: -2; }
+
+  #filters {
+    margin-top: 20px; } }
+@media only screen and (max-width: 490px) {
+  .album-art.album-art-full {
+    width: 90%;
+    height: 90%; }
+
+  .album_page_thumbnail_container {
+    display: flex;
+    flex-wrap: wrap; } }
+@media only screen and (max-width: 420px) {
+  .header-info {
+    margin-left: 10px; }
+    .header-info .vinyl_archive_title {
+      font-size: 21px; }
+    .header-info .hear_nebraska {
+      font-size: 20px; }
+
+  .navbar {
+    margin-top: -30px; }
+    .navbar .sort-bar {
+      margin: 0px 0px 20px 90px; } }
+@media only screen and (max-width: 380px) {
+  .navbar {
+    margin-top: -10px; }
+    .navbar .sort-bar {
+      margin: 0px 0px 20px 55px; } }
+@media only screen and (max-width: 325px) {
+  .navbar .sort-bar {
+    margin: 0px 0px 20px 0px; }
+
+  .page-nav .page_number {
+    margin: 0px 60px; } }

@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Vinyl Archive | Home - page 2</title>
+
+  <link rel="stylesheet" type="text/css" href="/styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="/main.js"></script>
+
+</head>
+
+<body class="page-background-color">
+
+	<div class="main-header main-head-background-color header-text-color">
+		<div class="header-content">
+		
+			<a href="/index.html">
+				<img id="logoAnimate" src="/images/vinyl.png" alt="vinyl still" class="vinyl-icon header_logo">
+			</a>
+
+			<div class= "header-info">
+
+				<a href="/index.html" class="header-text-color vinyl_archive_title header-title">
+						nebraska vinyl archive
+				</a>
+
+				<a href="http://hearnebraska.org" class="header-text-color hear_nebraska header-organization">
+						by Hear Nebraska
+				</a>
+
+			</div>
+
+		</div>
+
+		<a href="#" class="add-album-display add_button add-button header-text-color">
+				add an album 
+		</a>
+</div>
+
+	<div class="main-container main-background-color">
+
+		<nav class="navbar">
+
+	<div class="search">
+	<input type="text" class="searchTerm search_text search-text-color search-background-color" placeholder="Search for an album, artist, or track...">
+
+	<button type="submit" class="searchButton search-background-color">
+		<img src="/images/search.svg" alt="search icon" class="search-icon">
+	</button>
+
+</div>
+
+	<div class="sort-bar">
+
+		<div class="sort-text-color sort">
+			sort
+		</div>
+
+		<form class="dropdown">
+			<select class="sort-text-color sort_text sort-selection" onChange="window.location.href=this.value">
+				<option value="/views-sorting/grid/sort_date_upload">upload date, new to old </option>
+				<option value="/views-sorting/grid/sort_date_upload_reverse">upload date, old to new </option>
+				<option value="/views-sorting/grid/sort_date_release">album year, new to old </option>
+				<option value="/views-sorting/grid/sort_date_release_reverse">album year, old to new </option>
+				<option value="/views-sorting/grid/sort_album_title">album title, a to z </option>
+				<option value="/views-sorting/grid/sort_album_title_reverse">album title, z to a </option>
+				<option value="/views-sorting/grid/sort_album_artist" selected>album artist, a to z </option>
+				<option value="/views-sorting/grid/sort_album_artist_reverse">album artist, z to a </option>	
+			</select>
+		</form>
+
+	</div>
+
+	<div class="album-views">
+
+		<a href="/views-sorting/grid/sort_album_artist.html" class="icon-display">
+			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="512px" height="512px" viewBox="0 0 223.48 223.48" style="enable-background:new 0 0 223.48 223.48;" xml:space="preserve" alt="grid display icon" class="grid-icon grid-icon-color-active grid-icon-margin">
+
+				<g>
+					<rect x="124.96" y="0.003" width="98.521" height="98.505"/>
+					<rect y="0.003" width="98.512" height="98.505"/>
+					<rect y="124.964" width="98.512" height="98.514"/>
+					<rect x="124.96" y="124.964" width="98.521" height="98.514"/>
+				</g>
+			</svg>
+		</a>
+	
+
+		<a href="/views-sorting/list/sort_album_artist.html" class="icon-display">
+			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="512px" height="512px" viewBox="0 0 92.732 92.731" style="enable-background:new 0 0 92.732 92.731;" xml:space="preserve" alt="list display icon" class="list-icon list-icon-color list-icon-margin">
+				<g>
+					<rect x="1.134" width="110.463" height="14.214"/>
+					<rect x="1.186" y="25.721" width="110.357" height="14.215"/>
+					<rect x="1.134" y="52.795" width="110.463" height="14.215"/>
+					<rect x="1.186" y="78.518" width="110.357" height="14.214"/>
+				</g>
+			</svg>
+		</a>
+	</div>
+	
+</nav>
+
+<div class="main-body">
+
+	<button class=" filter-button sidebar_titles sidebar-head-text-color sidebar-head-background-color"onclick="filters()">Filters</button>
+
+	<div class="latest-uploads">
+
+		<div class="main-head-text-color main-head-background-color uploads">
+	Latest Uploads
+</div>
+
+		<div class="grid-main">
+
+			
+
+				<div class="album-display">
+	<a href="/2017/10/16/Lorde-Pure-Heroine.html">
+		<img src="/images/album_art/albumcover.jpg" alt="Lorde | Pure Heroine" class="album-art">
+	</a>
+
+	<div class="album-details">	
+		<a href="/2017/10/16/Lorde-Pure-Heroine.html" class="album-title-text-color mp_album">
+			Pure Heroine
+		</a>
+
+		<a href="#" class="main-body-text-color mp_artist">
+			Lorde
+		</a>
+	</div>	
+</div>
+
+
+
+			
+
+				<div class="album-display">
+	<a href="/2017/10/16/Lorde-Pure-Heroine-copy-2.html">
+		<img src="/images/album_art/albumcover.jpg" alt="Lorde | Pure Heroine" class="album-art">
+	</a>
+
+	<div class="album-details">	
+		<a href="/2017/10/16/Lorde-Pure-Heroine-copy-2.html" class="album-title-text-color mp_album">
+			Pure Heroine
+		</a>
+
+		<a href="#" class="main-body-text-color mp_artist">
+			Lorde
+		</a>
+	</div>	
+</div>
+
+
+
+			
+
+				<div class="album-display">
+	<a href="/2017/10/16/Lorde-Pure-Heroine-copy.html">
+		<img src="/images/album_art/albumcover.jpg" alt="Lorde | Pure Heroine" class="album-art">
+	</a>
+
+	<div class="album-details">	
+		<a href="/2017/10/16/Lorde-Pure-Heroine-copy.html" class="album-title-text-color mp_album">
+			Pure Heroine
+		</a>
+
+		<a href="#" class="main-body-text-color mp_artist">
+			Lorde
+		</a>
+	</div>	
+</div>
+
+
+
+			
+
+				<div class="album-display">
+	<a href="/2017/09/10/Lydia-Illuminate-copy.html">
+		<img src="/images/album_art/albumcover.jpg" alt="Lydia | Illuminate" class="album-art">
+	</a>
+
+	<div class="album-details">	
+		<a href="/2017/09/10/Lydia-Illuminate-copy.html" class="album-title-text-color mp_album">
+			Illuminate
+		</a>
+
+		<a href="#" class="main-body-text-color mp_artist">
+			Lydia
+		</a>
+	</div>	
+</div>
+
+
+
+			
+
+				<div class="album-display">
+	<a href="/2017/09/10/Lydia-Illuminate.html">
+		<img src="/images/album_art/albumcover.jpg" alt="Lydia | Illuminate" class="album-art">
+	</a>
+
+	<div class="album-details">	
+		<a href="/2017/09/10/Lydia-Illuminate.html" class="album-title-text-color mp_album">
+			Illuminate
+		</a>
+
+		<a href="#" class="main-body-text-color mp_artist">
+			Lydia
+		</a>
+	</div>	
+</div>
+
+
+
+			
+
+				<div class="album-display">
+	<a href="/2017/09/10/Lydia-Illuminate-copy-2.html">
+		<img src="/images/album_art/albumcover.jpg" alt="Lydia | Illuminate" class="album-art">
+	</a>
+
+	<div class="album-details">	
+		<a href="/2017/09/10/Lydia-Illuminate-copy-2.html" class="album-title-text-color mp_album">
+			Illuminate
+		</a>
+
+		<a href="#" class="main-body-text-color mp_artist">
+			Lydia
+		</a>
+	</div>	
+</div>
+
+
+
+			
+
+				<div class="album-display">
+	<a href="/2017/10/12/Mynabirds-Generals-copy.html">
+		<img src="/images/album_art/albumcover.jpg" alt="Mynabirds | Generals" class="album-art">
+	</a>
+
+	<div class="album-details">	
+		<a href="/2017/10/12/Mynabirds-Generals-copy.html" class="album-title-text-color mp_album">
+			Generals
+		</a>
+
+		<a href="#" class="main-body-text-color mp_artist">
+			Mynabirds
+		</a>
+	</div>	
+</div>
+
+
+
+			
+
+				<div class="album-display">
+	<a href="/2017/10/12/Mynabirds-Generals-copy-2.html">
+		<img src="/images/album_art/albumcover.jpg" alt="Mynabirds | Generals" class="album-art">
+	</a>
+
+	<div class="album-details">	
+		<a href="/2017/10/12/Mynabirds-Generals-copy-2.html" class="album-title-text-color mp_album">
+			Generals
+		</a>
+
+		<a href="#" class="main-body-text-color mp_artist">
+			Mynabirds
+		</a>
+	</div>	
+</div>
+
+
+
+			
+
+				<div class="album-display">
+	<a href="/2017/10/12/Mynabirds-Generals.html">
+		<img src="/images/album_art/albumcover.jpg" alt="Mynabirds | Generals" class="album-art">
+	</a>
+
+	<div class="album-details">	
+		<a href="/2017/10/12/Mynabirds-Generals.html" class="album-title-text-color mp_album">
+			Generals
+		</a>
+
+		<a href="#" class="main-body-text-color mp_artist">
+			Mynabirds
+		</a>
+	</div>	
+</div>
+
+
+
+			
+			
+		</div> 
+
+		<div class="page-nav prev-next-text-color ">
+			<a href="/views-sorting/grid/sort_album_artist.html" class="prev prev-next-text-color"> 
+				<div class="prev_next_arrows"> < </div>
+				<div> prev </div>
+			</a>
+
+
+			<div class="page_number"> 2 of 4 </div>
+
+
+			<a href="/views-sorting/grid/sort_album_artist/3/sort_album_artist.html" class="next prev-next-text-color"> 
+				<div> next </div>
+				<div class="prev_next_arrows"> > </div>	
+			</a>
+		</div>
+	</div>
+
+	<div id="filters" class="main-sidebar">
+
+	<div class="sidebar_titles sidebar-head-text-color sidebar-head-background-color">Cities</div>
+
+	<div class="sidebar-sort">
+		<div><a href="/views-filters/grid/cities/omaha" class="items_in_sidebar sidebar-list-text-color">Omaha (#)</a></div>
+		<div><a href="/views-filters/grid/cities/Lincoln" class="items_in_sidebar sidebar-list-text-color">Lincoln (#)</a></div>
+		<div><a href="/views-filters/grid/cities/Kearney" class="items_in_sidebar sidebar-list-text-color">Kearney (#)</a></div>
+	</div>
+
+	<div class="sidebar_titles sidebar-head-text-color sidebar-head-background-color">Genres</div>
+
+	<div class="sidebar-sort">
+		<div><a href="/views-filters/grid/genres/Alternative" class="items_in_sidebar sidebar-list-text-color">Alternative (#)</a></div>
+		<div><a href="/views-filters/grid/genres/Folk" class="items_in_sidebar sidebar-list-text-color">Folk (#)</a></div>
+		<div><a href="/views-filters/grid/genres/Rock" class="items_in_sidebar sidebar-list-text-color">Rock (#)</a></div>
+	</div>
+
+	<div class="sidebar_titles sidebar-head-text-color sidebar-head-background-color">Decades</div>
+
+
+	<div class="sidebar-sort">
+		<div><a href="/views-filters/grid/decades/1950's" class="items_in_sidebar sidebar-list-text-color">1950's (#)</a></div>
+		<div><a href="/views-filters/grid/decades/1960's" class="items_in_sidebar sidebar-list-text-color">1960's (#)</a></div>
+		<div><a href="/views-filters/grid/decades/1970's" class="items_in_sidebar sidebar-list-text-color">1970's (#)</a></div>
+		<div><a href="/views-filters/grid/decades/1980's" class="items_in_sidebar sidebar-list-text-color">1980's (#)</a></div>
+		<div><a href="/views-filters/grid/decades/1990's" class="items_in_sidebar sidebar-list-text-color">1990's (#)</a></div>
+		<div><a href="/views-filters/grid/decades/2000's" class="items_in_sidebar sidebar-list-text-color">2000's (#)</a></div>
+		<div><a href="/views-filters/grid/decades/2010's" class="items_in_sidebar sidebar-list-text-color">2010's (#)</a></div>
+	</div>
+
+	<div class="sidebar_titles sidebar-head-text-color sidebar-head-background-color">Format</div>	
+
+	<div class="sidebar-sort">
+		<div><a href="/views-filters/grid/formats/LP" class="items_in_sidebar sidebar-list-text-color">LP (#)</a></div>
+		<div><a href="/views-filters/grid/formats/EP" class="items_in_sidebar sidebar-list-text-color">EP (#)</a></div>
+		<div><a href="/views-filters/grid/formats/Single" class="items_in_sidebar sidebar-list-text-color">Single (#)</a></div>
+	</div>
+</div>
+
+</div>
+
+
+
+
+
+	</div>
+
+	<div class="main-footer main-head-background-color">
+	
+
+		<div class= "footer-info-sponsors footer-text-color footer_type">
+			<div> sponsors: </div>
+			<a href="#" class="footer-text-color sponsors">Firespring</a>
+			<a href="#" class="footer-text-color sponsors">Hudl</a>
+			<a href="#" class="footer-text-color sponsors">Bulu Box</a>
+		</div>
+
+		<div class= "footer-info-credit footer-text-color footer_type">
+			<div> site by: </div>
+			<a href="#" class="footer-text-color sponsors">Omaha Code School</a>
+		</div>
+
+	
+
+</div>
+
+</body>
+</html>

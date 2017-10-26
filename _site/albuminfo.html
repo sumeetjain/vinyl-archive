@@ -18,13 +18,13 @@
 	<div class="main-header main-head-background-color header-text-color">
 		<div class="header-content">
 		
-			<a href="index.html">
+			<a href="/index.html">
 				<img id="logoAnimate" src="/images/vinyl.png" alt="vinyl still" class="vinyl-icon header_logo">
 			</a>
 
 			<div class= "header-info">
 
-				<a href="index.html" class="header-text-color vinyl_archive_title header-title">
+				<a href="/index.html" class="header-text-color vinyl_archive_title header-title">
 						nebraska vinyl archive
 				</a>
 
@@ -62,15 +62,15 @@
 	</div>
 
 	<form class="dropdown">
-		<select id="mySelect" class="sort-text-color sort_text sort-selection" onchange="sortfunction()">
-			<option >upload date, new to old </option>
-			<option>upload date, old to new </option>
-			<option>album year, new to old </option>
-			<option>album year, old to new </option>
-			<option>album title, a to z </option>
-			<option>album title, z to a </option>
-			<option>album artist, a to z </option>
-			<option>album artist, z to a </option>	
+		<select class="sort-text-color sort_text sort-selection" onChange="window.location.href=this.value">
+			<option value="/views-sorting/sort_date_upload">upload date, new to old </option>
+			<option value="/views-sorting/sort_date_upload_reverse">upload date, old to new </option>
+			<option value="/views-sorting/sort_date_release">album year, new to old </option>
+			<option value="/views-sorting/sort_date_release_reverse">album year, old to new </option>
+			<option value="/views-sorting/sort_album_title">album title, a to z </option>
+			<option value="/views-sorting/sort_album_title_reverse">album title, z to a </option>
+			<option value="/views-sorting/sort_album_artist">album artist, a to z </option>
+			<option value="/views-sorting/sort_album_artist_reverse">album artist, z to a </option>	
 		</select>
 	</form>
 
