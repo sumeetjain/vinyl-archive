@@ -1,0 +1,50 @@
+---
+layout: member_page
+title: Vinyl Archive | Musician Info 
+---
+
+<div class="main-body">
+
+	<button class="filter-button sidebar_titles sidebar-head-text-color sidebar-head-background-color"onclick="myFunction()">Filters</button>
+
+	<div class="artist_container">
+		<div class="subheader_container uploads">
+			<div class="artist_album_background main-head-text-color main-head-background-color">
+				<span class="background_artist">Artist Name</span> <span class="verticle_line"> | </span> <span class="background_album">Musician</span>
+			</div>
+			<div class="edit_a main-head-text-color main-head-background-color">Edit Member</div>
+		</div>
+		
+		<div class="artist_photo">
+			<img src="images/mariachi.jpg" class="band_photo">
+		</div>
+		
+		<div class="artist_page">
+			<div class="apage_subheadings main-body-text-color">Albums</div>
+			
+			
+		</div>
+
+		<div class="grid-main">
+
+			{% for post in site.posts %}
+
+				{% include album_input.html 
+					album_url=post.url
+					artist_url="#"
+					album_cover=post.album_cover
+					album_title=post.album_title
+					album_artist=post.album_artist
+				%}
+
+			{% endfor %}
+	
+		</div> 
+
+	</div>
+
+	{%include filters.html%}
+
+</div>
+
+

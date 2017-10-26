@@ -3,9 +3,12 @@ layout: artist_page
 title: Vinyl Archive | Artist Info 
 ---
 
+<div class="main-body">
+
+	<button class="filter-button sidebar_titles sidebar-head-text-color sidebar-head-background-color"onclick="myFunction()">Filters</button>
+
 	<div class="artist_container">
-		
-		<div class="subheader_container">
+		<div class="subheader_container uploads">
 			<div class="artist_album_background main-head-text-color main-head-background-color">
 				<span class="background_artist">Artist</span> <span class="verticle_line"> | </span> <span class="background_album">Album</span>
 			</div>
@@ -13,60 +16,54 @@ title: Vinyl Archive | Artist Info
 		</div>
 		
 		<div class="artist_photo">
-			<img src="images/mariachi.jpg">
+			<img src="images/mariachi.jpg" class="band_photo">
 		</div>
+		
 
 		<div class="subheadings_container">
-			<div class="artist_page">
+			<div class="artist_subheadings_titles">
 				<div class="apage_subheadings main-body-text-color">Bio</div>
 				<div class="apage_subheadings main-body-text-color">Members</div>
 			</div>
-		</div>
-		<div class="artist_info_container">
-			<div class="artist_info">
-				<div class="info album-info-text-color">Here is where all the information about the bio will go...</div>
+			<div class="artist_info_container">
+				<div class="artist_info">
+					<div class="info album-info-text-color">Here is where all the information about the bio will go...</div>
+				</div>
+				<div class="artist__name_info">
+					<ul class="members_list">
+						<li class="info  album-info-text-color"><a href="#" class="members">Member</a> — contribution</li>
+						<li class="info  album-info-text-color"><a href="#" class="members">Member</a> — contribution</li>
+						<li class="info  album-info-text-color"><a href="#" class="members">Member</a> — contribution</li>
+						<li class="info  album-info-text-color"><a href="#" class="members">Member</a> — contribution</li>
+						<li class="info  album-info-text-color"><a href="#" class="members">Member</a> — contribution</li>
+						<li class="info  album-info-text-color"><a href="#" class="members">Member</a> — contribution</li>
+					</ul>
+				</div>
 			</div>
 		</div>
+
 		<div class="artist_page">
 			<div class="apage_subheadings main-body-text-color">Albums</div>
 		</div>
+
+		<div class="grid-main">
+
+			{% for post in site.posts %}
+
+				{% include album_input.html 
+					album_url=post.url
+					artist_url="#"
+					album_cover=post.album_cover
+					album_title=post.album_title
+					album_artist=post.album_artist
+				%}
+
+			{% endfor %}
+	
+		</div> 
+
 	</div>
 
+	{%include filters.html%}
 
-
-
-
-	<div class="main-sidebar">
-		<div class="sidebar_titles sidebar-head-text-color sidebar-head-background-color">Cities</div>
-
-		<div class="sidebar-sort">
-			<div><a href="#" class="items_in_sidebar sidebar-list-text-color">City (#)</a></div>
-			<div><a href="#" class="items_in_sidebar sidebar-list-text-color">City (#)</a></div>
-			<div><a href="#" class="items_in_sidebar sidebar-list-text-color">City (#)</a></div>
-		</div>
-
-		<div class="sidebar_titles sidebar-head-text-color sidebar-head-background-color">Genres</div>
-
-		<div class="sidebar-sort">
-			<div><a href="#" class="items_in_sidebar sidebar-list-text-color">Genre (#)</a></div>
-			<div><a href="#" class="items_in_sidebar sidebar-list-text-color">Genre (#)</a></div>
-			<div><a href="#" class="items_in_sidebar sidebar-list-text-color">Genre (#)</a></div>
-		</div>
-
-		<div class="sidebar_titles sidebar-head-text-color sidebar-head-background-color">Decades</div>
-
-
-		<div class="sidebar-sort">
-			<div><a href="#" class="items_in_sidebar sidebar-list-text-color">Decade (#)</a></div>
-			<div><a href="#" class="items_in_sidebar sidebar-list-text-color">Decade (#)</a></div>
-			<div><a href="#" class="items_in_sidebar sidebar-list-text-color">Decade (#)</a></div>
-		</div>
-
-		<div class="sidebar_titles sidebar-head-text-color sidebar-head-background-color">Format</div>	
-
-		<div class="sidebar-sort">
-			<div><a href="#" class="items_in_sidebar sidebar-list-text-color">Format (#)</a></div>
-			<div><a href="#" class="items_in_sidebar sidebar-list-text-color">Format (#)</a></div>
-			<div><a href="#" class="items_in_sidebar sidebar-list-text-color">Format (#)</a></div>
-		</div>
-	</div>
+</div>
