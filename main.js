@@ -1,11 +1,3 @@
-// sort bar functionality----------------------------
-
-
-// function sortfunction() {
-//     var x = document.getElementById("mySelect");
-//     var i = x.selectedIndex;
-//     document.getElementById("demo").innerHTML = x.options[i].text;
-// }
 
 
 //active page link highlight-------------------------
@@ -20,7 +12,7 @@ $( document ).ready(function() {
 
 //mobile filters dropdown----------------------------
 
-function myFunction() {
+function filters() {
     var x = document.getElementById("filters");
     	if (x.style.display === "none") {
         	x.style.display = "block";

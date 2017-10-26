@@ -1,0 +1,95 @@
+backend:
+  name: git-gateway
+  branch: master
+
+media_folder: "images/uploads"
+
+collections:
+  - name: "posts"
+    label: "Post"
+    folder: "_posts"
+    create: true
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Body", name: "body", widget: "markdown"}
+      
+  - name: "friends" # Used in routes, e.g., /admin/collections/blog
+    label: "Friend" # Used in the UI
+    folder: "_friends" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields for each document, usually in front matter
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Location", name: "location", widget: "string"}
+
+
+
+collections:
+
+  # MEMBERS -----------------------------------------------------------------
+
+  - name: "member"
+    label: "Member"
+    folder: "_posts/members"
+    creater: true
+    fields:
+      - {label: "Member Name", name: "member_name", widget: "string"}
+      - {label: "Member Instrument", name: "member_instrument", widget: "string"}
+
+      - {label: "Member Bio", name: "member_bio", widget: "markdown"}
+
+
+
+
+
+
+  # ARTISTS -----------------------------------------------------------------
+
+  - name: "artists"
+    label: "Artist"
+    folder: "_posts/artists"
+    creater: true
+    fields:
+
+      - {label: "Artist Image", name: "artist_image", widget: "image"}
+      - {label: "Artist Name", name: "artist_name", widget: "string"}
+      - {label: "Artist Bio", name: "artist_bio", widget: "markdown"}
+      - name: members
+      
+
+  # ALBUMS ------------------------------------------------------------------
+
+  - name: "albums"
+    label: "Albums"
+    folder: "_posts/albums"
+    creater: true
+    fields:
+      - {label: "Database Upload Date", name: "database_upload_date", widget: "datetime"}
+
+      - {label: "Album Art - Front Cover", name: "album_art_front", widget: "image"}
+      - {label: "Album Art - Inside Left", name: "album_art_inside_left", widget: "image"}
+      - {label: "Album Art - Inside Right", name: "album_art_inside_right", widget: "image"}
+      - {label: "Album Art - Back Cover", name: "album_art_back", widget: "image"}
+
+      - {label: "Album Title", name: "album_title", widget: "string"}
+      - name: artist
+      - {label: "Production City", name: "album_city", widget: "select"}
+      - {label: "Album Genre", name: "album_genre", widget: "select"}
+      - {label: "Album Decade", name: "album_decade", widget: "select"}
+      - {label: "Album Label", name: "album_label", widget: "string"}
+      - {label: "Album Format", name: "album_format", widget: "select"}
+      - {label: "Album Release Date", name: "album_date", widget: "datetime"}
+
+      - {label: "Album Information", name: "album_info", widget: "markdown"}
+     
+
+
+
+
+
+
+
+
+
+
+
