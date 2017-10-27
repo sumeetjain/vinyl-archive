@@ -482,6 +482,11 @@ li.song_numbers:before {
   align-items: center;
   justify-content: space-between; }
 
+.navbar-filters {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; }
+
 .search {
   display: flex;
   width: 44%; }
