@@ -2,5 +2,9 @@
 
 {% block body %}
   <h1>{{ album.title }}</h1>
-  <h2>{{ album.artist.title }}</h2>
+
+  <h2>
+    <a href="{% url "artist", album.artist %}">{{ album.artist.title }}</a>
+  </h2>
+
 {% endblock %}
