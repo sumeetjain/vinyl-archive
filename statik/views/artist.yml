@@ -1,0 +1,5 @@
+path:
+  template: /{{ artist.slug }}
+  for-each:
+    artist: session.query(Artist).all()
+template: artist

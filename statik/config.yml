@@ -1,0 +1,11 @@
+project-name: Vinyl Archive
+base-path: /
+context:
+  static:
+    site-title: Vinyl Archive - Hear Nebraska
+  dynamic:
+    albums: session.query(Album).all()
+    # genres: session.query(Genres).all()
+    # decades: session.query(Decades).all()
+    # city: session.query(City).all()
+    # format: session.query(Format).all()
