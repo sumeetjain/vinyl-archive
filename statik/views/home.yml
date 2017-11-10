@@ -1,0 +1,6 @@
+path: /
+template: home     # The .html is automatically added by Statik
+context:
+  static:
+    page-title: Nebraska Vinyl Archive
+  

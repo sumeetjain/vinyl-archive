@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{% block title %}{% if page_title %}{{ page_title }}{% else %}Vinyl Archive{% endif %}{% endblock %}</title>
+</head>
+<body>
+  <div class="container">
+    {% block body %}{% endblock %}
+  </div>
+</body>
+</html>
